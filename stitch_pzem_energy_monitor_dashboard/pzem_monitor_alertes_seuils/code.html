@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-container":"#03b5d3","outline-variant":"#434655","surface-container-highest":"#2d3449","on-tertiary-container":"#bdffdc","background":"#0b1326","tertiary-fixed-dim":"#45dfa4","on-primary-fixed-variant":"#003ea8","surface-tint":"#b4c5ff","on-surface":"#dae2fd","surface":"#0b1326","surface-container-high":"#222a3d","primary-container":"#2563eb","tertiary-container":"#007d57","tertiary":"#45dfa4","inverse-surface":"#dae2fd","on-primary":"#002a78","secondary-fixed-dim":"#4cd7f6","on-tertiary":"#003825","on-error":"#690005","error-container":"#93000a","surface-variant":"#2d3449","inverse-primary":"#0053db","tertiary-fixed":"#68fcbf","error":"#ffb4ab","outline":"#8d90a0","secondary":"#4cd7f6","surface-container-lowest":"#060e20","on-secondary-container":"#00424e","on-tertiary-fixed":"#002114","on-secondary-fixed-variant":"#004e5c","surface-bright":"#31394d","on-surface-variant":"#c3c6d7","primary":"#b4c5ff","surface-dim":"#0b1326","on-background":"#dae2fd","on-secondary-fixed":"#001f26","on-error-container":"#ffdad6","on-primary-fixed":"#00174b","surface-container":"#171f33","inverse-on-surface":"#283044","secondary-fixed":"#acedff","on-tertiary-fixed-variant":"#005137","on-secondary":"#003640","primary-fixed-dim":"#b4c5ff","surface-container-low":"#131b2e","primary-fixed":"#dbe1ff","on-primary-container":"#eeefff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-lg":"1.5rem","gutter":"1.25rem","space-md":"1rem","margin":"1.5rem","space-xl":"2rem","margin-mobile":"1rem"},"fontFamily":{"headline-md":["Inter"],"label-ui":["Inter"],"metric-xl":["JetBrains Mono"],"display-lg":["JetBrains Mono"],"headline-lg":["Inter"],"title-sm":["Inter"],"display-md":["JetBrains Mono"],"body-sm":["Inter"],"label-mono":["JetBrains Mono"],"body-md":["Inter"],"metric-md":["JetBrains Mono"]},"fontSize":{"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-ui":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"500"}],"metric-xl":["28px",{"lineHeight":"36px","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display-md":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-mono":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"metric-md":["18px",{"lineHeight":"24px","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/90 backdrop-blur-xl"><div class="flex items-center gap-space-sm"><img alt="PZEM Monitor Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPOsJDoZGojHV_2uzhoiMBedxVbp5nUpAClHFVedMubXKVvYGkVklCzo7OC9nP7CHoBhOIxTq1VQOVF-5SR0EDyW5SImgkpCsye_220NSS6dcssd2YRVT7GlfhMvRFywDhZQ4h39MUl4dYvcZCwMmXEKbfN_6ixVVV9jEjLPc7ame0q406aDXtJF7xQXUC40c694mCvBkWSkiolo5_CmlBj4ElMAMrUNqGp2sPclxLj_9aGjGzUy2sC4A"/><span class="font-title-sm text-title-sm text-on-surface tracking-tight font-semibold">PZEM Monitor</span></div><div class="flex items-center gap-space-xs px-space-xs py-0.5 rounded-full bg-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-ui text-label-ui text-tertiary uppercase">En ligne</span></div></div><div class="px-space-md py-space-sm"><p class="font-label-ui text-label-ui text-outline uppercase tracking-wider px-space-xs mb-space-xs">Supervision IoT</p><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="vue-densemble" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-title-sm text-title-sm">Vue d'ensemble</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="metriques-en-direct" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">bolt</span><span class="font-title-sm text-title-sm">Métriques en direct</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="historique-et-analyse" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">timeline</span><span class="font-title-sm text-title-sm">Historique &amp; Analyse</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="alertes-et-seuils" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-title-sm text-title-sm">Alertes &amp; Seuils</span></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-mono text-label-mono">1</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tarifs-et-facturation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-title-sm text-title-sm">Tarifs &amp; Facturation</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuration-capteurs" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">settings_input_component</span><span class="font-title-sm text-title-sm">Configuration capteurs</span></div></a></nav></div></div><div class="flex flex-col gap-space-sm p-space-md bg-surface-container-lowest/60"><div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-ui text-label-ui text-outline uppercase">Liaison MQTT / ESP32</span><div class="flex items-center gap-1.5"><span class="inline-block h-2 w-2 rounded-full bg-tertiary"></span><span class="font-label-mono text-label-mono text-tertiary">12 ms</span></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">Firmware PZEM</span><span class="font-label-mono text-label-mono text-secondary">v2.4.1</span></div></div><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-title-sm text-body-md text-on-surface leading-tight font-medium">Ingénieur Énergie</span><span class="font-body-sm text-body-sm text-outline">Station #01</span></div></div><button class="text-outline hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-low/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm bg-surface-container px-space-md py-1.5 rounded-lg"><span class="material-symbols-outlined text-secondary text-[20px]">memory</span><select class="bg-transparent font-title-sm text-body-md text-on-surface focus:outline-none cursor-pointer"><option class="bg-surface-container-high text-on-surface" value="pzem-1">PZEM-004T #1 - Tableau Principal</option><option class="bg-surface-container-high text-on-surface" value="pzem-2">PZEM-004T #2 - Pompe à chaleur</option><option class="bg-surface-container-high text-on-surface" value="pzem-3">PZEM-016 #3 - Onduleur Solaire</option></select></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-high p-1 rounded-lg"><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase bg-primary-container text-on-primary-container font-semibold transition-colors" type="button">Temps réel</button><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">24h</button><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">7j</button><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">30j</button></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[18px]">schedule</span><span class="font-label-mono text-label-mono text-on-surface">UTC+01:00 • 14:38:22</span></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">download</span><span class="font-body-sm text-body-sm font-medium">Export CSV</span></button><button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Script for sidebar active state alignment -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'alertes-et-seuils') {
+          link.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+          link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold', 'shadow-md');
+          const badge = link.querySelector('span:last-child');
+          if (badge) {
+            badge.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+            badge.classList.add('bg-error', 'text-on-error', 'font-bold');
+            badge.textContent = '3';
+          }
+        }
+      });
+    });
+  </script>
+<div class="w-full px-gutter-lg py-space-lg flex flex-col gap-space-lg">
+<!-- En-tête de page & Statistiques de veille opérationnelle -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Alertes &amp; Gestion des Seuils</h1>
+<p class="font-body-md text-body-md text-outline">Surveillance proactive des anomalies électriques, dépassements de puissance et intégrité réseau.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Badges statistiques -->
+<div class="flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-80"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-error"></span>
+</span>
+<span class="font-title-sm text-title-sm text-error font-semibold">3 Alertes actives</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-low text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-mono text-label-mono text-on-surface font-medium">14 Règles actives</span>
+<span class="font-body-sm text-body-sm text-outline">• 3 unités</span>
+</div>
+<!-- Boutons d'action globale -->
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-body-md transition-colors shadow-sm" id="btn-ack-all" type="button">
+<span class="material-symbols-outlined text-tertiary text-[20px]">done_all</span>
+<span>Tout acquitter</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-title-sm text-body-md transition-all shadow-md active:scale-95" id="btn-open-modal" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Nouvelle règle</span>
+</button>
+</div>
+</div>
+<!-- Navigation par Onglets (Tabs) & Barre de filtrage unifiée -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-low p-2 rounded-xl shadow-sm">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-title-sm text-title-sm shadow-sm transition-all" id="tab-alerts-btn" type="button">
+<span class="material-symbols-outlined text-error text-[20px]">notifications_active</span>
+<span>Alertes récentes</span>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-mono text-label-ui font-bold">3</span>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container font-title-sm text-title-sm transition-all" id="tab-rules-btn" type="button">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<span>Règles &amp; Seuils configurés</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-mono text-label-ui">14</span>
+</button>
+</div>
+<!-- Filtres contextuels pour le flux d'alertes -->
+<div class="flex flex-wrap items-center gap-space-xs" id="alerts-filters">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span>
+<input class="pl-9 pr-3 py-1.5 rounded-lg bg-surface-container font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none focus:bg-surface-container-high w-48 xl:w-64" id="search-incidents" placeholder="Rechercher incident, circuit..." type="text"/>
+</div>
+<select class="px-3 py-1.5 rounded-lg bg-surface-container font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer" id="filter-severity">
+<option value="all">Toutes les gravités</option>
+<option value="critical">Critique (Rouge)</option>
+<option value="warning">Avertissement (Ambre)</option>
+<option value="resolved">Résolues &amp; Acquittées</option>
+</select>
+<select class="px-3 py-1.5 rounded-lg bg-surface-container font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer" id="filter-device">
+<option value="all">Tous les appareils</option>
+<option value="0x01">TGBT Atelier (0x01)</option>
+<option value="0x02">Cuisine &amp; Électroménager (0x02)</option>
+<option value="0x03">Pompe à Chaleur (0x03)</option>
+<option value="0x04">Prises &amp; Éclairage (0x04)</option>
+</select>
+</div>
+</div>
+<!-- CONTENU ONGLET 1 : Liste détaillée des Alertes récentes (Flux d'incidents) -->
+<div class="flex flex-col gap-space-md" id="panel-alerts">
+<!-- Bannière de télémétrie critique -->
+<div class="relative overflow-hidden rounded-xl bg-error-container/20 p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-error-container flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[24px]">crisis_alert</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-error font-semibold uppercase tracking-wider">État Réseau Critique</span>
+<span class="px-2 py-0.5 rounded-full bg-error/20 text-error font-label-mono text-label-ui">Dépassement de calibre</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">La charge instantanée sur le départ Principal (TGBT Atelier) excède le calibre thermique contractuel réglé à 4 500 W.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-auto">
+<span class="font-metric-md text-metric-md text-error">4 890 W <span class="font-label-mono text-label-ui text-outline">actuels</span></span>
+<button class="px-space-md py-1.5 rounded-lg bg-error text-on-error font-title-sm text-body-sm hover:opacity-90 transition-opacity" type="button">Consulter télémétrie</button>
+</div>
+</div>
+<!-- Flux des incidents -->
+<div class="flex flex-col gap-space-sm" id="alerts-list">
+<!-- Alerte 1 (CRITIQUE) -->
+<div class="alert-item group rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md" data-device="0x01" data-severity="critical">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-error/15 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">offline_bolt</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded font-label-ui text-label-ui font-semibold bg-error text-on-error tracking-wider uppercase">Critique</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Dépassement de puissance active maximale (&gt; 4 500 W)</span>
+<span class="font-label-mono text-label-ui text-outline">• ID #ALT-9042</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-secondary text-[16px]">developer_board</span>
+                  Module Principal PZEM-004T — TGBT Atelier (0x01)
+                </span>
+<span>•</span>
+<span class="text-error font-metric-md text-body-md font-semibold">4 890 W <span class="text-outline font-label-mono text-body-sm">(Seuil : 4 500 W, +390 W)</span></span>
+<span>•</span>
+<span class="font-label-mono text-label-mono text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                  Aujourd'hui à 14:24:12 (il y a 14 min)
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end lg:self-auto shrink-0">
+<div class="px-2.5 py-1 rounded-full bg-error-container/40 text-on-error-container font-label-mono text-label-ui font-semibold">
+              Non acquitté
+            </div>
+<button class="btn-ack flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-tertiary-container hover:text-on-tertiary-container text-on-surface font-title-sm text-body-sm transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span>Acquitter</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-outline hover:text-on-surface transition-colors" title="Détails" type="button">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Alerte 2 (CRITIQUE) -->
+<div class="alert-item group rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md" data-device="0x03" data-severity="critical">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-error/15 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">gif_2</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded font-label-ui text-label-ui font-semibold bg-error text-on-error tracking-wider uppercase">Critique</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Sous-tension réseau sévère (&lt; 207 V RMS)</span>
+<span class="font-label-mono text-label-ui text-outline">• ID #ALT-9038</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-secondary text-[16px]">heat_pump</span>
+                  Circuit B — Pompe à Chaleur (PAC) (0x03)
+                </span>
+<span>•</span>
+<span class="text-error font-metric-md text-body-md font-semibold">204.2 V <span class="text-outline font-label-mono text-body-sm">(Seuil min : 207.0 V)</span></span>
+<span>•</span>
+<span class="font-label-mono text-label-mono text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                  Hier à 19:42:05
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end lg:self-auto shrink-0">
+<div class="px-2.5 py-1 rounded-full bg-error-container/40 text-on-error-container font-label-mono text-label-ui font-semibold">
+              Non acquitté
+            </div>
+<button class="btn-ack flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-tertiary-container hover:text-on-tertiary-container text-on-surface font-title-sm text-body-sm transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span>Acquitter</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-outline hover:text-on-surface transition-colors" title="Détails" type="button">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Alerte 3 (AVERTISSEMENT) -->
+<div class="alert-item group rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md" data-device="0x02" data-severity="warning">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">speed</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded font-label-ui text-label-ui font-semibold bg-surface-container-highest text-secondary tracking-wider uppercase">Avertissement</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Courant élevé proche du calibre disjoncteur (&gt; 15.0 A)</span>
+<span class="font-label-mono text-label-ui text-outline">• ID #ALT-9029</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-secondary text-[16px]">kitchen</span>
+                  Circuit A — Cuisine &amp; Électroménager (0x02)
+                </span>
+<span>•</span>
+<span class="text-secondary font-metric-md text-body-md font-semibold">15.42 A <span class="text-outline font-label-mono text-body-sm">(Seuil : 15.00 A)</span></span>
+<span>•</span>
+<span class="font-label-mono text-label-mono text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                  Aujourd'hui à 12:15:30 (il y a 2h)
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end lg:self-auto shrink-0">
+<div class="px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-mono text-label-ui font-semibold">
+              En attente
+            </div>
+<button class="btn-ack flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-tertiary-container hover:text-on-tertiary-container text-on-surface font-title-sm text-body-sm transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span>Acquitter</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-outline hover:text-on-surface transition-colors" title="Détails" type="button">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Alerte 4 (AVERTISSEMENT - Déjà Acquitté) -->
+<div class="alert-item group rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low p-space-md transition-all shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md opacity-85" data-device="0x01" data-severity="resolved">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">percent</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded font-label-ui text-label-ui font-medium bg-surface-container text-outline tracking-wider uppercase">Avertissement</span>
+<span class="font-title-sm text-title-sm text-on-surface-variant font-medium">Facteur de puissance dégradé (&lt; 0.85 cos φ)</span>
+<span class="font-label-mono text-label-ui text-outline">• ID #ALT-9011</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-body-sm text-body-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">developer_board</span>
+                  Module Principal PZEM-004T — TGBT Atelier (0x01)
+                </span>
+<span>•</span>
+<span class="font-metric-md text-body-md text-on-surface">0.81 cos φ <span class="font-label-mono text-body-sm">(Seuil min : 0.85)</span></span>
+<span>•</span>
+<span class="font-label-mono text-label-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                  Hier à 10:11:44
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end lg:self-auto shrink-0">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container/30 text-on-tertiary-container font-label-mono text-label-ui">
+<span class="material-symbols-outlined text-[16px] text-tertiary">done</span>
+<span>Acquitté à 10:30 (station.lan)</span>
+</div>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-outline transition-colors" title="Historique" type="button">
+<span class="material-symbols-outlined text-[20px]">history</span>
+</button>
+</div>
+</div>
+<!-- Alerte 5 (INFO / RÉSOLU) -->
+<div class="alert-item group rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low p-space-md transition-all shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md opacity-85" data-device="0x04" data-severity="resolved">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/30 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">sensors</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded font-label-ui text-label-ui font-semibold bg-tertiary-container text-on-tertiary-container tracking-wider uppercase">Résolu</span>
+<span class="font-title-sm text-title-sm text-on-surface font-medium">Rétablissement communication Modbus RTU / ESP32</span>
+<span class="font-label-mono text-label-ui text-outline">• ID #SYS-8994</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-body-sm text-body-sm text-outline">
+<span class="flex items-center gap-1 text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-secondary text-[16px]">lightbulb</span>
+                  Circuit C — Prises &amp; Éclairage Général (0x04)
+                </span>
+<span>•</span>
+<span class="font-metric-md text-body-md text-tertiary">Latence 12 ms, CRC OK</span>
+<span>•</span>
+<span class="font-label-mono text-label-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                  Hier à 08:00:15
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end lg:self-auto shrink-0">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-tertiary font-label-mono text-label-ui">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Liaison nominale</span>
+</div>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-outline transition-colors" title="Logs de trame" type="button">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CONTENU ONGLET 2 : Tableau des Règles & Seuils par appareil (initialement masqué ou alterné) -->
+<div class="hidden flex flex-col gap-space-md" id="panel-rules">
+<div class="rounded-xl bg-surface-container-low shadow-sm overflow-hidden">
+<div class="p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container/40">
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Matrice des Règles par Équipement</h3>
+<p class="font-body-sm text-body-sm text-outline">Configuration des seuils de déclenchement d'alertes MQTT et disjonction logicielle.</p>
+</div>
+<span class="font-label-mono text-label-mono text-secondary px-space-sm py-1 rounded bg-surface-container">4 circuits configurés</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/60 text-outline font-label-ui text-label-ui uppercase tracking-wider">
+<th class="py-3 px-space-md">Appareil surveillé</th>
+<th class="py-3 px-space-md">Puissance Max (W)</th>
+<th class="py-3 px-space-md">Tension Min / Max</th>
+<th class="py-3 px-space-md">Courant Max</th>
+<th class="py-3 px-space-md">Timeout Hors-ligne</th>
+<th class="py-3 px-space-md">Notifications</th>
+<th class="py-3 px-space-md text-center">État</th>
+<th class="py-3 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent font-body-md text-body-md">
+<!-- Règle 1 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">developer_board</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-body-md text-on-surface font-semibold">TGBT Atelier</span>
+<span class="font-label-mono text-label-ui text-outline">PZEM-004T • Modbus 0x01</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-error font-medium">4 500 W</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-on-surface">207 V — 253 V</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-secondary">20.0 A</td>
+<td class="py-3.5 px-space-md font-label-mono text-body-sm text-outline">&gt; 30 s</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-mono text-label-ui">MQTT</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-mono text-label-ui">Push</span>
+<span class="px-2 py-0.5 rounded bg-error/20 text-error font-label-mono text-label-ui">Buzzer</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full peer peer-checked:bg-tertiary after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-on-tertiary after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
+</label>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" title="Dupliquer" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Règle 2 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">kitchen</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-body-md text-on-surface font-semibold">Cuisine &amp; Électroménager</span>
+<span class="font-label-mono text-label-ui text-outline">Circuit A • Modbus 0x02</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-on-surface font-medium">3 500 W</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-on-surface">210 V — 250 V</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-secondary">16.0 A</td>
+<td class="py-3.5 px-space-md font-label-mono text-body-sm text-outline">&gt; 45 s</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-mono text-label-ui">Push</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full peer peer-checked:bg-tertiary after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-on-tertiary after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
+</label>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" title="Dupliquer" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Règle 3 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">heat_pump</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-body-md text-on-surface font-semibold">Pompe à Chaleur (PAC)</span>
+<span class="font-label-mono text-label-ui text-outline">Circuit B • Modbus 0x03</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-on-surface font-medium">3 000 W</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-on-surface">207 V — 250 V</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-secondary">15.0 A</td>
+<td class="py-3.5 px-space-md font-label-mono text-body-sm text-outline">&gt; 30 s</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-mono text-label-ui">Push</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-mono text-label-ui">Email</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full peer peer-checked:bg-tertiary after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-on-tertiary after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
+</label>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" title="Dupliquer" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Règle 4 -->
+<tr class="hover:bg-surface-container/60 transition-colors opacity-75">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[20px]">lightbulb</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-body-md text-on-surface font-semibold">Prises &amp; Éclairage Général</span>
+<span class="font-label-mono text-label-ui text-outline">Circuit C • Modbus 0x04</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-on-surface font-medium">2 000 W</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-on-surface">210 V — 245 V</td>
+<td class="py-3.5 px-space-md font-metric-md text-body-md text-secondary">10.0 A</td>
+<td class="py-3.5 px-space-md font-label-mono text-body-sm text-outline">&gt; 60 s</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-outline font-label-mono text-label-ui">Log Seul</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full peer peer-checked:bg-tertiary after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-outline after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
+</label>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" title="Modifier" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" title="Dupliquer" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Panneau Télémétrie & Visualisation des Dépassements Fréquents -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Sparkline & Profil de charge du pic critique -->
+<div class="lg:col-span-2 rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">show_chart</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Courbe du Dépassement Critique (Atelier — 14:00 - 14:30)</span>
+</div>
+<span class="font-label-mono text-label-mono text-error font-medium">Pic Max: 4 890 W (+8.6%)</span>
+</div>
+<!-- Visualisation SVG Inline (Waveform avec ligne de seuil rouge) -->
+<div class="relative w-full h-44 my-space-sm flex items-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 500 160">
+<defs>
+<lineargradient id="cyanGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#06B6D4" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#06B6D4" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Ligne de seuil 4500W en pointillé rouge -->
+<line stroke="#EF4444" stroke-dasharray="4 4" stroke-width="1.5" x1="0" x2="500" y1="45" y2="45"></line>
+<text fill="#EF4444" font-family="JetBrains Mono" font-size="10" font-weight="600" x="8" y="38">SEUIL PMAX CONTRACTUEL (4 500 W)</text>
+<!-- Trame de fond de puissance -->
+<path d="M0,130 Q50,125 100,120 T200,105 T280,80 T340,30 T390,20 T440,60 T500,75 L500,160 L0,160 Z" fill="url(#cyanGradient)"></path>
+<!-- Tracé principal de puissance active -->
+<path d="M0,130 Q50,125 100,120 T200,105 T280,80 T340,30 T390,20 T440,60 T500,75" fill="none" stroke="#4cd7f6" stroke-width="2.5"></path>
+<!-- Marqueur du point d'alerte critique -->
+<circle cx="390" cy="20" fill="#EF4444" r="5"></circle>
+<circle cx="390" cy="20" fill="#EF4444" opacity="0.3" r="10"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between text-outline font-label-mono text-label-ui border-t border-surface-container pt-2">
+<span>14:00 (3 100 W)</span>
+<span>14:10 (3 450 W)</span>
+<span class="text-error font-semibold">14:24:12 (Dépassement 4 890 W)</span>
+<span>14:30 (3 920 W)</span>
+</div>
+</div>
+<!-- Journal d'audit & Actions rapides de test -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Test d'Alerte &amp; Relais</span>
+<span class="material-symbols-outlined text-outline text-[18px]">security</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Simuler une condition d'alarme pour valider la chaîne de dispatch MQTT.</p>
+</div>
+<div class="flex flex-col gap-2.5 my-space-sm">
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-body-sm text-on-surface">Test Buzzer local ESP32</span>
+<span class="font-label-mono text-label-ui text-outline">Impulsion 500 ms</span>
+</div>
+<button class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-body-sm transition-colors" type="button">Déclencher</button>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-body-sm text-on-surface">Ping Broker MQTT</span>
+<span class="font-label-mono text-label-ui text-tertiary">mqtt://station.lan (8 ms)</span>
+</div>
+<button class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-body-sm transition-colors" type="button">Tester</button>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-body-sm text-error">Coupure Relais Dépassement</span>
+<span class="font-label-mono text-label-ui text-outline">Mode Fail-Safe : Armé</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">toggle_on</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-label-ui text-label-ui">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Dernière synchro des règles : Aujourd'hui à 14:00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL : Formulaire "Ajouter une règle de surveillance" -->
+<div class="fixed inset-0 z-50 bg-background/80 backdrop-blur-md hidden items-center justify-center p-4" id="modal-backdrop">
+<div class="w-full max-w-xl rounded-xl bg-surface-container-low shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
+<!-- En-tête Modal -->
+<div class="px-space-lg py-space-md bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_alert</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold leading-tight">Nouvelle règle de seuil</h2>
+<p class="font-body-sm text-body-sm text-outline">Définissez les conditions d'alerte et les canaux de notification.</p>
+</div>
+</div>
+<button class="p-1 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" id="btn-close-modal" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Corps du formulaire Modal -->
+<form class="p-space-lg flex flex-col gap-space-md overflow-y-auto max-h-[75vh]" id="form-new-rule">
+<!-- Sélection de l'appareil -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-ui text-label-ui uppercase tracking-wider text-outline">Appareil cible surveillé</label>
+<div class="relative">
+<select class="w-full px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none cursor-pointer">
+<option value="pzem-1">Module Principal PZEM-004T — TGBT Atelier (0x01)</option>
+<option value="pzem-2">Circuit A — Cuisine &amp; Électroménager (0x02)</option>
+<option value="pzem-3">Circuit B — Pompe à Chaleur (PAC) (0x03)</option>
+<option value="pzem-4">Circuit C — Prises &amp; Éclairage Général (0x04)</option>
+</select>
+</div>
+</div>
+<!-- Grandeur physique surveillée -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-ui text-label-ui uppercase tracking-wider text-outline">Type de mesure surveillée</label>
+<div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="metric_type" type="radio" value="power"/>
+<div class="p-2 rounded-lg bg-surface-container text-center text-outline peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:font-semibold transition-all">
+<span class="block font-label-mono text-label-mono">Puissance</span>
+<span class="text-xs opacity-70">(W)</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="metric_type" type="radio" value="voltage"/>
+<div class="p-2 rounded-lg bg-surface-container text-center text-outline peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:font-semibold transition-all">
+<span class="block font-label-mono text-label-mono">Tension</span>
+<span class="text-xs opacity-70">(V)</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="metric_type" type="radio" value="current"/>
+<div class="p-2 rounded-lg bg-surface-container text-center text-outline peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:font-semibold transition-all">
+<span class="block font-label-mono text-label-mono">Courant</span>
+<span class="text-xs opacity-70">(A)</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="metric_type" type="radio" value="pf"/>
+<div class="p-2 rounded-lg bg-surface-container text-center text-outline peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:font-semibold transition-all">
+<span class="block font-label-mono text-label-mono">Cos φ</span>
+<span class="text-xs opacity-70">(PF)</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="metric_type" type="radio" value="offline"/>
+<div class="p-2 rounded-lg bg-surface-container text-center text-outline peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:font-semibold transition-all">
+<span class="block font-label-mono text-label-mono">Liaison</span>
+<span class="text-xs opacity-70">(MQTT)</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Condition & Valeur seuil -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-ui text-label-ui uppercase tracking-wider text-outline">Condition</label>
+<select class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none">
+<option value="gt">Supérieur à (&gt;)</option>
+<option value="lt">Inférieur à (&lt;)</option>
+<option value="out_of_bounds">Hors plage tolérée</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-ui text-label-ui uppercase tracking-wider text-outline">Valeur de consigne</label>
+<div class="relative flex items-center">
+<input class="w-full px-space-md py-2.5 rounded-lg bg-surface-container font-metric-md text-metric-md text-on-surface focus:outline-none" type="text" value="4500"/>
+<span class="absolute right-3 font-label-mono text-label-mono text-secondary">Watts (W)</span>
+</div>
+</div>
+</div>
+<!-- Durée de temporisation & Gravité -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-ui text-label-ui uppercase tracking-wider text-outline">Temporisation transitoire</label>
+<select class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none">
+<option value="3">3 secondes (filtrage transitoire)</option>
+<option selected="" value="5">5 secondes (défaut recommandé)</option>
+<option value="15">15 secondes</option>
+<option value="30">30 secondes (dépassement prolongé)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-ui text-label-ui uppercase tracking-wider text-outline">Niveau de gravité</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="severity_level" type="radio" value="warning"/>
+<div class="flex items-center justify-center gap-1.5 p-2 rounded-lg bg-surface-container text-on-surface peer-checked:bg-secondary-container/20 peer-checked:text-secondary peer-checked:font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-ui text-label-ui uppercase">Avertissement</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="severity_level" type="radio" value="critical"/>
+<div class="flex items-center justify-center gap-1.5 p-2 rounded-lg bg-surface-container text-on-surface peer-checked:bg-error-container/40 peer-checked:text-error peer-checked:font-semibold">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-label-ui text-label-ui uppercase">Critique</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Canaux de transmission -->
+<div class="flex flex-col gap-2">
+<label class="font-label-ui text-label-ui uppercase tracking-wider text-outline">Canaux de notification &amp; Automatismes</label>
+<div class="flex flex-col gap-2 p-space-sm rounded-lg bg-surface-container">
+<label class="flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">rss_feed</span>
+<span class="font-body-md text-body-md text-on-surface">Publication Broker MQTT (<code class="font-label-mono text-label-ui text-secondary">alerts/power</code>)</span>
+</div>
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">notifications</span>
+<span class="font-body-md text-body-md text-on-surface">Notification Push Web &amp; Mobile</span>
+</div>
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">volume_up</span>
+<span class="font-body-md text-body-md text-on-surface">Signal sonore buzzer local (ESP32)</span>
+</div>
+<input class="w-4 h-4 rounded text-primary-container focus:ring-0" type="checkbox"/>
+</label>
+</div>
+</div>
+</form>
+<!-- Pied de Modal -->
+<div class="px-space-lg py-space-md bg-surface-container flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-body-md transition-colors" id="btn-cancel-modal" type="button">
+          Annuler
+        </button>
+<button class="px-space-md py-2 rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-title-sm text-body-md transition-all shadow-md" id="btn-save-rule" type="button">
+          Enregistrer la règle
+        </button>
+</div>
+</div>
+</div>
+<!-- Micro-interactions JS pour bascule d'onglets, acquittement et modale -->
+<script>
+    // Tab switching
+    const tabAlertsBtn = document.getElementById('tab-alerts-btn');
+    const tabRulesBtn = document.getElementById('tab-rules-btn');
+    const panelAlerts = document.getElementById('panel-alerts');
+    const panelRules = document.getElementById('panel-rules');
+    const alertsFilters = document.getElementById('alerts-filters');
+
+    tabAlertsBtn.addEventListener('click', () => {
+      tabAlertsBtn.className = "flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-title-sm text-title-sm shadow-sm transition-all";
+      tabRulesBtn.className = "flex items-center gap-space-sm px-space-md py-2 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container font-title-sm text-title-sm transition-all";
+      panelAlerts.classList.remove('hidden');
+      panelRules.classList.add('hidden');
+      alertsFilters.classList.remove('hidden');
+    });
+
+    tabRulesBtn.addEventListener('click', () => {
+      tabRulesBtn.className = "flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-title-sm text-title-sm shadow-sm transition-all";
+      tabAlertsBtn.className = "flex items-center gap-space-sm px-space-md py-2 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container font-title-sm text-title-sm transition-all";
+      panelAlerts.classList.add('hidden');
+      panelRules.classList.remove('hidden');
+      alertsFilters.classList.add('hidden');
+    });
+
+    // Modal Handling
+    const modal = document.getElementById('modal-backdrop');
+    const btnOpenModal = document.getElementById('btn-open-modal');
+    const btnCloseModal = document.getElementById('btn-close-modal');
+    const btnCancelModal = document.getElementById('btn-cancel-modal');
+    const btnSaveRule = document.getElementById('btn-save-rule');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    btnOpenModal.addEventListener('click', openModal);
+    btnCloseModal.addEventListener('click', closeModal);
+    btnCancelModal.addEventListener('click', closeModal);
+    btnSaveRule.addEventListener('click', () => {
+      closeModal();
+    });
+
+    // Individual Acknowledge buttons
+    document.querySelectorAll('.btn-ack').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const alertItem = this.closest('.alert-item');
+        alertItem.classList.add('opacity-75');
+        this.outerHTML = `
+          <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container/30 text-on-tertiary-container font-label-mono text-label-ui">
+            <span class="material-symbols-outlined text-[16px] text-tertiary">done</span>
+            <span>Acquitté à l'instant</span>
+          </div>
+        `;
+      });
+    });
+
+    // Acknowledge All button
+    document.getElementById('btn-ack-all').addEventListener('click', () => {
+      document.querySelectorAll('.btn-ack').forEach(btn => {
+        btn.click();
+      });
+    });
+
+    // Live search & filters
+    const searchInput = document.getElementById('search-incidents');
+    const filterSeverity = document.getElementById('filter-severity');
+    const filterDevice = document.getElementById('filter-device');
+
+    function applyFilters() {
+      const query = (searchInput.value || '').toLowerCase();
+      const sev = filterSeverity.value;
+      const dev = filterDevice.value;
+
+      document.querySelectorAll('.alert-item').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        const itemSev = item.getAttribute('data-severity');
+        const itemDev = item.getAttribute('data-device');
+
+        const matchQuery = text.includes(query);
+        const matchSev = sev === 'all' || itemSev === sev;
+        const matchDev = dev === 'all' || itemDev === dev;
+
+        if (matchQuery && matchSev && matchDev) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+    filterSeverity.addEventListener('change', applyFilters);
+    filterDevice.addEventListener('change', applyFilters);
+  </script>
+</div></main></div></body></html>

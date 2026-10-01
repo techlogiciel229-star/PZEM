@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-container":"#03b5d3","outline-variant":"#434655","surface-container-highest":"#2d3449","on-tertiary-container":"#bdffdc","background":"#0b1326","tertiary-fixed-dim":"#45dfa4","on-primary-fixed-variant":"#003ea8","surface-tint":"#b4c5ff","on-surface":"#dae2fd","surface":"#0b1326","surface-container-high":"#222a3d","primary-container":"#2563eb","tertiary-container":"#007d57","tertiary":"#45dfa4","inverse-surface":"#dae2fd","on-primary":"#002a78","secondary-fixed-dim":"#4cd7f6","on-tertiary":"#003825","on-error":"#690005","error-container":"#93000a","surface-variant":"#2d3449","inverse-primary":"#0053db","tertiary-fixed":"#68fcbf","error":"#ffb4ab","outline":"#8d90a0","secondary":"#4cd7f6","surface-container-lowest":"#060e20","on-secondary-container":"#00424e","on-tertiary-fixed":"#002114","on-secondary-fixed-variant":"#004e5c","surface-bright":"#31394d","on-surface-variant":"#c3c6d7","primary":"#b4c5ff","surface-dim":"#0b1326","on-background":"#dae2fd","on-secondary-fixed":"#001f26","on-error-container":"#ffdad6","on-primary-fixed":"#00174b","surface-container":"#171f33","inverse-on-surface":"#283044","secondary-fixed":"#acedff","on-tertiary-fixed-variant":"#005137","on-secondary":"#003640","primary-fixed-dim":"#b4c5ff","surface-container-low":"#131b2e","primary-fixed":"#dbe1ff","on-primary-container":"#eeefff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-lg":"1.5rem","gutter":"1.25rem","space-md":"1rem","margin":"1.5rem","space-xl":"2rem","margin-mobile":"1rem"},"fontFamily":{"headline-md":["Inter"],"label-ui":["Inter"],"metric-xl":["JetBrains Mono"],"display-lg":["JetBrains Mono"],"headline-lg":["Inter"],"title-sm":["Inter"],"display-md":["JetBrains Mono"],"body-sm":["Inter"],"label-mono":["JetBrains Mono"],"body-md":["Inter"],"metric-md":["JetBrains Mono"]},"fontSize":{"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-ui":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"500"}],"metric-xl":["28px",{"lineHeight":"36px","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display-md":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-mono":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"metric-md":["18px",{"lineHeight":"24px","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/90 backdrop-blur-xl"><div class="flex items-center gap-space-sm"><img alt="PZEM Monitor Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPOsJDoZGojHV_2uzhoiMBedxVbp5nUpAClHFVedMubXKVvYGkVklCzo7OC9nP7CHoBhOIxTq1VQOVF-5SR0EDyW5SImgkpCsye_220NSS6dcssd2YRVT7GlfhMvRFywDhZQ4h39MUl4dYvcZCwMmXEKbfN_6ixVVV9jEjLPc7ame0q406aDXtJF7xQXUC40c694mCvBkWSkiolo5_CmlBj4ElMAMrUNqGp2sPclxLj_9aGjGzUy2sC4A"/><span class="font-title-sm text-title-sm text-on-surface tracking-tight font-semibold">PZEM Monitor</span></div><div class="flex items-center gap-space-xs px-space-xs py-0.5 rounded-full bg-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-ui text-label-ui text-tertiary uppercase">En ligne</span></div></div><div class="px-space-md py-space-sm"><p class="font-label-ui text-label-ui text-outline uppercase tracking-wider px-space-xs mb-space-xs">Supervision IoT</p><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="vue-densemble" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-title-sm text-title-sm">Vue d'ensemble</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="metriques-en-direct" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">bolt</span><span class="font-title-sm text-title-sm">Métriques en direct</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="historique-et-analyse" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">timeline</span><span class="font-title-sm text-title-sm">Historique &amp; Analyse</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="alertes-et-seuils" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-title-sm text-title-sm">Alertes &amp; Seuils</span></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-mono text-label-mono">1</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tarifs-et-facturation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-title-sm text-title-sm">Tarifs &amp; Facturation</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuration-capteurs" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">settings_input_component</span><span class="font-title-sm text-title-sm">Configuration capteurs</span></div></a></nav></div></div><div class="flex flex-col gap-space-sm p-space-md bg-surface-container-lowest/60"><div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-ui text-label-ui text-outline uppercase">Liaison MQTT / ESP32</span><div class="flex items-center gap-1.5"><span class="inline-block h-2 w-2 rounded-full bg-tertiary"></span><span class="font-label-mono text-label-mono text-tertiary">12 ms</span></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">Firmware PZEM</span><span class="font-label-mono text-label-mono text-secondary">v2.4.1</span></div></div><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-title-sm text-body-md text-on-surface leading-tight font-medium">Ingénieur Énergie</span><span class="font-body-sm text-body-sm text-outline">Station #01</span></div></div><button class="text-outline hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-low/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm bg-surface-container px-space-md py-1.5 rounded-lg"><span class="material-symbols-outlined text-secondary text-[20px]">memory</span><select class="bg-transparent font-title-sm text-body-md text-on-surface focus:outline-none cursor-pointer"><option class="bg-surface-container-high text-on-surface" value="pzem-1">PZEM-004T #1 - Tableau Principal</option><option class="bg-surface-container-high text-on-surface" value="pzem-2">PZEM-004T #2 - Pompe à chaleur</option><option class="bg-surface-container-high text-on-surface" value="pzem-3">PZEM-016 #3 - Onduleur Solaire</option></select></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-high p-1 rounded-lg"><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase bg-primary-container text-on-primary-container font-semibold transition-colors" type="button">Temps réel</button><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">24h</button><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">7j</button><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">30j</button></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[18px]">schedule</span><span class="font-label-mono text-label-mono text-on-surface">UTC+01:00 • 14:38:22</span></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">download</span><span class="font-body-sm text-body-sm font-medium">Export CSV</span></button><button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Zone Contenu Principal Paramètres & Administration -->
+<div class="p-gutter-lg flex flex-col gap-space-xl">
+<!-- 1. En-tête de page & Breadcrumb -->
+<header class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-outline font-label-ui text-label-ui uppercase tracking-widest">
+<span>Supervision</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary">Système &amp; Administration</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Paramètres &amp; Administration</h1>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-ui text-label-ui text-tertiary font-semibold uppercase tracking-wider">Session Administrateur déverrouillée</span>
+</div>
+</div>
+</div>
+<!-- Boutons d'action globale -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-title-sm text-body-md font-medium flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Réinitialiser</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container hover:bg-inverse-primary transition-all font-title-sm text-body-md font-medium flex items-center gap-space-xs shadow-md" id="btn-save-settings" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Enregistrer les modifications</span>
+</button>
+</div>
+</div>
+<!-- Navigation rapide par onglets / ancres -->
+<nav class="flex items-center gap-space-xs overflow-x-auto pb-1 bg-surface-container-lowest/80 p-1 rounded-xl">
+<a class="nav-tab px-space-md py-2 rounded-lg font-title-sm text-body-md text-on-primary-container bg-primary-container flex items-center gap-space-xs whitespace-nowrap transition-colors" href="#section-tarifs">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span>1. Tarifs &amp; Facturation</span>
+</a>
+<a class="nav-tab px-space-md py-2 rounded-lg font-title-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-space-xs whitespace-nowrap transition-colors" href="#section-alertes">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+<span>2. Notifications &amp; Alertes</span>
+</a>
+<a class="nav-tab px-space-md py-2 rounded-lg font-title-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-space-xs whitespace-nowrap transition-colors" href="#section-rbac">
+<span class="material-symbols-outlined text-[18px]">group</span>
+<span>3. Utilisateurs &amp; RBAC</span>
+</a>
+<a class="nav-tab px-space-md py-2 rounded-lg font-title-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-space-xs whitespace-nowrap transition-colors" href="#section-profil">
+<span class="material-symbols-outlined text-[18px]">shield_person</span>
+<span>4. Profil &amp; Sécurité</span>
+</a>
+</nav>
+</header>
+<!-- 2. SECTION 1 : Barème Tarifaire & Facturation Électrique -->
+<section class="flex flex-col gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-sm" id="section-tarifs">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm bg-surface-container/30 px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">1. Barème Tarifaire &amp; Facturation Électrique</h2>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-ui text-label-ui uppercase tracking-wider font-semibold">Réservé Administrateur</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Configuration des coefficients monétaires pour conversion temps réel kWh vers devise locale.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-label-mono text-label-mono bg-surface-container px-space-sm py-1 rounded">
+<span>Devise système :</span>
+<span class="text-tertiary font-semibold">FCFA (XOF)</span>
+</div>
+</div>
+<!-- Paramètres globaux de tarification -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Prix base kWh -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-md rounded-lg">
+<label class="font-label-ui text-label-ui uppercase text-outline flex items-center justify-between" for="prix-kwh">
+<span>Prix contractuel de base</span>
+<span class="material-symbols-outlined text-[16px] text-outline">info</span>
+</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-space-md py-2 focus-within:bg-surface-container-high transition-colors">
+<input class="bg-transparent font-metric-xl text-metric-xl text-on-surface w-full focus:outline-none" id="prix-kwh" step="0.1" type="number" value="79.0"/>
+<span class="font-label-mono text-label-mono text-secondary whitespace-nowrap pl-space-xs">FCFA / kWh</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Tarif conventionnel monophasé / triphasé standard.</span>
+</div>
+<!-- Date d'effet -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-md rounded-lg">
+<label class="font-label-ui text-label-ui uppercase text-outline flex items-center justify-between" for="date-effet">
+<span>Date d'effet / Révision</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">event_available</span>
+</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-space-md py-2.5">
+<input class="bg-transparent font-metric-md text-metric-md text-on-surface w-full focus:outline-none cursor-pointer [color-scheme:dark]" id="date-effet" type="date" value="2025-06-01"/>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Application aux cumuls de registres Modbus ultérieurs.</span>
+</div>
+<!-- Puissance Souscrite -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-md rounded-lg">
+<label class="font-label-ui text-label-ui uppercase text-outline flex items-center justify-between" for="puissance-souscrite">
+<span>Puissance souscrite TGBT</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">speed</span>
+</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-space-md py-2.5">
+<select class="bg-transparent font-metric-md text-metric-md text-on-surface w-full focus:outline-none cursor-pointer" id="puissance-souscrite">
+<option class="bg-surface-container-high text-on-surface" value="18">18 kVA (30A Tri)</option>
+<option class="bg-surface-container-high text-on-surface" selected="" value="30">30 kVA (60A Tri)</option>
+<option class="bg-surface-container-high text-on-surface" value="36">36 kVA (80A Tri)</option>
+<option class="bg-surface-container-high text-on-surface" value="60">60 kVA (100A Tri)</option>
+</select>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Seuil déclencheur de pénalité de dépassement kVA.</span>
+</div>
+</div>
+<!-- Tranches horaires et Paliers -->
+<div class="flex flex-col gap-space-md bg-surface-container/60 p-space-md rounded-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-tranches" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface">Activer la tarification par tranches horaires dynamiques</span>
+<p class="font-body-sm text-body-sm text-outline">Modulation automatique du calcul selon l'horodatage RTC de la station PZEM.</p>
+</div>
+</div>
+<button class="self-start sm:self-auto px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-ui text-label-ui uppercase tracking-wider flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Ajouter une tranche horaire</span>
+</button>
+</div>
+<!-- Tableau des tranches -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-ui text-label-ui uppercase tracking-wider">
+<th class="py-2.5 px-space-md">Désignation</th>
+<th class="py-2.5 px-space-md">Plage horaire</th>
+<th class="py-2.5 px-space-md">Taux unitaire</th>
+<th class="py-2.5 px-space-md">Poids moyen</th>
+<th class="py-2.5 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/30">
+<!-- Ligne 1 : HC -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-md flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-semibold text-on-surface">Heures Creuses (HC)</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-mono bg-tertiary-container text-on-tertiary-container uppercase">Économique</span>
+</td>
+<td class="py-3 px-space-md font-label-mono text-label-mono text-secondary">22h00 → 06h00</td>
+<td class="py-3 px-space-md font-metric-md text-metric-md text-on-surface">58.0 <span class="font-label-mono text-label-mono text-outline">FCFA/kWh</span></td>
+<td class="py-3 px-space-md font-label-mono text-label-mono text-outline">28.4% de la conso</td>
+<td class="py-3 px-space-md text-right">
+<button class="text-outline hover:text-on-surface p-1" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+</td>
+</tr>
+<!-- Ligne 2 : HP -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-md flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-semibold text-on-surface">Heures Pleines (HP)</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-mono bg-surface-container-high text-on-surface-variant uppercase">Régime Standard</span>
+</td>
+<td class="py-3 px-space-md font-label-mono text-label-mono text-secondary">06h00 → 18h00</td>
+<td class="py-3 px-space-md font-metric-md text-metric-md text-on-surface">79.0 <span class="font-label-mono text-label-mono text-outline">FCFA/kWh</span></td>
+<td class="py-3 px-space-md font-label-mono text-label-mono text-outline">54.1% de la conso</td>
+<td class="py-3 px-space-md text-right">
+<button class="text-outline hover:text-on-surface p-1" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+</td>
+</tr>
+<!-- Ligne 3 : HPT -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-space-md flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-semibold text-on-surface">Heures de Pointe (HPT)</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-mono bg-error-container text-on-error-container uppercase">Majoré</span>
+</td>
+<td class="py-3 px-space-md font-label-mono text-label-mono text-secondary">18h00 → 22h00</td>
+<td class="py-3 px-space-md font-metric-md text-metric-md text-secondary">105.0 <span class="font-label-mono text-label-mono text-outline">FCFA/kWh</span></td>
+<td class="py-3 px-space-md font-label-mono text-label-mono text-outline">17.5% de la conso</td>
+<td class="py-3 px-space-md text-right">
+<button class="text-outline hover:text-on-surface p-1" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">calculate</span>
+<span>Le coût moyen pondéré est réévalué chaque minute d'après les impulsions d'énergie actives du PZEM et transmis au broker MQTT.</span>
+</div>
+</div>
+</section>
+<!-- 3. SECTION 2 : Canaux de Notification & Alertes -->
+<section class="flex flex-col gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-sm" id="section-alertes">
+<div class="flex items-center gap-space-sm pb-space-sm bg-surface-container/30 px-space-md py-space-sm rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">crisis_alert</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">2. Canaux de Notification &amp; Alertes</h2>
+<p class="font-body-sm text-body-sm text-outline">Routage télémétrique multi-canal pour astreintes et dysfonctionnements du réseau électrique.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Passerelle Email SMTP -->
+<div class="flex flex-col justify-between gap-space-md bg-surface-container p-space-md rounded-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface font-title-sm text-title-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">mail</span>
+<span>Passerelle Email (SMTP/TLS)</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Expédition instantanée de synthèses de déclenchement différentiel et coupures.</p>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-ui text-label-ui uppercase text-outline">Destinataires actifs</label>
+<div class="flex flex-wrap items-center gap-space-xs p-space-xs bg-surface-container-lowest rounded-lg">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-mono text-label-mono">
+<span>alertes.energie@station.lan</span>
+<button class="text-outline hover:text-error ml-1" type="button">×</button>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-mono text-label-mono">
+<span>superviseur@industrie.com</span>
+<button class="text-outline hover:text-error ml-1" type="button">×</button>
+</span>
+</div>
+<div class="flex gap-space-xs mt-1">
+<input class="bg-surface-container-lowest font-body-sm text-body-sm text-on-surface px-space-md py-1.5 rounded-lg flex-1 focus:outline-none" placeholder="Ajouter une adresse (ex: astreinte@site.sn)..." type="email"/>
+<button class="px-space-md py-1.5 bg-surface-container-high hover:bg-surface-bright text-on-surface text-label-ui font-label-ui uppercase rounded-lg" type="button">Ajouter</button>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-outline">Gravité minimale :</span>
+<span class="font-label-ui text-label-ui uppercase px-2 py-0.5 rounded bg-surface-container-highest text-secondary">Avertissements &amp; Critiques</span>
+</div>
+</div>
+<!-- Bot Telegram Astreinte IoT -->
+<div class="flex flex-col justify-between gap-space-md bg-surface-container p-space-md rounded-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface font-title-sm text-title-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">send</span>
+<span>Bot Telegram Astreinte IoT</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Transmission des alertes push d'urgence via API Telegram BotFather.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<div>
+<label class="font-label-ui text-label-ui uppercase text-outline">Handle du Bot</label>
+<input class="w-full bg-surface-container-lowest font-label-mono text-label-mono text-tertiary px-space-sm py-1.5 rounded-lg focus:outline-none" readonly="" type="text" value="@PzemAlertBot"/>
+</div>
+<div>
+<label class="font-label-ui text-label-ui uppercase text-outline">Canal ID Astreinte</label>
+<input class="w-full bg-surface-container-lowest font-label-mono text-label-mono text-on-surface px-space-sm py-1.5 rounded-lg focus:outline-none" readonly="" type="text" value="-100192847502"/>
+</div>
+</div>
+<div>
+<label class="font-label-ui text-label-ui uppercase text-outline">API Bot Token</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-space-sm py-1">
+<input class="w-full bg-transparent font-label-mono text-label-mono text-on-surface focus:outline-none" id="telegram-token" readonly="" type="password" value="6192849182:AAFlw9zK2bX9d8k14jQlwkZ0"/>
+<button class="text-outline hover:text-on-surface px-1" id="toggle-token" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-secondary font-title-sm text-body-md font-medium flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+<span>Envoyer un message de test Telegram</span>
+</button>
+</div>
+</div>
+<!-- Matrice de routage des alertes -->
+<div class="flex flex-col gap-space-sm bg-surface-container/40 p-space-md rounded-lg">
+<h3 class="font-title-sm text-title-sm text-on-surface">Matrice de routage des événements critiques</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-ui text-label-ui uppercase tracking-wider">
+<th class="py-2 px-space-md">Événement télémétrique surveillé</th>
+<th class="py-2 px-space-md text-center">Canal Email</th>
+<th class="py-2 px-space-md text-center">Canal Telegram</th>
+<th class="py-2 px-space-md text-right">Dernier déclenchement</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/20 font-body-sm text-body-sm">
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-space-md flex items-center gap-space-xs text-on-surface font-medium">
+<span class="material-symbols-outlined text-secondary text-[18px]">bolt</span>
+<span>Dépassement de puissance contractuelle (&gt; 4.5 kW)</span>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<input checked="" class="accent-primary-container h-4 w-4 rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<input checked="" class="accent-primary-container h-4 w-4 rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-space-md text-right font-label-mono text-label-mono text-outline">Hier, 19:42:10</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-space-md flex items-center gap-space-xs text-on-surface font-medium">
+<span class="material-symbols-outlined text-secondary text-[18px]">trending_down</span>
+<span>Sous-tension réseau secteur (&lt; 207 V RMS)</span>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<input checked="" class="accent-primary-container h-4 w-4 rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<input checked="" class="accent-primary-container h-4 w-4 rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-space-md text-right font-label-mono text-label-mono text-outline">Il y a 3 jours</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-space-md flex items-center gap-space-xs text-on-surface font-medium">
+<span class="material-symbols-outlined text-error text-[18px]">link_off</span>
+<span>Décrochage liaison Modbus / ESP32 (&gt; 15s)</span>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<input checked="" class="accent-primary-container h-4 w-4 rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<input checked="" class="accent-primary-container h-4 w-4 rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-space-md text-right font-label-mono text-label-mono text-tertiary">Aucun (Nominal)</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-space-md flex items-center gap-space-xs text-on-surface font-medium">
+<span class="material-symbols-outlined text-outline text-[18px]">summarize</span>
+<span>Rapport quotidien de synthèse énergétique (23h59)</span>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<input checked="" class="accent-primary-container h-4 w-4 rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<input class="accent-primary-container h-4 w-4 rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-space-md text-right font-label-mono text-label-mono text-outline">Hier, 23:59:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- 4. SECTION 3 : Gestion des Utilisateurs & Rôles (RBAC) -->
+<section class="flex flex-col gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-sm" id="section-rbac">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm bg-surface-container/30 px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">manage_accounts</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">3. Gestion des Utilisateurs &amp; Rôles (RBAC)</h2>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-ui text-label-ui uppercase tracking-wider font-semibold">Réservé Administrateur</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Contrôle d'accès basé sur les rôles aux registres Modbus et métriques.</p>
+</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary-container hover:bg-inverse-primary text-on-primary-container font-title-sm text-body-md font-medium flex items-center gap-space-xs transition-colors self-start sm:self-auto" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Inviter un utilisateur</span>
+</button>
+</div>
+<!-- Tableau des Utilisateurs -->
+<div class="overflow-x-auto bg-surface-container rounded-lg">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-ui text-label-ui uppercase tracking-wider">
+<th class="py-3 px-space-md">Utilisateur</th>
+<th class="py-3 px-space-md">Email</th>
+<th class="py-3 px-space-md">Rôle &amp; Privilèges</th>
+<th class="py-3 px-space-md">Statut</th>
+<th class="py-3 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/20 font-body-sm text-body-sm">
+<!-- Utilisateur 1 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-on-primary text-label-ui font-label-ui">AD</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Abdoulaye Diallo (Vous)</span>
+<span class="text-outline text-[11px]">Ingénieur Énergie</span>
+</div>
+</td>
+<td class="py-3 px-space-md font-label-mono text-label-mono text-on-surface-variant">ingenieur.energie@station.lan</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-ui text-label-ui font-semibold">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Administrateur</span>
+</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 text-tertiary font-label-ui text-label-ui uppercase">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<span>En ligne</span>
+</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-1 rounded text-outline hover:text-on-surface" title="Modifier profil" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded text-outline hover:text-secondary" title="Audit sécurité" type="button"><span class="material-symbols-outlined text-[18px]">verified_user</span></button>
+</div>
+</td>
+</tr>
+<!-- Utilisateur 2 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-on-surface text-label-ui font-label-ui">MC</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Technicien Maintenance CVC</span>
+<span class="text-outline text-[11px]">Station de Froid</span>
+</div>
+</td>
+<td class="py-3 px-space-md font-label-mono text-label-mono text-on-surface-variant">maintenance.cvc@station.lan</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-ui text-label-ui">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>Lecteur</span>
+</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 text-outline font-label-ui text-label-ui uppercase">
+<span class="h-2 w-2 rounded-full bg-outline"></span>
+<span>Actif (2h)</span>
+</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-1 rounded text-outline hover:text-on-surface" title="Modifier" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded text-outline hover:text-error" title="Supprimer" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Utilisateur 3 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-on-surface text-label-ui font-label-ui">RF</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Responsable Facturation &amp; Audit</span>
+<span class="text-outline text-[11px]">Direction Financière</span>
+</div>
+</td>
+<td class="py-3 px-space-md font-label-mono text-label-mono text-on-surface-variant">compta.audit@station.lan</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-ui text-label-ui">
+<span class="material-symbols-outlined text-[14px]">table_chart</span>
+<span>Lecteur</span>
+</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 text-outline font-label-ui text-label-ui uppercase">
+<span class="h-2 w-2 rounded-full bg-outline"></span>
+<span>Actif (hier)</span>
+</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-1 rounded text-outline hover:text-on-surface" title="Modifier" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded text-outline hover:text-error" title="Supprimer" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Utilisateur 4 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-on-surface text-label-ui font-label-ui">SE</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Stagiaire Exploitation</span>
+<span class="text-outline text-[11px]">Pôle Télémesure</span>
+</div>
+</td>
+<td class="py-3 px-space-md font-label-mono text-label-mono text-on-surface-variant">stage.iot@station.lan</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-ui text-label-ui">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>Lecteur</span>
+</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 text-secondary font-label-ui text-label-ui uppercase">
+<span class="h-2 w-2 rounded-full bg-secondary"></span>
+<span>En attente</span>
+</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-1 rounded text-secondary hover:text-on-surface" title="Renvoyer l'invitation" type="button"><span class="material-symbols-outlined text-[18px]">forward_to_inbox</span></button>
+<button class="p-1 rounded text-outline hover:text-error" title="Annuler" type="button"><span class="material-symbols-outlined text-[18px]">close</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Note de gouvernance -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-start gap-space-sm text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">policy</span>
+<span>
+<strong class="text-on-surface">Règle de gouvernance de sécurité :</strong> Les comptes avec profil « Lecteur » bénéficient d'un accès strictement consultatif. Ils ne possèdent aucun privilège de réinitialisation de registre Modbus (Reset kWh matériel), ni d'altération des seuils d'alarmes critiques ou de tarification.
+        </span>
+</div>
+</section>
+<!-- 5. SECTION 4 : Profil Opérateur & Sécurité de Session -->
+<section class="flex flex-col gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-sm" id="section-profil">
+<div class="flex items-center gap-space-sm pb-space-sm bg-surface-container/30 px-space-md py-space-sm rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">security</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">4. Profil Opérateur &amp; Clés d'API</h2>
+<p class="font-body-sm text-body-sm text-outline">Identifiants de l'ingénieur en charge, double facteur et point de raccordement MQTT.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Carte Profil -->
+<div class="flex flex-col justify-between gap-space-md bg-surface-container p-space-md rounded-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[36px]">engineering</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-headline-md text-on-surface leading-tight">Abdoulaye Diallo</span>
+<span class="font-body-sm text-body-sm text-secondary">Ingénieur Énergie Certifié</span>
+<span class="font-label-mono text-label-mono text-outline">Station #01 - TGBT Principal</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline">Authentification 2FA :</span>
+<span class="text-tertiary flex items-center gap-1 font-label-ui text-label-ui uppercase font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>TOTP Activé</span>
+</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline">Dernière connexion :</span>
+<span class="font-label-mono text-label-mono text-on-surface">Aujourd'hui à 14:12</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline">IP passerelle autorisée :</span>
+<span class="font-label-mono text-label-mono text-on-surface">192.168.1.100</span>
+</div>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-body-md font-medium transition-colors flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">phonelink_lock</span>
+<span>Gérer l'application TOTP</span>
+</button>
+</div>
+<!-- Changement Mot de Passe -->
+<div class="flex flex-col justify-between gap-space-md bg-surface-container p-space-md rounded-lg">
+<div class="flex flex-col gap-space-sm">
+<h3 class="font-title-sm text-title-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[20px]">password</span>
+<span>Changer le mot de passe</span>
+</h3>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-ui text-label-ui uppercase text-outline">Mot de passe actuel</label>
+<input class="w-full bg-surface-container-lowest font-body-sm text-body-sm text-on-surface px-space-md py-1.5 rounded-lg focus:outline-none" type="password" value="current-super-secret"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-ui text-label-ui uppercase text-outline">Nouveau mot de passe</label>
+<input class="w-full bg-surface-container-lowest font-body-sm text-body-sm text-on-surface px-space-md py-1.5 rounded-lg focus:outline-none" placeholder="Minimum 12 caractères..." type="password"/>
+</div>
+<!-- Jauge de complexité -->
+<div class="flex flex-col gap-1 mt-1">
+<div class="flex items-center justify-between font-label-ui text-label-ui">
+<span class="text-outline">Complexité :</span>
+<span class="text-tertiary">Forte (Chiffres + Caractères spéciaux)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-tertiary w-4/5"></div>
+</div>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-body-md font-medium transition-colors flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">key</span>
+<span>Mettre à jour le mot de passe</span>
+</button>
+</div>
+<!-- Clés d'API & Broker MQTT -->
+<div class="flex flex-col justify-between gap-space-md bg-surface-container p-space-md rounded-lg">
+<div class="flex flex-col gap-space-sm">
+<h3 class="font-title-sm text-title-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+<span>Liaison Passerelle MQTT / ESP32</span>
+</h3>
+<div>
+<label class="font-label-ui text-label-ui uppercase text-outline">URL du Broker MQTT (Local)</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-space-md py-1.5 mt-1">
+<input class="w-full bg-transparent font-label-mono text-label-mono text-on-surface focus:outline-none" readonly="" type="text" value="mqtt://broker.station.lan:1883"/>
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span>
+</div>
+</div>
+<div>
+<label class="font-label-ui text-label-ui uppercase text-outline">Jeton d'ingestion API (Bearer)</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-space-md py-1.5 mt-1">
+<input class="w-full bg-transparent font-label-mono text-label-mono text-secondary focus:outline-none" id="api-token" readonly="" type="password" value="pzem_live_9f83ac9201948ba9e102f8c"/>
+<button class="text-outline hover:text-on-surface p-1" id="btn-copy-token" title="Copier la clé" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex gap-space-xs">
+<button class="flex-1 py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-body-md font-medium transition-colors flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Régénérer</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-secondary font-title-sm text-body-md font-medium transition-colors" title="Documentation API" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Interactions de l'écran des paramètres
+  document.addEventListener('DOMContentLoaded', () => {
+    // Bouton de basculement du jeton Telegram
+    const toggleTokenBtn = document.getElementById('toggle-token');
+    const tokenInput = document.getElementById('telegram-token');
+    if (toggleTokenBtn && tokenInput) {
+      toggleTokenBtn.addEventListener('click', () => {
+        if (tokenInput.type === 'password') {
+          tokenInput.type = 'text';
+          toggleTokenBtn.querySelector('span').textContent = 'visibility_off';
+        } else {
+          tokenInput.type = 'password';
+          toggleTokenBtn.querySelector('span').textContent = 'visibility';
+        }
+      });
+    }
+
+    // Copie de clé API
+    const copyTokenBtn = document.getElementById('btn-copy-token');
+    const apiTokenInput = document.getElementById('api-token');
+    if (copyTokenBtn && apiTokenInput) {
+      copyTokenBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(apiTokenInput.value);
+        const icon = copyTokenBtn.querySelector('span');
+        icon.textContent = 'check';
+        setTimeout(() => {
+          icon.textContent = 'content_copy';
+        }, 2000);
+      });
+    }
+
+    // Sauvegarde avec effet visuel sur le bouton
+    const saveBtn = document.getElementById('btn-save-settings');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        const originalContent = saveBtn.innerHTML;
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Enregistrement en cours...</span>';
+        saveBtn.classList.add('opacity-80');
+        setTimeout(() => {
+          saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span><span>Modifications appliquées !</span>';
+          setTimeout(() => {
+            saveBtn.innerHTML = originalContent;
+            saveBtn.classList.remove('opacity-80');
+          }, 2000);
+        }, 800);
+      });
+    }
+
+    // Gestion du surlignage des sous-onglets
+    const tabs = document.querySelectorAll('.nav-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-primary-container', 'text-on-primary-container');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('bg-primary-container', 'text-on-primary-container');
+        tab.classList.remove('text-on-surface-variant');
+      });
+    });
+  });
+</script></main></div></body></html>

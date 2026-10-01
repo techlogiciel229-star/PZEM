@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-container":"#03b5d3","outline-variant":"#434655","surface-container-highest":"#2d3449","on-tertiary-container":"#bdffdc","background":"#0b1326","tertiary-fixed-dim":"#45dfa4","on-primary-fixed-variant":"#003ea8","surface-tint":"#b4c5ff","on-surface":"#dae2fd","surface":"#0b1326","surface-container-high":"#222a3d","primary-container":"#2563eb","tertiary-container":"#007d57","tertiary":"#45dfa4","inverse-surface":"#dae2fd","on-primary":"#002a78","secondary-fixed-dim":"#4cd7f6","on-tertiary":"#003825","on-error":"#690005","error-container":"#93000a","surface-variant":"#2d3449","inverse-primary":"#0053db","tertiary-fixed":"#68fcbf","error":"#ffb4ab","outline":"#8d90a0","secondary":"#4cd7f6","surface-container-lowest":"#060e20","on-secondary-container":"#00424e","on-tertiary-fixed":"#002114","on-secondary-fixed-variant":"#004e5c","surface-bright":"#31394d","on-surface-variant":"#c3c6d7","primary":"#b4c5ff","surface-dim":"#0b1326","on-background":"#dae2fd","on-secondary-fixed":"#001f26","on-error-container":"#ffdad6","on-primary-fixed":"#00174b","surface-container":"#171f33","inverse-on-surface":"#283044","secondary-fixed":"#acedff","on-tertiary-fixed-variant":"#005137","on-secondary":"#003640","primary-fixed-dim":"#b4c5ff","surface-container-low":"#131b2e","primary-fixed":"#dbe1ff","on-primary-container":"#eeefff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-lg":"1.5rem","gutter":"1.25rem","space-md":"1rem","margin":"1.5rem","space-xl":"2rem","margin-mobile":"1rem"},"fontFamily":{"headline-md":["Inter"],"label-ui":["Inter"],"metric-xl":["JetBrains Mono"],"display-lg":["JetBrains Mono"],"headline-lg":["Inter"],"title-sm":["Inter"],"display-md":["JetBrains Mono"],"body-sm":["Inter"],"label-mono":["JetBrains Mono"],"body-md":["Inter"],"metric-md":["JetBrains Mono"]},"fontSize":{"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-ui":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"500"}],"metric-xl":["28px",{"lineHeight":"36px","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display-md":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-mono":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"metric-md":["18px",{"lineHeight":"24px","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/90 backdrop-blur-xl"><div class="flex items-center gap-space-sm"><img alt="PZEM Monitor Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPOsJDoZGojHV_2uzhoiMBedxVbp5nUpAClHFVedMubXKVvYGkVklCzo7OC9nP7CHoBhOIxTq1VQOVF-5SR0EDyW5SImgkpCsye_220NSS6dcssd2YRVT7GlfhMvRFywDhZQ4h39MUl4dYvcZCwMmXEKbfN_6ixVVV9jEjLPc7ame0q406aDXtJF7xQXUC40c694mCvBkWSkiolo5_CmlBj4ElMAMrUNqGp2sPclxLj_9aGjGzUy2sC4A"/><span class="font-title-sm text-title-sm text-on-surface tracking-tight font-semibold">PZEM Monitor</span></div><div class="flex items-center gap-space-xs px-space-xs py-0.5 rounded-full bg-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-ui text-label-ui text-tertiary uppercase">En ligne</span></div></div><div class="px-space-md py-space-sm"><p class="font-label-ui text-label-ui text-outline uppercase tracking-wider px-space-xs mb-space-xs">Supervision IoT</p><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="vue-densemble" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-title-sm text-title-sm">Vue d'ensemble</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="metriques-en-direct" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">bolt</span><span class="font-title-sm text-title-sm">Métriques en direct</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="historique-et-analyse" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">timeline</span><span class="font-title-sm text-title-sm">Historique &amp; Analyse</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="alertes-et-seuils" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-title-sm text-title-sm">Alertes &amp; Seuils</span></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-mono text-label-mono">1</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tarifs-et-facturation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-title-sm text-title-sm">Tarifs &amp; Facturation</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuration-capteurs" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">settings_input_component</span><span class="font-title-sm text-title-sm">Configuration capteurs</span></div></a></nav></div></div><div class="flex flex-col gap-space-sm p-space-md bg-surface-container-lowest/60"><div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-ui text-label-ui text-outline uppercase">Liaison MQTT / ESP32</span><div class="flex items-center gap-1.5"><span class="inline-block h-2 w-2 rounded-full bg-tertiary"></span><span class="font-label-mono text-label-mono text-tertiary">12 ms</span></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">Firmware PZEM</span><span class="font-label-mono text-label-mono text-secondary">v2.4.1</span></div></div><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-title-sm text-body-md text-on-surface leading-tight font-medium">Ingénieur Énergie</span><span class="font-body-sm text-body-sm text-outline">Station #01</span></div></div><button class="text-outline hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-low/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm bg-surface-container px-space-md py-1.5 rounded-lg"><span class="material-symbols-outlined text-secondary text-[20px]">memory</span><select class="bg-transparent font-title-sm text-body-md text-on-surface focus:outline-none cursor-pointer"><option class="bg-surface-container-high text-on-surface" value="pzem-1">PZEM-004T #1 - Tableau Principal</option><option class="bg-surface-container-high text-on-surface" value="pzem-2">PZEM-004T #2 - Pompe à chaleur</option><option class="bg-surface-container-high text-on-surface" value="pzem-3">PZEM-016 #3 - Onduleur Solaire</option></select></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-high p-1 rounded-lg"><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase bg-primary-container text-on-primary-container font-semibold transition-colors" type="button">Temps réel</button><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">24h</button><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">7j</button><button class="px-space-sm py-1 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">30j</button></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[18px]">schedule</span><span class="font-label-mono text-label-mono text-on-surface">UTC+01:00 • 14:38:22</span></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">download</span><span class="font-body-sm text-body-sm font-medium">Export CSV</span></button><button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Script for Navigation & Micro-Interactions -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Synchronize active sidebar navigation state
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'historique-et-analyse') {
+          link.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+          link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold', 'shadow-sm');
+        } else {
+          link.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold', 'shadow-sm');
+          link.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high');
+        }
+      });
+    });
+
+    function toggleComparison() {
+      const s1Path = document.getElementById('s1-line-path');
+      const s1Area = document.getElementById('s1-area-path');
+      const toggleDot = document.getElementById('toggle-comparison-dot');
+      const toggleBg = document.getElementById('toggle-comparison-bg');
+      
+      const isVisible = s1Path.getAttribute('opacity') !== '0';
+      if (isVisible) {
+        s1Path.setAttribute('opacity', '0');
+        if (s1Area) s1Area.setAttribute('opacity', '0');
+        toggleDot.classList.replace('translate-x-4', 'translate-x-0');
+        toggleBg.classList.replace('bg-secondary', 'bg-surface-container-highest');
+      } else {
+        s1Path.setAttribute('opacity', '0.75');
+        if (s1Area) s1Area.setAttribute('opacity', '0.15');
+        toggleDot.classList.replace('translate-x-0', 'translate-x-4');
+        toggleBg.classList.replace('bg-surface-container-highest', 'bg-secondary');
+      }
+    }
+  </script>
+<!-- PAGE WRAPPER / CONTAINER -->
+<div class="p-gutter-lg flex flex-col gap-space-lg">
+<!-- 1. EN-TÊTE DE SECTION & BARRE D'OUTILS -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Title & Live IoT Status Badge -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Historique &amp; Analyse énergétique</h1>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-tertiary">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-ui text-label-ui uppercase tracking-wider font-semibold">Télémétrie archivée (ESP32 / Modbus-RTU)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Exploration temporelle des télémesures, comparaison de cycles et audit des consommations.
+        </p>
+</div>
+<!-- Action Buttons (Export CSV / PDF) -->
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<button class="group flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container shadow-md hover:bg-primary hover:text-on-primary transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[19px]">download</span>
+<span class="font-body-md text-body-md font-semibold">Exporter CSV</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-variant transition-all" title="Générer Rapport PDF" type="button">
+<span class="material-symbols-outlined text-[19px]">picture_as_pdf</span>
+<span class="font-body-md text-body-md font-medium">Rapport PDF</span>
+</button>
+</div>
+</div>
+<!-- TOOLBAR / FILTER PANEL -->
+<div class="flex flex-wrap items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container shadow-sm">
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Module Selector -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">developer_board</span>
+<select class="bg-transparent font-title-sm text-body-md text-on-surface focus:outline-none cursor-pointer">
+<option class="bg-surface-container-high" value="pzem-1">Module Principal PZEM-004T — TGBT Atelier</option>
+<option class="bg-surface-container-high" value="pzem-2">PZEM-004T #2 — Pompe à chaleur &amp; HVAC</option>
+<option class="bg-surface-container-high" value="pzem-3">PZEM-016 #3 — Injection Onduleur Solaire</option>
+</select>
+</div>
+<!-- Granular Time Segments -->
+<div class="inline-flex rounded-lg bg-surface-container-low p-1">
+<button class="px-space-md py-1.5 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">Heure</button>
+<button class="px-space-md py-1.5 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">Jour</button>
+<button class="px-space-md py-1.5 rounded font-label-ui text-label-ui uppercase bg-primary-container text-on-primary-container font-semibold transition-all shadow-sm" type="button">Semaine</button>
+<button class="px-space-md py-1.5 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">Mois</button>
+<button class="px-space-md py-1.5 rounded font-label-ui text-label-ui uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">Personnalisé</button>
+</div>
+</div>
+<!-- Date Range Picker Badge -->
+<div class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">calendar_month</span>
+<span class="font-label-mono text-label-mono tracking-tight font-medium">12 Mai 2025 — 18 Mai 2025 (Semaine 20)</span>
+<button class="ml-1 text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- 2. GRAPH COMMAND BAR (Display modes, metrics pills, comparison toggle) -->
+<div class="flex flex-wrap items-center justify-between gap-space-md px-space-sm">
+<div class="flex flex-wrap items-center gap-space-lg">
+<!-- Display Type Switcher -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-lg">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-highest text-secondary shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">show_chart</span>
+<span class="font-body-sm text-body-sm font-semibold">Courbe dynamique</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bar_chart</span>
+<span class="font-body-sm text-body-sm">Histogramme</span>
+</button>
+</div>
+<!-- Metric Filters (Pills) -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary/15 text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-ui text-label-ui uppercase font-semibold">Puissance active (kW)</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-ui text-label-ui uppercase font-medium">Énergie cumulée (kWh)</span>
+</div>
+</div>
+<!-- Comparison Toggle (S-1) -->
+<div class="flex items-center gap-space-sm cursor-pointer select-none" onclick="toggleComparison()">
+<div class="w-9 h-5 flex items-center bg-secondary rounded-full p-0.5 transition-colors duration-200" id="toggle-comparison-bg">
+<div class="bg-on-secondary-container w-4 h-4 rounded-full shadow-md transform translate-x-4 transition-transform duration-200" id="toggle-comparison-dot"></div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Comparer avec S-1</span>
+<span class="hidden sm:inline-block font-label-ui text-label-ui text-outline">(Ligne pointillée)</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Resolution Badge -->
+<div class="flex items-center gap-space-xs text-outline font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[16px] text-tertiary">tune</span>
+<span>Pas de mesure : 15 min • 672 points enregistrés</span>
+</div>
+</div>
+<!-- 3. GRAND GRAPHIQUE D'HISTORIQUE (Interactive SVG Telemetry) -->
+<div class="relative w-full rounded-xl bg-surface-container p-space-lg shadow-xl overflow-hidden">
+<!-- Chart Header Metadata -->
+<div class="flex items-center justify-between pb-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-1 rounded bg-secondary inline-block"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Semaine en cours (S20)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-0.5 border-t border-dashed border-outline inline-block"></span>
+<span class="font-body-sm text-body-sm text-outline">Semaine passée (S19)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-0.5 border-t border-dashed border-error inline-block"></span>
+<span class="font-body-sm text-body-sm text-error">Seuil d'alerte (4 500 W)</span>
+</div>
+</div>
+<div class="font-label-mono text-label-mono text-secondary">
+          Flux Modbus RTU / UART OK
+        </div>
+</div>
+<!-- High Fidelity SVG Canvas Area -->
+<div class="relative w-full h-80">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 1000 320">
+<defs>
+<!-- Primary Active Power Cyan Gradient -->
+<lineargradient id="cyanGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.32"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.00"></stop>
+</lineargradient>
+<!-- S-1 Comparison Area Gradient -->
+<lineargradient id="amberGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#8d90a0" stop-opacity="0.12"></stop>
+<stop offset="100%" stop-color="#8d90a0" stop-opacity="0.00"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Grid & Y-Axis Labels -->
+<!-- 5 kW -->
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="4 4" stroke-width="1" x1="45" x2="980" y1="20" y2="20"></line>
+<text fill="#8d90a0" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="36" y="24">5 kW</text>
+<!-- 4.5 kW Threshold Line (Alert Level) -->
+<line opacity="0.75" stroke="#ffb4ab" stroke-dasharray="5 5" stroke-width="1.5" x1="45" x2="980" y1="50" y2="50"></line>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="975" y="44">SEUIL CRITIQUE: 4.5 kW</text>
+<!-- 4 kW -->
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="4 4" stroke-width="1" x1="45" x2="980" y1="80" y2="80"></line>
+<text fill="#8d90a0" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="36" y="84">4 kW</text>
+<!-- 3 kW -->
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="4 4" stroke-width="1" x1="45" x2="980" y1="140" y2="140"></line>
+<text fill="#8d90a0" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="36" y="144">3 kW</text>
+<!-- 2 kW -->
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="4 4" stroke-width="1" x1="45" x2="980" y1="200" y2="200"></line>
+<text fill="#8d90a0" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="36" y="204">2 kW</text>
+<!-- 1 kW -->
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="4 4" stroke-width="1" x1="45" x2="980" y1="260" y2="260"></line>
+<text fill="#8d90a0" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="36" y="264">1 kW</text>
+<!-- Baseline 0 kW -->
+<line stroke="#434655" stroke-width="1.5" x1="45" x2="980" y1="310" y2="310"></line>
+<text fill="#8d90a0" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="36" y="313">0 kW</text>
+<!-- Vertical Day Dividers -->
+<line stroke="#222a3d" stroke-width="1" x1="175" x2="175" y1="20" y2="310"></line>
+<line stroke="#222a3d" stroke-width="1" x1="305" x2="305" y1="20" y2="310"></line>
+<line stroke="#222a3d" stroke-width="1" x1="435" x2="435" y1="20" y2="310"></line>
+<line stroke="#222a3d" stroke-width="1" x1="565" x2="565" y1="20" y2="310"></line>
+<line stroke="#222a3d" stroke-width="1" x1="695" x2="695" y1="20" y2="310"></line>
+<line stroke="#222a3d" stroke-width="1" x1="825" x2="825" y1="20" y2="310"></line>
+<!-- S-1 Previous Period Area (Amber/Grey tinted) -->
+<path d="M 50 310 L 50 220 C 110 200, 140 230, 175 190 C 210 150, 260 210, 305 180 C 350 150, 390 190, 435 160 C 475 130, 520 115, 565 110 C 610 105, 650 170, 695 165 C 740 160, 780 240, 825 240 C 870 240, 920 270, 970 260 L 970 310 Z" fill="url(#amberGradient)" id="s1-area-path" opacity="0.15"></path>
+<!-- S-1 Previous Period Line (Dashed) -->
+<path d="M 50 220 C 110 200, 140 230, 175 190 C 210 150, 260 210, 305 180 C 350 150, 390 190, 435 160 C 475 130, 520 115, 565 110 C 610 105, 650 170, 695 165 C 740 160, 780 240, 825 240 C 870 240, 920 270, 970 260" fill="none" id="s1-line-path" opacity="0.75" stroke="#8d90a0" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Main Active Power Area (Current S20) -->
+<path d="M 50 310 L 50 210 C 90 205, 130 170, 175 160 C 220 150, 260 175, 305 150 C 350 125, 400 135, 435 130 C 470 125, 515 88, 545 80 C 575 72, 605 130, 640 110 C 675 90, 715 140, 760 150 C 805 160, 850 250, 895 245 C 935 240, 955 255, 975 250 L 975 310 Z" fill="url(#cyanGradient)"></path>
+<!-- Main Active Power Line (Cyan) -->
+<path d="M 50 210 C 90 205, 130 170, 175 160 C 220 150, 260 175, 305 150 C 350 125, 400 135, 435 130 C 470 125, 515 88, 545 80 C 575 72, 605 130, 640 110 C 675 90, 715 140, 760 150 C 805 160, 850 250, 895 245 C 935 240, 955 255, 975 250" fill="none" stroke="#4cd7f6" stroke-linecap="round" stroke-width="3"></path>
+<!-- Crosshair Guideline for Peak Thursday 14:30 -->
+<line opacity="0.8" stroke="#4cd7f6" stroke-dasharray="3 3" stroke-width="1.5" x1="545" x2="545" y1="20" y2="310"></line>
+<!-- Interactive Highlight Nodes -->
+<circle cx="545" cy="80" fill="#4cd7f6" r="5" stroke="#0b1326" stroke-width="2.5"></circle>
+<circle cx="545" cy="110" fill="#8d90a0" r="4" stroke="#0b1326" stroke-width="2"></circle>
+</svg>
+<!-- FLOATING TOOLTIP FOR THURSDAY 14:30 PEAK -->
+<div class="absolute top-4 left-1/2 transform -translate-x-12 sm:translate-x-4 z-20 w-64 p-space-sm rounded-xl bg-surface-container-highest shadow-2xl backdrop-blur-md">
+<div class="flex items-center justify-between pb-1.5 mb-1.5 border-b border-surface-variant">
+<span class="font-title-sm text-body-sm text-on-surface font-semibold">Jeu 15 Mai • 14:30</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary/20 text-tertiary font-label-mono text-label-ui font-semibold">+12% vs S-1</span>
+</div>
+<div class="flex flex-col gap-1 font-label-mono text-label-mono">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Puissance active :</span>
+<span class="text-secondary font-semibold">3 840 W</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Semaine préc. (J-7) :</span>
+<span class="text-on-surface-variant">3 420 W</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Énergie tranche :</span>
+<span class="text-on-surface">0.96 kWh</span>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<span>Coût estimé :</span>
+<span class="text-tertiary font-semibold">76 FCFA</span>
+</div>
+</div>
+</div>
+</div>
+<!-- X-Axis Labels (Days) -->
+<div class="grid grid-cols-7 pt-space-sm text-center font-label-mono text-label-mono text-on-surface-variant">
+<div class="flex flex-col items-center">
+<span class="font-semibold text-on-surface">Lun 12</span>
+<span class="text-body-sm text-outline">38.2 kWh</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-semibold text-on-surface">Mar 13</span>
+<span class="text-body-sm text-outline">44.6 kWh</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-semibold text-on-surface">Mer 14</span>
+<span class="text-body-sm text-outline">49.1 kWh</span>
+</div>
+<div class="flex flex-col items-center text-secondary">
+<span class="font-semibold">Jeu 15 (Pic)</span>
+<span class="text-body-sm text-secondary">58.4 kWh</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-semibold text-on-surface">Ven 16</span>
+<span class="text-body-sm text-outline">52.8 kWh</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-semibold text-on-surface">Sam 17</span>
+<span class="text-body-sm text-outline">36.1 kWh</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-semibold text-on-surface">Dim 18</span>
+<span class="text-body-sm text-outline">33.2 kWh</span>
+</div>
+</div>
+</div>
+<!-- 4. CARTES STATISTIQUES RAPIDES (KPI Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- Card 1: Pic Maximal -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container shadow-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pic Maximal (kW)</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">bolt</span>
+</div>
+<div class="flex items-baseline gap-space-xs py-1">
+<span class="font-metric-xl text-metric-xl text-on-surface font-semibold">4 120</span>
+<span class="font-label-mono text-label-mono text-secondary">W</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-outline font-label-mono text-body-sm">
+<span>Jeu 15 à 18h15</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary text-label-ui">91.5% max</span>
+</div>
+</div>
+<!-- Card 2: Consommation Totale -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container shadow-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Consommation Totale</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">energy_savings_leaf</span>
+</div>
+<div class="flex items-baseline gap-space-xs py-1">
+<span class="font-metric-xl text-metric-xl text-on-surface font-semibold">312.4</span>
+<span class="font-label-mono text-label-mono text-tertiary">kWh</span>
+</div>
+<div class="flex items-center gap-1.5 pt-space-xs font-label-mono text-body-sm">
+<span class="flex items-center text-tertiary font-semibold">
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+            4.2%
+          </span>
+<span class="text-outline">vs semaine passée</span>
+</div>
+</div>
+<!-- Card 3: Puissance Moyenne -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container shadow-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Puissance Moyenne</span>
+<span class="material-symbols-outlined text-primary text-[20px]">speed</span>
+</div>
+<div class="flex items-baseline gap-space-xs py-1">
+<span class="font-metric-xl text-metric-xl text-on-surface font-semibold">1 859</span>
+<span class="font-label-mono text-label-mono text-primary">W</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-mono text-body-sm text-outline">
+<span>Facteur de charge</span>
+<span class="text-tertiary font-semibold">cos φ 0.95</span>
+</div>
+</div>
+<!-- Card 4: Coût Total Période -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container shadow-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Coût Total Estimé</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">payments</span>
+</div>
+<div class="flex items-baseline gap-space-xs py-1">
+<span class="font-metric-xl text-metric-xl text-on-surface font-semibold">24 680</span>
+<span class="font-label-mono text-label-mono text-tertiary">FCFA</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-mono text-body-sm text-outline">
+<span>Tarif 79 FCFA/kWh</span>
+<span class="text-tertiary font-semibold">-1 080 FCFA</span>
+</div>
+</div>
+</div>
+<!-- 5. TABLEAU RÉCAPITULATIF SOUS LE GRAPHIQUE -->
+<div class="flex flex-col rounded-xl bg-surface-container shadow-xl overflow-hidden">
+<!-- Table Header & Controls -->
+<div class="p-space-md flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-high">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">table_rows</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Journal détaillé des mesures journalières</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-mono text-label-mono text-outline">Affichage : 7 enregistrements journaliers</span>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-variant text-on-surface transition-colors" title="Actualiser les données" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-highest text-on-surface-variant font-label-ui text-label-ui uppercase tracking-wider">
+<th class="py-3 px-space-md">Période / Date</th>
+<th class="py-3 px-space-md">Tension Moy.</th>
+<th class="py-3 px-space-md">Min</th>
+<th class="py-3 px-space-md">Max / Pic</th>
+<th class="py-3 px-space-md">Moyenne</th>
+<th class="py-3 px-space-md">Facteur PF</th>
+<th class="py-3 px-space-md">Total Énergie</th>
+<th class="py-3 px-space-md">Coût (FCFA)</th>
+<th class="py-3 px-space-md">Écart vs S-1</th>
+<th class="py-3 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant font-label-mono text-body-sm text-on-surface">
+<!-- Row: Lun 12 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-space-md font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Lundi 12 Mai
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant">229.4 V</td>
+<td class="py-3 px-space-md text-on-surface-variant">420 W</td>
+<td class="py-3 px-space-md text-secondary font-semibold">2 940 W</td>
+<td class="py-3 px-space-md">1 590 W</td>
+<td class="py-3 px-space-md text-tertiary">0.96</td>
+<td class="py-3 px-space-md font-semibold text-on-surface">38.2 kWh</td>
+<td class="py-3 px-space-md text-tertiary">3 018 FCFA</td>
+<td class="py-3 px-space-md text-tertiary">-3.1%</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1 rounded text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Inspecter les 96 points de la journée" type="button">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+<!-- Row: Mar 13 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-space-md font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Mardi 13 Mai
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant">230.1 V</td>
+<td class="py-3 px-space-md text-on-surface-variant">410 W</td>
+<td class="py-3 px-space-md text-secondary font-semibold">3 180 W</td>
+<td class="py-3 px-space-md">1 860 W</td>
+<td class="py-3 px-space-md text-tertiary">0.94</td>
+<td class="py-3 px-space-md font-semibold text-on-surface">44.6 kWh</td>
+<td class="py-3 px-space-md text-tertiary">3 523 FCFA</td>
+<td class="py-3 px-space-md text-tertiary">-1.8%</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1 rounded text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Inspecter la journée" type="button">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+<!-- Row: Mer 14 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-space-md font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Mercredi 14 Mai
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant">228.8 V</td>
+<td class="py-3 px-space-md text-on-surface-variant">440 W</td>
+<td class="py-3 px-space-md text-secondary font-semibold">3 650 W</td>
+<td class="py-3 px-space-md">2 045 W</td>
+<td class="py-3 px-space-md text-tertiary">0.95</td>
+<td class="py-3 px-space-md font-semibold text-on-surface">49.1 kWh</td>
+<td class="py-3 px-space-md text-tertiary">3 879 FCFA</td>
+<td class="py-3 px-space-md text-secondary">+2.4%</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1 rounded text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Inspecter la journée" type="button">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+<!-- Row: Jeu 15 (Highlighted Peak) -->
+<tr class="bg-secondary/5 hover:bg-secondary/10 transition-colors">
+<td class="py-3 px-space-md font-medium text-secondary flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Jeudi 15 Mai (Pic)
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant">227.6 V</td>
+<td class="py-3 px-space-md text-on-surface-variant">480 W</td>
+<td class="py-3 px-space-md text-error font-bold">4 120 W</td>
+<td class="py-3 px-space-md font-semibold">2 433 W</td>
+<td class="py-3 px-space-md text-tertiary">0.93</td>
+<td class="py-3 px-space-md font-bold text-secondary">58.4 kWh</td>
+<td class="py-3 px-space-md text-tertiary font-bold">4 614 FCFA</td>
+<td class="py-3 px-space-md text-error font-semibold">+11.2%</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1 rounded text-secondary hover:bg-surface-container transition-colors" title="Inspecter la journée" type="button">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+<!-- Row: Ven 16 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-space-md font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Vendredi 16 Mai
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant">229.0 V</td>
+<td class="py-3 px-space-md text-on-surface-variant">430 W</td>
+<td class="py-3 px-space-md text-secondary font-semibold">3 790 W</td>
+<td class="py-3 px-space-md">2 200 W</td>
+<td class="py-3 px-space-md text-tertiary">0.95</td>
+<td class="py-3 px-space-md font-semibold text-on-surface">52.8 kWh</td>
+<td class="py-3 px-space-md text-tertiary">4 171 FCFA</td>
+<td class="py-3 px-space-md text-tertiary">-0.5%</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1 rounded text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Inspecter la journée" type="button">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+<!-- Row: Sam 17 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-space-md font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Samedi 17 Mai
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant">231.2 V</td>
+<td class="py-3 px-space-md text-on-surface-variant">320 W</td>
+<td class="py-3 px-space-md text-secondary font-semibold">2 410 W</td>
+<td class="py-3 px-space-md">1 504 W</td>
+<td class="py-3 px-space-md text-tertiary">0.97</td>
+<td class="py-3 px-space-md font-semibold text-on-surface">36.1 kWh</td>
+<td class="py-3 px-space-md text-tertiary">2 852 FCFA</td>
+<td class="py-3 px-space-md text-tertiary">-6.8%</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1 rounded text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Inspecter la journée" type="button">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+<!-- Row: Dim 18 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-3 px-space-md font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Dimanche 18 Mai
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant">231.8 V</td>
+<td class="py-3 px-space-md text-on-surface-variant">290 W</td>
+<td class="py-3 px-space-md text-secondary font-semibold">2 150 W</td>
+<td class="py-3 px-space-md">1 383 W</td>
+<td class="py-3 px-space-md text-tertiary">0.98</td>
+<td class="py-3 px-space-md font-semibold text-on-surface">33.2 kWh</td>
+<td class="py-3 px-space-md text-tertiary">2 623 FCFA</td>
+<td class="py-3 px-space-md text-tertiary">-8.4%</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1 rounded text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Inspecter la journée" type="button">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+</tbody>
+<!-- Footer Row: Totals & Global Averages -->
+<tfoot>
+<tr class="bg-surface-container-lowest font-label-mono text-body-md text-on-surface border-t-2 border-surface-container-high">
+<td class="py-3.5 px-space-md font-bold uppercase tracking-wider text-secondary">
+                Total / Moyenne
+              </td>
+<td class="py-3.5 px-space-md font-semibold">229.7 V</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">290 W</td>
+<td class="py-3.5 px-space-md text-error font-bold">4 120 W</td>
+<td class="py-3.5 px-space-md font-semibold">1 859 W</td>
+<td class="py-3.5 px-space-md text-tertiary font-bold">0.95</td>
+<td class="py-3.5 px-space-md text-secondary font-bold">312.4 kWh</td>
+<td class="py-3.5 px-space-md text-tertiary font-bold">24 680 FCFA</td>
+<td class="py-3.5 px-space-md text-tertiary font-bold">-4.2%</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface text-label-ui uppercase tracking-wider font-semibold transition-colors" type="button">
+                  Détail CSV
+                </button>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<!-- 6. BARRE D'ÉTAT SYSTÈME & INTÉGRITÉ DE L'ARCHIVE -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm p-space-md rounded-xl bg-surface-container-low text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+<span class="font-label-mono text-label-mono text-on-surface">
+          Base InfluxDB / MQTT : 100% paquets PZEM synchronisés • Checksum CRC-16 valide • 0 anomalie de trame
+        </span>
+</div>
+<div class="flex items-center gap-space-md font-label-mono text-body-sm text-outline">
+<span>Fréquence réseau : 50.02 Hz</span>
+<span>Latence passerelle : 14 ms</span>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

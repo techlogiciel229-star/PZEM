@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>PZEM Monitor — Dashboard Énergétique IoT</title>
+  
+  <!-- Polices Google : Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Tailwind CSS, Chart.js & Supabase Client -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Configuration Thème Tailwind inspiré des maquettes Stitch -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#0b1326",
+            surface: "#0b1326",
+            "surface-container-lowest": "#060e20",
+            "surface-container-low": "#131b2e",
+            "surface-container": "#171f33",
+            "surface-container-high": "#222a3d",
+            "surface-container-highest": "#2d3449",
+            primary: "#b4c5ff",
+            "primary-container": "#2563eb",
+            "on-primary-container": "#eeefff",
+            secondary: "#4cd7f6",
+            "secondary-container": "#03b5d3",
+            tertiary: "#45dfa4",
+            "tertiary-container": "#007d57",
+            outline: "#8d90a0",
+            "on-surface": "#dae2fd",
+            "on-surface-variant": "#c3c6d7",
+            error: "#ffb4ab",
+            "error-container": "#93000a"
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0b1326; }
+    ::-webkit-scrollbar-thumb { background: #222a3d; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #4cd7f6; }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface antialiased flex min-h-screen">
+
+  <!-- ======================== 1. BARRE LATÉRALE (SIDEBAR) ======================== -->
+  <aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between border-r border-surface-container-high/50 shadow-xl">
+    <div class="flex flex-col">
+      <!-- Logo & Titre -->
+      <div class="h-16 px-5 flex items-center justify-between bg-surface-container-low/90 border-b border-surface-container-high/40">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-primary-container/30 border border-primary-container flex items-center justify-center text-secondary">
+            <span class="material-symbols-outlined text-[24px]">electric_meter</span>
+          </div>
+          <div>
+            <h1 class="font-semibold text-sm tracking-tight text-white leading-tight">PZEM Monitor</h1>
+            <span class="text-[10px] text-outline font-mono">ESP32 IoT v2.4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="px-3 py-4">
+        <p class="text-[10px] font-semibold text-outline uppercase tracking-wider px-3 mb-2">Supervision Énergie</p>
+        <nav class="flex flex-col gap-1 text-sm font-medium">
+          <button onclick="switchTab('vue-ensemble')" id="nav-vue-ensemble" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary-container text-white transition-all">
+            <span class="material-symbols-outlined text-[20px]">grid_view</span>
+            <span>Vue d'ensemble</span>
+          </button>
+          <button onclick="switchTab('supervision')" id="nav-supervision" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-white transition-all">
+            <span class="material-symbols-outlined text-[20px]">bolt</span>
+            <span>Supervision Direct</span>
+          </button>
+          <button onclick="switchTab('historique')" id="nav-historique" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-white transition-all">
+            <span class="material-symbols-outlined text-[20px]">timeline</span>
+            <span>Historique & Coûts</span>
+          </button>
+          <button onclick="switchTab('alertes')" id="nav-alertes" class="nav-item flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-white transition-all">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">warning</span>
+              <span>Alertes & Seuils</span>
+            </div>
+            <span id="alert-badge" class="hidden px-1.5 py-0.5 rounded-full bg-error text-surface-container-lowest text-[10px] font-bold font-mono">1</span>
+          </button>
+          <button onclick="switchTab('parametres')" id="nav-parametres" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-white transition-all">
+            <span class="material-symbols-outlined text-[20px]">tune</span>
+            <span>Paramètres & Cloud</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Pied de Sidebar (Statut Cloud & Mode) -->
+    <div class="p-3 bg-surface-container-lowest/60 border-t border-surface-container-high/40 space-y-2">
+      <div class="p-2.5 rounded-lg bg-surface-container flex flex-col gap-1.5">
+        <div class="flex items-center justify-between text-xs">
+          <span class="text-outline uppercase text-[10px]">Statut ESP32</span>
+          <div class="flex items-center gap-1.5">
+            <span id="status-dot" class="inline-block h-2 w-2 rounded-full bg-tertiary animate-pulse"></span>
+            <span id="status-text" class="font-mono text-[11px] text-tertiary">En ligne</span>
+          </div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] text-on-surface-variant">
+          <span>Dernière synchro</span>
+          <span id="last-sync-time" class="font-mono text-secondary">--:--:--</span>
+        </div>
+      </div>
+
+      <!-- Toggle Simulateur -->
+      <div class="flex items-center justify-between px-2 py-1 bg-surface-container-low rounded-lg">
+        <span class="text-[11px] text-outline">Simulateur Démo</span>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="sim-toggle" class="sr-only peer" onchange="toggleSimulator(this.checked)">
+          <div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3.5 after:transition-all peer-checked:bg-secondary"></div>
+        </label>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================== 2. ZONE DE CONTENU PRINCIPALE ======================== -->
+  <div class="pl-64 flex-1 flex flex-col min-w-0">
+    
+    <!-- Top Header -->
+    <header class="h-16 border-b border-surface-container-high/40 bg-surface-container-low/70 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-40">
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-lg border border-surface-container-high">
+          <span class="material-symbols-outlined text-secondary text-[18px]">speed</span>
+          <span class="text-xs font-semibold text-white">Capteur : Tableau Général (PZEM-004T v3)</span>
+        </div>
+        <div id="live-banner" class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary/10 border border-tertiary/30 text-tertiary text-xs font-medium">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+          </span>
+          <span>Télémétrie Active (2s)</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-xs text-on-surface-variant font-mono">
+          <span class="material-symbols-outlined text-secondary text-[16px]">wifi</span>
+          <span id="header-rssi">Signal : -58 dBm</span>
+        </div>
+        <button onclick="exportCSV()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs text-white border border-surface-container-high transition-colors">
+          <span class="material-symbols-outlined text-[16px]">download</span>
+          <span>Export CSV</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="p-6 space-y-6">
+
+      <!-- ======================== ONGLET 1 : VUE D'ENSEMBLE ======================== -->
+      <section id="tab-vue-ensemble" class="tab-content space-y-6">
+        
+        <!-- Alerte Banner (si puissance > seuil) -->
+        <div id="overpower-alert" class="hidden p-4 rounded-xl bg-error-container/40 border border-error text-error flex items-center justify-between animate-bounce">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[24px]">crisis_alert</span>
+            <div>
+              <p class="font-bold text-sm">SURCONSOMMATION DÉTECTÉE !</p>
+              <p class="text-xs text-on-surface-variant">La puissance dépasse le seuil configuré. Risque de disjonction.</p>
+            </div>
+          </div>
+          <span id="alert-val" class="font-mono font-bold text-lg">0 W</span>
+        </div>
+
+        <!-- Bento Grid des 5 Métriques Clés -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          <!-- Carte 1 : Puissance Active (W) -->
+          <div class="rounded-xl bg-surface-container-low p-4 border border-surface-container-high/60 shadow-lg flex flex-col justify-between relative overflow-hidden group hover:border-secondary transition-colors">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-xs text-outline font-medium uppercase tracking-wider">Puissance Active</span>
+                <div class="flex items-baseline gap-1 mt-1">
+                  <span id="val-power" class="text-3xl font-bold font-mono text-white tracking-tight">0.0</span>
+                  <span class="text-xs font-mono text-secondary font-bold">W</span>
+                </div>
+              </div>
+              <div class="p-2 rounded-lg bg-surface-container text-secondary">
+                <span class="material-symbols-outlined text-[20px]">bolt</span>
+              </div>
+            </div>
+            <div class="mt-4 space-y-1.5">
+              <div class="flex justify-between text-[11px] font-mono text-outline">
+                <span>Charge (max 7 kW)</span>
+                <span id="power-percent" class="text-white">0%</span>
+              </div>
+              <div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+                <div id="power-bar" class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 2 : Tension Réseau (V) -->
+          <div class="rounded-xl bg-surface-container-low p-4 border border-surface-container-high/60 shadow-lg flex flex-col justify-between hover:border-secondary transition-colors">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-xs text-outline font-medium uppercase tracking-wider">Tension Réseau</span>
+                <div class="flex items-baseline gap-1 mt-1">
+                  <span id="val-voltage" class="text-3xl font-bold font-mono text-white tracking-tight">0.0</span>
+                  <span class="text-xs font-mono text-secondary font-bold">V</span>
+                </div>
+              </div>
+              <div class="p-2 rounded-lg bg-surface-container text-secondary">
+                <span class="material-symbols-outlined text-[20px]">speed</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center justify-between text-[11px]">
+              <span id="voltage-status" class="text-tertiary font-medium">Normal (230V ±5%)</span>
+              <span class="font-mono text-outline">50.0 Hz</span>
+            </div>
+          </div>
+
+          <!-- Carte 3 : Intensité Courant (A) -->
+          <div class="rounded-xl bg-surface-container-low p-4 border border-surface-container-high/60 shadow-lg flex flex-col justify-between hover:border-secondary transition-colors">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-xs text-outline font-medium uppercase tracking-wider">Courant RMS</span>
+                <div class="flex items-baseline gap-1 mt-1">
+                  <span id="val-current" class="text-3xl font-bold font-mono text-white tracking-tight">0.000</span>
+                  <span class="text-xs font-mono text-secondary font-bold">A</span>
+                </div>
+              </div>
+              <div class="p-2 rounded-lg bg-surface-container text-secondary">
+                <span class="material-symbols-outlined text-[20px]">current_ac</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center justify-between text-[11px] font-mono text-outline">
+              <span>Disjoncteur 16A</span>
+              <span id="current-percent" class="text-white">0%</span>
+            </div>
+          </div>
+
+          <!-- Carte 4 : Énergie Cumulée (kWh) -->
+          <div class="rounded-xl bg-surface-container-low p-4 border border-surface-container-high/60 shadow-lg flex flex-col justify-between hover:border-secondary transition-colors">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-xs text-outline font-medium uppercase tracking-wider">Énergie Cumulée</span>
+                <div class="flex items-baseline gap-1 mt-1">
+                  <span id="val-energy" class="text-3xl font-bold font-mono text-tertiary tracking-tight">0.000</span>
+                  <span class="text-xs font-mono text-tertiary font-bold">kWh</span>
+                </div>
+              </div>
+              <div class="p-2 rounded-lg bg-surface-container text-tertiary">
+                <span class="material-symbols-outlined text-[20px]">energy_savings_leaf</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center justify-between text-[11px] font-mono text-outline">
+              <span>Coût estimé (0.25€)</span>
+              <span id="val-cost" class="text-tertiary font-bold">0.00 €</span>
+            </div>
+          </div>
+
+          <!-- Carte 5 : Facteur de Puissance (Cos φ) -->
+          <div class="rounded-xl bg-surface-container-low p-4 border border-surface-container-high/60 shadow-lg flex flex-col justify-between hover:border-secondary transition-colors">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-xs text-outline font-medium uppercase tracking-wider">Facteur Puissance</span>
+                <div class="flex items-baseline gap-1 mt-1">
+                  <span id="val-pf" class="text-3xl font-bold font-mono text-white tracking-tight">0.00</span>
+                  <span class="text-xs font-mono text-secondary font-bold">Cos φ</span>
+                </div>
+              </div>
+              <div class="p-2 rounded-lg bg-surface-container text-secondary">
+                <span class="material-symbols-outlined text-[20px]">pie_chart</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center justify-between text-[11px]">
+              <span id="pf-quality" class="text-tertiary font-medium">Optimal (> 0.95)</span>
+              <span id="val-freq" class="font-mono text-outline">50.0 Hz</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Graphique Principal Temps Réel -->
+        <div class="rounded-xl bg-surface-container-low p-6 border border-surface-container-high/60 shadow-lg space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-[22px]">show_chart</span>
+              <h2 class="text-base font-semibold text-white">Profil de Puissance en Temps Réel (Watts)</h2>
+            </div>
+            <span class="text-xs text-outline font-mono">Derniers 30 points (Échantillonnage 2s)</span>
+          </div>
+          <div class="h-64 w-full">
+            <canvas id="liveChart"></canvas>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ======================== ONGLET 2 : SUPERVISION EN DIRECT ======================== -->
+      <section id="tab-supervision" class="tab-content hidden space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Graphique Double Axe (Tension V vs Courant A) -->
+          <div class="rounded-xl bg-surface-container-low p-6 border border-surface-container-high/60 shadow-lg space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-semibold text-white">Oscilloscope Tension (V) & Courant (A)</h3>
+              <span class="text-xs font-mono text-secondary">Synchronisé</span>
+            </div>
+            <div class="h-72 w-full">
+              <canvas id="viChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Fréquence & Facteur de puissance -->
+          <div class="rounded-xl bg-surface-container-low p-6 border border-surface-container-high/60 shadow-lg space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-semibold text-white">Qualité du Signal Réseau (Cos φ / Hz)</h3>
+              <span class="text-xs font-mono text-tertiary">Réseau 50Hz</span>
+            </div>
+            <div class="h-72 w-full">
+              <canvas id="pfChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== ONGLET 3 : HISTORIQUE & COÛTS ======================== -->
+      <section id="tab-historique" class="tab-content hidden space-y-6">
+        <div class="rounded-xl bg-surface-container-low p-6 border border-surface-container-high/60 shadow-lg space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-base font-semibold text-white">Consommation Énergétique Journalière (kWh & €)</h3>
+              <p class="text-xs text-outline">Simulation calculée basée sur le tarif Heures Pleines / Heures Creuses</p>
+            </div>
+            <span class="px-3 py-1 rounded-lg bg-surface-container text-xs font-mono text-tertiary">Tarif : 0.2516 € / kWh</span>
+          </div>
+          <div class="h-80 w-full">
+            <canvas id="historyBarChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== ONGLET 4 : ALERTES & SEUILS ======================== -->
+      <section id="tab-alertes" class="tab-content hidden space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Configuration des seuils -->
+          <div class="rounded-xl bg-surface-container-low p-6 border border-surface-container-high/60 shadow-lg space-y-4">
+            <h3 class="text-base font-semibold text-white flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary">tune</span>
+              Seuils de Sécurité
+            </h3>
+            <div class="space-y-3 text-sm">
+              <div>
+                <label class="text-xs text-outline block mb-1">Seuil Puissance Max (Watts)</label>
+                <input type="number" id="cfg-power-limit" value="3500" class="w-full bg-surface-container px-3 py-2 rounded-lg border border-surface-container-high font-mono text-white focus:outline-none focus:border-secondary">
+              </div>
+              <div>
+                <label class="text-xs text-outline block mb-1">Seuil Tension Min / Max (Volts)</label>
+                <div class="flex gap-2">
+                  <input type="number" id="cfg-volt-min" value="207" class="w-1/2 bg-surface-container px-3 py-2 rounded-lg border border-surface-container-high font-mono text-white text-xs">
+                  <input type="number" id="cfg-volt-max" value="253" class="w-1/2 bg-surface-container px-3 py-2 rounded-lg border border-surface-container-high font-mono text-white text-xs">
+                </div>
+              </div>
+              <button onclick="saveThresholds()" class="w-full py-2 rounded-lg bg-primary-container hover:bg-blue-600 text-white font-medium text-xs transition-colors mt-2">
+                Enregistrer les seuils
+              </button>
+            </div>
+          </div>
+
+          <!-- Journal des événements -->
+          <div class="lg:col-span-2 rounded-xl bg-surface-container-low p-6 border border-surface-container-high/60 shadow-lg space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-semibold text-white">Journal des Alertes & Événements</h3>
+              <button onclick="clearAlertLogs()" class="text-xs text-outline hover:text-white">Effacer l'historique</button>
+            </div>
+            <div id="alert-logs-list" class="space-y-2 max-h-72 overflow-y-auto font-mono text-xs">
+              <div class="p-3 rounded-lg bg-surface-container flex items-center justify-between border-l-4 border-tertiary">
+                <span class="text-white">Système initialisé et prêt</span>
+                <span class="text-outline text-[11px]">Aujourd'hui</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== ONGLET 5 : PARAMÈTRES & CLOUD ======================== -->
+      <section id="tab-parametres" class="tab-content hidden space-y-6">
+        <div class="max-w-2xl rounded-xl bg-surface-container-low p-6 border border-surface-container-high/60 shadow-lg space-y-4">
+          <h3 class="text-base font-semibold text-white flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary">database</span>
+            Connexion Supabase PostgreSQL & Realtime
+          </h3>
+          <p class="text-xs text-outline">
+            Renseignez l'URL de votre projet et votre clé publique <code class="text-secondary">anon key</code> (trouvables dans <em>Project Settings &gt; API</em> de Supabase).
+          </p>
+          <div class="space-y-3">
+            <div>
+              <label class="text-xs text-outline block mb-1">URL Supabase Project</label>
+              <input type="text" id="cfg-supabase-url" placeholder="https://votre-projet.supabase.co" class="w-full bg-surface-container px-3 py-2 rounded-lg border border-surface-container-high font-mono text-xs text-white focus:outline-none focus:border-secondary">
+            </div>
+            <div>
+              <label class="text-xs text-outline block mb-1">Clé Publique Anon Key (anon public)</label>
+              <input type="text" id="cfg-supabase-key" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." class="w-full bg-surface-container px-3 py-2 rounded-lg border border-surface-container-high font-mono text-xs text-white focus:outline-none focus:border-secondary">
+            </div>
+            <div class="flex gap-2 pt-1">
+              <button onclick="saveSupabaseConfig()" class="px-4 py-2 rounded-lg bg-primary-container hover:bg-blue-600 text-white font-medium text-xs transition-colors">
+                Enregistrer &amp; Connecter
+              </button>
+              <button onclick="testSupabaseConnection()" class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-medium text-xs transition-colors">
+                Tester la connexion
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
