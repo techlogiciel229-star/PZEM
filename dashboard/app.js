@@ -498,6 +498,7 @@ function exportCSV() {
 // 10. Démarrage de l'application
 window.addEventListener('DOMContentLoaded', () => {
   initCharts();
+  loadThemeSettings();
 
   const inputUrl = document.getElementById('cfg-supabase-url');
   if (inputUrl && state.supabaseUrl) inputUrl.value = state.supabaseUrl;
@@ -515,3 +516,78 @@ window.addEventListener('DOMContentLoaded', () => {
     connectSupabase();
   }
 });
+
+// 11. Personnalisation & UI (Responsive, Thème)
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('-translate-x-full');
+}
+
+function toggleThemePanel() {
+  const panel = document.getElementById('theme-panel');
+  if (panel.classList.contains('hidden')) {
+    panel.classList.remove('hidden');
+    setTimeout(() => {
+      panel.classList.remove('opacity-0', 'translate-y-2');
+    }, 10);
+  } else {
+    panel.classList.add('opacity-0', 'translate-y-2');
+    setTimeout(() => {
+      panel.classList.add('hidden');
+    }, 300);
+  }
+}
+
+function loadThemeSettings() {
+  const savedColor = localStorage.getItem('pzem_theme_color');
+  if (savedColor) applyTheme(savedColor);
+  
+  const savedGlass = localStorage.getItem('pzem_glass');
+  if (savedGlass !== null) {
+    const isGlass = savedGlass === 'true';
+    document.getElementById('glass-toggle').checked = isGlass;
+    applyGlass(isGlass);
+  }
+}
+
+function setThemeColor(colorHex) {
+  localStorage.setItem('pzem_theme_color', colorHex);
+  applyTheme(colorHex);
+}
+
+function applyTheme(colorHex) {
+  let styleEl = document.getElementById('custom-theme-style');
+  if (!styleEl) {
+    styleEl = document.createElement('style');
+    styleEl.id = 'custom-theme-style';
+    document.head.appendChild(styleEl);
+  }
+  styleEl.textContent = `
+    .text-secondary { color: ${colorHex} !important; }
+    .bg-secondary { background-color: ${colorHex} !important; }
+    .border-secondary { border-color: ${colorHex} !important; }
+    .peer-checked\\:bg-secondary:checked ~ div { background-color: ${colorHex} !important; }
+    .hover\\:border-secondary:hover { border-color: ${colorHex} !important; }
+    .text-tertiary { color: ${colorHex} !important; }
+    .bg-tertiary { background-color: ${colorHex} !important; }
+    .border-tertiary { border-color: ${colorHex} !important; }
+  `;
+}
+
+function toggleGlass(isGlass) {
+  localStorage.setItem('pzem_glass', isGlass);
+  applyGlass(isGlass);
+}
+
+function applyGlass(isGlass) {
+  const glassCards = document.querySelectorAll('.bg-surface-container-low\\/40, .bg-surface-container-low\\/60');
+  glassCards.forEach(c => {
+    if (!isGlass) {
+      c.style.backgroundColor = '#131b2e'; // Opaque
+      c.style.backdropFilter = 'none';
+    } else {
+      c.style.backgroundColor = '';
+      c.style.backdropFilter = '';
+    }
+  });
+}
