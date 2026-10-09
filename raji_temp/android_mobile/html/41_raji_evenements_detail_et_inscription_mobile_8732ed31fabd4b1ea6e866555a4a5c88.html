@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;font-family:'Inter',sans-serif;background-color:#F3F4F5;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface-variant': '#e0e3e6', 'primary-container': '#0a1b36', 'on-secondary': '#ffffff', 'surface-tint': '#4f5f7d', 'on-primary-fixed-variant': '#374764', 'on-primary': '#ffffff', 'tertiary-fixed': '#ffdf9a', 'background': '#f8f9fc', 'secondary': '#5d5f5f', 'surface-container-high': '#e6e8eb', 'surface': '#f8f9fc', 'on-error-container': '#93000a', 'outline-variant': '#c5c6ce', 'on-primary-container': '#7484a4', 'tertiary': '#000000', 'on-tertiary-container': '#a47e15', 'on-tertiary': '#ffffff', 'primary-fixed-dim': '#b7c7ea', 'on-surface-variant': '#44474d', 'error': '#ba1a1a', 'on-secondary-fixed': '#1a1c1c', 'surface-bright': '#f8f9fc', 'inverse-surface': '#2d3133', 'secondary-container': '#dfe0e0', 'surface-container-lowest': '#ffffff', 'error-container': '#ffdad6', 'surface-container-low': '#f2f4f7', 'inverse-on-surface': '#eff1f4', 'secondary-fixed': '#e2e2e2', 'on-secondary-container': '#616363', 'on-tertiary-fixed-variant': '#5a4300', 'tertiary-container': '#251a00', 'on-surface': '#191c1e', 'on-secondary-fixed-variant': '#454747', 'primary-fixed': '#d7e3ff', 'on-tertiary-fixed': '#251a00', 'inverse-primary': '#b7c7ea', 'surface-container-highest': '#e0e3e6', 'primary': '#000000', 'on-background': '#191c1e', 'outline': '#75777e', 'on-primary-fixed': '#0a1b36', 'secondary-fixed-dim': '#c6c6c7', 'on-error': '#ffffff', 'surface-dim': '#d8dadd', 'surface-container': '#eceef1', 'tertiary-fixed-dim': '#edc155' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-lg': '1.5rem', 'space-md': '1rem', 'margin-sm': '1rem', 'gutter': '1.5rem', 'space-xs': '0.25rem', 'space-xl': '2.5rem', 'gutter-lg': '2rem', 'gutter-sm': '1rem', 'margin-lg': '4rem', 'space-sm': '0.5rem', 'margin': '1.5rem' }, fontFamily: { 'display-mobile': ['Inter'], 'headline-lg-mobile': ['Inter'], 'headline-sm': ['Inter'], 'body-md': ['Inter'], 'body-sm': ['Inter'], 'body-lg': ['Inter'], 'title': ['Inter'], 'display': ['Inter'], 'label-md': ['Inter'], 'headline-md': ['Inter'], 'headline-lg': ['Inter'], 'label-sm': ['Inter'] }, fontSize: { 'display-mobile': ['2.25rem', { lineHeight: '2.75rem', letterSpacing: '-0.025em', fontWeight: '800' }], 'headline-lg-mobile': ['1.75rem', { lineHeight: '2.25rem', letterSpacing: '-0.02em', fontWeight: '700' }], 'headline-sm': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '-0.015em', fontWeight: '600' }], 'body-md': ['1rem', { lineHeight: '1.5rem', letterSpacing: '0', fontWeight: '400' }], 'body-sm': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0.005em', fontWeight: '400' }], 'body-lg': ['1.125rem', { lineHeight: '1.75rem', letterSpacing: '0', fontWeight: '400' }], 'title': ['1.125rem', { lineHeight: '1.625rem', letterSpacing: '-0.01em', fontWeight: '600' }], 'display': ['3.5rem', { lineHeight: '4rem', letterSpacing: '-0.035em', fontWeight: '800' }], 'label-md': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0.01em', fontWeight: '500' }], 'headline-md': ['1.875rem', { lineHeight: '2.375rem', letterSpacing: '-0.02em', fontWeight: '600' }], 'headline-lg': ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.025em', fontWeight: '700' }], 'label-sm': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.04em', fontWeight: '600' }] } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-[#F3F4F5] text-[#071934] flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-[#FFFFFF] shadow-[0_1px_8px_rgba(7,25,52,0.06)]"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-3"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-[44px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/><span class="text-[#071934] font-title text-title font-bold tracking-tight">RAJI</span></div><div class="flex items-center gap-2"><span class="hidden text-xs text-[#071934]/60">Innovateurs</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-[#F3F4F5] transition-colors" type="button"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="#071934" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path></svg></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-[#F3F4F5]"><div class="flex flex-col w-full text-[#071934] font-['Inter']">
+<!-- Back Action -->
+<div class="px-4 py-3 bg-[#F3F4F5]">
+<a class="inline-flex items-center gap-2 text-[14px] font-medium text-[#071934] hover:text-[#D3A940] transition-colors" data-path="actualites" href="#">
+<svg fill="none" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="#071934" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Retour aux événements</span>
+</a>
+</div>
+<div class="px-4 space-y-4 pb-8">
+<!-- Event Main Header Cartouche -->
+<section class="bg-[#FFFFFF] rounded-xl overflow-hidden shadow-[0_1px_3px_rgba(7,25,52,0.05)]">
+<!-- Visual Placeholder Neutral -->
+<div class="w-full h-44 bg-[#E6E8EB] flex flex-col items-center justify-center relative p-6">
+<div class="w-14 h-14 rounded-full bg-[#FFFFFF] flex items-center justify-center shadow-[0_2px_4px_rgba(7,25,52,0.06)] mb-2">
+<svg fill="none" height="28" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+<rect height="18" rx="2" stroke="#071934" stroke-width="1.8" width="18" x="3" y="4"></rect>
+<path d="M16 2V6M8 2V6M3 10H21" stroke="#071934" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M8 14H8.01M12 14H12.01M16 14H16.01M8 18H8.01M12 18H12.01" stroke="#071934" stroke-linecap="round" stroke-width="2.2"></path>
+</svg>
+</div>
+<span class="text-[12px] uppercase tracking-wider font-semibold text-[#071934]/70">Conférence &amp; Ateliers</span>
+<div class="absolute top-3 right-3 bg-[#071934] text-[#FFFFFF] text-[12px] font-semibold px-2.5 py-1 rounded">
+          Présentiel &amp; Hybride
+        </div>
+</div>
+<!-- Core Meta Content -->
+<div class="p-5">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#D3A940]/15 mb-3">
+<span class="w-2 h-2 rounded-full bg-[#D3A940]"></span>
+<span class="text-[12px] font-semibold text-[#071934]">Édition Panafricaine 2026</span>
+</div>
+<h1 class="text-[20px] font-bold leading-tight text-[#071934] mb-4">
+          Forum Panafricain de l'Innovation Frugale
+        </h1>
+<div class="space-y-3 bg-[#F3F4F5] p-3.5 rounded-lg">
+<!-- Date -->
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded bg-[#FFFFFF] flex items-center justify-center shrink-0">
+<svg fill="none" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+<rect height="18" rx="2" stroke="#071934" stroke-width="1.8" width="18" x="3" y="4"></rect>
+<path d="M16 2V6M8 2V6M3 10H21" stroke="#071934" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div>
+<p class="text-[12px] text-[#071934]/70 font-medium">Dates officielles</p>
+<p class="text-[14px] font-semibold text-[#071934]">24 au 26 Septembre 2026</p>
+</div>
+</div>
+<!-- Time -->
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded bg-[#FFFFFF] flex items-center justify-center shrink-0">
+<svg fill="none" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="9" stroke="#071934" stroke-width="1.8"></circle>
+<path d="M12 7V12L15 15" stroke="#071934" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div>
+<p class="text-[12px] text-[#071934]/70 font-medium">Horaires (GMT+0)</p>
+<p class="text-[14px] font-semibold text-[#071934]">08h30 – 18h00 quotidien</p>
+</div>
+</div>
+<!-- Location -->
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded bg-[#FFFFFF] flex items-center justify-center shrink-0">
+<svg fill="none" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#071934" stroke-width="1.8"></path>
+<circle cx="12" cy="9" r="2.5" stroke="#071934" stroke-width="1.8"></circle>
+</svg>
+</div>
+<div>
+<p class="text-[12px] text-[#071934]/70 font-medium">Lieu de convergence</p>
+<p class="text-[14px] font-semibold text-[#071934]">Palais des Congrès, Cotonou (Bénin)</p>
+</div>
+</div>
+<!-- Organizer -->
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded bg-[#FFFFFF] flex items-center justify-center shrink-0">
+<svg fill="none" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#071934" stroke-linecap="round" stroke-width="1.8"></path>
+<circle cx="9" cy="7" r="4" stroke="#071934" stroke-width="1.8"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#071934" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div>
+<p class="text-[12px] text-[#071934]/70 font-medium">Organisateur</p>
+<p class="text-[14px] font-semibold text-[#071934]">RAJI &amp; Partenaires Institutionnels</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Description Section -->
+<section class="bg-[#FFFFFF] rounded-xl p-5 shadow-[0_1px_3px_rgba(7,25,52,0.05)]">
+<h2 class="text-[16px] font-bold text-[#071934] mb-3 pb-2 border-b border-[#E6E8EB]">
+        À propos de l'événement
+      </h2>
+<div class="space-y-3 text-[14px] text-[#071934]/85 leading-relaxed">
+<p>
+          Le Forum Panafricain de l'Innovation Frugale rassemble plus de 450 délégués, chercheurs, entrepreneurs et institutions publiques issus de 28 pays africains. L'ambition est claire: transformer des contraintes locales en atouts structurels durables.
+        </p>
+<p>
+          Autour du mot d'ordre <em>"Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique"</em>, cette édition se concentre sur les technologies sobres, les bio-énergies distribuées, l'agritech paysanne et les financements d'amorçage à fort impact territorial.
+        </p>
+<p>
+          Conférences plénières, ateliers méthodologiques interactifs et sessions de maillage stratégique permettront aux participants d'accéder directement à un pool de mentors certifiés, de prototypes opérationnels et de partenaires financiers d'envergure internationale.
+        </p>
+</div>
+</section>
+<!-- Detailed Schedule Section -->
+<section class="bg-[#FFFFFF] rounded-xl p-5 shadow-[0_1px_3px_rgba(7,25,52,0.05)]">
+<h2 class="text-[16px] font-bold text-[#071934] mb-4 pb-2 border-b border-[#E6E8EB]">
+        Programme succinct
+      </h2>
+<div class="space-y-3">
+<!-- Jour 1 -->
+<div class="p-3.5 rounded-lg bg-[#F3F4F5]">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[12px] font-bold uppercase tracking-wider text-[#D3A940]">Jour 1 · 24 Septembre</span>
+<span class="text-[12px] font-medium text-[#071934]/70">08h30 - 17h30</span>
+</div>
+<h3 class="text-[14px] font-bold text-[#071934] mb-1">
+            Ouverture Institutionnelle &amp; Panorama Continental
+          </h3>
+<p class="text-[13px] text-[#071934]/80 leading-normal">
+            Discours ministériels, cartographie des brevets frugaux africains et table ronde inaugurale sur la souveraineté technologique.
+          </p>
+</div>
+<!-- Jour 2 -->
+<div class="p-3.5 rounded-lg bg-[#F3F4F5]">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[12px] font-bold uppercase tracking-wider text-[#D3A940]">Jour 2 · 25 Septembre</span>
+<span class="text-[12px] font-medium text-[#071934]/70">09h00 - 18h00</span>
+</div>
+<h3 class="text-[14px] font-bold text-[#071934] mb-1">
+            Laboratoires Pratiques &amp; Sessions Pitch Démo
+          </h3>
+<p class="text-[13px] text-[#071934]/80 leading-normal">
+            Ateliers techniques sur les architectures logicielles légères, passage à l'échelle des prototypes physiques et retours de terrain.
+          </p>
+</div>
+<!-- Jour 3 -->
+<div class="p-3.5 rounded-lg bg-[#F3F4F5]">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[12px] font-bold uppercase tracking-wider text-[#D3A940]">Jour 3 · 26 Septembre</span>
+<span class="text-[12px] font-medium text-[#071934]/70">09h00 - 16h30</span>
+</div>
+<h3 class="text-[14px] font-bold text-[#071934] mb-1">
+            Accords de Financement &amp; Remise des Prix RAJI
+          </h3>
+<p class="text-[13px] text-[#071934]/80 leading-normal">
+            Rencontres bilatérales avec les fonds d'amorçage, signature de partenariats stratégiques et clôture officielle du Forum.
+          </p>
+</div>
+</div>
+</section>
+<!-- Registration Form Card -->
+<section class="bg-[#FFFFFF] rounded-xl p-5 shadow-[0_1px_3px_rgba(7,25,52,0.05)] border border-[#E6E8EB]">
+<div class="mb-4">
+<h2 class="text-[18px] font-bold text-[#071934] leading-snug">
+          Inscription individuelle
+        </h2>
+<p class="text-[13px] text-[#071934]/75 mt-1">
+          Remplissez le formulaire ci-dessous pour réserver votre place. Les places physiques sont limitées par quota pays.
+        </p>
+</div>
+<form class="space-y-3.5" id="event-reg-form">
+<!-- Nom -->
+<div>
+<label class="block text-[12px] font-semibold uppercase tracking-wider text-[#071934] mb-1" for="last-name">
+            Nom *
+          </label>
+<input class="w-full h-10 px-3 text-[14px] bg-[#FFFFFF] border border-[#E6E8EB] rounded text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934]" id="last-name" name="last_name" placeholder="Ex: Diallo" required="" type="text"/>
+</div>
+<!-- Prénom -->
+<div>
+<label class="block text-[12px] font-semibold uppercase tracking-wider text-[#071934] mb-1" for="first-name">
+            Prénom *
+          </label>
+<input class="w-full h-10 px-3 text-[14px] bg-[#FFFFFF] border border-[#E6E8EB] rounded text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934]" id="first-name" name="first_name" placeholder="Ex: Aminata" required="" type="text"/>
+</div>
+<!-- Email -->
+<div>
+<label class="block text-[12px] font-semibold uppercase tracking-wider text-[#071934] mb-1" for="email-address">
+            Email professionnel ou personnel *
+          </label>
+<input class="w-full h-10 px-3 text-[14px] bg-[#FFFFFF] border border-[#E6E8EB] rounded text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934]" id="email-address" name="email" placeholder="aminata.diallo@domaine.org" required="" type="email"/>
+</div>
+<!-- Téléphone -->
+<div>
+<label class="block text-[12px] font-semibold uppercase tracking-wider text-[#071934] mb-1" for="phone-number">
+            Téléphone (avec indicatif) *
+          </label>
+<input class="w-full h-10 px-3 text-[14px] bg-[#FFFFFF] border border-[#E6E8EB] rounded text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934]" id="phone-number" name="phone" placeholder="+229 97 00 00 00" required="" type="tel"/>
+</div>
+<!-- Organisation / Structure -->
+<div>
+<label class="block text-[12px] font-semibold uppercase tracking-wider text-[#071934] mb-1" for="org-name">
+            Organisation / Structure / Startup *
+          </label>
+<input class="w-full h-10 px-3 text-[14px] bg-[#FFFFFF] border border-[#E6E8EB] rounded text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934]" id="org-name" name="organization" placeholder="Ex: AgriTech Innovations Bénin" required="" type="text"/>
+</div>
+<!-- Consent Note -->
+<p class="text-[12px] text-[#071934]/60 leading-normal pt-1">
+          En confirmant, vous acceptez le traitement de vos coordonnées pour la délivrance du badge officiel et des documents de séance.
+        </p>
+<!-- Submit Button -->
+<button class="w-full h-11 bg-[#D3A940] hover:bg-[#c49a33] text-[#071934] font-bold text-[14px] rounded flex items-center justify-center gap-2 transition-all shadow-[0_2px_4px_rgba(211,169,64,0.25)] active:translate-y-0.5" type="submit">
+<span>S'inscrire à l'événement</span>
+<svg fill="none" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#071934" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</form>
+<div class="hidden mt-3 p-3 rounded bg-[#E6E8EB] text-[#071934] text-[13px] text-center font-medium" id="form-success">
+        Votre demande d'inscription a bien été enregistrée. Une confirmation vous sera transmise par courriel.
+      </div>
+</section>
+<!-- Retrospective Past Editions -->
+<section class="bg-[#FFFFFF] rounded-xl p-5 shadow-[0_1px_3px_rgba(7,25,52,0.05)]">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="text-[16px] font-bold text-[#071934]">
+            Rétrospective des éditions passées
+          </h2>
+<p class="text-[12px] text-[#071934]/70">
+            Retour visuel sur l'impact de nos rendez-vous continentaux
+          </p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<!-- Past Edition 1 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-[#F3F4F5]">
+<div class="w-20 h-20 rounded bg-[#E6E8EB] shrink-0 flex flex-col items-center justify-center">
+<svg fill="none" height="22" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+<rect height="14" rx="2" stroke="#071934" stroke-width="1.8" width="20" x="2" y="3"></rect>
+<path d="M8 21H16M12 17V21" stroke="#071934" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+<span class="text-[10px] font-bold text-[#071934] mt-1">2025</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[11px] font-semibold uppercase text-[#D3A940]">Dakar · Sénégal</span>
+<h3 class="text-[14px] font-bold text-[#071934] truncate">Sommet Climat &amp; Énergies Décentralisées</h3>
+<p class="text-[12px] text-[#071934]/75 line-clamp-2 mt-0.5">380 porteurs de projets réunis, 14 consortiums de recherche financés.</p>
+</div>
+</div>
+<!-- Past Edition 2 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-[#F3F4F5]">
+<div class="w-20 h-20 rounded bg-[#E6E8EB] shrink-0 flex flex-col items-center justify-center">
+<svg fill="none" height="22" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#071934" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M2 17L12 22L22 17" stroke="#071934" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M2 12L12 17L22 12" stroke="#071934" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="text-[10px] font-bold text-[#071934] mt-1">2024</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[11px] font-semibold uppercase text-[#D3A940]">Kigali · Rwanda</span>
+<h3 class="text-[14px] font-bold text-[#071934] truncate">Assises de la Jeunesse Numérique</h3>
+<p class="text-[12px] text-[#071934]/75 line-clamp-2 mt-0.5">Focus sur l'intelligence artificielle souveraine et l'accès haut-débit rural.</p>
+</div>
+</div>
+<!-- Past Edition 3 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-[#F3F4F5]">
+<div class="w-20 h-20 rounded bg-[#E6E8EB] shrink-0 flex flex-col items-center justify-center">
+<svg fill="none" height="22" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 3V21M17 8L12 3L7 8M17 16L12 21L7 16" stroke="#071934" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="text-[10px] font-bold text-[#071934] mt-1">2023</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="text-[11px] font-semibold uppercase text-[#D3A940]">Nairobi · Kenya</span>
+<h3 class="text-[14px] font-bold text-[#071934] truncate">Rencontre des Pôles d'Incubation Sud</h3>
+<p class="text-[12px] text-[#071934]/75 line-clamp-2 mt-0.5">Adoption de la charte de coopération technologique inter-universitaire.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+    (function() {
+      const regForm = document.getElementById('event-reg-form');
+      const successBox = document.getElementById('form-success');
+      if (regForm && successBox) {
+        regForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          successBox.classList.remove('hidden');
+          regForm.reset();
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-[#071934] text-[#FFFFFF] pt-10 pb- safe px-6 pb-12"><div class="max-w-md mx-auto flex flex-col items-start"><div class="inline-flex items-center justify-center bg-[#FFFFFF] rounded-xl p-2.5 mb-8"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-[56px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/></div><nav class="flex flex-col space-y-4 w-full mb-10"><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="a-propos" href="#">À propos du RAJI</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="programmes" href="#">Nos Programmes</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="innovateurs" href="#">Communauté des Innovateurs</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="incubateur" href="#">Incubateur &amp; Accélération</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="actualites" href="#">Actualités &amp; Événements</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="partenaires" href="#">Partenaires &amp; Institutions</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="ressources" href="#">Ressources &amp; Publications</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="contact" href="#">Rejoindre le Réseau</a></nav><div class="w-full h-[1px] bg-[#FFFFFF]/10 mb-6"></div><p class="text-xs text-[#FFFFFF]/70 leading-relaxed font-normal">© 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.</p></div></footer></body></html>

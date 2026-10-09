@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9fc;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error": "#ffffff", "secondary-container": "#dfe0e0", "surface-container-high": "#e6e8eb", "tertiary-container": "#251a00", "primary-fixed": "#d7e3ff", "on-secondary-fixed-variant": "#454747", "secondary": "#5d5f5f", "on-error-container": "#93000a", "surface-variant": "#e0e3e6", "inverse-surface": "#2d3133", "on-primary": "#ffffff", "on-primary-container": "#7484a4", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#c6c6c7", "primary-fixed-dim": "#b7c7ea", "surface-container-low": "#f2f4f7", "on-background": "#191c1e", "on-tertiary-fixed": "#251a00", "on-secondary-fixed": "#1a1c1c", "surface": "#f8f9fc", "inverse-primary": "#b7c7ea", "background": "#f8f9fc", "on-surface": "#191c1e", "inverse-on-surface": "#eff1f4", "primary-container": "#0a1b36", "on-tertiary-fixed-variant": "#5a4300", "on-tertiary-container": "#a47e15", "tertiary-fixed-dim": "#edc155", "outline": "#75777e", "tertiary": "#000000", "on-secondary": "#ffffff", "surface-container": "#eceef1", "tertiary-fixed": "#ffdf9a", "surface-tint": "#4f5f7d", "on-surface-variant": "#44474d", "secondary-fixed": "#e2e2e2", "primary": "#000000", "surface-container-highest": "#e0e3e6", "surface-dim": "#d8dadd", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#0a1b36", "on-primary-fixed-variant": "#374764", "on-secondary-container": "#616363", "surface-bright": "#f8f9fc", "error-container": "#ffdad6", "outline-variant": "#c5c6ce" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-lg": "4rem", "space-md": "1rem", "space-xl": "2.5rem", "margin": "1.5rem", "gutter-lg": "2rem", "gutter": "1.5rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "margin-sm": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "display-mobile": ["Inter"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "title": ["Inter"], "headline-lg-mobile": ["Inter"], "label-sm": ["Inter"], "display": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "body-sm": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.005em", "fontWeight": "400" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "0", "fontWeight": "400" }], "body-md": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400" }], "headline-md": ["1.875rem", { "lineHeight": "2.375rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-lg": ["2.5rem", { "lineHeight": "3rem", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "title": ["1.125rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "display": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.035em", "fontWeight": "800" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-12 px-gutter-sm flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Ouvrir le menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="document.getElementById('mobile-drawer').classList.remove('hidden')" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/><span class="font-title text-title text-on-surface truncate max-w-[140px]">Accueil</span></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div aria-modal="true" class="fixed inset-0 z-50 hidden" id="mobile-drawer" role="dialog"><div class="fixed inset-0 bg-primary-container/60 backdrop-blur-sm transition-opacity" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"></div><div class="fixed inset-y-0 left-0 max-w-xs w-full bg-surface-container-lowest shadow-[0_20px_25px_-5px_rgba(7,25,52,0.12)] p-margin-sm flex flex-col justify-between z-10"><div class="flex flex-col gap-space-lg"><div class="flex items-center justify-between"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('mobile-drawer').classList.add('hidden')" type="button"><span class="material-symbols-outlined text-[24px]">close</span></button></div><div class="px-space-xs"><p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Réseau Africain</p><h2 class="font-title text-title text-on-surface">Jeunes Innovateurs</h2></div><nav class="flex flex-col gap-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg hover:bg-surface-container-low text-on-surface font-label-md text-label-md" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="material-symbols-outlined text-[20px]">home</span>Accueil</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg hover:bg-surface-container-low text-on-surface font-label-md text-label-md" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="material-symbols-outlined text-[20px]">lightbulb</span>Innovations</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg hover:bg-surface-container-low text-on-surface font-label-md text-label-md" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="material-symbols-outlined text-[20px]">groups</span>Écosystème & Hubs</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg hover:bg-surface-container-low text-on-surface font-label-md text-label-md" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="material-symbols-outlined text-[20px]">handshake</span>Partenaires</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg hover:bg-surface-container-low text-on-surface font-label-md text-label-md" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="material-symbols-outlined text-[20px]">person</span>Mon Compte</a></nav></div><div class="flex flex-col gap-space-md pt-space-md"><a class="w-full h-11 flex items-center justify-center gap-space-sm bg-tertiary-fixed text-on-tertiary-fixed rounded-lg font-label-md text-label-md shadow-[0_0_0_3px_rgba(211,169,64,0.25)]" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span>Soumettre mon innovation</a><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><p class="font-label-sm text-label-sm text-on-surface-variant text-center">"Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique"</p></div></div></div></div><main class="flex-1 flex flex-col relative w-full pt-12 bg-surface"><div class="flex flex-col w-full">
+<!-- Minimal Hero Section (Deep Navy) -->
+<section class="relative bg-primary-container text-on-primary p-5 overflow-hidden shadow-md">
+<!-- Fine African geometric watermark pattern -->
+<svg class="absolute right-0 top-0 h-full w-48 text-surface-container-lowest opacity-[0.04] pointer-events-none" fill="none" stroke="currentColor" stroke-width="1" viewbox="0 0 100 100">
+<polygon points="0,0 50,50 0,100"></polygon>
+<polygon points="50,0 100,50 50,100"></polygon>
+<polygon points="25,25 75,25 50,75"></polygon>
+<line x1="0" x2="100" y1="50" y2="50"></line>
+</svg>
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-sm text-label-sm">Aperçu Design System Mobile</span>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile tracking-tight text-on-primary">
+          RAJI UI System
+        </h1>
+<p class="font-body-sm text-body-sm text-surface-container-high leading-relaxed">
+          « Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique »
+        </p>
+</div>
+<!-- Quick Metrics Counter Pill -->
+<div class="flex items-center gap-4 pt-2">
+<div class="flex items-center gap-1.5">
+<span class="font-title text-title text-tertiary-fixed">100%</span>
+<span class="font-label-sm text-label-sm text-surface-container-high/80">Tokens Validés</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-surface-container-high/40"></div>
+<div class="flex items-center gap-1.5">
+<span class="font-title text-title text-tertiary-fixed">v2.4</span>
+<span class="font-label-sm text-label-sm text-surface-container-high/80">Mobile Spec</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Workspace -->
+<div class="p-margin-sm flex flex-col gap-space-lg">
+<!-- Interactive Mobile Segmented Tabs Bar -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Navigation d'inspection</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">touch_app</span> 3 vues
+        </span>
+</div>
+<div class="bg-surface-container-high p-1 rounded-xl flex items-center gap-1 shadow-sm" role="tablist">
+<button class="flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all duration-200 bg-surface-container-lowest text-on-surface shadow-sm text-center" id="tab-btn-components" onclick="switchPreviewTab('components')" type="button">
+          Composants
+        </button>
+<button class="flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all duration-200 text-on-surface-variant hover:text-on-surface text-center" id="tab-btn-tokens" onclick="switchPreviewTab('tokens')" type="button">
+          Tokens
+        </button>
+<button class="flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all duration-200 text-on-surface-variant hover:text-on-surface text-center" id="tab-btn-guidelines" onclick="switchPreviewTab('guidelines')" type="button">
+          Règles
+        </button>
+</div>
+</div>
+<!-- TAB 1: COMPONENTS (Default active view) -->
+<div class="flex flex-col gap-space-lg" id="tab-content-components">
+<!-- Spec Card: Buttons Matrix -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">smart_button</span>
+<h2 class="font-title text-title text-on-surface">Boutons d'Action</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">3 états</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Primary Deep Navy CTA -->
+<button class="w-full h-11 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm hover:opacity-95 active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Bouton Primaire — Deep Navy</span>
+</button>
+<!-- Gold Highlight CTA -->
+<button class="w-full h-11 px-space-md rounded-lg bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md flex items-center justify-center gap-2 shadow-[0_0_0_3px_rgba(211,169,64,0.25)] hover:opacity-90 active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>CTA Or — Propulsion Majeure</span>
+</button>
+<!-- Outlined / Secondary Button with Strict Colors -->
+<button class="w-full h-11 px-space-md rounded-lg bg-surface-container-lowest text-primary-container font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm hover:bg-surface-container-low active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Bouton Secondaire — Profil Neutre</span>
+</button>
+</div>
+</div>
+<!-- Spec Card: Badges Showcase -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">sell</span>
+<h2 class="font-title text-title text-on-surface">Badges & Statuts</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tokens M3 / RAJI</span>
+</div>
+<!-- Badges Container -->
+<div class="flex flex-wrap gap-2 items-center">
+<!-- Gold Badge with micro dot -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+            Excellence Or
+          </span>
+<!-- Deep Navy Solid Badge -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+            Innovateur Actif
+          </span>
+<!-- Muted Tint Badge -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            En Examen
+          </span>
+<!-- Clean Minimal Pill -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+            Hub Dakar
+          </span>
+</div>
+</div>
+<!-- Spec Card: Form Input Field -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5" for="project-name">
+<span>Nom du Projet d'Innovation</span>
+<span class="text-on-tertiary-container">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Max 40 caractères</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">eco</span>
+<input class="w-full h-10 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_3px_rgba(211,169,64,0.35)] transition-all shadow-inner" id="project-name" placeholder="Ex: Système d'irrigation solaire" type="text" value="AgriTech Sahelo-Smart"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-container">info</span>
+          Identifiant d'impact auditable par le jury panafricain.
+        </p>
+</div>
+<!-- Spec Card: Standard shadcn-style Compact Card with Logo watermark & Image slot -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<!-- Card Header with Logo Asset -->
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center p-1.5 shadow-sm shrink-0">
+<img alt="RAJI Symbol" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUpd5KteZhCxVnu7y36eNi63HGA67viIuvNkS5gWawXt4GjG42f-9XRVU06gDNBrhRvRQjbYpmdr53uMgdNCTPTUK8P-FpEbRO3tdSk7JBK3KCrIa_0ca6x7SmAtIoXSQMcWdIo-zQnuNZ1OdmnFn1OEAu7FlMrQOW8eL0zfN05SzLvfyeVbJnF7boWKx9IKdoOrN_4pbBtNVKKBH-FLtfmIBeNuychRm02JxWAMrryEd6hLF7ze95b9zPeDsFpSPlR0g"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container">Projet Certifié</span>
+<h3 class="font-title text-title text-on-surface">Bio-Pesticide Nilotica</h3>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm shrink-0">
+            Rwanda
+          </span>
+</div>
+<!-- Description -->
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Formulation agronomique biodégradable valorisant les coproduits oléagineux locaux pour protéger les récoltes céréalières à coût accessible.
+        </p>
+<!-- Progress Tracker Mini Widget -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Maturité Prototype</span>
+<span class="text-on-tertiary-container font-semibold">Étape 4 / 5 (80%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Dual Card Actions -->
+<div class="flex items-center gap-space-sm pt-1">
+<button class="flex-1 h-10 px-3 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:opacity-95 shadow-sm active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Consulter</span>
+</button>
+<button aria-label="Favoris" class="h-10 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TAB 2: DESIGN TOKENS (Hidden by default) -->
+<div class="hidden flex-col gap-space-md" id="tab-content-tokens">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<h2 class="font-title text-title text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">palette</span>
+          Palette Stricte RAJI
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Respect absolu du quadriptyque : Deep Navy, Blanc Pur, Or Solaire et Nuances Neutres.
+        </p>
+<div class="grid grid-cols-2 gap-3 pt-1">
+<!-- Deep Navy -->
+<div class="p-3 rounded-xl bg-primary-container text-on-primary flex flex-col justify-between h-24 shadow-sm">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold">Deep Navy</span>
+<div class="flex flex-col">
+<span class="font-title text-title leading-tight">#071934</span>
+<span class="font-label-sm text-label-sm opacity-70">Dominante primaire</span>
+</div>
+</div>
+<!-- Warm Gold -->
+<div class="p-3 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex flex-col justify-between h-24 shadow-sm">
+<span class="font-label-sm text-label-sm font-semibold">Warm Gold</span>
+<div class="flex flex-col">
+<span class="font-title text-title leading-tight">#D3A940</span>
+<span class="font-label-sm text-label-sm opacity-80">Accents d'honneur</span>
+</div>
+</div>
+<!-- Surface Pure White -->
+<div class="p-3 rounded-xl bg-surface-container-lowest text-on-surface flex flex-col justify-between h-24 shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Pure White</span>
+<div class="flex flex-col">
+<span class="font-title text-title leading-tight">#FFFFFF</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fond & Cartes</span>
+</div>
+</div>
+<!-- Tint Soft Container -->
+<div class="p-3 rounded-xl bg-surface-container-high text-on-surface flex flex-col justify-between h-24 shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Surface Tint</span>
+<div class="flex flex-col">
+<span class="font-title text-title leading-tight">#E6E8EB</span>
+<span class="font-label-sm text-label-sm text-secondary">Séparations discrètes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 3: GUIDELINES (Hidden by default) -->
+<div class="hidden flex-col gap-space-md" id="tab-content-guidelines">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<h2 class="font-title text-title text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">gavel</span>
+          Règles d'Intégrité Visuelle
+        </h2>
+<div class="flex flex-col gap-2 pt-2">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Zéro Bordure Agressive</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Les contrastes proviennent exclusivement des décalages de teinte (#F3F4F5 / #FFFFFF / #E6E8EB).</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Identité Pan-Africaine Subtile</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Watermarks géométriques stylisés limités à 4-6% d'opacité pour garantir la lisibilité corporate.</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Logo RAJI Inaltérable</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Préservation rigoureuse du ratio d'aspect de la marque officielle sans étirement.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Toast Micro-Notification Demo -->
+<div class="p-3 rounded-xl bg-surface-container flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[22px] shrink-0">workspace_premium</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Validation Responsive 390px OK</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-on-tertiary-container px-2 py-0.5 rounded bg-surface-container-lowest shrink-0 shadow-sm">
+        Conforme
+      </span>
+</div>
+</div>
+</div>
+<script>
+  function switchPreviewTab(tabId) {
+    var tabs = ['components', 'tokens', 'guidelines'];
+    tabs.forEach(function(t) {
+      var contentEl = document.getElementById('tab-content-' + t);
+      var btnEl = document.getElementById('tab-btn-' + t);
+      if (contentEl && btnEl) {
+        if (t === tabId) {
+          contentEl.classList.remove('hidden');
+          contentEl.classList.add('flex');
+          btnEl.className = 'flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all duration-200 bg-surface-container-lowest text-on-surface shadow-sm text-center';
+        } else {
+          contentEl.classList.remove('flex');
+          contentEl.classList.add('hidden');
+          btnEl.className = 'flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all duration-200 text-on-surface-variant hover:text-on-surface text-center';
+        }
+      }
+    });
+  }
+</script><footer class="w-full bg-primary-container text-on-primary px-margin-sm py-space-xl mt-space-xl"><div class="flex flex-col items-center gap-space-lg text-center"><div class="bg-surface-container-lowest rounded-xl p-2.5 inline-flex items-center justify-center shadow-[0_1px_3px_0_rgba(7,25,52,0.04)]"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/></div><div class="flex flex-col gap-space-xs"><p class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary-fixed">Excellence Panafricaine</p><p class="font-body-sm text-body-sm text-surface-container-high max-w-xs">Plateforme de propulsion de l'entrepreneuriat et du génie technologique de la jeunesse africaine.</p></div><div class="flex items-center justify-center gap-space-lg pt-space-xs"><a class="font-label-sm text-label-sm text-surface-container-high hover:text-on-primary" href="#">Charte</a><span class="text-surface-container-high/40">•</span><a class="font-label-sm text-label-sm text-surface-container-high hover:text-on-primary" href="#">Contact</a><span class="text-surface-container-high/40">•</span><a class="font-label-sm text-label-sm text-surface-container-high hover:text-on-primary" href="#">Mentions Légales</a></div><p class="font-label-sm text-label-sm text-surface-container-high/60">© 2025 RAJI. Tous droits réservés.</p></div></footer></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-gutter-sm"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-14 h-14 transition-colors text-primary font-bold" data-path="accueil" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Accueil</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant transition-colors" data-path="innovations" href="#"><span class="material-symbols-outlined text-[22px]">lightbulb</span><span class="font-label-sm text-label-sm">Projets</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant transition-colors" data-path="soumettre" href="#"><span class="material-symbols-outlined text-[22px] text-on-tertiary-container">add_box</span><span class="font-label-sm text-label-sm text-on-tertiary-container">Soumettre</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant transition-colors" data-path="communaute" href="#"><span class="material-symbols-outlined text-[22px]">hub</span><span class="font-label-sm text-label-sm">Réseau</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant transition-colors" data-path="profil" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm">Profil</span></a></div></nav></body></html>

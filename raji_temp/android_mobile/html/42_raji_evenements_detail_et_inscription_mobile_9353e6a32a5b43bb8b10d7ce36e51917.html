@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;font-family:'Inter',sans-serif;background-color:#F3F4F5;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface-variant': '#e0e3e6', 'primary-container': '#0a1b36', 'on-secondary': '#ffffff', 'surface-tint': '#4f5f7d', 'on-primary-fixed-variant': '#374764', 'on-primary': '#ffffff', 'tertiary-fixed': '#ffdf9a', 'background': '#f8f9fc', 'secondary': '#5d5f5f', 'surface-container-high': '#e6e8eb', 'surface': '#f8f9fc', 'on-error-container': '#93000a', 'outline-variant': '#c5c6ce', 'on-primary-container': '#7484a4', 'tertiary': '#000000', 'on-tertiary-container': '#a47e15', 'on-tertiary': '#ffffff', 'primary-fixed-dim': '#b7c7ea', 'on-surface-variant': '#44474d', 'error': '#ba1a1a', 'on-secondary-fixed': '#1a1c1c', 'surface-bright': '#f8f9fc', 'inverse-surface': '#2d3133', 'secondary-container': '#dfe0e0', 'surface-container-lowest': '#ffffff', 'error-container': '#ffdad6', 'surface-container-low': '#f2f4f7', 'inverse-on-surface': '#eff1f4', 'secondary-fixed': '#e2e2e2', 'on-secondary-container': '#616363', 'on-tertiary-fixed-variant': '#5a4300', 'tertiary-container': '#251a00', 'on-surface': '#191c1e', 'on-secondary-fixed-variant': '#454747', 'primary-fixed': '#d7e3ff', 'on-tertiary-fixed': '#251a00', 'inverse-primary': '#b7c7ea', 'surface-container-highest': '#e0e3e6', 'primary': '#000000', 'on-background': '#191c1e', 'outline': '#75777e', 'on-primary-fixed': '#0a1b36', 'secondary-fixed-dim': '#c6c6c7', 'on-error': '#ffffff', 'surface-dim': '#d8dadd', 'surface-container': '#eceef1', 'tertiary-fixed-dim': '#edc155' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-lg': '1.5rem', 'space-md': '1rem', 'margin-sm': '1rem', 'gutter': '1.5rem', 'space-xs': '0.25rem', 'space-xl': '2.5rem', 'gutter-lg': '2rem', 'gutter-sm': '1rem', 'margin-lg': '4rem', 'space-sm': '0.5rem', 'margin': '1.5rem' }, fontFamily: { 'display-mobile': ['Inter'], 'headline-lg-mobile': ['Inter'], 'headline-sm': ['Inter'], 'body-md': ['Inter'], 'body-sm': ['Inter'], 'body-lg': ['Inter'], 'title': ['Inter'], 'display': ['Inter'], 'label-md': ['Inter'], 'headline-md': ['Inter'], 'headline-lg': ['Inter'], 'label-sm': ['Inter'] }, fontSize: { 'display-mobile': ['2.25rem', { lineHeight: '2.75rem', letterSpacing: '-0.025em', fontWeight: '800' }], 'headline-lg-mobile': ['1.75rem', { lineHeight: '2.25rem', letterSpacing: '-0.02em', fontWeight: '700' }], 'headline-sm': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '-0.015em', fontWeight: '600' }], 'body-md': ['1rem', { lineHeight: '1.5rem', letterSpacing: '0', fontWeight: '400' }], 'body-sm': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0.005em', fontWeight: '400' }], 'body-lg': ['1.125rem', { lineHeight: '1.75rem', letterSpacing: '0', fontWeight: '400' }], 'title': ['1.125rem', { lineHeight: '1.625rem', letterSpacing: '-0.01em', fontWeight: '600' }], 'display': ['3.5rem', { lineHeight: '4rem', letterSpacing: '-0.035em', fontWeight: '800' }], 'label-md': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0.01em', fontWeight: '500' }], 'headline-md': ['1.875rem', { lineHeight: '2.375rem', letterSpacing: '-0.02em', fontWeight: '600' }], 'headline-lg': ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.025em', fontWeight: '700' }], 'label-sm': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.04em', fontWeight: '600' }] } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-[#F3F4F5] text-[#071934] flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-[#FFFFFF] shadow-[0_1px_8px_rgba(7,25,52,0.06)]"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-3"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-[44px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/><span class="text-[#071934] font-title text-title font-bold tracking-tight">RAJI</span></div><div class="flex items-center gap-2"><span class="hidden text-xs text-[#071934]/60">Innovateurs</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center rounded-lg hover:bg-[#F3F4F5] transition-colors" type="button"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="#071934" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path></svg></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-[#F3F4F5]"><div class="flex flex-col w-full text-[#071934]">
+<!-- Top Sticky Sub-Bar & Breadcrumb -->
+<div class="sticky top-16 z-40 bg-[#FFFFFF] border-b border-[#E6E8EB] px-4 py-3 flex items-center justify-between shadow-[0_2px_6px_rgba(7,25,52,0.03)]">
+<a class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#071934] hover:text-[#D3A940] transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Retour aux événements</span>
+</a>
+<span class="text-[11px] font-bold tracking-wider uppercase bg-[#E6E8EB] text-[#071934] px-2.5 py-1 rounded">Édition 2026</span>
+</div>
+<div class="px-4 py-5 flex flex-col gap-6">
+<!-- Header & Badges -->
+<div class="flex flex-col gap-3">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-1 bg-[#FFFFFF] border border-[#E6E8EB] text-[11px] font-bold uppercase tracking-wider text-[#071934] rounded">
+          Inscriptions ouvertes
+        </span>
+<span class="inline-flex items-center px-2.5 py-1 bg-[#D3A940] text-[11px] font-bold uppercase tracking-wider text-[#071934] rounded">
+          Éco-Technologies &amp; Énergie
+        </span>
+</div>
+<span class="text-[12px] font-bold tracking-widest uppercase text-[#071934]/60">
+        Sommet continental annuel
+      </span>
+<h1 class="text-[22px] leading-[28px] font-bold text-[#071934] tracking-tight">
+        Forum Panafricain de l'Innovation Frugale et des Éco-Technologies
+      </h1>
+<p class="text-[14px] leading-[22px] text-[#071934]/80">
+        Trois journées d'émulation technologique, de présentations de prototypes à haut rendement écologique et d'alliances d'investissements stratégiques pour accélérer la souveraineté industrielle et environnementale du continent africain.
+      </p>
+</div>
+<!-- Quick Info Cards (2x2 Grid) -->
+<div class="grid grid-cols-2 gap-2.5 bg-[#FFFFFF] border border-[#E6E8EB] p-4 rounded-xl shadow-sm">
+<div class="flex flex-col gap-1 p-2 bg-[#F3F4F5] rounded-lg border border-[#E6E8EB]">
+<div class="flex items-center gap-1.5 text-[#071934]/70">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="text-[11px] font-bold uppercase tracking-wider">Dates</span>
+</div>
+<p class="text-[13px] font-bold text-[#071934]">18 — 20 Mai 2026</p>
+</div>
+<div class="flex flex-col gap-1 p-2 bg-[#F3F4F5] rounded-lg border border-[#E6E8EB]">
+<div class="flex items-center gap-1.5 text-[#071934]/70">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="text-[11px] font-bold uppercase tracking-wider">Horaires</span>
+</div>
+<p class="text-[13px] font-bold text-[#071934]">08:30 — 18:00 (GMT+1)</p>
+</div>
+<div class="flex flex-col gap-1 p-2 bg-[#F3F4F5] rounded-lg border border-[#E6E8EB]">
+<div class="flex items-center gap-1.5 text-[#071934]/70">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="text-[11px] font-bold uppercase tracking-wider">Lieu &amp; Format</span>
+</div>
+<p class="text-[13px] font-bold text-[#071934] leading-tight">Yaoundé &amp; Retransmission</p>
+</div>
+<div class="flex flex-col gap-1 p-2 bg-[#F3F4F5] rounded-lg border border-[#E6E8EB]">
+<div class="flex items-center gap-1.5 text-[#071934]/70">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+<span class="text-[11px] font-bold uppercase tracking-wider">Organisateur</span>
+</div>
+<p class="text-[13px] font-bold text-[#071934] leading-tight">Conseil Panafricain RAJI</p>
+</div>
+</div>
+<!-- Section 1: Presentation & Enjeux -->
+<div class="flex flex-col gap-3">
+<div class="border-b border-[#071934] pb-2">
+<h2 class="text-[16px] font-bold text-[#071934] uppercase tracking-wide">
+          Présentation détaillée &amp; Enjeux stratégiques
+        </h2>
+</div>
+<p class="text-[14px] leading-[21px] text-[#071934]/80">
+        Face aux transitions climatiques et énergétiques, l'Afrique capitalise sur des modèles d'ingénierie sobres, résilients et hautement scalables. Le sommet réunit les porteurs de brevets continentaux, les laboratoires de recherche panafricains et les fonds d'amorçage.
+      </p>
+<div class="flex flex-col gap-3 mt-1">
+<!-- Axe 01 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] p-3.5 rounded-lg">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[11px] font-bold tracking-wider uppercase text-[#D3A940]">Axe 01</span>
+<span class="material-symbols-outlined text-[#071934] text-[18px]">recycling</span>
+</div>
+<h3 class="text-[14px] font-bold text-[#071934] mb-1">Technologies Circulaires</h3>
+<p class="text-[13px] text-[#071934]/75 leading-relaxed">
+            Revalorisation des intrants agricoles et électroniques, substitution des polymères fossiles et conception modulaire à cycle de vie étendu.
+          </p>
+</div>
+<!-- Axe 02 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] p-3.5 rounded-lg">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[11px] font-bold tracking-wider uppercase text-[#D3A940]">Axe 02</span>
+<span class="material-symbols-outlined text-[#071934] text-[18px]">bolt</span>
+</div>
+<h3 class="text-[14px] font-bold text-[#071934] mb-1">Systèmes Énergétiques Autonomes</h3>
+<p class="text-[13px] text-[#071934]/75 leading-relaxed">
+            Micro-réseaux hybrides solaires-biomasse en zones rurales, convertisseurs thermiques basse consommation et stockage décentralisé.
+          </p>
+</div>
+<!-- Axe 03 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] p-3.5 rounded-lg">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[11px] font-bold tracking-wider uppercase text-[#D3A940]">Axe 03</span>
+<span class="material-symbols-outlined text-[#071934] text-[18px]">account_tree</span>
+</div>
+<h3 class="text-[14px] font-bold text-[#071934] mb-1">Propriété &amp; Financement Frugal</h3>
+<p class="text-[13px] text-[#071934]/75 leading-relaxed">
+            Mécanismes juridiques de protection intellectuelle panafricaine (OAPI/ARIPO) et syndication de capitaux patients dédiés aux prototypes industriels.
+          </p>
+</div>
+</div>
+</div>
+<!-- Section 2: Programme complet -->
+<div class="flex flex-col gap-3">
+<div class="border-b border-[#071934] pb-2">
+<h2 class="text-[16px] font-bold text-[#071934] uppercase tracking-wide">
+          Programme complet des 3 jours
+        </h2>
+</div>
+<div class="flex flex-col gap-2.5" id="programAccordion">
+<!-- Jour 1 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg overflow-hidden">
+<button class="w-full text-left p-3.5 bg-[#FFFFFF] hover:bg-[#F3F4F5] flex items-center justify-between border-b border-[#E6E8EB]" onclick="toggleAccordion('day1-content', 'day1-icon')" type="button">
+<div class="flex flex-col">
+<span class="text-[11px] font-bold uppercase text-[#D3A940]">18 Mai 2026</span>
+<span class="text-[13px] font-bold text-[#071934] leading-snug">Jour 1 : Souveraineté Technologique &amp; État des Lieux</span>
+</div>
+<span class="material-symbols-outlined text-[#071934] text-[20px] transition-transform" id="day1-icon">expand_more</span>
+</button>
+<div class="p-3.5 flex flex-col gap-3 bg-[#F3F4F5]" id="day1-content">
+<div class="flex gap-3 items-start border-l-2 border-[#071934] pl-2.5">
+<span class="text-[12px] font-bold text-[#071934] min-w-[70px]">08:30 - 10:00</span>
+<div class="flex-1">
+<p class="text-[13px] font-bold text-[#071934]">Cérémonie protocolaire d'ouverture</p>
+<p class="text-[12px] text-[#071934]/70">Discours introductif de la Présidence RAJI et représentants ministériels.</p>
+</div>
+</div>
+<div class="flex gap-3 items-start border-l-2 border-[#071934] pl-2.5">
+<span class="text-[12px] font-bold text-[#071934] min-w-[70px]">10:30 - 13:00</span>
+<div class="flex-1">
+<p class="text-[13px] font-bold text-[#071934]">Plénière : Diagnostic de l'autonomie frugale</p>
+<p class="text-[12px] text-[#071934]/70">Présentation du baromètre continental des brevets éco-technologiques.</p>
+</div>
+</div>
+<div class="flex gap-3 items-start border-l-2 border-[#D3A940] pl-2.5">
+<span class="text-[12px] font-bold text-[#071934] min-w-[70px]">14:30 - 17:30</span>
+<div class="flex-1">
+<p class="text-[13px] font-bold text-[#071934]">Vitrine Démo &amp; Pitchs Labs 1 à 15</p>
+<p class="text-[12px] text-[#071934]/70">Démonstrations en conditions réelles des 15 premiers prototypes sélectionnés.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Jour 2 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg overflow-hidden">
+<button class="w-full text-left p-3.5 bg-[#FFFFFF] hover:bg-[#F3F4F5] flex items-center justify-between border-b border-[#E6E8EB]" onclick="toggleAccordion('day2-content', 'day2-icon')" type="button">
+<div class="flex flex-col">
+<span class="text-[11px] font-bold uppercase text-[#D3A940]">19 Mai 2026</span>
+<span class="text-[13px] font-bold text-[#071934] leading-snug">Jour 2 : Déploiement Industriel &amp; Ateliers Pratiques</span>
+</div>
+<span class="material-symbols-outlined text-[#071934] text-[20px] transition-transform" id="day2-icon">expand_more</span>
+</button>
+<div class="p-3.5 flex flex-col gap-3 bg-[#F3F4F5]" id="day2-content">
+<div class="flex gap-3 items-start border-l-2 border-[#071934] pl-2.5">
+<span class="text-[12px] font-bold text-[#071934] min-w-[70px]">09:00 - 12:00</span>
+<div class="flex-1">
+<p class="text-[13px] font-bold text-[#071934]">Ateliers d'ingénierie inverse et normes AfCFTA</p>
+<p class="text-[12px] text-[#071934]/70">Conformité transfrontalière et standardisation des unités matérielles.</p>
+</div>
+</div>
+<div class="flex gap-3 items-start border-l-2 border-[#071934] pl-2.5">
+<span class="text-[12px] font-bold text-[#071934] min-w-[70px]">13:30 - 16:00</span>
+<div class="flex-1">
+<p class="text-[13px] font-bold text-[#071934]">Masterclass : Chaînes d'approvisionnement locales</p>
+<p class="text-[12px] text-[#071934]/70">Fabrication additive, usinage distribué et matières composites durables.</p>
+</div>
+</div>
+<div class="flex gap-3 items-start border-l-2 border-[#D3A940] pl-2.5">
+<span class="text-[12px] font-bold text-[#071934] min-w-[70px]">16:30 - 18:00</span>
+<div class="flex-1">
+<p class="text-[13px] font-bold text-[#071934]">B2B &amp; Sessions d'appariement institutionnel</p>
+<p class="text-[12px] text-[#071934]/70">Rencontres bilatérales acheteurs publics et industriels.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Jour 3 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg overflow-hidden">
+<button class="w-full text-left p-3.5 bg-[#FFFFFF] hover:bg-[#F3F4F5] flex items-center justify-between border-b border-[#E6E8EB]" onclick="toggleAccordion('day3-content', 'day3-icon')" type="button">
+<div class="flex flex-col">
+<span class="text-[11px] font-bold uppercase text-[#D3A940]">20 Mai 2026</span>
+<span class="text-[13px] font-bold text-[#071934] leading-snug">Jour 3 : Alliances, Prix d'Excellence &amp; Déclaration de Yaoundé</span>
+</div>
+<span class="material-symbols-outlined text-[#071934] text-[20px] transition-transform" id="day3-icon">expand_more</span>
+</button>
+<div class="p-3.5 flex flex-col gap-3 bg-[#F3F4F5]" id="day3-content">
+<div class="flex gap-3 items-start border-l-2 border-[#071934] pl-2.5">
+<span class="text-[12px] font-bold text-[#071934] min-w-[70px]">09:30 - 12:30</span>
+<div class="flex-1">
+<p class="text-[13px] font-bold text-[#071934]">Grande Table Ronde : Fonds d'Amorçage Panafricains</p>
+<p class="text-[12px] text-[#071934]/70">Signature des protocoles d'investissement et engagement des banques de développement.</p>
+</div>
+</div>
+<div class="flex gap-3 items-start border-l-2 border-[#D3A940] pl-2.5">
+<span class="text-[12px] font-bold text-[#071934] min-w-[70px]">14:00 - 16:30</span>
+<div class="flex-1">
+<p class="text-[13px] font-bold text-[#071934]">Remise des Prix d'Excellence RAJI 2026</p>
+<p class="text-[12px] text-[#071934]/70">Attribution des subventions d'accélération et bourses d'incubation.</p>
+</div>
+</div>
+<div class="flex gap-3 items-start border-l-2 border-[#071934] pl-2.5">
+<span class="text-[12px] font-bold text-[#071934] min-w-[70px]">17:00 - 18:00</span>
+<div class="flex-1">
+<p class="text-[13px] font-bold text-[#071934]">Adoption solennelle de la Déclaration de Yaoundé</p>
+<p class="text-[12px] text-[#071934]/70">Clôture des travaux et communiqué officiel continental.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Formulaire officiel d'inscription -->
+<div class="flex flex-col gap-3">
+<div class="border-b border-[#071934] pb-2">
+<h2 class="text-[16px] font-bold text-[#071934] uppercase tracking-wide">
+          Formulaire officiel d'inscription
+        </h2>
+</div>
+<form class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-5 flex flex-col gap-4 shadow-sm" onsubmit="event.preventDefault(); alert('Votre demande d\'inscription a été soumise avec succès au secrétariat du RAJI.');">
+<div class="flex flex-col gap-1.5">
+<label class="text-[12px] font-bold uppercase tracking-wider text-[#071934]" for="nom">
+            Nom <span class="text-[#071934]">*</span>
+</label>
+<input class="h-[44px] px-3 bg-[#FFFFFF] border border-[#071934] rounded-[8px] text-[14px] text-[#071934] focus:outline-none focus:ring-1 focus:ring-[#D3A940] transition" id="nom" placeholder="Ex. Ouedraogo" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[12px] font-bold uppercase tracking-wider text-[#071934]" for="prenom">
+            Prénom <span class="text-[#071934]">*</span>
+</label>
+<input class="h-[44px] px-3 bg-[#FFFFFF] border border-[#071934] rounded-[8px] text-[14px] text-[#071934] focus:outline-none focus:ring-1 focus:ring-[#D3A940] transition" id="prenom" placeholder="Ex. Amadou" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[12px] font-bold uppercase tracking-wider text-[#071934]" for="email">
+            Adresse électronique institutionnelle <span class="text-[#071934]">*</span>
+</label>
+<input class="h-[44px] px-3 bg-[#FFFFFF] border border-[#071934] rounded-[8px] text-[14px] text-[#071934] focus:outline-none focus:ring-1 focus:ring-[#D3A940] transition" id="email" placeholder="a.ouedraogo@institution.org" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[12px] font-bold uppercase tracking-wider text-[#071934]" for="telephone">
+            Téléphone professionnel (avec indicatif) <span class="text-[#071934]">*</span>
+</label>
+<input class="h-[44px] px-3 bg-[#FFFFFF] border border-[#071934] rounded-[8px] text-[14px] text-[#071934] focus:outline-none focus:ring-1 focus:ring-[#D3A940] transition" id="telephone" placeholder="+237 600 00 00 00" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[12px] font-bold uppercase tracking-wider text-[#071934]" for="organisation">
+            Organisation / Entreprise / Université <span class="text-[#071934]">*</span>
+</label>
+<input class="h-[44px] px-3 bg-[#FFFFFF] border border-[#071934] rounded-[8px] text-[14px] text-[#071934] focus:outline-none focus:ring-1 focus:ring-[#D3A940] transition" id="organisation" placeholder="Ex. Institut Supérieur d'Ingénierie Solaire" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[12px] font-bold uppercase tracking-wider text-[#071934]" for="profil">
+            Sélecteur de profil <span class="text-[#071934]">*</span>
+</label>
+<select class="h-[44px] px-3 bg-[#FFFFFF] border border-[#071934] rounded-[8px] text-[14px] text-[#071934] focus:outline-none focus:ring-1 focus:ring-[#D3A940] transition" id="profil" required="">
+<option value="">Sélectionnez votre profil d'accréditation</option>
+<option value="innovateur">Jeune Innovateur / Porteur de brevet</option>
+<option value="chercheur">Chercheur / Universitaire</option>
+<option value="investisseur">Investisseur / Fonds d'impact</option>
+<option value="institutionnel">Délégué institutionnel / Autorité publique</option>
+<option value="presse">Presse &amp; Médias spécialisés</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<label class="text-[12px] font-bold uppercase tracking-wider text-[#071934]">
+            Format de participation souhaité <span class="text-[#071934]">*</span>
+</label>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 p-2.5 bg-[#F3F4F5] border border-[#E6E8EB] rounded-[8px] cursor-pointer">
+<input checked="" class="w-4 h-4 text-[#071934] border-[#071934] focus:ring-0" name="format" type="radio" value="presentiel"/>
+<div class="flex flex-col">
+<span class="text-[13px] font-bold text-[#071934]">Présentiel à Yaoundé</span>
+<span class="text-[11px] text-[#071934]/70">Accès aux plénières, stands, ateliers et réceptions officielles.</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-2.5 bg-[#F3F4F5] border border-[#E6E8EB] rounded-[8px] cursor-pointer">
+<input class="w-4 h-4 text-[#071934] border-[#071934] focus:ring-0" name="format" type="radio" value="numerique"/>
+<div class="flex flex-col">
+<span class="text-[13px] font-bold text-[#071934]">Accès numérique en direct</span>
+<span class="text-[11px] text-[#071934]/70">Flux sécurisé HD, salons de networking virtuels et rediffusions.</span>
+</div>
+</label>
+</div>
+</div>
+<div class="flex items-start gap-2.5 pt-2">
+<input class="mt-1 w-4 h-4 rounded-none border border-[#071934] text-[#071934] focus:ring-0" id="cgu" required="" type="checkbox"/>
+<label class="text-[12px] leading-[18px] text-[#071934]/80 select-none" for="cgu">
+            J'accepte les conditions générales de participation du RAJI et j'autorise le traitement de mes données personnelles dans le cadre exclusif de la gestion logistique et protocolaire de l'événement.
+          </label>
+</div>
+<button class="mt-2 w-full h-[44px] bg-[#D3A940] hover:bg-[#c29832] text-[#071934] text-[14px] font-semibold rounded-lg flex items-center justify-center gap-2 transition-colors" type="submit">
+<span>S'inscrire à l'événement</span>
+<span>→</span>
+</button>
+</form>
+</div>
+<!-- Section 4: Rétrospective des éditions antérieures -->
+<div class="flex flex-col gap-3">
+<div class="border-b border-[#071934] pb-2">
+<h2 class="text-[16px] font-bold text-[#071934] uppercase tracking-wide">
+          Rétrospective des éditions antérieures
+        </h2>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Kigali 2025 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg overflow-hidden flex flex-col">
+<div class="w-full h-36 bg-[#E6E8EB] flex flex-col items-center justify-center gap-1 text-[#071934]">
+<svg class="w-8 h-8 stroke-[#071934]" fill="none" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[11px] uppercase tracking-wider font-semibold text-[#071934]/60">Archive visuelle de session</span>
+</div>
+<div class="p-3.5 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold text-[#D3A940] uppercase">Édition 2025</span>
+<span class="text-[12px] text-[#071934]/60 font-medium">Kigali, Rwanda</span>
+</div>
+<p class="text-[13px] font-bold text-[#071934]">Sommet de l'Agri-Tech et de la Robotique Rurale</p>
+<p class="text-[12px] text-[#071934]/75">420 délégués, 48 pays représentés, 2.4M USD mobilisés en accords d'amorçage.</p>
+</div>
+</div>
+<!-- Abidjan 2024 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg overflow-hidden flex flex-col">
+<div class="w-full h-36 bg-[#E6E8EB] flex flex-col items-center justify-center gap-1 text-[#071934]">
+<svg class="w-8 h-8 stroke-[#071934]" fill="none" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[11px] uppercase tracking-wider font-semibold text-[#071934]/60">Archive visuelle de session</span>
+</div>
+<div class="p-3.5 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold text-[#D3A940] uppercase">Édition 2024</span>
+<span class="text-[12px] text-[#071934]/60 font-medium">Abidjan, Côte d'Ivoire</span>
+</div>
+<p class="text-[13px] font-bold text-[#071934]">Conférence Africaine des Matériaux Biosourcés</p>
+<p class="text-[12px] text-[#071934]/75">310 délégués, adoption de la charte de coopération biomatériaux inter-universitaire.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function toggleAccordion(contentId, iconId) {
+      var el = document.getElementById(contentId);
+      var icon = document.getElementById(iconId);
+      if (el.style.display === "none") {
+        el.style.display = "flex";
+        icon.innerText = "expand_less";
+      } else {
+        el.style.display = "none";
+        icon.innerText = "expand_more";
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-[#071934] text-[#FFFFFF] pt-10 pb- safe px-6 pb-12"><div class="max-w-md mx-auto flex flex-col items-start"><div class="inline-flex items-center justify-center bg-[#FFFFFF] rounded-xl p-2.5 mb-8"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-[56px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/></div><nav class="flex flex-col space-y-4 w-full mb-10"><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="a-propos" href="#">À propos du RAJI</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="programmes" href="#">Nos Programmes</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="innovateurs" href="#">Communauté des Innovateurs</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="incubateur" href="#">Incubateur &amp; Accélération</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="actualites" href="#">Actualités &amp; Événements</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="partenaires" href="#">Partenaires &amp; Institutions</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="ressources" href="#">Ressources &amp; Publications</a><a class="text-sm text-[#FFFFFF] hover:text-[#D3A940] transition-colors font-medium" data-path="contact" href="#">Rejoindre le Réseau</a></nav><div class="w-full h-[1px] bg-[#FFFFFF]/10 mb-6"></div><p class="text-xs text-[#FFFFFF]/70 leading-relaxed font-normal">© 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.</p></div></footer></body></html>

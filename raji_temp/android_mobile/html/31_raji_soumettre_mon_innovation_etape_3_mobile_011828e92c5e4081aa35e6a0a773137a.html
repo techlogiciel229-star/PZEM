@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<title>RAJI — Soumettre mon innovation – Étape 3 (Mobile)</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_stack" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+      }
+      body {
+        overscroll-behavior-y: none;
+        background-color: #F3F4F5;
+        color: #071934;
+        min-height: max(884px, 100dvh);
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#F3F4F5] text-[#071934]">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-[#FFFFFF] shadow-[0_1px_8px_rgba(7,25,52,0.06)] pt-safe">
+<div class="h-16 px-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="RAJI Logo" class="h-[44px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwif_8aN9Q3saTvYKzfW6pikWigZDcwtMwgB_QzO44yOOX3S8tGr5IaauCTbwRubKO7TX1ITYzO1QNpCFfbQkgr-ol8Uhd3zzQhU38aO9M2YRwxwgrqrz_Vx2J_la4nRwJoW1XQOY5TU_pmmc96YyI61DNq2O8HRYmttpwG6Ildlnq0RwuNrcu4dwMtE11OXm6ahIBlL3MI0qgql19cL2EiddQ3rBW69Q5ryNiAKt4hOaR7_k8Q09itf7mdaoM55EIGuc"/>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Menu de navigation" class="w-[44px] h-[44px] flex items-center justify-center text-[#071934] active:bg-[#F3F4F5] rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[28px] text-[#071934]">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col relative w-full pt-16 bg-[#F3F4F5]">
+<!-- Top Back Navigation -->
+<div class="w-full max-w-2xl mx-auto px-4 py-4 flex items-center gap-2">
+<button aria-label="Retour" class="w-[44px] h-[44px] flex items-center justify-center text-[#071934] active:bg-[#E6E8EB] rounded-lg transition-colors" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[22px] text-[#071934]">arrow_back</span>
+</button>
+<h1 class="text-[18px] font-bold text-[#071934] truncate">Soumettre Mon Innovation</h1>
+</div>
+<div class="flex flex-col w-full pb-8">
+<div class="w-full max-w-2xl mx-auto px-4 space-y-6">
+<!-- Page Intro -->
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="w-[24px] h-[3px] bg-[#D3A940] rounded-full shrink-0"></span>
+<span class="px-2.5 py-0.5 rounded text-[12px] font-semibold tracking-wider text-[#071934] bg-[#E6E8EB]">
+              CANDIDATURE &amp; RÉSEAU
+            </span>
+</div>
+<h2 class="text-[26px] leading-[32px] font-bold text-[#071934] tracking-tight">
+            Soumettre mon innovation
+          </h2>
+<p class="text-[14px] leading-relaxed text-[#071934]">
+            Présentez votre projet au réseau RAJI. Vos informations sont stockées de manière sécurisée et ne sont jamais publiées sans votre accord.
+          </p>
+</div>
+<!-- Progress Box -->
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] space-y-3 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="text-[14px] font-semibold text-[#071934]">
+              Étape 3 sur 4 : Traction &amp; Financement
+            </span>
+<span class="text-[12px] font-bold text-[#071934] bg-[#F3F4F5] px-2.5 py-0.5 rounded-full border border-[#E6E8EB]">
+              75%
+            </span>
+</div>
+<div class="w-full h-2 bg-[#E6E8EB] rounded-full overflow-hidden">
+<div class="w-3/4 h-full bg-[#071934] rounded-full transition-all duration-300"></div>
+</div>
+<!-- Step Indicators -->
+<div class="grid grid-cols-4 gap-1 pt-1">
+<div class="flex items-center gap-1.5 text-[12px] text-[#071934]">
+<span class="material-symbols-outlined text-[16px] text-[#D3A940]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium text-[#071934]">1. Identité</span>
+</div>
+<div class="flex items-center gap-1.5 text-[12px] text-[#071934]">
+<span class="material-symbols-outlined text-[16px] text-[#D3A940]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium text-[#071934]">2. Projet</span>
+</div>
+<div class="flex items-center gap-1.5 text-[12px] text-[#071934]">
+<span class="w-[18px] h-[18px] rounded-full bg-[#071934] text-[#FFFFFF] text-[11px] font-bold flex items-center justify-center shrink-0">
+                3
+              </span>
+<span class="font-bold text-[#071934]">3. Traction</span>
+</div>
+<div class="flex items-center gap-1.5 text-[12px] text-[#071934] opacity-50">
+<span class="w-[18px] h-[18px] rounded-full border border-[#071934] text-[#071934] text-[11px] font-semibold flex items-center justify-center shrink-0">
+                4
+              </span>
+<span class="text-[#071934]">4. Médias</span>
+</div>
+</div>
+</div>
+<!-- Form Main Card -->
+<form class="bg-[#FFFFFF] rounded-2xl border border-[#E6E8EB] p-5 space-y-5 shadow-sm" id="submission-form" onsubmit="event.preventDefault();">
+<!-- Section Header Inside Card -->
+<div>
+<span class="text-[12px] font-semibold tracking-wide text-[#071934] bg-[#F3F4F5] px-2.5 py-1 rounded inline-block mb-2 uppercase">
+              FORMULAIRE D'ADMISSION
+            </span>
+<h3 class="text-[18px] font-bold text-[#071934] leading-tight">
+              Traction et financement
+            </h3>
+<p class="text-[14px] text-[#071934] opacity-80 mt-1 leading-relaxed">
+              Partagez votre dynamique d'adoption et vos besoins en ressources.
+            </p>
+</div>
+<!-- Field 1: Beneficiaries -->
+<div class="space-y-1.5">
+<label class="block text-[14px] font-medium text-[#071934]" for="beneficiaries">
+              Nombre de clients ou bénéficiaires actifs <span class="text-[#071934] font-bold">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-3 bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg text-[14px] text-[#071934] placeholder-[#071934] placeholder-opacity-40 outline-none transition-all duration-150 focus:border-[#071934] focus:ring-1 focus:ring-[#071934]" id="beneficiaries" name="beneficiaries" placeholder="Ex: 1 200 usagers actifs" required="" type="text"/>
+</div>
+</div>
+<!-- Field 2: Business Model -->
+<div class="space-y-1.5">
+<label class="block text-[14px] font-medium text-[#071934]" for="business-model">
+              Modèle économique &amp; revenus actuels <span class="text-[#071934] font-bold">*</span>
+</label>
+<textarea class="w-full h-24 p-3 bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg text-[14px] text-[#071934] placeholder-[#071934] placeholder-opacity-40 resize-none outline-none transition-all duration-150 focus:border-[#071934] focus:ring-1 focus:ring-[#071934]" id="business-model" name="business-model" placeholder="Précisez votre modèle de monétisation..." required="" rows="3"></textarea>
+</div>
+<!-- Field 3: Priority Needs -->
+<div class="space-y-1.5">
+<label class="block text-[14px] font-medium text-[#071934]" for="project-needs">
+              Besoins prioritaires du projet <span class="text-[#071934] font-bold">*</span>
+</label>
+<textarea class="w-full h-24 p-3 bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg text-[14px] text-[#071934] placeholder-[#071934] placeholder-opacity-40 resize-none outline-none transition-all duration-150 focus:border-[#071934] focus:ring-1 focus:ring-[#071934]" id="project-needs" name="project-needs" placeholder="Mentorat, accès marchés, prototypage..." required="" rows="3"></textarea>
+</div>
+<!-- Field 4: Target Amount -->
+<div class="space-y-1.5">
+<label class="block text-[14px] font-medium text-[#071934]" for="funding-amount">
+              Montant recherché (FCFA) <span class="text-[#071934] font-bold">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-3 bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg text-[14px] text-[#071934] placeholder-[#071934] placeholder-opacity-40 outline-none transition-all duration-150 focus:border-[#071934] focus:ring-1 focus:ring-[#071934]" id="funding-amount" name="funding-amount" placeholder="Ex: 15 000 000 FCFA" required="" type="text"/>
+</div>
+</div>
+<!-- Field 5: Funding Allocation -->
+<div class="space-y-1.5">
+<label class="block text-[14px] font-medium text-[#071934]" for="fund-usage">
+              Utilisation prévue du financement <span class="text-[#071934] font-bold">*</span>
+</label>
+<textarea class="w-full h-24 p-3 bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg text-[14px] text-[#071934] placeholder-[#071934] placeholder-opacity-40 resize-none outline-none transition-all duration-150 focus:border-[#071934] focus:ring-1 focus:ring-[#071934]" id="fund-usage" name="fund-usage" placeholder="Détaillez la répartition prévisionnelle..." required="" rows="3"></textarea>
+</div>
+<!-- Confidentiality Note -->
+<div class="flex items-start gap-2.5 p-3 bg-[#F3F4F5] rounded-lg text-[12px] text-[#071934]">
+<span class="material-symbols-outlined text-[18px] text-[#071934] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="leading-relaxed">Confidentialité assurée : vos projections financières sont uniquement partagées avec le comité d'évaluation accrédité RAJI.</span>
+</div>
+<!-- Action Buttons -->
+<div class="pt-2 flex flex-col gap-3">
+<button class="w-full h-[44px] bg-[#071934] text-[#FFFFFF] rounded-lg font-medium text-[14px] flex items-center justify-center gap-2 active:scale-[0.99] transition-transform" type="submit">
+<span>Suivant : Médias et accord →</span>
+</button>
+<button class="w-full h-[44px] bg-[#F3F4F5] border border-[#E6E8EB] text-[#071934] rounded-lg font-medium text-[14px] flex items-center justify-center gap-2 active:scale-[0.99] transition-transform" onclick="history.back()" type="button">
+<span>← Précédent : Projet</span>
+</button>
+</div>
+</form>
+<!-- Advice Tip Card -->
+<div class="p-4 bg-[#FFFFFF] rounded-xl border border-[#E6E8EB] shadow-sm flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-[#F3F4F5] flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px] text-[#071934]">lightbulb</span>
+</div>
+<div class="space-y-1">
+<p class="text-[12px] font-bold text-[#071934]">Conseil traction RAJI</p>
+<p class="text-[12px] text-[#071934] leading-relaxed opacity-80">
+              Les dossiers présentant une traction d'usage mesurable même modeste sont prioritaires pour l'accréditation.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#071934] text-[#FFFFFF] mt-auto pb-safe">
+<div class="max-w-2xl mx-auto px-6 pt-10 pb-8 flex flex-col items-center text-center gap-8">
+<div class="bg-[#FFFFFF] p-2 rounded-xl flex items-center justify-center shadow-md">
+<img alt="RAJI Logo" class="h-[56px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUTkF5RtnMq9T1Ey9ss26-YKBkGO0tLrtb6QSFMZSZToMK_yifrPixtmLGJfbCWHydAI7a3opwMV8SWRGqq3kajgHIsNoyNcrPIPvMcVU8ILr8J1aJmoP52NKh6FkjU4waXE1wA4n-sezHwdwi6AevGASWY0njxXtObiES70QTD2D24Tq0KzALKtzrh0rvi1umauSIf-8kPUvtim1K3rnfavLqnPd3vgCTbgOiX4Kw7cj8QklV60MTCfematDph3UjefE"/>
+</div>
+<nav aria-label="Navigation pied de page" class="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4 w-full text-center">
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1" data-path="accueil" href="#">Accueil</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1" data-path="a-propos" href="#">À propos</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1" data-path="innovateurs" href="#">Innovateurs</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1" data-path="raji-media" href="#">RAJI Média</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1" data-path="evenements" href="#">Événements</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1" data-path="partenaires" href="#">Partenaires</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1" data-path="opportunites" href="#">Opportunités</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1" data-path="contact" href="#">Contact</a>
+</nav>
+<div class="w-12 h-0.5 bg-[#D3A940] rounded-full opacity-75"></div>
+<p class="text-[12px] text-[#E6E8EB] max-w-xs leading-relaxed">
+        © 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.
+      </p>
+</div>
+</footer>
+</body></html>

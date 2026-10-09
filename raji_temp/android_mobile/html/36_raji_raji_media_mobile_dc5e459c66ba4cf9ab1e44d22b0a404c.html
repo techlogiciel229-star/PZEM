@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAJI — RAJI Média (Mobile)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-[#FFFFFF] text-[#071934] antialiased min-h-screen flex flex-col max-w-[390px] mx-auto border-x border-[#E6E8EB]">
+
+  <!-- HEADER MOBILE STICKY (390px, Hamburger FERMÉ) -->
+  <header class="sticky top-0 z-50 bg-[#FFFFFF] border-b border-[#E6E8EB] w-full px-4 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuARIqFC3bzaroEKf4hiDbGZvxDk257ThK0wIfgzl2eVXc7hUFvkf10FtMc-VjWrgRKjoyslfbPshVUzAeR08zq1kzhopi99TsQ1ucQHUY1153hJwVYzWBejveUSLwXKG3zoJDF142Y4GfAwFgCZI9FkiI0lxl4yL72dl-ewTqUXqwhfJ20sysYVsb5TLdcLnnrrbAgovrHHas16Mt57dAkR3RAq2WUomHW0_l0jiWZt-6J07vWf45AWJ07qFDGKRlUZ2Eo" alt="Logo RAJI" class="h-11 w-auto object-contain" />
+    </a>
+    <div class="flex items-center space-x-2">
+      <a href="#" class="bg-[#D3A940] text-[#071934] text-xs font-semibold px-3 py-2 rounded-lg hover:opacity-95 transition">
+        Soumettre
+      </a>
+      <button type="button" aria-label="Ouvrir le menu" class="w-11 h-11 border border-[#E6E8EB] rounded-lg flex flex-col items-center justify-center space-y-1 text-[#071934] hover:bg-[#F3F4F5] transition">
+        <span class="w-5 h-0.5 bg-[#071934]"></span>
+        <span class="w-5 h-0.5 bg-[#071934]"></span>
+        <span class="w-5 h-0.5 bg-[#071934]"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- BANNIÈRE NAVY MOBILE -->
+  <section class="bg-[#071934] text-[#FFFFFF] py-6 px-4 border-b border-[#071934]">
+    <nav class="flex items-center text-xs text-[#FFFFFF]/70 space-x-1 mb-2">
+      <a href="#" class="hover:underline">Accueil</a>
+      <span>/</span>
+      <span class="text-[#D3A940] font-medium">RAJI Média</span>
+    </nav>
+    <div class="flex items-center space-x-2 mb-1.5">
+      <span class="w-6 h-[3px] bg-[#D3A940] inline-block"></span>
+      <span class="text-xs font-semibold uppercase tracking-wider text-[#FFFFFF]">MÉDIA & DIFFUSION</span>
+    </div>
+    <h1 class="text-2xl font-bold tracking-tight text-[#FFFFFF] mb-2">RAJI Média</h1>
+    <p class="text-xs text-[#FFFFFF]/80 leading-relaxed">
+      L'espace d'inspiration et d'actualités des jeunes innovateurs à travers l'Afrique.
+    </p>
+  </section>
+
+  <!-- FILTRES SCROLL HORIZONTAL MOBILE -->
+  <section class="bg-[#F3F4F5] border-b border-[#E6E8EB] py-2.5 px-4 overflow-x-auto whitespace-nowrap scrollbar-none flex items-center space-x-2">
+    <a href="#" class="px-3.5 py-1 rounded-full text-xs font-semibold bg-[#D3A940] text-[#071934] inline-block">Toutes</a>
+    <a href="#" class="px-3.5 py-1 rounded-full text-xs font-medium bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] inline-block">Interviews</a>
+    <a href="#" class="px-3.5 py-1 rounded-full text-xs font-medium bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] inline-block">Portraits</a>
+    <a href="#" class="px-3.5 py-1 rounded-full text-xs font-medium bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] inline-block">Innovations</a>
+    <a href="#" class="px-3.5 py-1 rounded-full text-xs font-medium bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] inline-block">Reportages</a>
+    <a href="#" class="px-3.5 py-1 rounded-full text-xs font-medium bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] inline-block">Histoires</a>
+  </section>
+
+  <!-- CONTENU MOBILE (1 COLONNE STACKÉE) -->
+  <main class="flex-grow px-4 py-6 w-full space-y-6">
+
+    <!-- ARTICLE À LA UNE MOBILE -->
+    <div class="bg-[#F3F4F5] border border-[#E6E8EB] rounded-xl overflow-hidden">
+      <div class="h-44 bg-[#E6E8EB] relative flex items-center justify-center">
+        <svg class="w-12 h-12 text-[#071934]/30" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+        </svg>
+        <span class="absolute top-2.5 left-2.5 bg-[#D3A940] text-[#071934] text-xs font-semibold px-2 py-0.5 rounded">
+          À la une
+        </span>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center space-x-2 text-xs font-semibold text-[#071934] mb-1.5">
+          <span class="bg-[#FFFFFF] border border-[#E6E8EB] px-2 py-0.5 rounded">Interviews</span>
+          <span class="text-[#071934]/60">•</span>
+          <span class="text-[#071934]/70">8 min</span>
+        </div>
+        <h2 class="text-base font-bold text-[#071934] mb-2 leading-snug">
+          L'IA frugale et le pré-diagnostic rural dans les dispensaires isolés
+        </h2>
+        <p class="text-xs text-[#071934]/80 mb-3 leading-relaxed">
+          Entretien exclusif avec CardioScan Mobiles sur les défis du matériel embarqué sans réseau.
+        </p>
+        <div class="pt-2.5 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#071934]/70">
+          <span>12 mai 2026</span>
+          <a href="#" class="font-bold text-[#071934] hover:text-[#D3A940]">Lire l'article →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TITRE DE SECTION -->
+    <div class="flex items-center space-x-2 pt-2">
+      <span class="w-6 h-[3px] bg-[#D3A940] inline-block"></span>
+      <h3 class="text-base font-bold text-[#071934]">Derniers articles (9)</h3>
+    </div>
+
+    <!-- 9 CARTES 1 COLONNE -->
+    <div class="space-y-4">
+      
+      <!-- Card 1 (Interview avec play icon) -->
+      <article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden">
+        <div class="h-36 bg-[#E6E8EB] relative flex items-center justify-center">
+          <div class="w-10 h-10 rounded-full bg-[#071934] text-[#FFFFFF] flex items-center justify-center shadow">
+            <svg class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="absolute top-2 left-2 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-semibold px-2 py-0.5 rounded">
+            Interviews
+          </span>
+        </div>
+        <div class="p-4">
+          <h4 class="text-sm font-bold text-[#071934] mb-1">Électrification des zones de pêche artisanale</h4>
+          <p class="text-xs text-[#071934]/80 mb-3">Onduleurs durcis pour supporter les micro-unités de froid.</p>
+          <div class="pt-2 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#071934]/70">
+            <span>Koffi M.</span>
+            <span>08 mai 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden">
+        <div class="h-36 bg-[#E6E8EB] relative flex items-center justify-center">
+          <svg class="w-8 h-8 text-[#071934]/30" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+          </svg>
+          <span class="absolute top-2 left-2 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-semibold px-2 py-0.5 rounded">
+            Portraits
+          </span>
+        </div>
+        <div class="p-4">
+          <h4 class="text-sm font-bold text-[#071934] mb-1">Cartographier le stress hydrique par drone</h4>
+          <p class="text-xs text-[#071934]/80 mb-3">Télédétection et gestion économe de l'eau en vergers arides.</p>
+          <div class="pt-2 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#071934]/70">
+            <span>Mariama T.</span>
+            <span>04 mai 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden">
+        <div class="h-36 bg-[#E6E8EB] relative flex items-center justify-center">
+          <svg class="w-8 h-8 text-[#071934]/30" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+          </svg>
+          <span class="absolute top-2 left-2 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-semibold px-2 py-0.5 rounded">
+            Innovations
+          </span>
+        </div>
+        <div class="p-4">
+          <h4 class="text-sm font-bold text-[#071934] mb-1">EcoPlast : recycler 12 tonnes de déchets</h4>
+          <p class="text-xs text-[#071934]/80 mb-3">Procédé de thermofusion sans combustion pour pavés durables.</p>
+          <div class="pt-2 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#071934]/70">
+            <span>Rédaction RAJI</span>
+            <span>29 avril 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 (Reportage) -->
+      <article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden">
+        <div class="h-36 bg-[#E6E8EB] relative flex items-center justify-center">
+          <div class="w-10 h-10 rounded-full bg-[#071934] text-[#FFFFFF] flex items-center justify-center shadow">
+            <svg class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="absolute top-2 left-2 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-semibold px-2 py-0.5 rounded">
+            Reportages
+          </span>
+        </div>
+        <div class="p-4">
+          <h4 class="text-sm font-bold text-[#071934] mb-1">Immersion dans les fablabs du Sahel</h4>
+          <p class="text-xs text-[#071934]/80 mb-3">Maintenance open-source pour le matériel agricole.</p>
+          <div class="pt-2 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#071934]/70">
+            <span>Oumar S.</span>
+            <span>25 avril 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden">
+        <div class="h-36 bg-[#E6E8EB] relative flex items-center justify-center">
+          <svg class="w-8 h-8 text-[#071934]/30" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+          </svg>
+          <span class="absolute top-2 left-2 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-semibold px-2 py-0.5 rounded">
+            Histoires
+          </span>
+        </div>
+        <div class="p-4">
+          <h4 class="text-sm font-bold text-[#071934] mb-1">Du prototype au déploiement des mini-réseaux</h4>
+          <p class="text-xs text-[#071934]/80 mb-3">Structurer un modèle durable pour les coopératives rurales.</p>
+          <div class="pt-2 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#071934]/70">
+            <span>Rédaction RAJI</span>
+            <span>20 avril 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden">
+        <div class="h-36 bg-[#E6E8EB] relative flex items-center justify-center">
+          <svg class="w-8 h-8 text-[#071934]/30" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+          </svg>
+          <span class="absolute top-2 left-2 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-semibold px-2 py-0.5 rounded">
+            Actualités
+          </span>
+        </div>
+        <div class="p-4">
+          <h4 class="text-sm font-bold text-[#071934] mb-1">Homologation unifiée des intrants bio</h4>
+          <p class="text-xs text-[#071934]/80 mb-3">Harmonisation des protocoles d'homologation régionale.</p>
+          <div class="pt-2 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#071934]/70">
+            <span>Aïssatou D.</span>
+            <span>15 avril 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden">
+        <div class="h-36 bg-[#E6E8EB] relative flex items-center justify-center">
+          <div class="w-10 h-10 rounded-full bg-[#071934] text-[#FFFFFF] flex items-center justify-center shadow">
+            <svg class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="absolute top-2 left-2 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-semibold px-2 py-0.5 rounded">
+            Interviews
+          </span>
+        </div>
+        <div class="p-4">
+          <h4 class="text-sm font-bold text-[#071934] mb-1">Sécurisation des semences maraîchères</h4>
+          <p class="text-xs text-[#071934]/80 mb-3">Traitements biologiques contre les ravageurs en climat sec.</p>
+          <div class="pt-2 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#071934]/70">
+            <span>Rédaction RAJI</span>
+            <span>10 avril 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden">
+        <div class="h-36 bg-[#E6E8EB] relative flex items-center justify-center">
+          <svg class="w-8 h-8 text-[#071934]/30" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+          </svg>
+          <span class="absolute top-2 left-2 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-semibold px-2 py-0.5 rounded">
+            Portraits
+          </span>
+        </div>
+        <div class="p-4">
+          <h4 class="text-sm font-bold text-[#071934] mb-1">Serveurs éducatifs hors-ligne en classe</h4>
+          <p class="text-xs text-[#071934]/80 mb-3">Enseignement scientifique interactif sans connexion internet.</p>
+          <div class="pt-2 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#071934]/70">
+            <span>Mireille K.</span>
+            <span>05 avril 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 9 -->
+      <article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden">
+        <div class="h-36 bg-[#E6E8EB] relative flex items-center justify-center">
+          <svg class="w-8 h-8 text-[#071934]/30" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+          </svg>
+          <span class="absolute top-2 left-2 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-semibold px-2 py-0.5 rounded">
+            Innovations
+          </span>
+        </div>
+        <div class="p-4">
+          <h4 class="text-sm font-bold text-[#071934] mb-1">Micro-crédit d'amorçage maraîcher</h4>
+          <p class="text-xs text-[#071934]/80 mb-3">Algorithme d'attribution basé sur le suivi agronomique.</p>
+          <div class="pt-2 border-t border-[#E6E8EB] flex items-center justify-between text-xs text-[#071934]/70">
+            <span>Rédaction RAJI</span>
+            <span>01 avril 2026</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- PAGINATION MOBILE -->
+    <div class="flex items-center justify-between pt-4 border-t border-[#E6E8EB]">
+      <a href="#" class="px-3 py-1.5 rounded-lg border border-[#E6E8EB] text-xs font-medium text-[#071934]/70">Précédent</a>
+      <div class="flex space-x-1">
+        <span class="w-7 h-7 rounded-lg bg-[#071934] text-[#FFFFFF] text-xs flex items-center justify-center font-bold">1</span>
+        <span class="w-7 h-7 rounded-lg border border-[#E6E8EB] text-[#071934] text-xs flex items-center justify-center font-medium">2</span>
+      </div>
+      <a href="#" class="px-3 py-1.5 rounded-lg border border-[#E6E8EB] text-xs font-medium text-[#071934]">Suivant</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER MOBILE -->
+  <footer class="bg-[#071934] border-t border-[#FFFFFF]/10 text-[#FFFFFF] py-8 px-4 text-center">
+    <div class="bg-[#FFFFFF] p-2.5 rounded-2xl inline-block mb-4">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoc22bj1FvBa6K0nE2TGLZSIFgy9I_zkunVHTe7O9jlVDtkRQMzQtvKaZY1GiueAqZRBGJ2vT6oeebcP9O4Q4MoKhLu_w_YSlhLW9ctYT3Z4qrqa6uw9UAvxXlhqPh2uPvA2PlhoxdbKofzQiYsfpt8TB1uK663_V3M_t_4uVG1YFjp_ybnQYFNDL45KNx8FT-7UH98vtIGtgr6rqzA6AKM6mD8d8ooCAQfTJsq2r6YxL-dljjZ4Sx-3TfRI2SDiXWUcM" alt="Logo RAJI officiel" class="h-14 w-auto object-contain" />
+    </div>
+    <p class="text-sm font-semibold text-[#FFFFFF] mb-1">Réseau Africain des Jeunes Innovateurs</p>
+    <p class="text-xs text-[#FFFFFF]/70 mb-5">Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique.</p>
+    <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-[#FFFFFF]/80 mb-6">
+      <a href="#" class="hover:underline">Accueil</a>
+      <a href="#" class="hover:underline">À propos</a>
+      <a href="#" class="hover:underline">Innovateurs</a>
+      <a href="#" class="hover:underline text-[#D3A940] font-semibold">RAJI Média</a>
+      <a href="#" class="hover:underline">Contact</a>
+    </div>
+    <p class="text-xs text-[#FFFFFF]/60">© 2026 RAJI. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

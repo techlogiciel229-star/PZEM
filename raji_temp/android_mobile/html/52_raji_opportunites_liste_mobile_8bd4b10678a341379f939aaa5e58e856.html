@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>RAJI — Opportunités – Liste (Mobile)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #F3F4F5;
+        color: #071934;
+        font-family: 'Inter', sans-serif;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-[#F3F4F5] text-[#071934] min-h-screen flex flex-col antialiased">
+<!-- Sticky White Header -->
+<header class="sticky top-0 w-full z-50 bg-[#FFFFFF] border-b border-[#E6E8EB] pt-safe">
+<div class="h-16 px-4 flex items-center justify-between">
+<a class="flex items-center" href="#">
+<img alt="RAJI - Réseau Africain des Jeunes Innovateurs" class="h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMi3yJBKncvIwxl4iHzBToW4eRumSQ_XIJkG_Afya3cRocmOZbYK57iCYX6L1NjXjVsrRGAZeBKxoeeCrS1wdupGt7mxG_SNAmqH3I1JMSyGw434MloTfjYRobo2lRbTNGejdJUYFUmQqs2jKEoZXiOA1yhiIBpZ7ZaSNpHaCaW8nWHp9P3WKB8HG9u0BezB79UBFwOhyxY_h2LF7JLjjBvyCbUHNTPYH2hfyTu1hO0AYw-de9pmBPsj7tQskSRoL46hA"/>
+</a>
+<button aria-label="Ouvrir le menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-[#071934] hover:bg-[#F3F4F5] transition-colors focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Container (390px Mobile Stack) -->
+<main class="flex-1 flex flex-col w-full max-w-[390px] mx-auto px-4 py-5 bg-[#F3F4F5]">
+<!-- Breadcrumb -->
+<nav aria-label="Fil d'Ariane" class="flex items-center gap-1.5 text-xs text-[#071934]/70 mb-4">
+<a class="hover:text-[#071934] transition-colors" href="#">Accueil</a>
+<span class="text-[#071934]/40">/</span>
+<span aria-current="page" class="text-[#071934] font-medium">Opportunités</span>
+</nav>
+<!-- Header Section -->
+<section class="flex flex-col mb-4">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-[24px] h-[3px] bg-[#D3A940] rounded-full shrink-0"></span>
+<span class="text-xs font-semibold tracking-wider text-[#071934] uppercase">Programmes &amp; Soutien</span>
+</div>
+<h1 class="text-2xl font-bold text-[#071934] tracking-tight mb-2">Opportunités &amp; Appels</h1>
+<p class="text-sm text-[#071934]/80 leading-relaxed">
+        Découvrez les appels à projets, concours, bourses et résidences d'innovation pour propulser vos initiatives en Afrique.
+      </p>
+</section>
+<!-- Search Bar -->
+<div class="mb-3">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#071934]/60">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-11 pl-10 pr-3.5 bg-[#FFFFFF] rounded-xl text-sm text-[#071934] placeholder-[#071934]/50 border border-[#E6E8EB] focus:border-[#071934] focus:outline-none transition-all shadow-sm" id="search-input" placeholder="Rechercher une opportunité..." type="search"/>
+</div>
+</div>
+<!-- Category Filters (Scrollable horizontal chips) -->
+<div class="flex items-center gap-2 pb-2 mb-5 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden" role="tablist">
+<button class="bg-[#071934] text-[#FFFFFF] px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap shadow-sm" type="button">
+        Tous
+      </button>
+<button class="bg-[#FFFFFF] text-[#071934] border border-[#E6E8EB] px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap hover:bg-[#F3F4F5] transition-colors" type="button">
+        Appels à projets
+      </button>
+<button class="bg-[#FFFFFF] text-[#071934] border border-[#E6E8EB] px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap hover:bg-[#F3F4F5] transition-colors" type="button">
+        Bourses
+      </button>
+<button class="bg-[#FFFFFF] text-[#071934] border border-[#E6E8EB] px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap hover:bg-[#F3F4F5] transition-colors" type="button">
+        Concours
+      </button>
+<button class="bg-[#FFFFFF] text-[#071934] border border-[#E6E8EB] px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap hover:bg-[#F3F4F5] transition-colors" type="button">
+        Résidences
+      </button>
+</div>
+<!-- Opportunity Cards Stack -->
+<div class="flex flex-col space-y-4 mb-6">
+<!-- Card 1 -->
+<article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 flex flex-col shadow-sm">
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold tracking-wide uppercase bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB]">
+            Appel à projets
+          </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[#FFFFFF] border border-[#D3A940] text-[#071934]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#D3A940]"></span>
+            Clôture : 30 Avril 2026
+          </span>
+</div>
+<h2 class="text-base font-bold text-[#071934] leading-snug mb-2">
+          Fonds d'amorçage AgriTech Sahel 2026
+        </h2>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-3">
+          Financement non-dilutif jusqu'à 45 000 USD et accompagnement technique de 9 mois pour les startups développant des systèmes d'irrigation solaire frugaux.
+        </p>
+<div class="flex items-center gap-1.5 text-xs text-[#071934]/70 mb-4">
+<span class="material-symbols-outlined text-[16px] text-[#071934]">public</span>
+<span>Éligibilité : Sénégal, Mali, Niger, Burkina Faso</span>
+</div>
+<div class="pt-3 border-t border-[#E6E8EB] flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="text-[11px] text-[#071934]/60 uppercase tracking-wide">Dotation</span>
+<span class="text-xs font-bold text-[#071934]">Jusqu'à 45 000 $</span>
+</div>
+<a class="px-4 py-2 bg-[#071934] hover:bg-[#071934]/90 text-[#FFFFFF] text-xs font-semibold rounded-lg transition-colors flex items-center gap-1.5" href="#">
+<span>Consulter l'offre</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 flex flex-col shadow-sm">
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold tracking-wide uppercase bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB]">
+            Concours
+          </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[#FFFFFF] border border-[#D3A940] text-[#071934]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#D3A940]"></span>
+            Clôture : 15 Mai 2026
+          </span>
+</div>
+<h2 class="text-base font-bold text-[#071934] leading-snug mb-2">
+          Grand Prix Panafricain de l'Éco-Innovation
+        </h2>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-3">
+          Compétition continentale distinguant les inventions novatrices en matière de recyclage circulaire des polymères et valorisation des déchets industriels.
+        </p>
+<div class="flex items-center gap-1.5 text-xs text-[#071934]/70 mb-4">
+<span class="material-symbols-outlined text-[16px] text-[#071934]">public</span>
+<span>Éligibilité : Tous pays de l'Union Africaine</span>
+</div>
+<div class="pt-3 border-t border-[#E6E8EB] flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="text-[11px] text-[#071934]/60 uppercase tracking-wide">Prix</span>
+<span class="text-xs font-bold text-[#071934]">25 000 $ + Mentorat</span>
+</div>
+<a class="px-4 py-2 bg-[#071934] hover:bg-[#071934]/90 text-[#FFFFFF] text-xs font-semibold rounded-lg transition-colors flex items-center gap-1.5" href="#">
+<span>Consulter l'offre</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 flex flex-col shadow-sm">
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold tracking-wide uppercase bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB]">
+            Bourses
+          </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[#FFFFFF] border border-[#071934] text-[#071934]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#071934]"></span>
+            Clôture : 05 Juin 2026
+          </span>
+</div>
+<h2 class="text-base font-bold text-[#071934] leading-snug mb-2">
+          Bourses de Recherche Appliquée HealthTech
+        </h2>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-3">
+          Allocation de recherche doctorale et postdoctorale axée sur les dispositifs biomédicaux à faible coût pour dispensaires ruraux.
+        </p>
+<div class="flex items-center gap-1.5 text-xs text-[#071934]/70 mb-4">
+<span class="material-symbols-outlined text-[16px] text-[#071934]">public</span>
+<span>Éligibilité : Jeunes chercheurs (&lt; 35 ans)</span>
+</div>
+<div class="pt-3 border-t border-[#E6E8EB] flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="text-[11px] text-[#071934]/60 uppercase tracking-wide">Prise en charge</span>
+<span class="text-xs font-bold text-[#071934]">100% Frais + Séjour</span>
+</div>
+<a class="px-4 py-2 bg-[#071934] hover:bg-[#071934]/90 text-[#FFFFFF] text-xs font-semibold rounded-lg transition-colors flex items-center gap-1.5" href="#">
+<span>Consulter l'offre</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 flex flex-col shadow-sm">
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold tracking-wide uppercase bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB]">
+            Résidences
+          </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[#FFFFFF] border border-[#071934] text-[#071934]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#071934]"></span>
+            Clôture : 20 Juin 2026
+          </span>
+</div>
+<h2 class="text-base font-bold text-[#071934] leading-snug mb-2">
+          Résidence Maker &amp; Énergie Solaire Frugale
+        </h2>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-3">
+          Immersion de 3 mois au sein du réseau FabLab Ouest-Africain pour prototyper et tester en conditions réelles des onduleurs solaires réparables.
+        </p>
+<div class="flex items-center gap-1.5 text-xs text-[#071934]/70 mb-4">
+<span class="material-symbols-outlined text-[16px] text-[#071934]">public</span>
+<span>Éligibilité : Ingénieurs, makers, designers</span>
+</div>
+<div class="pt-3 border-t border-[#E6E8EB] flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="text-[11px] text-[#071934]/60 uppercase tracking-wide">Lieu</span>
+<span class="text-xs font-bold text-[#071934]">Dakar / Cotonou</span>
+</div>
+<a class="px-4 py-2 bg-[#071934] hover:bg-[#071934]/90 text-[#FFFFFF] text-xs font-semibold rounded-lg transition-colors flex items-center gap-1.5" href="#">
+<span>Consulter l'offre</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<nav aria-label="Pagination" class="flex items-center justify-center gap-2 mb-6 text-xs">
+<button class="h-9 px-3 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934]/40 rounded-lg flex items-center justify-center font-medium cursor-not-allowed" disabled="" type="button">
+        Précédent
+      </button>
+<button aria-current="page" class="h-9 w-9 bg-[#071934] text-[#FFFFFF] font-bold rounded-lg flex items-center justify-center shadow-sm" type="button">
+        1
+      </button>
+<button class="h-9 w-9 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] hover:bg-[#F3F4F5] font-medium rounded-lg flex items-center justify-center transition-colors" type="button">
+        2
+      </button>
+<button class="h-9 px-3 bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] hover:bg-[#F3F4F5] rounded-lg flex items-center justify-center font-medium transition-colors" type="button">
+        Suivant
+      </button>
+</nav>
+</main>
+<!-- Navy Footer -->
+<footer class="w-full bg-[#071934] text-[#FFFFFF] pt-8 pb-safe mt-auto">
+<div class="w-full max-w-[390px] mx-auto px-4 flex flex-col items-center text-center">
+<!-- White container with logo 56px -->
+<div class="bg-[#FFFFFF] p-2.5 rounded-xl inline-flex items-center justify-center shadow-sm mb-5">
+<img alt="RAJI Logo" class="h-14 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOIV3FMDZMKBaF-AFqm-4A_YWEjNS8Tza8DUxRd1mBCH3_3Bc6fsrrN0CmEXwQRjhs4QmUkUdHjo0pLzMlydSdn0Vk8LyNprYJb_6i-3g2zufPsDnOUYg1kqCX3Rqt2z4P3TEP-iTGZr6BaNpJ9cG5fygS6OT0MCNu75f95mniVlgsDasbJ4vkYh2FOlO7cWmOUB5fkotDlbkYnTiZ56NqslY2Hi5gLgygKvt3PjXSTWwOMks6LlBPfWEzgFsgcQ3Ote8"/>
+</div>
+<p class="text-xs text-[#E6E8EB] max-w-xs mb-5 italic">
+        « Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique »
+      </p>
+<div class="w-36 h-px bg-[#E6E8EB]/20 mb-5"></div>
+<!-- 8 Links Grid -->
+<div class="grid grid-cols-2 gap-x-6 gap-y-2.5 w-full max-w-xs mb-6 text-left text-xs">
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors py-0.5" href="#">Accueil</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors py-0.5" href="#">À propos</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors py-0.5" href="#">Opportunités</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors py-0.5" href="#">Programmes</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors py-0.5" href="#">Écosystème</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors py-0.5" href="#">Actualités</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors py-0.5" href="#">Partenaires</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors py-0.5" href="#">Contact</a>
+</div>
+<div class="w-full h-px bg-[#E6E8EB]/10 mb-4"></div>
+<p class="text-xs text-[#E6E8EB]/70 pb-6 max-w-xs leading-relaxed">
+        © 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.
+      </p>
+</div>
+</footer>
+</body></html>

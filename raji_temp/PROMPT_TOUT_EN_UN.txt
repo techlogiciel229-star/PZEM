@@ -1,0 +1,68 @@
+PROMPT TOUT-EN-UN — CORRECTION MAQUETTE RESPONSIVE MULTIPLATEFORME RAJI
+
+(Copie ce bloc entier dans Stitch > Édition par prompt, sur la maquette à corriger.)
+
+ÉCRAN CIBLE : {nom de la maquette} — Responsive Multiplateforme
+Travaille UNIQUEMENT sur cet écran. Garde EXACTEMENT le même contenu, le même texte, la même structure et les mêmes sections. Corrige uniquement les points ci-dessous, puis renomme l'écran « {même nom} — CORRIGÉ ».
+
+1) TYPOGRAPHIE — Inter uniquement.
+Supprime toute classe de token indéfinie (font-headline-sm, font-body-md, text-headline-lg, font-label-caps, px-space-md, py-space-xl, etc.) et remplace-la par des utilitaires Tailwind bruts : text-xs/text-sm/text-base/text-xl/text-2xl/text-3xl/text-4xl, font-medium/font-semibold/font-bold/font-extrabold, px-4/px-6/py-2.5/py-3.5, leading-relaxed, tracking-tight, rounded-[8px], rounded-[12px]. Dans tailwind.config, ne déclare QUE theme.extend { fontFamily: { sans:['Inter','sans-serif'] }, colors: { navy:'#071934', gold:'#D3A940', canvas:'#F3F4F5', line:'#E6E8EB', secondary:'#44474D' } }. Aucune autre extension. Hiérarchie : hero 44–48px/800, h2 28–30px/700, h3 18–20px/700, body 16px (jamais < 16px), labels 12–14px.
+
+2) COULEURS — palette stricte, aucune autre teinte.
+Uniquement : #071934 (navy, prima fac / fonds sombres), #D3A940 (or, CTA, badges, soulignement actif — texte navy au-dessus), #FFFFFF (cartes), #F3F4F5 (canvas), #E6E8EB (bordures 1px), #44474D (texte secondaire). Interdits : toute classe de couleur Tailwind standard (gray, red, green, emerald, amber, blue…) et tout hex arbitraire (comme #25d366, #0c2447, #0e2a52, #c49a33…). Les signaux erreur/succès/statut/alerte se font SANS rouge ni vert ni ambre : badge or #D3A940 sur fond #071934, pastille #071934 sur canvas #F3F4F5, ou texte #44474D + pictogramme SVG. Rayons : cartes 12px, boutons/champs 8px, badges 4px.
+
+3) IMAGES — vraies photos, zéro placeholder.
+Remplace tout placeholder gris (https://www.gstatic.com/labs-code/stitch/stitch-placeholder-*) par une vraie photo réaliste cohérente avec le sujet (portraits d'innovateurs africains, agritech, healthtech, cleantech) en ratio fixe 4/3 ou 1/1. Chaque <img> doit avoir un attribut alt descriptif en français et loading="lazy", et une largeur/hauteur définie. Aucun espace vide, aucune bordure pointillée, aucun dessin gris à la place d'une photo.
+
+4) ICÔNES — SVG inline uniquement.
+Chaque icône est un <svg> inline (stroke #071934 ou #D3A940). Interdiction d'utiliser une police d'icônes : pas de Material Symbols, pas de Font Awesome, pas de classe icone-font.
+
+5) LOGO RAJI.
+Place le logo officiel RAJI dans le header ET dans le footer, chacun dans un conteneur blanc (padding 4–8px, rayon 8px) pour le contraste sur fond navy. Hauteur 44–56px ; jamais étiré ni déformé ; aucune version alternative.
+
+6) UX et accessibilité tactile.
+Chaque bouton et lien cliquable fait au moins 44px de hauteur (utilise min-h-[44px] ou un padding suffisant, min 44×44px). Focus visible or (outline 2px #D3A940), contraste AA (navy/blanc, blanc/navy, navy/or), ordre de lecture logique, états hover/active/focus cohérents, navigation clavier.
+
+7) RESPONSIVE — à conserver partout.
+Le même écran reste une maquette responsive multiplateforme : Desktop 1440 (grille 12 col, conteneur max 1200px, marges 24px, cartes 3–4 col), Tablette 768 (grille 8 col, cartes 2 col), Mobile 390 (1 col, menu hamburger, CTA pleine largeur, texte ≥16px, cibles tactiles). Utilise des classes sm:/md:/lg: ou de vraies media queries. Conserve <meta viewport> et <html lang="fr">.
+
+CONTRAINTE : ne renomme et ne paraphrase rien ; ne modifie aucun texte existant ; ne réorganise pas les sections ; ne change que la mise en forme et les points ci-dessus.
+
+------------------------------------------------------------------
+ÉCRANS À CORRIGER (identification)
+------------------------------------------------------------------
+Applique le bloc TOUT-EN-UN ci-dessus à chacune de ces maquettes, dans cet ordre. Le suffixe « (Responsive Multiplateforme) » est le nom attendu sur Stitch.
+
+PRIORITÉ 1 — CRITIQUES (à corriger d'abord)
+1. RAJI — Aperçu Design System (Responsive Multiplateforme)
+   → Toute la typographie est cassée : 218 classes de tokens (font-headline-lg, text-body-md…) sans AUCUN tailwind.config. Priorité au point 1 du bloc.
+2. RAJI — Soumettre mon innovation – Étape 2 (Responsive Multiplateforme)
+   → Idem : 121 classes de tokens, configuration absente. Ajouter le point 2 (couleur text-emerald-600) et point 6 (min-h-[44px] absent).
+3. RAJI — Soumettre mon innovation – Étape 1 – Erreurs de validation (Responsive Multiplateforme)
+   → Idem : 85 classes de tokens sans config + messages en classes AMBER (bg-amber-50/100/500, text-amber-700/800) à réécrire en or/navy.
+4. RAJI — Innovateurs – Profil (contact non partagé) (Responsive Multiplateforme)
+   → 4 images sur 6 sont des placeholders gris (gstatic stitch-placeholder-300x300.svg) : les remplacer par de vraies photos (point 3). Icônes Material Symbols : remplacer par SVG (point 4). Cibles <44px (point 6).
+
+PRIORITÉ 2 — IMPORTANT
+5. RAJI — Administration – Candidatures (Responsive Multiplateforme)
+   → Badges de statut en classes EMERALD (bg-emerald-50/500/600, border-emerald-500) et AMBER : réécrire en or/navy/canvas (point 2). Navy trop sombre #0c2447 / #0e2a52 (barre latérale, tableau) : repasser en #071934. 2 tokens manquants (display-hero, label-caps).
+6. RAJI — Soumettre mon innovation – Étape 1 (Responsive Multiplateforme)
+   → Couleur hors palette #25d366 (vert WhatsApp) à supprimer (point 2). 2 tokens manquants (display-hero, label-caps). Cibles <44px (point 6).
+
+PRIORITÉ 3 — STANDARD
+7. RAJI — RAJI Match (Responsive Multiplateforme)
+   → Police d'icônes Material Symbols : remplacer par SVG inline (point 4). Cibles <44px.
+8. RAJI — Soumettre mon innovation – Étape 3 (Responsive Multiplateforme)
+   → Nettoyer les tokens de config inutiles (point 1) ; ajouter loading="lazy" (point 3) ; min-h-[44px] cohérent.
+9. RAJI — Innovateurs – Aucun résultat (Responsive Multiplateforme)
+   → loading="lazy" absent (point 3) ; cibles <44px (point 6).
+10. RAJI — Innovateurs – Fiche profil (Responsive Multiplateforme)
+    → Image basse résolution à remplacer, loading="lazy" absent (point 3) ; cibles <44px.
+11. RAJI — À propos (Responsive Multiplateforme)
+    → loading="lazy" absent ; cibles <44px ; contrôler la palette.
+12. RAJI — Accueil (Responsive Multiplateforme) [1 et 2]
+    → loading="lazy" absent (0/2 et 0/12) ; compléter min-h-[44px].
+
+CONTRÔLE SIMPLE (normalement conformes)
+13. RAJI — Accueil (Maquette Responsive Unique) [1 et 2]
+    → Déjà bons (31–32 cibles 44px, lazy 10/13, palette OK) : uniquement contrôler et renommer « — CORRIGÉ » si le bloc est appliqué.

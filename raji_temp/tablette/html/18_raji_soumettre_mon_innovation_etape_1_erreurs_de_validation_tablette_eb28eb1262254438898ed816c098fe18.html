@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAJI — Soumettre mon innovation – Étape 1 – Erreurs de validation (Tablette)</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+      }
+      body {
+        overscroll-behavior: none;
+        background-color: #F3F4F5;
+        color: #071934;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-[#F3F4F5] font-sans antialiased text-[#071934] min-h-screen flex flex-col">
+<!-- Header: Sticky white header, 820px layout, logo 44px on left, 44px hamburger button on right ONLY with navy stroke. NO desktop nav links. -->
+<header class="sticky top-0 left-0 right-0 z-50 bg-[#FFFFFF] shadow-[0_1px_8px_rgba(7,25,52,0.06)] border-b border-[#E6E8EB]">
+<div class="max-w-[820px] w-full mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Logo RAJI" class="h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNK08xvjXvWhKTojBNhpYXTrKdyJPbbc7aBjuVgSmaQf7odYVfBZQOtr1z3EAxjn2QJZAQyQrCb8aeW-GjV787bcCXdLqExZmvDRfZVYq2W9Aw12TLKBJ2Mu2s3_g4R1xfYgnnG9STY093_lIfKPEvEevwGAm_trrksWAdxoM-ofKMYXL-2QmKyaPN4W5nX9ivKmgZSnwRhbapG_ln3k7uv72ML_i2J7IXoEp7RmpEjv-6mO2r8VO3GAC1ULfHgsEiHZY"/>
+<span class="font-bold text-[18px] text-[#071934] tracking-tight">RAJI</span>
+</div>
+<div class="flex items-center">
+<button aria-label="Ouvrir le menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-[#071934] hover:bg-[#F3F4F5] transition-colors" type="button">
+<span class="material-symbols-outlined text-[28px] text-[#071934]">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Section: Tablet centered layout (820px container context) -->
+<main class="flex-1 w-full bg-[#F3F4F5] py-8">
+<div class="max-w-[820px] mx-auto px-6">
+<!-- Breadcrumb / Return + Intro Context -->
+<div class="text-center flex flex-col items-center mb-8">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FFFFFF] rounded-md shadow-sm mb-3 border border-[#E6E8EB]">
+<span class="w-2 h-2 rounded-full bg-[#D3A940]"></span>
+<span class="text-[12px] uppercase tracking-wider text-[#071934] font-semibold">Candidature &amp; Réseau</span>
+</div>
+<h1 class="text-[28px] leading-tight font-bold text-[#071934] tracking-tight">
+          Soumettre mon innovation
+        </h1>
+<div class="w-8 h-[3px] bg-[#D3A940] rounded-full my-3"></div>
+<p class="text-[14px] text-[#071934]/80 max-w-[540px] text-center leading-relaxed">
+          Présentez votre projet au réseau RAJI. Vos informations sont stockées de manière sécurisée et ne sont jamais publiées sans votre accord.
+        </p>
+</div>
+<!-- Horizontal Stepper (4 Steps, Step 1 active) -->
+<div class="w-full max-w-[640px] mx-auto mb-8 px-2">
+<div class="relative flex items-center justify-between">
+<!-- Step 1 (Active) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#071934] text-[#FFFFFF] flex items-center justify-center text-[14px] font-bold shadow-sm">
+              1
+            </div>
+<span class="mt-2 text-[14px] font-semibold text-[#071934] tracking-tight">
+              1 Identité
+            </span>
+</div>
+<!-- Track 1-2 -->
+<div class="flex-1 h-[2px] mx-2 bg-[#E6E8EB] relative -top-3">
+<div class="h-full bg-[#071934] w-1/2"></div>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934]/70 flex items-center justify-center text-[14px] font-medium">
+              2
+            </div>
+<span class="mt-2 text-[14px] text-[#071934]/70 tracking-tight">
+              2 Projet
+            </span>
+</div>
+<!-- Track 2-3 -->
+<div class="flex-1 h-[2px] mx-2 bg-[#E6E8EB] relative -top-3"></div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934]/70 flex items-center justify-center text-[14px] font-medium">
+              3
+            </div>
+<span class="mt-2 text-[14px] text-[#071934]/70 tracking-tight text-center">
+              3 Traction &amp; Financement
+            </span>
+</div>
+<!-- Track 3-4 -->
+<div class="flex-1 h-[2px] mx-2 bg-[#E6E8EB] relative -top-3"></div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934]/70 flex items-center justify-center text-[14px] font-medium">
+              4
+            </div>
+<span class="mt-2 text-[14px] text-[#071934]/70 tracking-tight">
+              4 Médias
+            </span>
+</div>
+</div>
+</div>
+<!-- Centered Form Card: 640px wide, white, rounded-2xl, border 1px #E6E8EB, p-8 -->
+<div class="w-full max-w-[640px] mx-auto bg-[#FFFFFF] rounded-2xl p-8 border border-[#E6E8EB] shadow-[0_1px_4px_rgba(7,25,52,0.04)] mb-8">
+<!-- Header badge & titles -->
+<div class="mb-6">
+<span class="text-[12px] font-semibold text-[#071934] bg-[#F3F4F5] px-2.5 py-1 rounded inline-block mb-3 tracking-wide uppercase">
+            FORMULAIRE D'ADMISSION
+          </span>
+<h2 class="text-[20px] font-bold text-[#071934] leading-snug">
+            Étape 1 sur 4 : Vos informations personnelles
+          </h2>
+<p class="text-[14px] text-[#071934]/80 mt-1">
+            Ces données nous permettront de vous identifier en tant que porteur de projet.
+          </p>
+</div>
+<!-- Error summary box at top of card -->
+<div class="bg-[#F3F4F5] border-l-4 border-[#D3A940] rounded-r-lg p-4 flex items-start gap-3 mb-6 shadow-sm">
+<span class="material-symbols-outlined text-[#071934] text-[22px] shrink-0 mt-0.5">error</span>
+<div>
+<h3 class="text-[14px] font-bold text-[#071934] leading-tight">
+              Veuillez corriger les champs indiqués.
+            </h3>
+<p class="text-[12px] text-[#071934]/80 mt-0.5">
+              2 champs nécessitent votre attention.
+            </p>
+</div>
+</div>
+<!-- Form Elements in 2 columns -->
+<form class="space-y-5" onsubmit="event.preventDefault();">
+<!-- Row 1: Nom & Prénom -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-[14px] font-medium text-[#071934] mb-1.5" for="nom">
+                Nom <span class="text-[#071934] font-bold">*</span>
+</label>
+<input class="w-full h-11 px-3 text-[14px] text-[#071934] placeholder-[#071934]/40 bg-[#FFFFFF] border-2 border-[#071934] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D3A940]/25 transition-all" id="nom" name="nom" placeholder="Ex: Diallo" required="" type="text" value=""/>
+<div class="mt-1.5 flex items-center gap-1.5 text-[12px] text-[#071934] font-medium">
+<span class="material-symbols-outlined text-[#071934] text-[16px] shrink-0">warning</span>
+<span>Le nom de famille est obligatoire.</span>
+</div>
+</div>
+<div>
+<label class="block text-[14px] font-medium text-[#071934] mb-1.5" for="prenom">
+                Prénom <span class="text-[#071934] font-bold">*</span>
+</label>
+<input class="w-full h-11 px-3 text-[14px] text-[#071934] placeholder-[#071934]/40 bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg focus:outline-none focus:border-[#071934] focus:ring-2 focus:ring-[#D3A940]/25 transition-all" id="prenom" name="prenom" placeholder="Ex: Amadou" required="" type="text"/>
+</div>
+</div>
+<!-- Row 2: Pays & Ville de résidence -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-[14px] font-medium text-[#071934] mb-1.5" for="pays">
+                Pays <span class="text-[#071934] font-bold">*</span>
+</label>
+<div class="relative w-full">
+<select class="w-full h-11 px-3 text-[14px] text-[#071934] bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg appearance-none focus:outline-none focus:border-[#071934] focus:ring-2 focus:ring-[#D3A940]/25 transition-all pr-10 cursor-pointer" id="pays" name="pays" required="">
+<option disabled="" selected="" value="">Sélectionnez votre pays</option>
+<option value="SN">Sénégal</option>
+<option value="CI">Côte d'Ivoire</option>
+<option value="CM">Cameroun</option>
+<option value="MA">Maroc</option>
+<option value="NG">Nigeria</option>
+<option value="KE">Kenya</option>
+<option value="RW">Rwanda</option>
+<option value="TG">Togo</option>
+<option value="BJ">Bénin</option>
+<option value="CD">RD Congo</option>
+<option value="GH">Ghana</option>
+<option value="ML">Mali</option>
+<option value="BF">Burkina Faso</option>
+<option value="TN">Tunisie</option>
+<option value="OTHER">Autre pays africain</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[#071934] text-[20px]">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block text-[14px] font-medium text-[#071934] mb-1.5" for="ville">
+                Ville de résidence <span class="text-[#071934] font-bold">*</span>
+</label>
+<input class="w-full h-11 px-3 text-[14px] text-[#071934] placeholder-[#071934]/40 bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg focus:outline-none focus:border-[#071934] focus:ring-2 focus:ring-[#D3A940]/25 transition-all" id="ville" name="ville" placeholder="Ex: Dakar" required="" type="text"/>
+</div>
+</div>
+<!-- Row 3: Téléphone / WhatsApp & Adresse email -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-[14px] font-medium text-[#071934] mb-1.5" for="telephone">
+                Téléphone / WhatsApp <span class="text-[#071934] font-bold">*</span>
+</label>
+<input class="w-full h-11 px-3 text-[14px] text-[#071934] placeholder-[#071934]/40 bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg focus:outline-none focus:border-[#071934] focus:ring-2 focus:ring-[#D3A940]/25 transition-all" id="telephone" name="telephone" placeholder="Ex: +221 77 123 45 67" required="" type="tel"/>
+</div>
+<div>
+<label class="block text-[14px] font-medium text-[#071934] mb-1.5" for="email">
+                Adresse email professionnelle <span class="text-[#071934] font-bold">*</span>
+</label>
+<input class="w-full h-11 px-3 text-[14px] text-[#071934] bg-[#FFFFFF] border-2 border-[#071934] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D3A940]/25 transition-all font-medium" id="email" name="email" placeholder="Ex: amadou.diallo@innovation.sn" required="" type="email" value="amadou.diallo@innovation"/>
+<div class="mt-1.5 flex items-center gap-1.5 text-[12px] text-[#071934] font-medium">
+<span class="material-symbols-outlined text-[#071934] text-[16px] shrink-0">warning</span>
+<span>Veuillez saisir une adresse email valide.</span>
+</div>
+</div>
+</div>
+<!-- Security note: bg-[#F3F4F5], navy shield icon -->
+<div class="flex items-start gap-3 bg-[#F3F4F5] p-3.5 rounded-lg text-[#071934]">
+<span class="material-symbols-outlined text-[18px] text-[#071934] shrink-0 mt-0.5">verified_user</span>
+<p class="text-[12px] text-[#071934]/80 leading-relaxed">
+              Ces canaux directs serviront exclusivement aux correspondances du jury RAJI et des bailleurs accrédités.
+            </p>
+</div>
+<!-- Form Footer Actions -->
+<div class="pt-5 border-t border-[#E6E8EB] flex flex-col sm:flex-row justify-between items-center gap-4">
+<span class="text-[12px] text-[#071934]/70 order-2 sm:order-1 text-center sm:text-left">
+              Étape suivante : Détails technologiques &amp; impact
+            </span>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#071934] hover:bg-[#071934]/90 text-[#FFFFFF] rounded-lg text-[14px] font-medium transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-[#D3A940] order-1 sm:order-2" type="submit">
+<span>Suivant : Mon projet</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Trust Badges Under Card -->
+<div class="max-w-[640px] mx-auto flex items-center justify-center gap-6 text-center opacity-70 pb-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#071934]">lock</span>
+<span class="text-[12px] font-medium text-[#071934]">Chiffrement bout en bout</span>
+</div>
+<div class="h-3 w-[1px] bg-[#E6E8EB]"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#071934]">public</span>
+<span class="text-[12px] font-medium text-[#071934]">Couverture panafricaine</span>
+</div>
+<div class="h-3 w-[1px] bg-[#E6E8EB]"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#071934]">policy</span>
+<span class="text-[12px] font-medium text-[#071934]">Normes RGPD &amp; UA</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer: Navy #071934, logo 56px inside white rounded container, exact 8 links, copyright -->
+<footer class="w-full bg-[#071934] text-[#FFFFFF] mt-auto">
+<div class="max-w-[820px] mx-auto px-6 pt-10 pb-8 flex flex-col items-center text-center gap-6">
+<div class="bg-[#FFFFFF] p-2.5 rounded-xl inline-flex items-center justify-center shadow-md">
+<img alt="Logo RAJI" class="h-[56px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvhL1oDG_2bo03I-_NGEScGsh0VUG63X-XAqeG2K3bVvB4CUOuqpv4d1L2JJS1VTXPaaZ9ZYxyuMf75gKGPakR_2uXWkF9eHJob5Kk8lhEIcKTwNkPiScHRFjw4LLnRHJE4w0jcUAbVy05gpZ6islZq0AYyyO0lovEHcvAVDOlqBakZ-GUpGNYUZbmLkyNkD_2CI2gErZH77bNSmIdjSujbQcwfgnN0CPCXkHIKFKI12KY80AfIKK2Ay6zxr4kGQMCGY0"/>
+</div>
+<!-- Exact 8 links: Accueil, À propos, Innovateurs, RAJI Média, Événements, Partenaires, Opportunités, Contact -->
+<nav aria-label="Navigation pied de page" class="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-3 w-full max-w-xl text-center">
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1 font-medium" data-path="accueil" href="#">Accueil</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1 font-medium" data-path="a-propos" href="#">À propos</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1 font-medium" data-path="innovateurs" href="#">Innovateurs</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1 font-medium" data-path="raji-media" href="#">RAJI Média</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1 font-medium" data-path="evenements" href="#">Événements</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1 font-medium" data-path="partenaires" href="#">Partenaires</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1 font-medium" data-path="opportunites" href="#">Opportunités</a>
+<a class="text-[14px] text-[#FFFFFF] hover:text-[#D3A940] transition-colors py-1 font-medium" data-path="contact" href="#">Contact</a>
+</nav>
+<div class="w-12 h-0.5 bg-[#D3A940] rounded-full opacity-75 my-1"></div>
+<p class="text-[12px] text-[#E6E8EB] leading-relaxed max-w-md">
+        © 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.
+      </p>
+</div>
+</footer>
+</body></html>

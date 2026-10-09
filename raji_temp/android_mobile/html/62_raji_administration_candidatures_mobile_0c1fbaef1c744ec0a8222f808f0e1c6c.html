@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;font-family:'Inter',sans-serif;}body{overscroll-behavior:none;background-color:#F3F4F5;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}#admin-drawer.open{transform:translateX(0);}#drawer-overlay.open{opacity:1;pointer-events:auto;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "outline-variant": "#c5c6ce", "secondary-fixed": "#d7e3ff", "on-secondary-fixed": "#0a1b36", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#edc155", "tertiary-fixed": "#ffdf9a", "tertiary-container": "#251a00", "on-secondary-container": "#505f7e", "background": "#f8f9fa", "outline": "#75777e", "inverse-primary": "#b7c7ea", "on-primary-container": "#7484a4", "surface-container-highest": "#e1e3e4", "on-primary": "#ffffff", "on-tertiary-fixed": "#251a00", "on-surface-variant": "#44474d", "primary-fixed-dim": "#b7c7ea", "on-error": "#ffffff", "surface-container": "#edeeef", "on-primary-fixed": "#0a1b36", "primary-container": "#0a1b36", "surface-dim": "#E6E8EB", "surface-bright": "#FFFFFF", "on-tertiary-fixed-variant": "#5a4300", "surface-container-lowest": "#ffffff", "secondary": "#4f5f7d", "error": "#ba1a1a", "on-background": "#191c1d", "primary": "#000000", "secondary-fixed-dim": "#b7c7ea", "on-tertiary-container": "#a47e15", "inverse-surface": "#2e3132", "tertiary": "#000000", "surface": "#f8f9fa", "on-error-container": "#93000a", "primary-fixed": "#d7e3ff", "on-primary-fixed-variant": "#374764", "surface-container-low": "#f3f4f5", "secondary-container": "#cadafe", "surface-variant": "#e1e3e4", "surface-tint": "#4f5f7d", "inverse-on-surface": "#f0f1f2", "on-secondary": "#ffffff", "error-container": "#ffdad6", "surface-container-high": "#e7e8e9", "on-surface": "#191c1d", "on-secondary-fixed-variant": "#374764", "outline-strong": "#071934" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-tablet": "2rem", "gutter": "1rem", "gutter-desktop": "2rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-desktop": "3rem", "gutter-tablet": "1.5rem", "margin": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "space-md": "1rem" }, fontFamily: { "display-lg": ["Inter"], "label-lg": ["Inter"], "headline-md": ["Inter"], "headline-sm": ["Inter"], "title-md": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "display-lg-mobile": ["Inter"], "label-sm": ["Inter"] }, fontSize: { "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-[#F3F4F5] text-[#071934] flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-[#FFFFFF] shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-3 flex items-center justify-between border-b border-[#E6E8EB]"><div class="flex items-center gap-2"><button class="w-11 h-11 flex items-center justify-center text-[#071934] active:bg-[#F3F4F5] transition-colors" onclick="document.getElementById('admin-drawer').classList.add('open');document.getElementById('drawer-overlay').classList.add('open');" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/></div><div class="flex items-center gap-2"><span class="font-label-sm text-label-sm uppercase tracking-wider text-[#071934] font-semibold hidden sm:inline">Candidatures</span><span class="px-2 py-0.5 bg-[#071934] text-[#FFFFFF] text-[11px] font-bold tracking-wider uppercase rounded-none">Admin</span></div></div></header><div class="fixed inset-0 z-50 bg-[#071934]/40 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm" id="drawer-overlay" onclick="document.getElementById('admin-drawer').classList.remove('open');document.getElementById('drawer-overlay').classList.remove('open');"></div><aside class="fixed top-0 left-0 z-50 h-full w-[280px] bg-[#FFFFFF] shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-safe" id="admin-drawer"><div class="h-14 px-4 flex items-center justify-between border-b border-[#E6E8EB]"><div class="flex items-center gap-2"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/><span class="px-1.5 py-0.5 bg-[#071934] text-[#FFFFFF] text-[10px] font-bold uppercase tracking-wider">Admin</span></div><button class="w-11 h-11 flex items-center justify-center text-[#071934] active:bg-[#F3F4F5]" onclick="document.getElementById('admin-drawer').classList.remove('open');document.getElementById('drawer-overlay').classList.remove('open');" type="button"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="px-4 py-3 bg-[#F3F4F5] border-b border-[#E6E8EB]"><p class="text-[11px] font-semibold text-[#071934] uppercase tracking-wider">Navigation Administration</p></div><nav class="flex-1 overflow-y-auto py-2" data-active-classes="bg-[#F3F4F5] text-[#071934] font-bold border-l-4 border-[#D3A940]"><div class="flex flex-col"><a class="flex items-center gap-3 px-4 py-3 text-[14px] text-[#071934] hover:bg-[#F3F4F5] transition-colors border-l-4 border-transparent" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Tableau de bord</span></a><a aria-current="page" class="flex items-center gap-3 px-4 py-3 transition-colors bg-[#F3F4F5] text-[#071934] font-bold border-l-4 border-[#D3A940]" data-path="candidatures" href="#"><span class="material-symbols-outlined text-[20px]">description</span><span>Candidatures</span></a><a class="flex items-center gap-3 px-4 py-3 text-[14px] text-[#071934] hover:bg-[#F3F4F5] transition-colors border-l-4 border-transparent" data-path="utilisateurs-et-roles" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Utilisateurs et rôles</span></a><a class="flex items-center gap-3 px-4 py-3 text-[14px] text-[#071934] hover:bg-[#F3F4F5] transition-colors border-l-4 border-transparent" data-path="parametres" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Paramètres</span></a></div></nav><div class="p-3 border-t border-[#E6E8EB] bg-[#FFFFFF] flex flex-col gap-1 pb-safe"><a class="flex items-center gap-3 px-3 py-2.5 text-[13px] text-[#071934] hover:bg-[#F3F4F5] transition-colors" data-path="retour-au-site-public" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span><span>Retour au site public</span></a><a class="flex items-center gap-3 px-3 py-2.5 text-[13px] text-[#BA1A1A] hover:bg-[#FFDAD6]/30 transition-colors font-medium" data-path="deconnexion" href="#"><span class="material-symbols-outlined text-[18px]">logout</span><span>Déconnexion</span></a></div></aside><main class="flex flex-col relative w-full pt-14 pb-20 bg-[#F3F4F5] min-h-screen"><div class="flex flex-col w-full">
+<!-- Title & Metric Bar -->
+<section class="w-full bg-[#FFFFFF] px-4 pt-4 pb-3 border-b border-[#E6E8EB]">
+<div class="flex items-baseline justify-between">
+<h1 class="text-[20px] leading-[28px] font-bold text-[#071934] tracking-tight">Candidatures</h1>
+<span class="text-[12px] font-medium text-[#071934] bg-[#F3F4F5] px-2 py-0.5 border border-[#E6E8EB]">6 dossiers enregistrés</span>
+</div>
+</section>
+<!-- Search & Filter Controls -->
+<section class="w-full bg-[#FFFFFF] px-4 pt-3 pb-3 border-b border-[#E6E8EB] space-y-3">
+<!-- Search Field -->
+<div class="relative w-full h-[44px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#071934] text-[20px] pointer-events-none">search</span>
+<input class="w-full h-[44px] pl-10 pr-3 bg-[#FFFFFF] border border-[#E6E8EB] text-[13px] text-[#071934] placeholder:text-[#071934]/60 focus:outline-none focus:border-[#071934] rounded-none transition-colors" id="candidatures-search" placeholder="Rechercher..." type="search"/>
+</div>
+<!-- Status Filter Chips (Scrollable Row) -->
+<div aria-label="Filtrer par statut" class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5" role="tablist">
+<button class="status-chip flex-shrink-0 px-3 py-1.5 text-[12px] font-bold bg-[#071934] text-[#FFFFFF] border border-[#071934] transition-colors" onclick="filterByStatus('all', this)" type="button">
+        Toutes (6)
+      </button>
+<button class="status-chip flex-shrink-0 px-3 py-1.5 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#E6E8EB] active:bg-[#F3F4F5] transition-colors" onclick="filterByStatus('pending', this)" type="button">
+        En attente (3)
+      </button>
+<button class="status-chip flex-shrink-0 px-3 py-1.5 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#E6E8EB] active:bg-[#F3F4F5] transition-colors" onclick="filterByStatus('validated', this)" type="button">
+        Validées (2)
+      </button>
+<button class="status-chip flex-shrink-0 px-3 py-1.5 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#E6E8EB] active:bg-[#F3F4F5] transition-colors" onclick="filterByStatus('rejected', this)" type="button">
+        Refusées (1)
+      </button>
+</div>
+</section>
+<!-- Dossiers Cards List -->
+<div class="w-full px-4 py-4 space-y-3" id="cards-container">
+<!-- Card 1 -->
+<article class="candidature-card bg-[#FFFFFF] border border-[#E6E8EB] p-4 flex flex-col gap-3 shadow-[0_1px_3px_rgba(7,25,52,0.04)]" data-applicant="Aïssatou Diallo Guinée SolaireIrrig Pro" data-status="pending">
+<div class="flex items-start justify-between gap-2 border-b border-[#E6E8EB] pb-2.5">
+<div class="flex flex-col min-w-0">
+<span class="text-[14px] font-bold text-[#071934] truncate">Aïssatou Diallo</span>
+<span class="text-[12px] text-[#071934]/70">Guinée</span>
+</div>
+<span class="flex-shrink-0 text-[12px] font-semibold bg-[#D3A940] text-[#071934] px-2.5 py-0.5">En attente</span>
+</div>
+<div>
+<h2 class="text-[16px] font-bold text-[#071934] tracking-tight">SolaireIrrig Pro</h2>
+<div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-[12px] text-[#071934]/80">
+<span class="font-medium">AgriTech &amp; Énergie</span>
+<span class="text-[#E6E8EB]">|</span>
+<span>28/02/2026</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB] active:bg-[#E6E8EB] transition-colors text-center" type="button">Voir</button>
+<button class="flex-1 py-2 text-[12px] font-bold bg-[#071934] text-[#FFFFFF] border border-[#071934] active:bg-[#071934]/85 transition-colors text-center" type="button">Valider</button>
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#071934] active:bg-[#F3F4F5] transition-colors text-center" type="button">Refuser</button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="candidature-card bg-[#FFFFFF] border border-[#E6E8EB] p-4 flex flex-col gap-3 shadow-[0_1px_3px_rgba(7,25,52,0.04)]" data-applicant="Kofi Mensah Ghana AfriBioPack" data-status="validated">
+<div class="flex items-start justify-between gap-2 border-b border-[#E6E8EB] pb-2.5">
+<div class="flex flex-col min-w-0">
+<span class="text-[14px] font-bold text-[#071934] truncate">Kofi Mensah</span>
+<span class="text-[12px] text-[#071934]/70">Ghana</span>
+</div>
+<span class="flex-shrink-0 text-[12px] font-semibold bg-[#071934] text-[#FFFFFF] px-2.5 py-0.5">Validée</span>
+</div>
+<div>
+<h2 class="text-[16px] font-bold text-[#071934] tracking-tight">AfriBioPack</h2>
+<div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-[12px] text-[#071934]/80">
+<span class="font-medium">Écologie &amp; Recyclage</span>
+<span class="text-[#E6E8EB]">|</span>
+<span>26/02/2026</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB] active:bg-[#E6E8EB] transition-colors text-center" type="button">Voir</button>
+<button class="flex-1 py-2 text-[12px] font-bold bg-[#071934] text-[#FFFFFF] border border-[#071934] active:bg-[#071934]/85 transition-colors text-center" type="button">Valider</button>
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#071934] active:bg-[#F3F4F5] transition-colors text-center" type="button">Refuser</button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="candidature-card bg-[#FFFFFF] border border-[#E6E8EB] p-4 flex flex-col gap-3 shadow-[0_1px_3px_rgba(7,25,52,0.04)]" data-applicant="Fatimata Bamba Côte d'Ivoire TeleMed rural" data-status="pending">
+<div class="flex items-start justify-between gap-2 border-b border-[#E6E8EB] pb-2.5">
+<div class="flex flex-col min-w-0">
+<span class="text-[14px] font-bold text-[#071934] truncate">Fatimata Bamba</span>
+<span class="text-[12px] text-[#071934]/70">Côte d'Ivoire</span>
+</div>
+<span class="flex-shrink-0 text-[12px] font-semibold bg-[#D3A940] text-[#071934] px-2.5 py-0.5">En attente</span>
+</div>
+<div>
+<h2 class="text-[16px] font-bold text-[#071934] tracking-tight">TeleMed rural</h2>
+<div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-[12px] text-[#071934]/80">
+<span class="font-medium">Santé &amp; e-Santé</span>
+<span class="text-[#E6E8EB]">|</span>
+<span>25/02/2026</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB] active:bg-[#E6E8EB] transition-colors text-center" type="button">Voir</button>
+<button class="flex-1 py-2 text-[12px] font-bold bg-[#071934] text-[#FFFFFF] border border-[#071934] active:bg-[#071934]/85 transition-colors text-center" type="button">Valider</button>
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#071934] active:bg-[#F3F4F5] transition-colors text-center" type="button">Refuser</button>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="candidature-card bg-[#FFFFFF] border border-[#E6E8EB] p-4 flex flex-col gap-3 shadow-[0_1px_3px_rgba(7,25,52,0.04)]" data-applicant="Tariq Benali Maroc AquaSens IoT" data-status="rejected">
+<div class="flex items-start justify-between gap-2 border-b border-[#E6E8EB] pb-2.5">
+<div class="flex flex-col min-w-0">
+<span class="text-[14px] font-bold text-[#071934] truncate">Tariq Benali</span>
+<span class="text-[12px] text-[#071934]/70">Maroc</span>
+</div>
+<span class="flex-shrink-0 text-[12px] font-semibold bg-transparent text-[#071934] border border-[#071934] px-2.5 py-0.5">Refusée</span>
+</div>
+<div>
+<h2 class="text-[16px] font-bold text-[#071934] tracking-tight">AquaSens IoT</h2>
+<div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-[12px] text-[#071934]/80">
+<span class="font-medium">Gestion de l'eau</span>
+<span class="text-[#E6E8EB]">|</span>
+<span>24/02/2026</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB] active:bg-[#E6E8EB] transition-colors text-center" type="button">Voir</button>
+<button class="flex-1 py-2 text-[12px] font-bold bg-[#071934] text-[#FFFFFF] border border-[#071934] active:bg-[#071934]/85 transition-colors text-center" type="button">Valider</button>
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#071934] active:bg-[#F3F4F5] transition-colors text-center" type="button">Refuser</button>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="candidature-card bg-[#FFFFFF] border border-[#E6E8EB] p-4 flex flex-col gap-3 shadow-[0_1px_3px_rgba(7,25,52,0.04)]" data-applicant="Chinedu Okafor Nigéria FinAfrik MicroPay" data-status="validated">
+<div class="flex items-start justify-between gap-2 border-b border-[#E6E8EB] pb-2.5">
+<div class="flex flex-col min-w-0">
+<span class="text-[14px] font-bold text-[#071934] truncate">Chinedu Okafor</span>
+<span class="text-[12px] text-[#071934]/70">Nigéria</span>
+</div>
+<span class="flex-shrink-0 text-[12px] font-semibold bg-[#071934] text-[#FFFFFF] px-2.5 py-0.5">Validée</span>
+</div>
+<div>
+<h2 class="text-[16px] font-bold text-[#071934] tracking-tight">FinAfrik MicroPay</h2>
+<div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-[12px] text-[#071934]/80">
+<span class="font-medium">FinTech</span>
+<span class="text-[#E6E8EB]">|</span>
+<span>22/02/2026</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB] active:bg-[#E6E8EB] transition-colors text-center" type="button">Voir</button>
+<button class="flex-1 py-2 text-[12px] font-bold bg-[#071934] text-[#FFFFFF] border border-[#071934] active:bg-[#071934]/85 transition-colors text-center" type="button">Valider</button>
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#071934] active:bg-[#F3F4F5] transition-colors text-center" type="button">Refuser</button>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="candidature-card bg-[#FFFFFF] border border-[#E6E8EB] p-4 flex flex-col gap-3 shadow-[0_1px_3px_rgba(7,25,52,0.04)]" data-applicant="Zouhaira Mwangi Kenya EduTech Swahili" data-status="pending">
+<div class="flex items-start justify-between gap-2 border-b border-[#E6E8EB] pb-2.5">
+<div class="flex flex-col min-w-0">
+<span class="text-[14px] font-bold text-[#071934] truncate">Zouhaira Mwangi</span>
+<span class="text-[12px] text-[#071934]/70">Kenya</span>
+</div>
+<span class="flex-shrink-0 text-[12px] font-semibold bg-[#D3A940] text-[#071934] px-2.5 py-0.5">En attente</span>
+</div>
+<div>
+<h2 class="text-[16px] font-bold text-[#071934] tracking-tight">EduTech Swahili</h2>
+<div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-[12px] text-[#071934]/80">
+<span class="font-medium">Éducation &amp; Numérique</span>
+<span class="text-[#E6E8EB]">|</span>
+<span>20/02/2026</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB] active:bg-[#E6E8EB] transition-colors text-center" type="button">Voir</button>
+<button class="flex-1 py-2 text-[12px] font-bold bg-[#071934] text-[#FFFFFF] border border-[#071934] active:bg-[#071934]/85 transition-colors text-center" type="button">Valider</button>
+<button class="flex-1 py-2 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#071934] active:bg-[#F3F4F5] transition-colors text-center" type="button">Refuser</button>
+</div>
+</article>
+</div>
+<!-- Pagination Block -->
+<section class="w-full bg-[#FFFFFF] border-t border-[#E6E8EB] px-4 py-3 mt-1 flex items-center justify-between">
+<p class="text-[12px] font-medium text-[#071934]" id="pagination-label">Affichage 1-6 sur 6</p>
+<div class="flex items-center gap-2">
+<button aria-label="Page précédente" class="h-9 px-3 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#E6E8EB] active:bg-[#F3F4F5] transition-colors disabled:opacity-40" type="button">
+        Précédent
+      </button>
+<button aria-label="Page suivante" class="h-9 px-3 text-[12px] font-medium bg-[#FFFFFF] text-[#071934] border border-[#E6E8EB] active:bg-[#F3F4F5] transition-colors disabled:opacity-40" type="button">
+        Suivant
+      </button>
+</div>
+</section>
+</div>
+<script>
+  let currentFilter = 'all';
+
+  function filterByStatus(status, chipElement) {
+    currentFilter = status;
+    
+    // Update chip styling
+    const chips = document.querySelectorAll('.status-chip');
+    chips.forEach(c => {
+      c.classList.remove('bg-[#071934]', 'text-[#FFFFFF]', 'font-bold', 'border-[#071934]');
+      c.classList.add('bg-[#FFFFFF]', 'text-[#071934]', 'font-medium', 'border-[#E6E8EB]');
+    });
+    chipElement.classList.remove('bg-[#FFFFFF]', 'border-[#E6E8EB]', 'font-medium');
+    chipElement.classList.add('bg-[#071934]', 'text-[#FFFFFF]', 'font-bold', 'border-[#071934]');
+
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const searchVal = (document.getElementById('candidatures-search')?.value || '').toLowerCase().trim();
+    const cards = document.querySelectorAll('.candidature-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardStatus = card.getAttribute('data-status');
+      const cardApplicant = (card.getAttribute('data-applicant') || '').toLowerCase();
+      
+      const matchesStatus = (currentFilter === 'all') || (cardStatus === currentFilter);
+      const matchesSearch = !searchVal || cardApplicant.includes(searchVal);
+
+      if (matchesStatus && matchesSearch) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const label = document.getElementById('pagination-label');
+    if (label) {
+      if (visibleCount === 0) {
+        label.textContent = "Aucun dossier trouvé";
+      } else {
+        label.textContent = `Affichage 1-${visibleCount} sur ${visibleCount}`;
+      }
+    }
+  }
+
+  document.getElementById('candidatures-search')?.addEventListener('input', applyFilters);
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#FFFFFF] border-t border-[#E6E8EB] shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-[#071934] font-bold"><div class="flex justify-around items-center h-16 px-2"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#75777E] transition-all" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Tableau</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 transition-all text-[#071934] font-bold" data-path="candidatures" href="#"><span class="material-symbols-outlined text-[22px]">description</span><span class="font-label-sm text-label-sm mt-0.5">Candidatures</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#75777E] transition-all" data-path="utilisateurs-et-roles" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-label-sm text-label-sm mt-0.5">Rôles</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#75777E] transition-all" data-path="parametres" href="#"><span class="material-symbols-outlined text-[22px]">settings</span><span class="font-label-sm text-label-sm mt-0.5">Paramètres</span></a></div></nav></body></html>

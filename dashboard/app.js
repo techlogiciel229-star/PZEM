@@ -19,6 +19,8 @@ const state = {
 };
 
 // 2. Gestion des Onglets
+let watchdogTimer = null;
+
 function switchTab(tabId) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
   
@@ -193,9 +195,9 @@ function updateUI(data) {
   document.getElementById('val-pf').textContent = pf.toFixed(2);
   document.getElementById('val-freq').textContent = `${f.toFixed(1)} Hz`;
 
-  // Coût estimé (0.2516 € / kWh)
-  const cost = (e * 0.2516).toFixed(2);
-  document.getElementById('val-cost').textContent = `${cost} €`;
+  // Coût estimé (112.87 FCFA / kWh)
+  const cost = Math.round(e * 112.87);
+  document.getElementById('val-cost').textContent = `${cost.toLocaleString('fr-FR')} FCFA`;
 
   // Pourcentages et jauges
   const powerPct = Math.min(100, Math.round((p / 7000) * 100));
@@ -224,6 +226,30 @@ function updateUI(data) {
   // Sauvegarde dans l'historique exportable
   state.historyData.push({ timestamp: data.created_at || now.toISOString(), voltage: v, current: i, power: p, energy: e, frequency: f, pf: pf });
   if (state.historyData.length > 500) state.historyData.shift();
+
+  // Reset Watchdog ESP32
+  resetWatchdog();
+}
+
+// 4.5. Chien de garde (Watchdog) pour détecter la déconnexion
+function resetWatchdog() {
+  if (watchdogTimer) clearTimeout(watchdogTimer);
+  
+  if (!state.isSimulator) {
+    document.getElementById('status-text').textContent = 'En ligne';
+    document.getElementById('status-text').classList.replace('text-error', 'text-tertiary');
+    document.getElementById('status-dot').className = 'inline-block h-2 w-2 rounded-full bg-tertiary animate-pulse';
+  }
+
+  // Si aucune donnée reçue pendant 20 secondes, on passe hors ligne
+  watchdogTimer = setTimeout(() => {
+    document.getElementById('status-text').textContent = 'Hors ligne';
+    document.getElementById('status-text').classList.replace('text-tertiary', 'text-error');
+    document.getElementById('status-dot').className = 'inline-block h-2 w-2 rounded-full bg-error';
+    
+    // Mettre les valeurs à zéro visuellement (optionnel) ou juste avertir
+    logAlert('⚠️ ESP32 Déconnecté : Aucune donnée reçue depuis 20s.', new Date().toLocaleTimeString('fr-FR'), 'warning');
+  }, 20000);
 }
 
 // 5. Ajout des points sur les graphiques

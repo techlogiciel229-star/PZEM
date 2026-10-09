@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>RAJI — Partenaires – Menu ouvert (Mobile)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      width: 100%;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-color: #F3F4F5;
+      color: #071934;
+      overflow-x: hidden;
+    }
+    .nav-link-hover {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .nav-link-hover::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 12px;
+      width: 0;
+      height: 2px;
+      background-color: #D3A940;
+      transition: width 0.2s ease;
+    }
+    .nav-link-hover:hover::after {
+      width: calc(100% - 24px);
+    }
+  </style>
+</head>
+<body class="relative min-h-screen bg-[#F3F4F5]">
+<!-- En-tête mobile sous l'overlay (Page Partenaires) -->
+<header aria-hidden="true" class="w-full h-16 bg-[#FFFFFF] border-b border-[#E6E8EB] px-4 flex items-center justify-between select-none">
+<div class="flex items-center gap-3">
+<img alt="Logo RAJI" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt82K0e1Ez7vBCEU3pWNFNpsuqSmv-_0vQ847DmphBNTpUFp4C3U4CP25wqFBrirJy_g9VdQ0iBmLlQCA0St4gK4wvNWT_qD32Xyaobx98usd5s7ALbmF3IIuJPof17KYayYmo_NQiVTfljCaFNLh4eTYkoTkdi5zyzD55Ev2XtY-aGerB6YajJZZRQjUO1kdWh-wR5RazTwTm35f9HknGe9lqHuOV39xFupgJLmJXLlo0cjDEpNwqxlvsIOYRjd2Se-M"/>
+<div class="flex flex-col">
+<span class="text-xs font-bold uppercase tracking-wider text-[#071934]">RAJI</span>
+<span class="text-[11px] text-[#071934]/60">Partenaires</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-[#071934] flex items-center justify-center text-[#FFFFFF]">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+</svg>
+</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg text-[#071934]">
+<svg class="w-6 h-6 stroke-[#071934]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24">
+<line x1="4" x2="20" y1="7" y2="7"></line>
+<line x1="4" x2="20" y1="12" y2="12"></line>
+<line x1="4" x2="20" y1="17" y2="17"></line>
+</svg>
+</div>
+</div>
+</header>
+<!-- Contenu simulé en arrière-plan (Page Partenaires) -->
+<main aria-hidden="true" class="w-full p-4 flex flex-col gap-4 select-none pointer-events-none">
+<div class="flex flex-col gap-1">
+<span class="text-xs font-semibold tracking-wider uppercase text-[#071934]/60">Écosystème Panafricain</span>
+<h1 class="text-2xl font-bold text-[#071934]">Nos Partenaires Stratégiques</h1>
+<p class="text-sm text-[#071934]/70">Institutions, fonds d'investissement et géants technologiques engagés pour l'Afrique.</p>
+</div>
+<!-- Filtres -->
+<div class="flex gap-2 overflow-hidden py-1">
+<span class="px-3 py-1.5 rounded-full bg-[#071934] text-[#FFFFFF] text-xs font-medium">Tous (48)</span>
+<span class="px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-medium">Institutionnels</span>
+<span class="px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-xs font-medium">Capital Risque</span>
+</div>
+<!-- Cartes partenaires factices -->
+<div class="flex flex-col gap-3">
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-[#F3F4F5] flex items-center justify-center font-bold text-[#071934] text-xs">
+          BAD
+        </div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#071934]">Banque Africaine de Développement</span>
+<span class="text-xs text-[#071934]/60">Partenaire Institutionnel • Panafricain</span>
+</div>
+</div>
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-[#F3F4F5] flex items-center justify-center font-bold text-[#071934] text-xs">
+          AU
+        </div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#071934]">Union Africaine - Dir. Innovation</span>
+<span class="text-xs text-[#071934]/60">Partenaire Politique • Addis-Abeba</span>
+</div>
+</div>
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-[#F3F4F5] flex items-center justify-center font-bold text-[#071934] text-xs">
+          VC
+        </div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#071934]">Partech Africa Growth Fund</span>
+<span class="text-xs text-[#071934]/60">Fonds Technologique • Dakar / Nairobi</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Overlay marine #071934 à 40% d'opacité -->
+<div aria-hidden="true" class="fixed inset-0 z-40 bg-[#071934]/40" id="drawerOverlay"></div>
+<!-- Side sheet: fixe à droite, largeur 300px, fond blanc #FFFFFF, pleine hauteur -->
+<aside aria-label="Menu principal de navigation" class="fixed top-0 right-0 bottom-0 w-[300px] h-full bg-[#FFFFFF] z-50 flex flex-col justify-between p-5 shadow-2xl border-l border-[#E6E8EB]" id="sideSheet">
+<!-- Barre supérieure: Logo 44px de haut et bouton fermer SVG marine #071934 (cible tactile 44px) -->
+<div class="flex items-center justify-between pb-4 border-b border-[#E6E8EB]">
+<div class="flex items-center">
+<img alt="Logo RAJI" class="h-[44px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZkXZLI5e5LpJ3uSwW5IpHlSgl_7irVqb_Pl48f1Hjq4Gapr84UHd2YLWTr6uAgcJbwezOIDdf3bRm90CA4yKQYUv_mQzsIFjYZWaqmECMKxNLf2XIkkSEEuUzQgkKvtF70dZJwa3InOUdran4VIAsMgmQ7M3mmHEjc10uYGLDCRDb-mB9UEZXPKTIKa995FEIKib5Vxf-nuRiuHLkhjBJtK2ooRCrtzVfPzKR0CnCqd3Lj2TDyOOKP-Lh7WOMdIzgwtg"/>
+</div>
+<button aria-label="Fermer le menu" class="w-[44px] h-[44px] flex items-center justify-center rounded-lg border border-[#E6E8EB] bg-[#FFFFFF] hover:bg-[#F3F4F5] transition-colors focus:outline-none" id="closeDrawerBtn" type="button">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+</div>
+<!-- Navigation principale: exactement 8 liens -->
+<nav class="flex-1 py-4 flex flex-col justify-center gap-1">
+<a class="nav-link-hover text-[#071934] font-medium py-2.5 px-3 block text-base rounded-md hover:bg-[#F3F4F5] transition-colors" href="#">
+        Accueil
+      </a>
+<a class="nav-link-hover text-[#071934] font-medium py-2.5 px-3 block text-base rounded-md hover:bg-[#F3F4F5] transition-colors" href="#">
+        À propos
+      </a>
+<a class="nav-link-hover text-[#071934] font-medium py-2.5 px-3 block text-base rounded-md hover:bg-[#F3F4F5] transition-colors" href="#">
+        Innovateurs
+      </a>
+<a class="nav-link-hover text-[#071934] font-medium py-2.5 px-3 block text-base rounded-md hover:bg-[#F3F4F5] transition-colors" href="#">
+        RAJI Média
+      </a>
+<a class="nav-link-hover text-[#071934] font-medium py-2.5 px-3 block text-base rounded-md hover:bg-[#F3F4F5] transition-colors" href="#">
+        Événements
+      </a>
+<!-- Lien Partenaires Actif: barre gauche or #D3A940 de 4px, font-semibold, texte #071934 -->
+<a aria-current="page" class="bg-[#F3F4F5] font-semibold text-[#071934] py-2.5 px-3 rounded-r-lg block text-base border-l-[4px] border-l-[#D3A940]" href="#">
+        Partenaires
+      </a>
+<a class="nav-link-hover text-[#071934] font-medium py-2.5 px-3 block text-base rounded-md hover:bg-[#F3F4F5] transition-colors" href="#">
+        Opportunités
+      </a>
+<a class="nav-link-hover text-[#071934] font-medium py-2.5 px-3 block text-base rounded-md hover:bg-[#F3F4F5] transition-colors" href="#">
+        Contact
+      </a>
+</nav>
+<!-- Zone inférieure: Bouton CTA Or + Mention de bas de volet -->
+<div class="pt-4 border-t border-[#E6E8EB] flex flex-col gap-3">
+<a class="w-full bg-[#D3A940] text-[#071934] font-semibold text-[14px] py-3 rounded-lg text-center block shadow-sm hover:opacity-95 transition-opacity" href="#">
+        Soumettre mon innovation
+      </a>
+<p class="text-xs text-[#071934]/60 text-center tracking-normal">
+        © 2026 RAJI. Tous droits réservés.
+      </p>
+</div>
+</aside>
+<script>
+    (function () {
+      const closeBtn = document.getElementById('closeDrawerBtn');
+      const overlay = document.getElementById('drawerOverlay');
+      const sideSheet = document.getElementById('sideSheet');
+
+      function closeMenu() {
+        if (!sideSheet || !overlay) return;
+        sideSheet.style.display = 'none';
+        overlay.style.display = 'none';
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (overlay) overlay.addEventListener('click', closeMenu);
+    })();
+  </script>
+</body></html>

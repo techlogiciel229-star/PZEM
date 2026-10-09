@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="fr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAJI — Aperçu Design System (Tablette)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; box-sizing: border-box; }
+    body { background-color: #F3F4F5; color: #071934; margin: 0; padding: 0; }
+  </style>
+</head>
+<body class="bg-[#F3F4F5] text-[#071934] antialiased min-h-screen flex flex-col">
+
+  <!-- STICKY HEADER TABLETTE (820px) -->
+  <header class="sticky top-0 z-50 bg-[#FFFFFF] border-b border-[#E6E8EB] px-6 py-3.5 flex items-center justify-between shadow-sm">
+    <div class="flex items-center">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHDKDM8lZDEWpREYPt6OUL9wEbJ-UfFnYR4fEQRF_aWWglgPTx1aRdlLSZ_BHbdtridFnDMDqItoMC0SzlNxvLNgVS50bFhAnUm1Eh_5bdhgG_GytJ35f5g4qsRk-kWfqN5sm6mAI-TIJ2cQM7AYgwPE_h4ea-UaSuGg7pFG3OJs6ld11q9lVeXS5RW16aLnz6Jd1-6q53WUliyjPbxOZbWsoVa7AUJ8CsMPC0-Lj9ToJaUfllBfKr3t1TtpnwBxgygqg" alt="RAJI Logo" class="h-11 w-auto object-contain">
+    </div>
+    <div class="flex items-center gap-3">
+      <button onclick="document.getElementById('tablet-drawer').classList.toggle('hidden')" class="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 text-[#071934] rounded-lg hover:bg-[#F3F4F5] focus:outline-none" aria-label="Menu"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+    </div>
+  </header>
+
+  <!-- TABLET SIDE SHEET / DRAWER -->
+  <div id="tablet-drawer" class="hidden fixed inset-0 z-50 flex">
+    <div class="fixed inset-0 bg-[#071934] bg-opacity-40" onclick="document.getElementById('tablet-drawer').classList.add('hidden')"></div>
+    <div class="relative ml-auto w-80 bg-[#FFFFFF] h-full shadow-2xl p-6 flex flex-col justify-between z-10">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-[#E6E8EB]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFf2cWJrXz0qghHZDIxIgZIR7ozcfh5IPQ4vLj3J-K8nSrOrIPA9J-QwRiyHV5cetH9xjwVZqrSB4fcr7MsLNgQit4x28Ihh41AXAb3ghB9d-gX32kJzEC8n3XhSgNLkO9iCVb_qCCQqsSm41sxCGudFp5SnpwdD63kTH1367wRR9aoMaKoJxs9auup19P5ytEL8-ACO734cn7urutL55JMcVZI1UhpfTJO5uL7QHqTC2R4nSNNHY02_9BJtl1EEwUQHw" alt="RAJI Logo" class="h-10 w-auto object-contain">
+          <button onclick="document.getElementById('tablet-drawer').classList.add('hidden')" class="text-[#071934] p-1 font-bold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="mt-6 flex flex-col space-y-3.5 text-[#071934] font-semibold text-sm">
+          <a href="#" class="text-[#071934] hover:opacity-80 py-1 border-b-2 border-[#D3A940] inline-block font-bold">Accueil</a>
+          <a href="#" class="text-[#071934] hover:opacity-80 py-1">À propos</a>
+          <a href="#" class="text-[#071934] hover:opacity-80 py-1">Innovateurs</a>
+          <a href="#" class="text-[#071934] hover:opacity-80 py-1">RAJI Média</a>
+          <a href="#" class="text-[#071934] hover:opacity-80 py-1">Événements</a>
+          <a href="#" class="text-[#071934] hover:opacity-80 py-1">Partenaires</a>
+          <a href="#" class="text-[#071934] hover:opacity-80 py-1">Opportunités</a>
+          <a href="#" class="text-[#071934] hover:opacity-80 py-1">Contact</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-[#E6E8EB]">
+        <button class="w-full bg-[#D3A940] text-[#071934] font-bold text-sm py-3 px-4 rounded-lg text-center hover:opacity-95 shadow-sm">
+          Soumettre mon innovation
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT TABLET (2 COLUMNS LAYOUT) -->
+  <main class="flex-grow p-6 space-y-6 max-w-[820px] mx-auto w-full">
+
+    <!-- HERO TABLETTE -->
+    <div class="bg-[#071934] text-[#FFFFFF] rounded-2xl p-7 shadow-sm text-center">
+      <div class="inline-block bg-[#D3A940] text-[#071934] text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-3">
+        Aperçu Design System Tablette
+      </div>
+      <h1 class="text-2xl font-bold leading-tight mb-2 text-[#FFFFFF] max-w-xl mx-auto">
+        RAJI — Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique
+      </h1>
+      <p class="text-xs text-[#FFFFFF] text-opacity-80 max-w-lg mx-auto">
+        Spécification et harmonisation stricte du système de design. Composants unifiés, contrastes validés et déclinaison chromatique officielle.
+      </p>
+      <div class="mt-6 pt-4 border-t border-[#FFFFFF] border-opacity-15 flex justify-center gap-8 text-center">
+        <div>
+          <span class="block text-[11px] text-[#FFFFFF] text-opacity-70 uppercase tracking-wider">Norme</span>
+          <span class="text-xs font-bold text-[#FFFFFF]">WCAG AA+</span>
+        </div>
+        <div>
+          <span class="block text-[11px] text-[#FFFFFF] text-opacity-70 uppercase tracking-wider">Nuancier</span>
+          <span class="text-xs font-bold text-[#FFFFFF]">5 Teintes Strictes</span>
+        </div>
+        <div>
+          <span class="block text-[11px] text-[#FFFFFF] text-opacity-70 uppercase tracking-wider">Grille</span>
+          <span class="text-xs font-bold text-[#FFFFFF]">8px Modulaire</span>
+        </div>
+        <div>
+          <span class="block text-[11px] text-[#FFFFFF] text-opacity-70 uppercase tracking-wider">Typographie</span>
+          <span class="text-xs font-bold text-[#FFFFFF]">Inter Pro</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="bg-[#FFFFFF] p-1.5 rounded-xl border border-[#E6E8EB] flex gap-2 text-xs font-semibold max-w-md mx-auto">
+      <button class="flex-1 py-2 rounded-lg bg-[#071934] text-[#FFFFFF] text-center shadow-sm">Vue d'ensemble</button>
+      <button class="flex-1 py-2 rounded-lg text-[#071934] hover:bg-[#F3F4F5] text-center">Spécifications</button>
+      <button class="flex-1 py-2 rounded-lg text-[#071934] hover:bg-[#F3F4F5] text-center">Palette Officielle</button>
+    </div>
+
+    <!-- 2-COLUMNS GRID FOR TABLET -->
+    <div class="grid grid-cols-2 gap-6">
+
+      <!-- COLUMN 1: BOUTONS & FORMULAIRES -->
+      <div class="space-y-6">
+
+        <!-- BOUTONS & ACTIONS -->
+        <div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-2xl p-5 space-y-4">
+          <div class="flex items-center justify-between border-b border-[#E6E8EB] pb-3">
+            <h2 class="text-sm font-bold text-[#071934]">Boutons &amp; Actions</h2>
+            <span class="text-[10px] font-semibold text-[#071934] bg-[#F3F4F5] px-2 py-0.5 rounded">Interactifs</span>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <span class="block text-[11px] text-[#071934] mb-1 font-medium">Primaire :</span>
+              <button class="w-full bg-[#071934] text-[#FFFFFF] font-semibold text-xs py-2.5 px-4 rounded-lg hover:opacity-95">Action Principale</button>
+            </div>
+            <div>
+              <span class="block text-[11px] text-[#071934] mb-1 font-medium">Accent (CTA) :</span>
+              <button class="w-full bg-[#D3A940] text-[#071934] font-bold text-xs py-2.5 px-4 rounded-lg hover:opacity-95">Candidature RAJI</button>
+            </div>
+            <div>
+              <span class="block text-[11px] text-[#071934] mb-1 font-medium">Contour :</span>
+              <button class="w-full bg-[#FFFFFF] border border-[#071934] text-[#071934] font-semibold text-xs py-2.5 px-4 rounded-lg hover:bg-[#F3F4F5]">Consulter Détails</button>
+            </div>
+            <div>
+              <span class="block text-[11px] text-[#071934] mb-1 font-medium">Fantôme :</span>
+              <button class="w-full bg-transparent text-[#071934] font-medium text-xs py-2.5 px-4 rounded-lg hover:bg-[#F3F4F5]">Annuler</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORMULAIRES & CHAMPS -->
+        <div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-2xl p-5 space-y-4">
+          <div class="flex items-center justify-between border-b border-[#E6E8EB] pb-3">
+            <h2 class="text-sm font-bold text-[#071934]">Formulaires &amp; Saisie</h2>
+            <span class="text-[10px] font-semibold text-[#071934] bg-[#F3F4F5] px-2 py-0.5 rounded">Données</span>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <label class="block text-xs font-semibold text-[#071934] mb-1">Nom de l'initiative</label>
+              <input type="text" placeholder="ex: AgriFlow Sahel" class="w-full bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg px-3 py-2 text-xs text-[#071934] focus:outline-none focus:border-[#071934]">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#071934] mb-1">Recherche d'innovateurs</label>
+              <div class="relative">
+                <input type="text" placeholder="Pays, filière, porteur..." class="w-full bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg pl-8 pr-3 py-2 text-xs text-[#071934] focus:outline-none focus:border-[#071934]">
+                <svg class="w-4 h-4 text-[#071934] absolute left-2.5 top-2.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#071934] mb-1">Domaine d'intervention</label>
+              <select class="w-full bg-[#FFFFFF] border border-[#E6E8EB] rounded-lg px-3 py-2 text-xs text-[#071934] focus:outline-none focus:border-[#071934]">
+                <option>AgriTech &amp; Souveraineté</option>
+                <option>Énergies Renouvelables</option>
+                <option>Santé &amp; Biotech</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COLUMN 2: BADGES, PROJET & METRIQUE -->
+      <div class="space-y-6">
+
+        <!-- BADGES & INDICATEURS -->
+        <div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-2xl p-5 space-y-4">
+          <div class="flex items-center justify-between border-b border-[#E6E8EB] pb-3">
+            <h2 class="text-sm font-bold text-[#071934]">Badges &amp; Indicateurs</h2>
+            <span class="text-[10px] font-semibold text-[#071934] bg-[#F3F4F5] px-2 py-0.5 rounded">Signalétique</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-[#D3A940] text-[#071934]">Prix Spécial 2026</span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-[#071934] text-[#FFFFFF]">Afrique de l'Ouest</span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-[#F3F4F5] border border-[#E6E8EB] text-[#071934]">DeepTech</span>
+          </div>
+          <div class="bg-[#F3F4F5] border border-[#E6E8EB] rounded-lg p-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#D3A940]"></span>
+              <span class="text-xs font-semibold text-[#071934]">Appels Ouverts</span>
+            </div>
+            <span class="text-[11px] text-[#071934] bg-[#FFFFFF] px-2 py-0.5 rounded border border-[#E6E8EB] font-medium">En cours</span>
+          </div>
+        </div>
+
+        <!-- CARTE PROJET -->
+        <div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-2xl p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-1.5 shadow-sm flex items-center justify-center w-14 h-12">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcc59r0khwnpJiu_rwNwBetGlsnE3BVyxzwXuG14lFOx_pr7cCPQBTghn2O3C7SrKOjRvxWqpwzqMfSnR3TJ5wcyCfSl3h6M4440cTViUulSl6RWhXVKGfAspqzU3nlj4GQHj7V5acOH9edQHEbUhmTxyCTNtYnP17GwFRJhiJdsCnC37_gGxbiqZt-OHnHae3CP9L60vkrNI1ayYb0ZpMjHVkOkKToF5q-dqo-gEg2SMbt_wUbhJy_M1brcJq6H6oAZ4" alt="RAJI" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-[11px] font-semibold bg-[#F3F4F5] border border-[#E6E8EB] text-[#071934] px-2 py-0.5 rounded">Rwanda</span>
+              <span class="text-[11px] font-bold bg-[#D3A940] text-[#071934] px-2 py-0.5 rounded">En Incubation</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-[#071934]">Bio-Pesticide Nilotica</h3>
+            <p class="text-[11px] text-[#071934] opacity-80 mt-0.5">Projet labellisé RAJI 2026 • Agronomie Verte</p>
+          </div>
+          <p class="text-xs text-[#071934] leading-relaxed">
+            Formulation organique à partir de plantes médicinales des Grands Lacs pour remplacer les intrants chimiques synthétiques.
+          </p>
+          <div class="bg-[#F3F4F5] rounded-lg p-2.5 border border-[#E6E8EB]">
+            <div class="flex justify-between text-[11px] font-semibold text-[#071934] mb-1">
+              <span class="">Phase de validation terrain</span>
+              <span class="">78%</span>
+            </div>
+            <div class="w-full bg-[#E6E8EB] h-1.5 rounded-full overflow-hidden">
+              <div class="bg-[#071934] h-full rounded-full" style="width: 78%;"></div>
+            </div>
+          </div>
+          <div class="pt-2 flex gap-2">
+            <button class="flex-1 bg-[#071934] text-[#FFFFFF] font-semibold text-xs py-2.5 rounded-lg hover:opacity-95">Consulter le profil</button>
+            <button class="flex-1 bg-[#FFFFFF] border border-[#071934] text-[#071934] font-semibold text-xs py-2.5 rounded-lg hover:bg-[#F3F4F5]">Contacter l'innovateur</button>
+          </div>
+        </div>
+
+        <!-- CARTE METRIQUE -->
+        <div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-2xl p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] font-bold tracking-wider uppercase text-[#071934] opacity-70">Indicateur Continental</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#D3A940]"></span>
+          </div>
+          <div>
+            <div class="text-3xl font-extrabold text-[#071934]">54 Pays</div>
+            <div class="text-xs font-bold text-[#071934] mt-0.5">Déploiement continental</div>
+          </div>
+          <p class="text-xs text-[#071934] opacity-90 leading-relaxed">
+            Représentation active des délégations nationales du Réseau Africain des Jeunes Innovateurs sur toutes les zones régionales.
+          </p>
+          <div class="bg-[#F3F4F5] border border-[#E6E8EB] rounded-xl p-3 flex items-center justify-between">
+            <span class="text-xs font-semibold text-[#071934]">Taux de couverture des pôles :</span>
+            <span class="text-xs font-bold bg-[#071934] text-[#FFFFFF] px-2.5 py-1 rounded">100%</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER TABLETTE -->
+  <footer class="bg-[#071934] text-[#FFFFFF] mt-10 py-10 px-6 border-t border-[#071934]">
+    <div class="max-w-[820px] mx-auto flex flex-col items-center text-center space-y-5">
+      <div class="bg-[#FFFFFF] p-2 rounded-xl shadow-md inline-flex items-center justify-center min-w-[70px] h-[64px]"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhrwKXMcGW62Pbdh3kvIoNdFf52c23jbtTtpRuTvHKBdOrKQenHPahO_3mbzQxFo1xQ-A2VXmUYHvgU_LWhYSQ6kyZr0FAOmKBd_XOwUXmGtWbBtlEnkM-JZZjbZqwttR2ikIR9hiqXTwaMbLALdOrwUSNvTaMLjkABZlZxij48uqtiB6zTbzasUzcazooHxvdzp5G2XBfo1dRe65oEk7fccgjY4FouEHo3fJYcoBLc4khQJp6ia0ORWqdWCrRTbpsSK0" alt="RAJI" class="h-[56px] w-auto object-contain"></div>
+      <p class="text-xs text-[#FFFFFF] text-opacity-90 max-w-md">
+        Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique. Catalyseur panafricain d'innovations à fort impact sociétal et technologique.
+      </p>
+      <div class="flex flex-wrap justify-center gap-6 text-xs text-[#FFFFFF] text-opacity-80 pt-3 border-t border-[#FFFFFF] border-opacity-15 w-full"><a href="#" class="hover:underline border-b-2 border-[#D3A940] pb-1 text-[#FFFFFF] font-semibold">Accueil</a><a href="#" class="hover:underline text-[#FFFFFF] text-opacity-80">À propos</a><a href="#" class="hover:underline text-[#FFFFFF] text-opacity-80">Innovateurs</a><a href="#" class="hover:underline text-[#FFFFFF] text-opacity-80">RAJI Média</a><a href="#" class="hover:underline text-[#FFFFFF] text-opacity-80">Événements</a><a href="#" class="hover:underline text-[#FFFFFF] text-opacity-80">Partenaires</a><a href="#" class="hover:underline text-[#FFFFFF] text-opacity-80">Opportunités</a><a href="#" class="hover:underline text-[#FFFFFF] text-opacity-80">Contact</a></div>
+      <p class="text-[11px] text-[#FFFFFF] text-opacity-60 pt-3">
+        © 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.
+      </p>
+    </div>
+  </footer>
+
+
+
+
+
+</body></html>

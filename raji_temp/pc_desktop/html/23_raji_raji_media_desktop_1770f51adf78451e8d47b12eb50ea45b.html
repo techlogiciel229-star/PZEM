@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>RAJI — Réseau Africain des Jeunes Innovateurs</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><style>@layer base{html,body{margin:0;padding:0;font-family:'Inter',sans-serif;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-[#FFFFFF] text-[#071934] antialiased min-h-screen flex flex-col"><header class="sticky top-0 z-50 w-full bg-[#FFFFFF] border-b border-[#E6E8EB]"><div class="max-w-[1200px] h-20 mx-auto px-6 flex items-center justify-between gap-6"><div class="flex items-center flex-shrink-0"><a class="flex items-center gap-3" data-path="accueil" href="#"><img alt="Logo RAJI" class="h-[44px] w-auto max-w-none object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/><span class="sr-only">Réseau Africain des Jeunes Innovateurs</span></a></div><nav class="hidden xl:flex items-center gap-6 h-full" data-active-classes="border-b-2 border-[#D3A940] text-[#071934] font-semibold"><a class="text-sm font-medium text-[#071934] border-b-2 border-transparent hover:border-[#D3A940] transition-colors py-2" data-path="accueil" href="#">Accueil</a><a class="text-sm font-medium text-[#071934] border-b-2 border-transparent hover:border-[#D3A940] transition-colors py-2" data-path="a-propos" href="#">À propos</a><a class="text-sm font-medium text-[#071934] border-b-2 border-transparent hover:border-[#D3A940] transition-colors py-2" data-path="innovateurs" href="#">Innovateurs</a><a class="text-sm font-semibold text-[#071934] border-b-2 border-[#D3A940] transition-colors py-2" data-path="raji-media" href="#">RAJI Média</a><a class="text-sm font-medium text-[#071934] border-b-2 border-transparent hover:border-[#D3A940] transition-colors py-2" data-path="evenements" href="#">Événements</a><a class="text-sm font-medium text-[#071934] border-b-2 border-transparent hover:border-[#D3A940] transition-colors py-2" data-path="partenaires" href="#">Partenaires</a><a class="text-sm font-medium text-[#071934] border-b-2 border-transparent hover:border-[#D3A940] transition-colors py-2" data-path="opportunites" href="#">Opportunités</a><a class="text-sm font-medium text-[#071934] border-b-2 border-transparent hover:border-[#D3A940] transition-colors py-2" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-4"><a class="bg-[#D3A940] text-[#071934] font-semibold text-sm px-5 py-2.5 rounded-lg hover:brightness-105 transition-all shadow-sm flex items-center justify-center whitespace-nowrap" data-path="soumettre-mon-innovation" href="#">Soumettre mon innovation</a></div></div></header><main class="w-full flex-grow bg-[#FFFFFF]"><div class="flex flex-col w-full">
+<!-- Section 1: Header Banner -->
+<section class="w-full bg-[#071934] text-white py-12 px-6">
+<div class="max-w-[1200px] mx-auto flex flex-col items-start">
+<!-- Breadcrumb -->
+<nav aria-label="Fil d'Ariane" class="flex items-center gap-1.5 text-xs text-white/70 mb-4">
+<a class="hover:text-white transition-colors" data-path="accueil" href="#">Accueil</a>
+<span>/</span>
+<span class="text-white font-semibold">RAJI Média</span>
+</nav>
+<!-- Title -->
+<h1 class="text-3xl lg:text-4xl font-bold tracking-tight text-white mb-3">
+        RAJI Média
+      </h1>
+<!-- Subtitle -->
+<p class="text-base text-white/80 max-w-3xl leading-relaxed">
+        Le hub d'information panafricain dédié aux parcours d'innovateurs, interviews exclusives, dossiers d'ingénierie et actualités technologiques du continent.
+      </p>
+</div>
+</section>
+<!-- Section 2: Category Filter Tabs -->
+<section class="w-full max-w-[1200px] mx-auto px-6 mt-8 mb-8">
+<div aria-label="Catégories des publications" class="flex flex-wrap gap-2 items-center" role="tablist">
+<button class="bg-[#071934] text-white font-medium text-sm px-4 py-2 rounded-full border border-[#071934] transition-all cursor-pointer" type="button">
+        Toutes
+      </button>
+<button class="bg-[#FFFFFF] text-[#071934] font-medium text-sm px-4 py-2 rounded-full border border-[#E6E8EB] hover:border-[#071934] transition-all cursor-pointer" type="button">
+        Interviews
+      </button>
+<button class="bg-[#FFFFFF] text-[#071934] font-medium text-sm px-4 py-2 rounded-full border border-[#E6E8EB] hover:border-[#071934] transition-all cursor-pointer" type="button">
+        Portraits
+      </button>
+<button class="bg-[#FFFFFF] text-[#071934] font-medium text-sm px-4 py-2 rounded-full border border-[#E6E8EB] hover:border-[#071934] transition-all cursor-pointer" type="button">
+        Innovations de la semaine
+      </button>
+<button class="bg-[#FFFFFF] text-[#071934] font-medium text-sm px-4 py-2 rounded-full border border-[#E6E8EB] hover:border-[#071934] transition-all cursor-pointer" type="button">
+        Reportages
+      </button>
+<button class="bg-[#FFFFFF] text-[#071934] font-medium text-sm px-4 py-2 rounded-full border border-[#E6E8EB] hover:border-[#071934] transition-all cursor-pointer" type="button">
+        Histoires de réussite
+      </button>
+<button class="bg-[#FFFFFF] text-[#071934] font-medium text-sm px-4 py-2 rounded-full border border-[#E6E8EB] hover:border-[#071934] transition-all cursor-pointer" type="button">
+        Actualités
+      </button>
+</div>
+</section>
+<!-- Section 3: Featured Article (À la une) -->
+<section class="w-full max-w-[1200px] mx-auto px-6 mb-12">
+<div class="mb-4">
+<span class="w-6 h-[3px] bg-[#D3A940] inline-block mr-2 align-middle"></span>
+<span class="text-xs font-semibold uppercase tracking-wider text-[#071934]">À la une</span>
+</div>
+<article class="bg-[#FFFFFF] rounded-2xl border border-[#E6E8EB] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-md transition-shadow">
+<!-- Left side: 7 cols neutral placeholder -->
+<div class="lg:col-span-7 bg-[#E6E8EB] min-h-[360px] flex items-center justify-center relative p-8">
+<!-- Duration Badge -->
+<span class="absolute top-4 right-4 bg-[#071934] text-white text-xs px-2.5 py-1 rounded-md font-medium tracking-wide">
+          18 min d'écoute
+        </span>
+<!-- Video play icon trigger -->
+<div aria-label="Lire la vidéo" class="w-20 h-20 rounded-full bg-[#FFFFFF] flex items-center justify-center shadow-md cursor-pointer hover:scale-105 transition-transform">
+<svg aria-hidden="true" class="w-8 h-8 text-[#071934] ml-1" fill="currentColor" viewbox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+</div>
+</div>
+<!-- Right side: 5 cols content -->
+<div class="lg:col-span-5 p-8 flex flex-col justify-between bg-[#FFFFFF]">
+<div>
+<!-- Badge -->
+<span class="bg-[#F3F4F5] text-[#071934] text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+            Interview vidéo
+          </span>
+<!-- Title -->
+<h2 class="text-2xl font-bold text-[#071934] leading-snug mb-3 hover:underline cursor-pointer">
+            « Transformer les résidus agricoles en énergie propre pour les zones rurales »
+          </h2>
+<!-- Excerpt -->
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-6">
+            Kofi Osei revient sur la genèse de BioVolt Mini-Grids, les défis de fabrication locale et la nécessaire standardisation des micro-réseaux solaires et biomasse.
+          </p>
+</div>
+<!-- Footer -->
+<div class="border-t border-[#E6E8EB] pt-4 flex items-center justify-between">
+<span class="text-xs text-[#071934]/60 font-medium">
+            Par Rédaction RAJI • 12 mai 2026
+          </span>
+<a class="text-sm font-semibold text-[#071934] flex items-center gap-1 hover:text-[#D3A940] transition-colors" href="#">
+            Lire l'interview complète <span aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+</article>
+</section>
+<!-- Section 4: Grid of 9 Articles (3x3) -->
+<section class="w-full max-w-[1200px] mx-auto px-6 mb-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<article class="rounded-xl border border-[#E6E8EB] bg-[#FFFFFF] overflow-hidden flex flex-col justify-between hover:border-[#071934] transition-colors">
+<div>
+<div class="h-48 bg-[#E6E8EB] flex items-center justify-center relative">
+<div class="w-12 h-12 rounded-full bg-[#FFFFFF] flex items-center justify-center text-[#071934] shadow-sm">
+<svg aria-hidden="true" class="w-5 h-5 ml-0.5 text-[#071934]" fill="currentColor" viewbox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+</div>
+</div>
+<div class="p-5">
+<span class="bg-[#F3F4F5] text-[#071934] text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-3">
+              Interviews
+            </span>
+<h3 class="text-lg font-bold text-[#071934] leading-snug mb-2 hover:underline cursor-pointer">
+              Détecter le stress hydrique par drones solaires
+            </h3>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-4">
+              Yasmine Bennani détaille la conception d'algorithmes thermiques adaptés aux palmeraies semi-arides.
+            </p>
+</div>
+</div>
+<div class="px-5 pb-5 pt-3 border-t border-[#E6E8EB] text-xs text-[#071934]/60 font-medium">
+          Par Rédaction RAJI • 8 mai 2026
+        </div>
+</article>
+<!-- Card 2 -->
+<article class="rounded-xl border border-[#E6E8EB] bg-[#FFFFFF] overflow-hidden flex flex-col justify-between hover:border-[#071934] transition-colors">
+<div>
+<div class="h-48 bg-[#E6E8EB] flex items-center justify-center relative">
+<div class="w-12 h-12 rounded-full bg-[#FFFFFF] flex items-center justify-center text-[#071934] shadow-sm">
+<svg aria-hidden="true" class="w-6 h-6 text-[#071934]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="p-5">
+<span class="bg-[#F3F4F5] text-[#071934] text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-3">
+              Portraits
+            </span>
+<h3 class="text-lg font-bold text-[#071934] leading-snug mb-2 hover:underline cursor-pointer">
+              Aïssata Traoré : pionnière de l'électrocardiogramme frugal
+            </h3>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-4">
+              Retour sur l'itinéraire d'une ingénieure biomédicale engagée pour la santé rurale.
+            </p>
+</div>
+</div>
+<div class="px-5 pb-5 pt-3 border-t border-[#E6E8EB] text-xs text-[#071934]/60 font-medium">
+          Par Amina Diallo • 4 mai 2026
+        </div>
+</article>
+<!-- Card 3 -->
+<article class="rounded-xl border border-[#E6E8EB] bg-[#FFFFFF] overflow-hidden flex flex-col justify-between hover:border-[#071934] transition-colors">
+<div>
+<div class="h-48 bg-[#E6E8EB] flex items-center justify-center relative">
+<div class="w-12 h-12 rounded-full bg-[#FFFFFF] flex items-center justify-center text-[#071934] shadow-sm">
+<svg aria-hidden="true" class="w-6 h-6 text-[#071934]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="p-5">
+<span class="bg-[#F3F4F5] text-[#071934] text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-3">
+              Innovations de la semaine
+            </span>
+<h3 class="text-lg font-bold text-[#071934] leading-snug mb-2 hover:underline cursor-pointer">
+              ColdChain Solaire : préserver les récoltes maraîchères
+            </h3>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-4">
+              Analyse technique du caisson isotherme réfrigéré par cycle d'adsorption autonome.
+            </p>
+</div>
+</div>
+<div class="px-5 pb-5 pt-3 border-t border-[#E6E8EB] text-xs text-[#071934]/60 font-medium">
+          Par Dr. Salimata Kone • 29 avril 2026
+        </div>
+</article>
+<!-- Card 4 -->
+<article class="rounded-xl border border-[#E6E8EB] bg-[#FFFFFF] overflow-hidden flex flex-col justify-between hover:border-[#071934] transition-colors">
+<div>
+<div class="h-48 bg-[#E6E8EB] flex items-center justify-center relative">
+<div class="w-12 h-12 rounded-full bg-[#FFFFFF] flex items-center justify-center text-[#071934] shadow-sm">
+<svg aria-hidden="true" class="w-5 h-5 ml-0.5 text-[#071934]" fill="currentColor" viewbox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+</div>
+</div>
+<div class="p-5">
+<span class="bg-[#F3F4F5] text-[#071934] text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-3">
+              Reportages
+            </span>
+<h3 class="text-lg font-bold text-[#071934] leading-snug mb-2 hover:underline cursor-pointer">
+              Immersion dans les ateliers d'éco-matériaux de Cotonou
+            </h3>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-4">
+              Comment transformer les rebuts polymères en pavés haute résistance sans liant chimique.
+            </p>
+</div>
+</div>
+<div class="px-5 pb-5 pt-3 border-t border-[#E6E8EB] text-xs text-[#071934]/60 font-medium">
+          Par Kofi Mensah • 24 avril 2026
+        </div>
+</article>
+<!-- Card 5 -->
+<article class="rounded-xl border border-[#E6E8EB] bg-[#FFFFFF] overflow-hidden flex flex-col justify-between hover:border-[#071934] transition-colors">
+<div>
+<div class="h-48 bg-[#E6E8EB] flex items-center justify-center relative">
+<div class="w-12 h-12 rounded-full bg-[#FFFFFF] flex items-center justify-center text-[#071934] shadow-sm">
+<svg aria-hidden="true" class="w-6 h-6 text-[#071934]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="p-5">
+<span class="bg-[#F3F4F5] text-[#071934] text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-3">
+              Histoires de réussite
+            </span>
+<h3 class="text-lg font-bold text-[#071934] leading-snug mb-2 hover:underline cursor-pointer">
+              Du prototype d'irrigation à 120 fermes connectées au Sahel
+            </h3>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-4">
+              Amadou Diallo partage ses enseignements sur l'adoption paysanne des vannes connectées.
+            </p>
+</div>
+</div>
+<div class="px-5 pb-5 pt-3 border-t border-[#E6E8EB] text-xs text-[#071934]/60 font-medium">
+          Par Fatou Bamba • 19 avril 2026
+        </div>
+</article>
+<!-- Card 6 -->
+<article class="rounded-xl border border-[#E6E8EB] bg-[#FFFFFF] overflow-hidden flex flex-col justify-between hover:border-[#071934] transition-colors">
+<div>
+<div class="h-48 bg-[#E6E8EB] flex items-center justify-center relative">
+<div class="w-12 h-12 rounded-full bg-[#FFFFFF] flex items-center justify-center text-[#071934] shadow-sm">
+<svg aria-hidden="true" class="w-6 h-6 text-[#071934]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="p-5">
+<span class="bg-[#F3F4F5] text-[#071934] text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-3">
+              Actualités
+            </span>
+<h3 class="text-lg font-bold text-[#071934] leading-snug mb-2 hover:underline cursor-pointer">
+              Structuration des pôles régionaux d'ingénierie RAJI
+            </h3>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-4">
+              Mise en place de passerelles d'échanges techniques entre laboratoires universitaires et ateliers.
+            </p>
+</div>
+</div>
+<div class="px-5 pb-5 pt-3 border-t border-[#E6E8EB] text-xs text-[#071934]/60 font-medium">
+          Par Rédaction RAJI • 15 avril 2026
+        </div>
+</article>
+<!-- Card 7 -->
+<article class="rounded-xl border border-[#E6E8EB] bg-[#FFFFFF] overflow-hidden flex flex-col justify-between hover:border-[#071934] transition-colors">
+<div>
+<div class="h-48 bg-[#E6E8EB] flex items-center justify-center relative">
+<div class="w-12 h-12 rounded-full bg-[#FFFFFF] flex items-center justify-center text-[#071934] shadow-sm">
+<svg aria-hidden="true" class="w-5 h-5 ml-0.5 text-[#071934]" fill="currentColor" viewbox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+</div>
+</div>
+<div class="p-5">
+<span class="bg-[#F3F4F5] text-[#071934] text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-3">
+              Interviews
+            </span>
+<h3 class="text-lg font-bold text-[#071934] leading-snug mb-2 hover:underline cursor-pointer">
+              Bio-pesticides endogènes : protéger le caféier sans intrants chimiques
+            </h3>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-4">
+              Jean-Paul Kayiranga expose la méthode de formulation et de contrôle qualité microbiologique.
+            </p>
+</div>
+</div>
+<div class="px-5 pb-5 pt-3 border-t border-[#E6E8EB] text-xs text-[#071934]/60 font-medium">
+          Par Rédaction RAJI • 11 avril 2026
+        </div>
+</article>
+<!-- Card 8 -->
+<article class="rounded-xl border border-[#E6E8EB] bg-[#FFFFFF] overflow-hidden flex flex-col justify-between hover:border-[#071934] transition-colors">
+<div>
+<div class="h-48 bg-[#E6E8EB] flex items-center justify-center relative">
+<div class="w-12 h-12 rounded-full bg-[#FFFFFF] flex items-center justify-center text-[#071934] shadow-sm">
+<svg aria-hidden="true" class="w-6 h-6 text-[#071934]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="p-5">
+<span class="bg-[#F3F4F5] text-[#071934] text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-3">
+              Portraits
+            </span>
+<h3 class="text-lg font-bold text-[#071934] leading-snug mb-2 hover:underline cursor-pointer">
+              Samuel Nguema et le défi des bibliothèques numériques hors-ligne
+            </h3>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-4">
+              Diffuser des contenus scientifiques interactifs sans dépendance à la connectivité Internet.
+            </p>
+</div>
+</div>
+<div class="px-5 pb-5 pt-3 border-t border-[#E6E8EB] text-xs text-[#071934]/60 font-medium">
+          Par Inès Ndayishimiye • 6 avril 2026
+        </div>
+</article>
+<!-- Card 9 -->
+<article class="rounded-xl border border-[#E6E8EB] bg-[#FFFFFF] overflow-hidden flex flex-col justify-between hover:border-[#071934] transition-colors">
+<div>
+<div class="h-48 bg-[#E6E8EB] flex items-center justify-center relative">
+<div class="w-12 h-12 rounded-full bg-[#FFFFFF] flex items-center justify-center text-[#071934] shadow-sm">
+<svg aria-hidden="true" class="w-6 h-6 text-[#071934]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="p-5">
+<span class="bg-[#F3F4F5] text-[#071934] text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-3">
+              Innovations de la semaine
+            </span>
+<h3 class="text-lg font-bold text-[#071934] leading-snug mb-2 hover:underline cursor-pointer">
+              AgroMicro Trust : modéliser le micro-crédit par imagerie satellitaire
+            </h3>
+<p class="text-sm text-[#071934]/80 leading-relaxed mb-4">
+              L'évaluation du risque agricole pour les petits exploitants non bancarisés.
+            </p>
+</div>
+</div>
+<div class="px-5 pb-5 pt-3 border-t border-[#E6E8EB] text-xs text-[#071934]/60 font-medium">
+          Par Dr. Salimata Kone • 2 avril 2026
+        </div>
+</article>
+</div>
+</section>
+<!-- Section 5: Pagination Control -->
+<section aria-label="Pagination" class="w-full max-w-[1200px] mx-auto px-6 flex justify-center items-center gap-2 mb-16">
+<!-- Bouton Précédent (désactivé) -->
+<button class="text-xs font-semibold text-[#071934] px-4 py-2 border border-[#E6E8EB] rounded-lg bg-white opacity-50 cursor-not-allowed" disabled="" type="button">
+      Précédent
+    </button>
+<!-- Page 1 (Active) -->
+<button aria-current="page" class="bg-[#071934] text-white px-3 py-1.5 rounded-lg text-xs font-bold border border-[#071934]" type="button">
+      1
+    </button>
+<!-- Page 2 -->
+<button class="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#071934] border border-[#E6E8EB] bg-white hover:border-[#071934] transition-colors" type="button">
+      2
+    </button>
+<!-- Page 3 -->
+<button class="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#071934] border border-[#E6E8EB] bg-white hover:border-[#071934] transition-colors" type="button">
+      3
+    </button>
+<!-- Ellipsis -->
+<span class="px-2 py-1.5 text-xs text-[#071934]/60 font-semibold select-none">...</span>
+<!-- Page 8 -->
+<button class="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#071934] border border-[#E6E8EB] bg-white hover:border-[#071934] transition-colors" type="button">
+      8
+    </button>
+<!-- Bouton Suivant -->
+<button class="text-xs font-semibold text-[#071934] px-4 py-2 border border-[#E6E8EB] rounded-lg bg-white hover:border-[#071934] transition-colors" type="button">
+      Suivant
+    </button>
+</section>
+<!-- Section 6: Call to Action Banner -->
+<section class="w-full max-w-[1200px] mx-auto px-6 mb-16">
+<div class="bg-[#071934] text-white rounded-2xl p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
+<!-- Watermark Texture -->
+<div class="absolute -right-12 -bottom-12 opacity-5 pointer-events-none text-white select-none">
+<svg class="w-72 h-72" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 100 100">
+<polygon points="50,5 95,95 5,95"></polygon>
+<polygon points="50,25 80,85 20,85"></polygon>
+<polygon points="50,45 65,75 35,75"></polygon>
+</svg>
+</div>
+<div class="max-w-2xl z-10">
+<!-- Eyebrow -->
+<div class="mb-3">
+<span class="w-6 h-[3px] bg-[#D3A940] inline-block mr-2 align-middle"></span>
+<span class="text-xs font-semibold uppercase tracking-wider text-white">Partager une histoire</span>
+</div>
+<!-- Title -->
+<h2 class="text-2xl font-bold text-white mb-2 leading-tight">
+          Vous êtes journaliste, chercheur ou porteur d'une innovation inspirante ?
+        </h2>
+<!-- Subtitle -->
+<p class="text-sm text-white/80 leading-relaxed">
+          Proposez un sujet ou un retour d'expérience pour nourrir la documentation panafricaine.
+        </p>
+</div>
+<!-- Action Button -->
+<div class="z-10 flex-shrink-0">
+<a class="inline-block bg-[#D3A940] text-[#071934] font-bold text-sm px-6 py-3 rounded-lg hover:brightness-105 transition-all shadow-sm" href="#">
+          Proposer un sujet
+        </a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-[#071934] text-white py-12 border-t border-[#071934]"><div class="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center"><div class="bg-[#FFFFFF] p-2 rounded-xl inline-block mb-6 shadow-sm"><img alt="RAJI" class="h-[56px] w-auto max-w-none object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/></div><nav class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 mb-8 max-w-3xl"><a class="text-sm font-medium text-white/90 hover:text-[#D3A940] transition-colors" data-path="accueil" href="#">Accueil</a><a class="text-sm font-medium text-white/90 hover:text-[#D3A940] transition-colors" data-path="a-propos" href="#">À propos</a><a class="text-sm font-medium text-white/90 hover:text-[#D3A940] transition-colors" data-path="innovateurs" href="#">Innovateurs</a><a class="text-sm font-medium text-white/90 hover:text-[#D3A940] transition-colors" data-path="raji-media" href="#">RAJI Média</a><a class="text-sm font-medium text-white/90 hover:text-[#D3A940] transition-colors" data-path="evenements" href="#">Événements</a><a class="text-sm font-medium text-white/90 hover:text-[#D3A940] transition-colors" data-path="partenaires" href="#">Partenaires</a><a class="text-sm font-medium text-white/90 hover:text-[#D3A940] transition-colors" data-path="opportunites" href="#">Opportunités</a><a class="text-sm font-medium text-white/90 hover:text-[#D3A940] transition-colors" data-path="contact" href="#">Contact</a></nav><div class="w-full max-w-md h-[1px] bg-white/10 mb-6"></div><p class="text-xs text-white/70 font-normal">© 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.</p></div></footer></body></html>

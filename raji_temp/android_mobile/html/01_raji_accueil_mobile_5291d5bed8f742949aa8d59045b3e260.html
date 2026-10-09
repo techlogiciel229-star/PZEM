@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAJI — Accueil (Mobile)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-[#F3F4F5] text-[#071934] antialiased min-h-screen flex flex-col relative max-w-[390px] mx-auto border-x border-[#E6E8EB]">
+<!-- HEADER STICKY MOBILE (MENU STRICTEMENT FERMÉ) -->
+<header class="sticky top-0 z-40 bg-[#FFFFFF] border-b border-[#E6E8EB] shadow-sm">
+<div class="px-4 h-16 flex items-center justify-between">
+<!-- Logo RAJI officiel (44px) -->
+<a class="flex items-center" href="#">
+<img alt="Logo officiel RAJI" class="h-11 w-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVNXnNwpvzm7Z25vhroKjFOp9f98EVF5bHWtCOhKHX2oraEXZttK3SB6CChOtsvwW0vF6AD30Cjfw63_DRg-5WLQViTkhvYxKDDTINB3IHw9ZrY4vZRb7gkwFRKkPFhyfn5kr_e3wfNVXM19hAeXYEcyYBnbK9RgAcHwxqMKi6MxrYym7D1LceT4XtrkDk6mkF50apTZEDMBJ7C_JyEIPQ2jQQl5CXmn92r-jw40k02zcnW0Mz5DD1j9Ts6-hzJOfXfwo"/>
+</a>
+<!-- Bouton Hamburger fermé min 44x44px -->
+<button aria-label="Ouvrir le menu" class="w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg border border-[#E6E8EB] bg-[#FFFFFF] hover:bg-[#F3F4F5] transition">
+<svg class="w-6 h-6 stroke-[#071934]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- 1. HERO MOBILE (NAVY) -->
+<section class="relative bg-[#071934] text-[#FFFFFF] py-12 px-5 overflow-hidden text-center">
+<div class="absolute inset-0 pointer-events-none opacity-[0.04]">
+<svg class="w-full h-full" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="afro-pattern-mob" patternunits="userSpaceOnUse" width="40">
+<path d="M 0 20 L 20 0 L 40 20 L 20 40 Z" fill="none" stroke="#FFFFFF" stroke-width="1.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#afro-pattern-mob)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#D3A940] bg-[#071934] text-[#D3A940] text-xs font-semibold uppercase tracking-wider mb-4">
+          Panafricanisme &amp; Innovation
+        </div>
+<h1 class="text-2xl font-extrabold tracking-tight text-[#FFFFFF] leading-snug">
+          RAJI — Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique
+        </h1>
+<p class="mt-3 text-sm text-[#F3F4F5] leading-relaxed">
+          Le Réseau Africain des Jeunes Innovateurs découvre, valorise et promeut les jeunes innovateurs africains.
+        </p>
+<div class="mt-6 flex flex-col gap-3">
+<a class="w-full py-3 rounded-lg bg-[#D3A940] text-[#071934] text-sm font-bold shadow-md" href="#">
+            Découvrir les innovateurs
+          </a>
+<a class="w-full py-3 rounded-lg border-2 border-[#FFFFFF] text-[#FFFFFF] text-sm font-semibold" href="#">
+            Rejoindre RAJI
+          </a>
+</div>
+</div>
+</section>
+<!-- 2. NOTRE MISSION -->
+<section class="py-8 px-4 bg-[#FFFFFF] border-b border-[#E6E8EB] text-center">
+<div class="inline-flex items-center justify-center mb-1">
+<span class="w-6 h-[3px] bg-[#D3A940] rounded-full mr-2"></span>
+<span class="text-xs font-semibold uppercase tracking-wider text-[#071934]">Vision Continentale</span>
+</div>
+<h2 class="text-xl font-bold text-[#071934] mt-1 mb-3">Notre mission</h2>
+<p class="text-sm text-[#071934] leading-relaxed font-medium bg-[#F3F4F5] p-4 rounded-xl border border-[#E6E8EB]">
+        Découvrir, valoriser et promouvoir les jeunes innovateurs africains, tout en créant des connexions entre eux et les acteurs capables de contribuer au développement de leurs projets.
+      </p>
+</section>
+<!-- 3. PRÉSENTATION DU RÉSEAU (4 CARTES VERTICALES) -->
+<section class="py-8 px-4">
+<div class="mb-5 text-center">
+<div class="inline-flex items-center justify-center mb-1">
+<span class="w-6 h-[3px] bg-[#D3A940] rounded-full mr-2"></span>
+<span class="text-xs font-semibold uppercase tracking-wider text-[#071934]">Piliers d'action</span>
+</div>
+<h2 class="text-xl font-bold text-[#071934]">Présentation du réseau</h2>
+<p class="text-sm text-[#071934] mt-1">4 piliers d'action panafricaine</p>
+</div>
+<div class="space-y-4">
+<!-- Card 1 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 shadow-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] flex items-center justify-center shrink-0">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+<h3 class="text-base font-bold text-[#071934]">RAJI Média</h3>
+</div>
+<p class="text-sm text-[#071934] leading-relaxed mb-3">Portraits exclusifs et valorisation médiatique de l'excellence africaine.</p>
+<a class="text-sm font-bold text-[#071934] hover:underline" href="#">Accéder au média →</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 shadow-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] flex items-center justify-center shrink-0">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+</div>
+<h3 class="text-base font-bold text-[#071934]">Annuaire des innovateurs</h3>
+</div>
+<p class="text-sm text-[#071934] leading-relaxed mb-3">Index panafricain qualifié à travers l'Afrique.</p>
+<a class="text-sm font-bold text-[#071934] hover:underline" href="#">Consulter l'annuaire →</a>
+</div>
+<!-- Card 3 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 shadow-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] flex items-center justify-center shrink-0">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line></svg>
+</div>
+<h3 class="text-base font-bold text-[#071934]">Événements</h3>
+</div>
+<p class="text-sm text-[#071934] leading-relaxed mb-3">Rencontres et forums d'affaires régionaux.</p>
+<a class="text-sm font-bold text-[#071934] hover:underline" href="#">Voir le calendrier →</a>
+</div>
+<!-- Card 4 -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 shadow-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] flex items-center justify-center shrink-0">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+</div>
+<h3 class="text-base font-bold text-[#071934]">Opportunités</h3>
+</div>
+<p class="text-sm text-[#071934] leading-relaxed mb-3">Mentorat, bourses et accompagnement à impact.</p>
+<a class="text-sm font-bold text-[#071934] hover:underline" href="#">Explorer les offres →</a>
+</div>
+</div>
+</section>
+<!-- 4. INNOVATIONS MISES EN AVANT (CARROUSEL HORIZONTAL - 3 CARTES) -->
+<section class="py-8 px-4 bg-[#FFFFFF] border-y border-[#E6E8EB]">
+<div class="flex items-end justify-between mb-4">
+<div>
+<div class="inline-flex items-center mb-1">
+<span class="w-6 h-[3px] bg-[#D3A940] rounded-full mr-2"></span>
+<span class="text-xs font-semibold uppercase tracking-wider text-[#071934]">Sélection 2026</span>
+</div>
+<h2 class="text-xl font-bold text-[#071934]">Innovations phares</h2>
+</div>
+<a class="text-xs font-bold text-[#071934] hover:underline" href="#">Voir tout →</a>
+</div>
+<!-- Carrousel avec peek -->
+<div class="flex space-x-4 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4">
+<!-- Project 1 -->
+<div class="min-w-[260px] max-w-[260px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden shadow-sm shrink-0 flex flex-col justify-between">
+<div>
+<div class="w-full h-32 bg-[#E6E8EB] flex items-center justify-center border-b border-[#E6E8EB]">
+<svg class="w-8 h-8 stroke-[#071934]" fill="none" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+</div>
+<div class="p-4">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold px-2 py-0.5 rounded bg-[#071934] text-[#FFFFFF]">AgriTech</span>
+<span class="text-xs font-semibold px-2 py-0.5 rounded bg-[#D3A940] text-[#071934]">Incubation</span>
+</div>
+<h3 class="text-base font-bold text-[#071934]">AgriFlow Sahel</h3>
+<p class="text-sm text-[#071934] mb-2 font-medium">Sénégal • Amadou Traoré</p>
+<p class="text-sm text-[#071934] leading-relaxed">Irrigation solaire connectée adaptée aux sols arides.</p>
+</div>
+</div>
+<div class="p-4 pt-0">
+<a class="w-full inline-flex items-center justify-center py-2.5 rounded-lg bg-[#071934] text-[#FFFFFF] text-xs font-semibold" href="#">
+              Voir l'innovation
+            </a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="min-w-[260px] max-w-[260px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden shadow-sm shrink-0 flex flex-col justify-between">
+<div>
+<div class="w-full h-32 bg-[#E6E8EB] flex items-center justify-center border-b border-[#E6E8EB]">
+<svg class="w-8 h-8 stroke-[#071934]" fill="none" stroke-width="1.5" viewbox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+</div>
+<div class="p-4">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold px-2 py-0.5 rounded bg-[#071934] text-[#FFFFFF]">AgriTech</span>
+<span class="text-xs font-semibold px-2 py-0.5 rounded bg-[#D3A940] text-[#071934]">Pilote</span>
+</div>
+<h3 class="text-base font-bold text-[#071934]">Bio-Pesticide Nilotica</h3>
+<p class="text-sm text-[#071934] mb-2 font-medium">Rwanda • Claudine Mukamana</p>
+<p class="text-sm text-[#071934] leading-relaxed">Formulation biologique à partir d'espèces endogènes.</p>
+</div>
+</div>
+<div class="p-4 pt-0">
+<a class="w-full inline-flex items-center justify-center py-2.5 rounded-lg bg-[#071934] text-[#FFFFFF] text-xs font-semibold" href="#">
+              Voir l'innovation
+            </a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="min-w-[260px] max-w-[260px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden shadow-sm shrink-0 flex flex-col justify-between">
+<div>
+<div class="w-full h-32 bg-[#E6E8EB] flex items-center justify-center border-b border-[#E6E8EB]">
+<svg class="w-8 h-8 stroke-[#071934]" fill="none" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line></svg>
+</div>
+<div class="p-4">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold px-2 py-0.5 rounded bg-[#071934] text-[#FFFFFF]">CleanTech</span>
+<span class="text-xs font-semibold px-2 py-0.5 rounded bg-[#D3A940] text-[#071934]">Déploiement</span>
+</div>
+<h3 class="text-base font-bold text-[#071934]">SolarCold Hub</h3>
+<p class="text-sm text-[#071934] mb-2 font-medium">Kenya • Samuel Ochieng</p>
+<p class="text-sm text-[#071934] leading-relaxed">Chambres froides mobiles pour coopératives agricoles.</p>
+</div>
+</div>
+<div class="p-4 pt-0">
+<a class="w-full inline-flex items-center justify-center py-2.5 rounded-lg bg-[#071934] text-[#FFFFFF] text-xs font-semibold" href="#">
+              Voir l'innovation
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. DERNIERS INNOVATEURS (CARROUSEL HORIZONTAL) -->
+<section class="py-8 px-4">
+<div class="flex items-end justify-between mb-4">
+<div>
+<div class="inline-flex items-center mb-1">
+<span class="w-6 h-[3px] bg-[#D3A940] rounded-full mr-2"></span>
+<span class="text-xs font-semibold uppercase tracking-wider text-[#071934]">Portraits</span>
+</div>
+<h2 class="text-xl font-bold text-[#071934]">Derniers innovateurs</h2>
+</div>
+<span class="text-xs text-[#071934] font-medium">Glisser →</span>
+</div>
+<div class="flex space-x-3 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4">
+<!-- Innovateur 1 -->
+<div class="min-w-[160px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 text-center shrink-0">
+<div class="w-14 h-14 mx-auto rounded-full bg-[#E6E8EB] flex items-center justify-center mb-2">
+<svg class="w-7 h-7 stroke-[#071934]" fill="none" stroke-width="1.5" viewbox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+</div>
+<h3 class="text-sm font-bold text-[#071934]">Fatou Diop</h3>
+<p class="text-xs text-[#071934]">Sénégal</p>
+<span class="inline-block mt-2 px-2.5 py-1 rounded text-xs font-semibold bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB]">AgriTech</span>
+</div>
+<!-- Innovateur 2 -->
+<div class="min-w-[160px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 text-center shrink-0">
+<div class="w-14 h-14 mx-auto rounded-full bg-[#E6E8EB] flex items-center justify-center mb-2">
+<svg class="w-7 h-7 stroke-[#071934]" fill="none" stroke-width="1.5" viewbox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+</div>
+<h3 class="text-sm font-bold text-[#071934]">Kofi Mensah</h3>
+<p class="text-xs text-[#071934]">Ghana</p>
+<span class="inline-block mt-2 px-2.5 py-1 rounded text-xs font-semibold bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB]">DeepTech</span>
+</div>
+<!-- Innovateur 3 -->
+<div class="min-w-[160px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 text-center shrink-0">
+<div class="w-14 h-14 mx-auto rounded-full bg-[#E6E8EB] flex items-center justify-center mb-2">
+<svg class="w-7 h-7 stroke-[#071934]" fill="none" stroke-width="1.5" viewbox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+</div>
+<h3 class="text-sm font-bold text-[#071934]">Amina Cherif</h3>
+<p class="text-xs text-[#071934]">Maroc</p>
+<span class="inline-block mt-2 px-2.5 py-1 rounded text-xs font-semibold bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB]">HealthTech</span>
+</div>
+</div>
+<div class="mt-4">
+<a class="w-full inline-flex items-center justify-center py-2.5 rounded-lg border-2 border-[#071934] text-[#071934] text-xs font-bold" href="#">
+          Voir tous les innovateurs
+        </a>
+</div>
+</section>
+<!-- 6. DERNIÈRES INTERVIEWS (CARROUSEL HORIZONTAL - 3 VIDÉOS) -->
+<section class="py-8 px-4 bg-[#FFFFFF] border-y border-[#E6E8EB]">
+<div class="flex items-end justify-between mb-4">
+<div>
+<div class="inline-flex items-center mb-1">
+<span class="w-6 h-[3px] bg-[#D3A940] rounded-full mr-2"></span>
+<span class="text-xs font-semibold uppercase tracking-wider text-[#071934]">Média</span>
+</div>
+<h2 class="text-xl font-bold text-[#071934]">Interviews</h2>
+</div>
+<a class="text-xs font-bold text-[#071934] hover:underline" href="#">Voir tout →</a>
+</div>
+<div class="flex space-x-4 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4">
+<!-- Video 1 -->
+<div class="min-w-[260px] max-w-[260px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden shadow-sm shrink-0">
+<div class="relative w-full h-36 bg-[#E6E8EB] flex items-center justify-center">
+<div class="w-10 h-10 rounded-full bg-[#071934] flex items-center justify-center">
+<svg class="w-4 h-4 fill-[#FFFFFF] ml-0.5" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+<div class="p-3">
+<span class="text-xs font-bold px-2 py-0.5 rounded bg-[#D3A940] text-[#071934]">Souveraineté</span>
+<h3 class="text-sm font-bold text-[#071934] mt-2 leading-snug">Sécuriser les semences endogènes en Afrique</h3>
+<p class="text-sm text-[#071934] mt-1">Dr. Ibrahim Touré • 14 min</p>
+</div>
+</div>
+<!-- Video 2 -->
+<div class="min-w-[260px] max-w-[260px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden shadow-sm shrink-0">
+<div class="relative w-full h-36 bg-[#E6E8EB] flex items-center justify-center">
+<div class="w-10 h-10 rounded-full bg-[#071934] flex items-center justify-center">
+<svg class="w-4 h-4 fill-[#FFFFFF] ml-0.5" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+<div class="p-3">
+<span class="text-xs font-bold px-2 py-0.5 rounded bg-[#D3A940] text-[#071934]">DeepTech</span>
+<h3 class="text-sm font-bold text-[#071934] mt-2 leading-snug">L'IA appliquée aux langues locales africaines</h3>
+<p class="text-sm text-[#071934] mt-1">Aïssatou Ndiaye • 18 min</p>
+</div>
+</div>
+<!-- Video 3 -->
+<div class="min-w-[260px] max-w-[260px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl overflow-hidden shadow-sm shrink-0">
+<div class="relative w-full h-36 bg-[#E6E8EB] flex items-center justify-center">
+<div class="w-10 h-10 rounded-full bg-[#071934] flex items-center justify-center">
+<svg class="w-4 h-4 fill-[#FFFFFF] ml-0.5" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+<div class="p-3">
+<span class="text-xs font-bold px-2 py-0.5 rounded bg-[#D3A940] text-[#071934]">FinTech</span>
+<h3 class="text-sm font-bold text-[#071934] mt-2 leading-snug">Financement panafricain des projets à impact</h3>
+<p class="text-sm text-[#071934] mt-1">Kwami Mensah • 22 min</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. PROCHAINS ÉVÉNEMENTS (CARROUSEL HORIZONTAL - 3 ÉVÉNEMENTS) -->
+<section class="py-8 px-4">
+<div class="flex items-end justify-between mb-4">
+<div>
+<div class="inline-flex items-center mb-1">
+<span class="w-6 h-[3px] bg-[#D3A940] rounded-full mr-2"></span>
+<span class="text-xs font-semibold uppercase tracking-wider text-[#071934]">Agenda</span>
+</div>
+<h2 class="text-xl font-bold text-[#071934]">Événements</h2>
+</div>
+<a class="text-xs font-bold text-[#071934] hover:underline" href="#">Voir l'agenda →</a>
+</div>
+<div class="flex space-x-4 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4">
+<!-- Event 1 -->
+<div class="min-w-[250px] max-w-[250px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 shadow-sm shrink-0 flex flex-col justify-between">
+<div>
+<span class="inline-block px-2.5 py-1 rounded bg-[#071934] text-[#FFFFFF] text-xs font-bold mb-2">18 - 20 Mars 2026</span>
+<h3 class="text-sm font-bold text-[#071934] leading-snug">Sommet Panafricain de la Jeunesse</h3>
+<p class="text-sm text-[#071934] mt-1 mb-3">Kigali, Rwanda</p>
+</div>
+<a class="w-full inline-flex items-center justify-center py-2 rounded-lg bg-[#071934] text-[#FFFFFF] text-xs font-semibold" href="#">S'inscrire</a>
+</div>
+<!-- Event 2 -->
+<div class="min-w-[250px] max-w-[250px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 shadow-sm shrink-0 flex flex-col justify-between">
+<div>
+<span class="inline-block px-2.5 py-1 rounded bg-[#071934] text-[#FFFFFF] text-xs font-bold mb-2">12 - 14 Mai 2026</span>
+<h3 class="text-sm font-bold text-[#071934] leading-snug">Forum AgriTech Afrique de l'Ouest</h3>
+<p class="text-sm text-[#071934] mt-1 mb-3">Dakar, Sénégal</p>
+</div>
+<a class="w-full inline-flex items-center justify-center py-2 rounded-lg bg-[#071934] text-[#FFFFFF] text-xs font-semibold" href="#">S'inscrire</a>
+</div>
+<!-- Event 3 -->
+<div class="min-w-[250px] max-w-[250px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl p-4 shadow-sm shrink-0 flex flex-col justify-between">
+<div>
+<span class="inline-block px-2.5 py-1 rounded bg-[#071934] text-[#FFFFFF] text-xs font-bold mb-2">24 - 26 Juin 2026</span>
+<h3 class="text-sm font-bold text-[#071934] leading-snug">Salon de l'Innovation Panafricaine</h3>
+<p class="text-sm text-[#071934] mt-1 mb-3">Nairobi, Kenya</p>
+</div>
+<a class="w-full inline-flex items-center justify-center py-2 rounded-lg bg-[#071934] text-[#FFFFFF] text-xs font-semibold" href="#">S'inscrire</a>
+</div>
+</div>
+</section>
+<!-- 8. BANNIÈRE REJOINDRE RAJI -->
+<section class="bg-[#071934] text-[#FFFFFF] py-10 px-5 text-center">
+<h2 class="text-lg font-bold leading-snug">
+        Vous êtes un jeune innovateur africain ? Présentez votre projet au réseau.
+      </h2>
+<div class="mt-5 flex flex-col gap-2.5">
+<a class="w-full py-3 rounded-lg bg-[#D3A940] text-[#071934] text-xs font-bold shadow-md" href="#">
+          Soumettre mon innovation
+        </a>
+<a class="w-full py-3 rounded-lg border-2 border-[#FFFFFF] text-[#FFFFFF] text-xs font-semibold" href="#">
+          Devenir partenaire
+        </a>
+</div>
+</section>
+</main>
+<!-- 9. FOOTER MOBILE (AVEC LES 8 LIENS EXHAUSTIFS) -->
+<footer class="bg-[#071934] text-[#FFFFFF] border-t border-[#071934] pt-8 pb-6 px-5 text-center">
+<!-- Logo 56px dans son conteneur blanc arrondi -->
+<div class="inline-block bg-[#FFFFFF] p-2 rounded-xl shadow-sm mb-3">
+<img alt="RAJI" class="h-14 w-auto object-contain block mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTGQVxHO1z8Ai4oi5Tj6gh3m-SyQSqlQjWfS3KydZMQeXZO4Q43qQmdQ0d_hS_4G2v21AWKu3NRI-UTY9CL2QBcE8EQjozR5g29JGe1MbjYHsl6kNySR5VBT0Tgg509cvKaqDq_AvlHAQ21tIESJgAX5gBkmczbXl1gKxnEGIhWGL7EVS3VAex2flG3pKf3k5CjhA4-Q8Jkw2h41f9h3VMqUqb4Z7wxyRJtTikXXNfa6dsg54D9PfNLLbI3vFGssOhBoM"/>
+</div>
+<p class="text-sm text-[#F3F4F5] leading-relaxed mb-5">
+      Réseau Africain des Jeunes Innovateurs.<br/>
+      Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique.
+    </p>
+<!-- Les 8 liens du menu complets sur mobile -->
+<div class="grid grid-cols-2 gap-2 text-sm text-[#F3F4F5] pb-5 border-b border-[#071934]/40 mb-4 text-left px-2">
+<a class="hover:text-[#D3A940]" href="#">Accueil</a>
+<a class="hover:text-[#D3A940]" href="#">À propos</a>
+<a class="hover:text-[#D3A940]" href="#">Innovateurs</a>
+<a class="hover:text-[#D3A940]" href="#">RAJI Média</a>
+<a class="hover:text-[#D3A940]" href="#">Événements</a>
+<a class="hover:text-[#D3A940]" href="#">Partenaires</a>
+<a class="hover:text-[#D3A940]" href="#">Opportunités</a>
+<a class="hover:text-[#D3A940]" href="#">Contact</a>
+</div>
+<!-- Icônes simples navy sur fond blanc -->
+<div class="flex items-center justify-center space-x-3 mb-4">
+<div class="w-8 h-8 rounded-lg bg-[#FFFFFF] flex items-center justify-center">
+<svg class="w-4 h-4 stroke-[#071934]" fill="none" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line></svg>
+</div>
+<div class="w-8 h-8 rounded-lg bg-[#FFFFFF] flex items-center justify-center">
+<svg class="w-4 h-4 stroke-[#071934]" fill="none" stroke-width="2" viewbox="0 0 24 24"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l.77.78L12 20.66l7.65-7.65.77-.78a5.4 5.4 0 0 0 0-7.65z"></path></svg>
+</div>
+<div class="w-8 h-8 rounded-lg bg-[#FFFFFF] flex items-center justify-center">
+<svg class="w-4 h-4 stroke-[#071934]" fill="none" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+</div>
+</div>
+<!-- Copyright -->
+<div class="text-xs text-[#F3F4F5]">
+      © 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.
+    </div>
+</footer>
+</body></html>

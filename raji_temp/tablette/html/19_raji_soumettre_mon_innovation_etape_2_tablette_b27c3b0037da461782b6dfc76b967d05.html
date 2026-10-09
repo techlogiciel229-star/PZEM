@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAJI — Soumettre mon innovation – Étape 2 (Tablette)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#F3F4F5] text-[#071934] antialiased min-h-screen flex flex-col items-center">
+<!-- Main Tablet Container (820px) -->
+<div class="w-full max-w-[820px] min-h-screen flex flex-col bg-[#F3F4F5] shadow-sm">
+<!-- Sticky Header (820px wide layout, logo 44px on left, 44px hamburger button on right ONLY) -->
+<header class="sticky top-0 z-50 bg-[#FFFFFF] border-b border-[#E6E8EB] w-full px-6 h-[72px] flex items-center justify-between">
+<a class="flex items-center gap-3" href="#">
+<img alt="Logo RAJI" class="h-[44px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx_-yMyyKOQYDKo1klnzN3x0-fhH-yICtrzCqEGTQKg5Js4mo4qK0pfA6ZOO_pMSegY16z9iD4hSbM3OC4uVxDvNEbD0txMbGWWrS_ifPW4PrpBpLzqsxhgPEdhKaT-rq1aUFbnaFGz7-t2q2SOEBsC-IVQWyhuS3YI-RS3X78sM_kvJzQb8nsi80aBvjbJmFsn0M-6UaF61pz7-95Z0ADyY4RUDRZY24IleFG3nXD7mhnT-GGkOhiIcyd6ilhGc_lEEw"/>
+<span class="font-bold text-[18px] text-[#071934] tracking-tight">RAJI</span>
+</a>
+<button aria-label="Menu de navigation" class="w-[44px] h-[44px] flex items-center justify-center rounded-lg border border-[#E6E8EB] text-[#071934] hover:bg-[#F3F4F5] transition-colors" type="button">
+<svg class="w-6 h-6 stroke-[#071934]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<line x1="4" x2="20" y1="6" y2="6"></line>
+<line x1="4" x2="20" y1="12" y2="12"></line>
+<line x1="4" x2="20" y1="18" y2="18"></line>
+</svg>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 w-full px-6 py-8 flex flex-col items-center">
+<!-- Page Header Intro Block (640px) -->
+<div class="w-full max-w-[640px] mb-6 text-left">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] text-[12px] font-semibold tracking-wider uppercase px-2.5 py-1 rounded">
+            CANDIDATURE &amp; RÉSEAU
+          </span>
+<div class="w-5 h-[3px] bg-[#D3A940] rounded-full"></div>
+</div>
+<h1 class="text-[26px] leading-[32px] font-bold text-[#071934] tracking-tight mb-2">
+          Soumettre mon innovation
+        </h1>
+<p class="text-[14px] leading-[22px] text-[#071934]">
+          Présentez votre projet au réseau RAJI. Vos informations sont stockées de manière sécurisée et ne sont jamais publiées sans votre accord.
+        </p>
+</div>
+<!-- Stepper Navigation (4 Stages) -->
+<div class="w-full max-w-[640px] mb-8">
+<div class="bg-[#FFFFFF] rounded-2xl border border-[#E6E8EB] p-4 shadow-sm">
+<div class="flex items-center justify-between relative">
+<!-- Step 1: Completed -->
+<div class="flex flex-col items-center text-center z-10 flex-1">
+<div class="w-8 h-8 rounded-full bg-[#071934] text-[#FFFFFF] flex items-center justify-center mb-1.5 shadow-sm">
+<svg class="w-4 h-4 text-[#FFFFFF]" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[13px] font-medium text-[#071934]">1 Identité</span>
+</div>
+<!-- Divider 1 -> 2 (Completed line) -->
+<div class="h-[2px] bg-[#071934] flex-1 -mt-5"></div>
+<!-- Step 2: Active -->
+<div class="flex flex-col items-center text-center z-10 flex-1">
+<div class="w-8 h-8 rounded-full bg-[#071934] text-[#FFFFFF] flex items-center justify-center font-bold text-[14px] mb-1.5 ring-4 ring-[#D3A940]/25">
+                2
+              </div>
+<span class="text-[13px] font-bold text-[#071934]">2 Projet</span>
+</div>
+<!-- Divider 2 -> 3 -->
+<div class="h-[2px] bg-[#E6E8EB] flex-1 -mt-5"></div>
+<!-- Step 3: Upcoming -->
+<div class="flex flex-col items-center text-center z-10 flex-1">
+<div class="w-8 h-8 rounded-full bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] flex items-center justify-center font-medium text-[14px] mb-1.5">
+                3
+              </div>
+<span class="text-[13px] font-normal text-[#071934]">3 Traction &amp; financement</span>
+</div>
+<!-- Divider 3 -> 4 -->
+<div class="h-[2px] bg-[#E6E8EB] flex-1 -mt-5"></div>
+<!-- Step 4: Upcoming -->
+<div class="flex flex-col items-center text-center z-10 flex-1">
+<div class="w-8 h-8 rounded-full bg-[#FFFFFF] border border-[#E6E8EB] text-[#071934] flex items-center justify-center font-medium text-[14px] mb-1.5">
+                4
+              </div>
+<span class="text-[13px] font-normal text-[#071934]">4 Médias</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Centered Form Card (640px wide, white, rounded-2xl, border 1px #E6E8EB, p-8) -->
+<div class="w-full max-w-[640px] bg-[#FFFFFF] rounded-2xl p-8 border border-[#E6E8EB] shadow-sm mb-10">
+<!-- Card Header -->
+<div class="mb-6">
+<span class="text-[12px] font-medium text-[#071934] bg-[#F3F4F5] px-2.5 py-1 rounded inline-block mb-3 border border-[#E6E8EB]">
+            FORMULAIRE D'ADMISSION
+          </span>
+<h2 class="text-[20px] font-bold text-[#071934] tracking-tight leading-tight">
+            Étape 2 sur 4 : Détails de votre innovation
+          </h2>
+<p class="text-[14px] text-[#071934] mt-1.5">
+            Présentez la valeur ajoutée technologique, sociale et économique de votre solution.
+          </p>
+</div>
+<!-- Form Content -->
+<form class="space-y-5" onsubmit="event.preventDefault();">
+<!-- Row: Nom du projet * | Secteur d'activité * -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Nom du projet -->
+<div class="flex flex-col">
+<label class="text-[14px] font-medium text-[#071934] mb-1.5" for="project-name">
+                Nom du projet <span class="text-[#071934]">*</span>
+</label>
+<input class="h-11 rounded-lg border border-[#E6E8EB] bg-[#FFFFFF] px-3 text-[14px] text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934] transition-colors" id="project-name" name="projectName" placeholder="Ex: AgriFlow Sahel" required="" type="text"/>
+</div>
+<!-- Secteur d'activité -->
+<div class="flex flex-col">
+<label class="text-[14px] font-medium text-[#071934] mb-1.5" for="sector">
+                Secteur d'activité <span class="text-[#071934]">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 appearance-none rounded-lg border border-[#E6E8EB] bg-[#FFFFFF] px-3 pr-10 text-[14px] text-[#071934] focus:outline-none focus:border-[#071934] transition-colors cursor-pointer" id="sector" name="sector" required="">
+<option disabled="" selected="" value="">Sélectionnez un secteur</option>
+<option value="agritech">AgriTech</option>
+<option value="cleantech">CleanTech</option>
+<option value="healthtech">HealthTech</option>
+<option value="deeptech">DeepTech</option>
+<option value="edtech">EdTech</option>
+<option value="fintech">FinTech</option>
+<option value="autre">Autre</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#071934]">
+<svg class="w-4 h-4 stroke-[#071934]" fill="none" stroke-width="2" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<!-- Description de l'innovation -->
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-1.5">
+<label class="text-[14px] font-medium text-[#071934]" for="description">
+                Description de l'innovation <span class="text-[#071934]">*</span>
+</label>
+<span class="text-[12px] text-[#071934]/60 font-normal">3 lignes max conseillées</span>
+</div>
+<textarea class="h-24 resize-none rounded-lg border border-[#E6E8EB] bg-[#FFFFFF] p-3 text-[14px] leading-relaxed text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934] transition-colors" id="description" name="description" placeholder="Décrivez précisément votre produit ou service, sa proposition de valeur et sa cible..." required="" rows="3"></textarea>
+</div>
+<!-- Problème résolu -->
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-1.5">
+<label class="text-[14px] font-medium text-[#071934]" for="problem-solved">
+                Problème résolu <span class="text-[#071934]">*</span>
+</label>
+<span class="text-[12px] text-[#071934]/60 font-normal">Impact continental &amp; local</span>
+</div>
+<textarea class="h-24 resize-none rounded-lg border border-[#E6E8EB] bg-[#FFFFFF] p-3 text-[14px] leading-relaxed text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934] transition-colors" id="problem-solved" name="problemSolved" placeholder="Quel défi structurel ou besoin critique votre solution adresse-t-elle sur le continent africain ?" required="" rows="3"></textarea>
+</div>
+<!-- Fonctionnement technique -->
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-1.5">
+<label class="text-[14px] font-medium text-[#071934]" for="technical-operation">
+                Fonctionnement technique <span class="text-[#071934]">*</span>
+</label>
+<span class="text-[12px] text-[#071934]/60 font-normal">Technologies, brevets, processus</span>
+</div>
+<textarea class="h-24 resize-none rounded-lg border border-[#E6E8EB] bg-[#FFFFFF] p-3 text-[14px] leading-relaxed text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934] transition-colors" id="technical-operation" name="technicalOperation" placeholder="Exposez succinctement l'architecture technique, les briques logicielles, matérielles ou agronomiques mises en œuvre..." required="" rows="3"></textarea>
+</div>
+<!-- Niveau d'avancement -->
+<div class="flex flex-col">
+<label class="text-[14px] font-medium text-[#071934] mb-1.5" for="advancement-level">
+              Niveau d'avancement <span class="text-[#071934]">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 appearance-none rounded-lg border border-[#E6E8EB] bg-[#FFFFFF] px-3 pr-10 text-[14px] text-[#071934] focus:outline-none focus:border-[#071934] transition-colors cursor-pointer" id="advancement-level" name="advancementLevel" required="">
+<option disabled="" selected="" value="">Sélectionnez le stade actuel du projet</option>
+<option value="idee">Idée</option>
+<option value="prototype">Prototype</option>
+<option value="prototype-fonctionnel">Prototype fonctionnel</option>
+<option value="lance">Lancé</option>
+<option value="en-croissance">En croissance</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#071934]">
+<svg class="w-4 h-4 stroke-[#071934]" fill="none" stroke-width="2" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- IP protection note -->
+<div class="bg-[#F3F4F5] rounded-lg p-3.5 flex items-start gap-3 border border-[#E6E8EB]">
+<div class="w-5 h-5 rounded-full bg-[#071934]/10 text-[#071934] flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-3.5 h-3.5 fill-[#071934]" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<p class="text-[12px] leading-[18px] text-[#071934]">
+              Propriété intellectuelle protégée. Les comités d'évaluation RAJI sont tenus à une clause stricte de non-divulgation.
+            </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex justify-between items-center pt-6 border-t border-[#E6E8EB] mt-6">
+<button class="border border-[#071934] text-[#071934] bg-[#FFFFFF] hover:bg-[#F3F4F5] px-4 py-2.5 rounded-lg font-medium text-[14px] transition-colors focus:outline-none" onclick="history.back()" type="button">
+              ← Précédent : Identité
+            </button>
+<button class="bg-[#071934] hover:bg-[#071934]/90 text-[#FFFFFF] px-5 py-2.5 rounded-lg font-medium text-[14px] flex items-center gap-2 transition-transform active:scale-[0.99] shadow-sm" type="submit">
+<span>Suivant : Traction &amp; financement →</span>
+</button>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer: Navy #071934, logo 56px inside white rounded container, the EXACT 8 links, copyright -->
+<footer class="w-full bg-[#071934] text-[#FFFFFF] pt-8 pb-6 px-6 border-t border-[#071934]">
+<div class="max-w-[640px] mx-auto flex flex-col items-center text-center">
+<!-- Logo container -->
+<div class="p-2.5 bg-[#FFFFFF] rounded-xl inline-flex items-center justify-center shadow-sm mb-4">
+<img alt="Logo RAJI" class="h-[56px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu904bOBYPTSwMGV0hkUUQq34y9enoFSMpKczcIn4VES63jYCvu5sLv5yEuAk-RVZlu_-dtWxm8HqR-soCDP9HIyzuL-hcfq-T0k936sGRl6qR9G3C3EWQPOteko8IJgFePx3kWvEFTQC1Peq3Z3175nNXIzebVp7V-D6paQDqGGviZ_8XPh3GJbCg-qIC-xv8m1vDNjGd-tBu_AQ1SbNAbrGVsnO82AzGoyLnpD861zcyIGdHqPtOLMAEmhekwBE6msY"/>
+</div>
+<p class="text-[12px] leading-relaxed text-[#E6E8EB] max-w-sm mb-6">
+          Réseau Africain des Jeunes Innovateurs.<br/>
+          Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique.
+        </p>
+<!-- EXACT 8 links -->
+<nav class="flex flex-wrap justify-center gap-x-5 gap-y-2.5 mb-6 text-[14px]">
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors" href="#">Accueil</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors" href="#">À propos</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors" href="#">Innovateurs</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors" href="#">RAJI Média</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors" href="#">Événements</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors" href="#">Partenaires</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors" href="#">Opportunités</a>
+<a class="text-[#E6E8EB] hover:text-[#D3A940] transition-colors" href="#">Contact</a>
+</nav>
+<div class="w-full border-t border-[#FFFFFF]/10 pt-4">
+<p class="text-[12px] text-[#E6E8EB]">
+            © 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.
+          </p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

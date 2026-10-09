@@ -1,0 +1,554 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RAJI — À propos (Tablette)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = { theme: { screens: { sm:'0px', md:'0px', lg:'100000px', xl:'100000px', '2xl':'100000px' } } }
+</script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+<meta content="web_standard" name="shell-type"></head>
+<body class="bg-[#F3F4F5] text-[#071934] antialiased min-h-screen flex flex-col">
+<!-- HEADER STICKY DESKTOP (Aligned inside max-w-[1200px]) -->
+<header class="sticky top-0 z-50 bg-[#FFFFFF] border-b border-[#E6E8EB]">
+<div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Logo RAJI officiel (h-[44px], no text) -->
+<a class="flex items-center" href="#">
+<img alt="Logo officiel RAJI" class="h-[44px] w-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq3dWwiGX1GUeftxFIolJ8dprkKrZUEPX7PbjeVvXWHDezoGnlfQFdcQr4jbYisI32ytpgux5YpItOwN5SU6YQSjji1jt4SHgCtabU8alE9VI6pl3bxg8hUGFs2-cowDbC-e4lOHlgicOiiB94FsuRmT3NPShqHh69Qf-gtL77Zc9AH8WPLkX_nTi0AuaLu_CitU_hEDQsAE2CSmx13MeIOATeN-1ldYEVoxvJpFRQSrJP_Kz16XGSba0e7EsIse8QTKE">
+</a>
+<!-- Menu horizontal 8 rubriques -->
+<nav class="hidden lg:flex items-center space-x-6">
+<a class="text-sm font-semibold text-[#071934] border-b-2 border-[#D3A940] pb-1" href="#">Accueil</a>
+<a class="text-sm font-medium text-[#071934] hover:border-b-2 hover:border-[#D3A940] transition pb-1 border-b-2 border-transparent" href="#">À propos</a>
+<a class="text-sm font-medium text-[#071934] hover:border-b-2 hover:border-[#D3A940] transition pb-1 border-b-2 border-transparent" href="#">Innovateurs</a>
+<a class="text-sm font-medium text-[#071934] hover:border-b-2 hover:border-[#D3A940] transition pb-1 border-b-2 border-transparent" href="#">RAJI Média</a>
+<a class="text-sm font-medium text-[#071934] hover:border-b-2 hover:border-[#D3A940] transition pb-1 border-b-2 border-transparent" href="#">Événements</a>
+<a class="text-sm font-medium text-[#071934] hover:border-b-2 hover:border-[#D3A940] transition pb-1 border-b-2 border-transparent" href="#">Partenaires</a>
+<a class="text-sm font-medium text-[#071934] hover:border-b-2 hover:border-[#D3A940] transition pb-1 border-b-2 border-transparent" href="#">Opportunités</a>
+<a class="text-sm font-medium text-[#071934] hover:border-b-2 hover:border-[#D3A940] transition pb-1 border-b-2 border-transparent" href="#">Contact</a>
+</nav>
+<!-- CTA Or -->
+<div class="flex items-center">
+<a class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#D3A940] text-[#071934] text-sm font-semibold hover:opacity-95 transition" href="#">
+          Soumettre mon innovation
+        </a>
+</div>
+</div>
+</header>
+<main class="flex-grow"><div class="flex flex-col w-full">
+<!-- 1. Header banner -->
+<section class="relative bg-[#071934] py-14 px-6 overflow-hidden">
+<!-- Geometric watermark texture overlay (4% opacity) -->
+<div class="absolute inset-0 pointer-events-none opacity-[0.04]" style="background-image: radial-gradient(#FFFFFF 1px, transparent 1px), radial-gradient(#FFFFFF 1px, #071934 1px); background-size: 24px 24px; background-position: 0 0, 12px 12px;"></div>
+<div class="max-w-[1200px] mx-auto relative z-10">
+<nav aria-label="Fil d'Ariane" class="mb-3">
+<ol class="flex items-center space-x-2 text-xs uppercase tracking-wider text-white/70">
+<li class="">
+<a class="hover:text-white transition" href="#">Accueil</a>
+</li>
+<li class="select-none text-white/40">/</li>
+<li class="text-[#D3A940] font-semibold">À propos</li>
+</ol>
+</nav>
+<h1 class="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
+        À propos de RAJI
+      </h1>
+<p class="text-lg text-white/90 max-w-2xl leading-relaxed">
+        Un réseau panafricain au service des jeunes innovateurs et de leurs projets.
+      </p>
+</div>
+</section>
+<!-- 2. Qui sommes-nous ? -->
+<section class="py-16 px-6 bg-[#F3F4F5]">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex items-center mb-3">
+<span class="inline-block w-6 h-[3px] bg-[#D3A940] rounded-full mr-2.5"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-[#071934]">ORIGINE &amp; IDENTITÉ</span>
+</div>
+<h2 class="text-2xl font-bold text-[#071934] mb-6">
+        Le catalyseur de l'ingéniosité africaine
+      </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-[#071934]/80 text-[15px] leading-relaxed">
+<p class="">
+          Le Réseau Africain des Jeunes Innovateurs (RAJI) est une initiative indépendante dédiée à identifier, valoriser et connecter les porteurs de solutions technologiques, sociales et durables à travers l'Afrique avec l'écosystème institutionnel, les entreprises et les partenaires stratégiques capables de propulser leur déploiement.
+        </p>
+<p class="">
+          En plaçant la créativité et la rigueur scientifique au centre du développement économique du continent, RAJI agit comme un trait d'union fédérateur. La plateforme consolide un vivier de talents hautement qualifiés, renforce la visibilité internationale de leurs prototypes et accélère leur passage à l'impact concret.
+        </p>
+</div>
+</div>
+</section>
+<!-- 3. Notre mission et notre vision -->
+<section class="py-16 px-6 bg-[#FFFFFF]">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex items-center mb-3">
+<span class="inline-block w-6 h-[3px] bg-[#D3A940] rounded-full mr-2.5"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-[#071934]">CAP STRATÉGIQUE</span>
+</div>
+<h2 class="text-2xl font-bold text-[#071934] mb-8">
+        Nos lignes directrices
+      </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Carte 1: Mission -->
+<div class="bg-white p-8 rounded-xl border border-[#E6E8EB] shadow-sm hover:shadow-md transition">
+<div class="w-12 h-12 rounded-lg bg-[#F3F4F5] flex items-center justify-center mb-6">
+<svg class="w-6 h-6 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+</svg>
+</div>
+<h3 class="text-xl font-bold text-[#071934] mb-3">Notre mission</h3>
+<p class="text-[15px] text-[#071934]/80 leading-relaxed">
+            Découvrir, valoriser et promouvoir les jeunes innovateurs à travers l'Afrique en bâtissant des ponts durables avec les acteurs d'accompagnement, industriels et institutionnels.
+          </p>
+</div>
+<!-- Carte 2: Vision -->
+<div class="bg-white p-8 rounded-xl border border-[#E6E8EB] shadow-sm hover:shadow-md transition">
+<div class="w-12 h-12 rounded-lg bg-[#F3F4F5] flex items-center justify-center mb-6">
+<svg class="w-6 h-6 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+<path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+<path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+<path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+</svg>
+</div>
+<h3 class="text-xl font-bold text-[#071934] mb-3">Notre vision</h3>
+<p class="text-[15px] text-[#071934]/80 leading-relaxed">
+            Faire de la jeunesse créatrice africaine le moteur souverain de la transformation technologique, économique et environnementale du continent d'ici 2035.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Pourquoi RAJI existe -->
+<section class="py-14 px-6 bg-[#F3F4F5]">
+<div class="max-w-[1200px] mx-auto">
+<div class="bg-[#FFFFFF] border-l-4 border-[#D3A940] border-y border-r border-[#E6E8EB] p-6 md:p-8 rounded-r-xl shadow-sm">
+<h3 class="text-lg font-bold text-[#071934] mb-3">
+          Répondre aux défis majeurs de l'écosystème
+        </h3>
+<p class="text-[15px] text-[#071934]/80 leading-relaxed">
+          Malgré un dynamisme remarquable, les jeunes créateurs africains se heurtent fréquemment à un isolement sectoriel et géographique limitant leur essor. Le manque crucial de visibilité continentale et internationale freine le rayonnement d'initiatives à fort potentiel. RAJI démantèle ces barrières en offrant un canal direct vers des partenaires de haut niveau, des réseaux d'accélération structurés et des opportunités réelles d'échelle pour transformer l'ingéniosité locale en référence mondiale.
+        </p>
+</div>
+</div>
+</section>
+<!-- 5. Nos objectifs -->
+<section class="py-16 px-6 bg-[#FFFFFF]">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex items-center mb-3">
+<span class="inline-block w-6 h-[3px] bg-[#D3A940] rounded-full mr-2.5"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-[#071934]">ENGAGEMENTS MAJEURS</span>
+</div>
+<h2 class="text-2xl font-bold text-[#071934] mb-8">
+        Nos objectifs prioritaires
+      </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Objectif 1 -->
+<div class="bg-white p-6 rounded-xl border border-[#E6E8EB] shadow-sm flex flex-col justify-between hover:border-[#071934]/30 transition">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] flex items-center justify-center mb-5">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="8" r="7"></circle>
+<polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+</svg>
+</div>
+<h3 class="text-base font-bold text-[#071934] mb-2">Valoriser les innovateurs</h3>
+<p class="text-sm text-[#071934]/75 leading-relaxed">
+              Mettre en lumière les projets pionniers pour créer des rôles modèles inspirants au sein de la communauté panafricaine.
+            </p>
+</div>
+</div>
+<!-- Objectif 2 -->
+<div class="bg-white p-6 rounded-xl border border-[#E6E8EB] shadow-sm flex flex-col justify-between hover:border-[#071934]/30 transition">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] flex items-center justify-center mb-5">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="18" cy="5" r="3"></circle>
+<circle cx="6" cy="12" r="3"></circle>
+<circle cx="18" cy="19" r="3"></circle>
+<line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line>
+<line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line>
+</svg>
+</div>
+<h3 class="text-base font-bold text-[#071934] mb-2">Créer des connexions régionales</h3>
+<p class="text-sm text-[#071934]/75 leading-relaxed">
+              Fédérer les pôles d'innovation d'Afrique de l'Ouest, Centrale, de l'Est et du Nord afin de stimuler les synergies transfrontalières.
+            </p>
+</div>
+</div>
+<!-- Objectif 3 -->
+<div class="bg-white p-6 rounded-xl border border-[#E6E8EB] shadow-sm flex flex-col justify-between hover:border-[#071934]/30 transition">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] flex items-center justify-center mb-5">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<path d="m11 17 2 2a1 1 0 0 0 1.42 0l6.58-6.59a1 1 0 0 0 0-1.41l-2-2a1 1 0 0 0-1.41 0L11 15.58"></path>
+<path d="m18 13-1.5-1.5"></path>
+<path d="M2 11l4.59-4.59a1 1 0 0 1 1.41 0l2 2a1 1 0 0 1 0 1.41L5.41 14.41a1 1 0 0 1-1.41 0L2 12.41a1 1 0 0 1 0-1.41Z"></path>
+<path d="m7 9.5 1.5 1.5"></path>
+</svg>
+</div>
+<h3 class="text-base font-bold text-[#071934] mb-2">Faciliter l'accès aux partenaires</h3>
+<p class="text-sm text-[#071934]/75 leading-relaxed">
+              Intermédier des coopérations avec les universités, les groupements d'affaires et les institutions d'appui stratégique.
+            </p>
+</div>
+</div>
+<!-- Objectif 4 -->
+<div class="bg-white p-6 rounded-xl border border-[#E6E8EB] shadow-sm flex flex-col justify-between hover:border-[#071934]/30 transition">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] flex items-center justify-center mb-5">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+<h3 class="text-base font-bold text-[#071934] mb-2">Renforcer la souveraineté technologique</h3>
+<p class="text-sm text-[#071934]/75 leading-relaxed">
+              Encourager la maîtrise des technologies critiques et la propriété intellectuelle panafricaine appliquée aux priorités locales.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Nos valeurs -->
+<section class="py-16 px-6 bg-[#F3F4F5]">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex items-center mb-3">
+<span class="inline-block w-6 h-[3px] bg-[#D3A940] rounded-full mr-2.5"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-[#071934]">NOS PRINCIPES FONDATEURS</span>
+</div>
+<h2 class="text-2xl font-bold text-[#071934] mb-8">
+        Ce qui guide nos actions
+      </h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Valeur 1 -->
+<div class="bg-white p-5 rounded-xl border border-[#E6E8EB] flex items-start gap-4 shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] flex-shrink-0 flex items-center justify-center">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+<path d="m9 12 2 2 4-4"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-sm font-bold text-[#071934] mb-1">Intégrité</h3>
+<p class="text-xs text-[#071934]/70 leading-normal">
+              Transparence absolue et éthique dans nos relations.
+            </p>
+</div>
+</div>
+<!-- Valeur 2 -->
+<div class="bg-white p-5 rounded-xl border border-[#E6E8EB] flex items-start gap-4 shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] flex-shrink-0 flex items-center justify-center">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+</svg>
+</div>
+<div>
+<h3 class="text-sm font-bold text-[#071934] mb-1">Excellence</h3>
+<p class="text-xs text-[#071934]/70 leading-normal">
+              Rigueur d'exécution et exigence de standards élevés.
+            </p>
+</div>
+</div>
+<!-- Valeur 3 -->
+<div class="bg-white p-5 rounded-xl border border-[#E6E8EB] flex items-start gap-4 shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] flex-shrink-0 flex items-center justify-center">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-sm font-bold text-[#071934] mb-1">Collaboration</h3>
+<p class="text-xs text-[#071934]/70 leading-normal">
+              Force collective et synergie panafricaine ouverte.
+            </p>
+</div>
+</div>
+<!-- Valeur 4 -->
+<div class="bg-white p-5 rounded-xl border border-[#E6E8EB] flex items-start gap-4 shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-[#F3F4F5] flex-shrink-0 flex items-center justify-center">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 2v20"></path>
+<path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-sm font-bold text-[#071934] mb-1">Impact durable</h3>
+<p class="text-xs text-[#071934]/70 leading-normal">
+              Solutions viables pour les générations futures.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Notre histoire -->
+<section class="py-16 px-6 bg-[#FFFFFF]">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex items-center mb-3">
+<span class="inline-block w-6 h-[3px] bg-[#D3A940] rounded-full mr-2.5"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-[#071934]">PARCOURS</span>
+</div>
+<h2 class="text-2xl font-bold text-[#071934] mb-12">
+        Les jalons de notre développement
+      </h2>
+<!-- Timeline verticale -->
+<div class="relative pl-6 md:pl-8 ml-3 md:ml-4 border-l-2 border-[#071934] space-y-10">
+<!-- 2022 -->
+<div class="relative group">
+<div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#D3A940] ring-4 ring-white"></div>
+<div class="bg-[#F3F4F5] p-6 rounded-xl border border-[#E6E8EB] max-w-2xl">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-2.5 py-0.5 rounded text-xs font-bold bg-[#071934] text-white">2022</span>
+<h3 class="text-base font-bold text-[#071934]">Naissance de l'initiative</h3>
+</div>
+<p class="text-sm text-[#071934]/80 leading-relaxed">
+              Premiers rassemblements et formulation de la charte panafricaine des jeunes porteurs de solutions.
+            </p>
+</div>
+</div>
+<!-- 2023 -->
+<div class="relative group">
+<div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#D3A940] ring-4 ring-white"></div>
+<div class="bg-[#F3F4F5] p-6 rounded-xl border border-[#E6E8EB] max-w-2xl">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-2.5 py-0.5 rounded text-xs font-bold bg-[#071934] text-white">2023</span>
+<h3 class="text-base font-bold text-[#071934]">Structuration du Réseau</h3>
+</div>
+<p class="text-sm text-[#071934]/80 leading-relaxed">
+              Lancement des délégations régionales et premiers répertoires d'initiatives pour décloisonner les écosystèmes locaux.
+            </p>
+</div>
+</div>
+<!-- 2024 -->
+<div class="relative group">
+<div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#D3A940] ring-4 ring-white"></div>
+<div class="bg-[#F3F4F5] p-6 rounded-xl border border-[#E6E8EB] max-w-2xl">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-2.5 py-0.5 rounded text-xs font-bold bg-[#071934] text-white">2024</span>
+<h3 class="text-base font-bold text-[#071934]">Déploiement de RAJI Média</h3>
+</div>
+<p class="text-sm text-[#071934]/80 leading-relaxed">
+              Valorisation éditoriale et podcasts mettant en lumière les bâtisseurs et porteurs d'inventions du continent.
+            </p>
+</div>
+</div>
+<!-- 2026 -->
+<div class="relative group">
+<div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#D3A940] ring-4 ring-white"></div>
+<div class="bg-[#F3F4F5] p-6 rounded-xl border border-[#E6E8EB] max-w-2xl">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-2.5 py-0.5 rounded text-xs font-bold bg-[#071934] text-white">2026</span>
+<h3 class="text-base font-bold text-[#071934]">Consolidation &amp; Sommet Continental</h3>
+</div>
+<p class="text-sm text-[#071934]/80 leading-relaxed">
+              Labellisation des projets d'innovation et renforcement continu de l'ancrage institutionnel avec les partenaires clés.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Notre équipe -->
+<section class="py-16 px-6 bg-[#F3F4F5]">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex items-center mb-3">
+<span class="inline-block w-6 h-[3px] bg-[#D3A940] rounded-full mr-2.5"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-[#071934]">GOUVERNANCE &amp; TALENTS</span>
+</div>
+<h2 class="text-2xl font-bold text-[#071934] mb-2">Notre équipe</h2>
+<p class="text-base text-[#071934]/70 mb-8 leading-relaxed">Les personnes qui portent le projet RAJI.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Membre 1: Elohim Carène OTCHOUN -->
+  <div class="bg-[#FFFFFF] rounded-2xl border border-[#E6E8EB] overflow-hidden shadow-sm flex flex-col hover:shadow-md transition">
+    <div class="w-full h-64 bg-[#071934] overflow-hidden">
+      <img alt="Mr. Elohim Carène OTCHOUN" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGdSqsCf4LSHZLBl3HG8-jpkCKUUt2t6HO-IY78JMK9BzvUW9kRD1dmh4g3FusncRNSIRaTtuJ_S-elVCSgzpcDPMe6MfbNUYU7yvGB6vfR1QHuXCt1wWIvW86yJicGkzHYTMPNlnXNNusisyrK7nxnN3WkLg6D577dVk61B5QhuU2EzbodutcQBqsoNwL8h6RANOY_5N7i0cjJodpLUoDXG5vhLuEYc_-ZkqGu_f1UfIbgBjjRLOHEUbf18-pTfSiUV0muBGCU5o">
+    </div>
+    <div class="p-6 flex flex-col flex-grow justify-between">
+      <div>
+        <h3 class="text-lg font-bold text-[#071934] mb-1">Mr. Elohim Carène OTCHOUN</h3>
+        <p class="text-xs font-semibold uppercase tracking-wider text-[#D3A940] mb-4">FONDATEUR ET PRÉSIDENT</p>
+      </div>
+      <div class="border-l-4 border-[#D3A940] pl-4 py-2 bg-[#F3F4F5] rounded-r-lg mt-4">
+        <p class="text-xs text-[#071934]/80 italic leading-relaxed">« Nous ne voulons pas seulement parler de l'innovation africaine. Nous voulons contribuer à créer les conditions qui permettront à nos innovateurs de se faire connaître, de rencontrer les bonnes personnes et de transformer leurs idées en véritables opportunités. »</p>
+      </div>
+    </div>
+  </div>
+  <!-- Membre 2: Thierry AKOVOHOUANDE -->
+  <div class="bg-[#FFFFFF] rounded-2xl border border-[#E6E8EB] overflow-hidden shadow-sm flex flex-col hover:shadow-md transition">
+    <div class="w-full h-64 bg-[#071934] overflow-hidden">
+      <img alt="Mr. Thierry AKOVOHOUANDE" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA083VWLU8MCwwMxvdhgH6MYFsNF5NfM9HHwK7Rx1TYPB2syBEjZRPKiP6RuqH7k_5MONeZKu8CZ4MSrAzzO44ROWrhTPg64lxjvxoI0FqRxtlmaBXHm6W_2nnPxAJSyOuwpQCMQW_pnhCZZLI6mi8iyEjwSvQGhw0pH6C-BrataI2FwFYTgMALG9xw4igVd6q62EAyZ9KQ1jpfRbyMqd_nliHS9DZ-J4sV5Jxl67U9Vq3IjE1wOR_0dF3M2c5DCCOk9_pqS1QuKn0">
+    </div>
+    <div class="p-6 flex flex-col flex-grow justify-between">
+      <div>
+        <h3 class="text-lg font-bold text-[#071934] mb-1">Mr. Thierry AKOVOHOUANDE</h3>
+        <p class="text-xs font-semibold uppercase tracking-wider text-[#D3A940] mb-4">CHARGÉ DES RELATIONS EXTÉRIEURES ET DES PARTENARIATS</p>
+      </div>
+      <div class="border-l-4 border-[#D3A940] pl-4 py-2 bg-[#F3F4F5] rounded-r-lg mt-4">
+        <p class="text-xs text-[#071934]/80 italic leading-relaxed">« Les grandes opportunités naissent rarement seules ; elles prennent forme lorsque les bonnes personnes décident de construire ensemble. »</p>
+      </div>
+    </div>
+  </div>
+  <!-- Membre 3: Marie-Otniel HOUEDOTÉ -->
+  <div class="bg-[#FFFFFF] rounded-2xl border border-[#E6E8EB] overflow-hidden shadow-sm flex flex-col hover:shadow-md transition">
+    <div class="w-full h-64 bg-[#071934] overflow-hidden">
+      <img alt="Mr. Marie-Otniel HOUEDOTÉ" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhp_uL_MDPgkBcjhZEmtu6xB0_hwhwLZr01Kg0ikmgp-Y5uQqbdI4gqk0KlntwjjjVcLs7Rk0Hyq4fvdq7WWca_VSnKESuCVEy2hVv_K_w2A7wYJjxre2ydJQK9LC38W_r9LrnfJtDv9WGZ993BQaNddVMfQ2ti6NlbzfAurYFxqj_tqszrqplXHd_GxlZFresAMBjlqAi2MhzLeDBAY2Ap-AbascCvrJ4dlvUk7mPU20oaDtc3v5rhvS_vUdqnk8P2fQD7QX0h28">
+    </div>
+    <div class="p-6 flex flex-col flex-grow justify-between">
+      <div>
+        <h3 class="text-lg font-bold text-[#071934] mb-1">Mr. Marie-Otniel HOUEDOTÉ</h3>
+        <p class="text-xs font-semibold uppercase tracking-wider text-[#D3A940] mb-4">CHARGÉ DE COMMUNICATION</p>
+      </div>
+      <div class="border-l-4 border-[#D3A940] pl-4 py-2 bg-[#F3F4F5] rounded-r-lg mt-4">
+        <p class="text-xs text-[#071934]/80 italic leading-relaxed">« Une innovation qui n’est pas suffisamment visible peut facilement rester dans l’ombre. Mon rôle, c’est de donner aux talents la visibilité qu’ils méritent. »</p>
+      </div>
+    </div>
+  </div>
+  <!-- Membre 4: Cyrille OLIHIDE -->
+  <div class="bg-[#FFFFFF] rounded-2xl border border-[#E6E8EB] overflow-hidden shadow-sm flex flex-col hover:shadow-md transition">
+    <div class="w-full h-64 bg-[#071934] overflow-hidden">
+      <img alt="Mr. Cyrille OLIHIDE" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAKYdI-VQ69T33r5kAkm7zj2LPFj3sYS16fRPLZ82DzuUdTI72GgX3Xz-YSdz_9aB-xQCT3cpugy3O0I2ce4RK13GVmjdHMSYwWqG7kdKg2IIovLIDl2hmixSHv0JY1n9WuqvC61wmuzxmbiG83d7gvZCOLak0PXc9AYYKu5DlCCzm7hxfONi-dnJzM4rrc5m-Y_-T5vtruJ870BMly1YyOYfdofcOjvSPc8vFX_QjCTJ3xh5iw-0JoR-FeHtCVMTjcz46ngjnWac">
+    </div>
+    <div class="p-6 flex flex-col flex-grow justify-between">
+      <div>
+        <h3 class="text-lg font-bold text-[#071934] mb-1">Mr. Cyrille OLIHIDE</h3>
+        <p class="text-xs font-semibold uppercase tracking-wider text-[#D3A940] mb-4">SECRÉTAIRE GÉNÉRAL</p>
+      </div>
+      <div class="border-l-4 border-[#D3A940] pl-4 py-2 bg-[#F3F4F5] rounded-r-lg mt-4">
+        <p class="text-xs text-[#071934]/80 italic leading-relaxed">« Une bonne organisation ne se voit pas toujours, mais elle porte tout le reste : sans elle, même les meilleures idées se perdent. »</p>
+      </div>
+    </div>
+  </div>
+  <!-- Membre 5: Joaness OSSA -->
+  <div class="bg-[#FFFFFF] rounded-2xl border border-[#E6E8EB] overflow-hidden shadow-sm flex flex-col hover:shadow-md transition">
+    <div class="w-full h-64 bg-[#071934] overflow-hidden">
+      <img alt="Mr. Joaness OSSA" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMQFFCqHDsLppZjiJIa_FkwunMho-RHVWY2PL7EWuDy1FCVPVQ6eDV7YNWAEx7jzUrAZCsUx_sREVFBauSml9EX4obkbHuOatuFHYzJDI5TtPZto6QAKTzJsHM2283KhWXLc1OULQHXgc4bMXWjZ-dGaf_fg4-n5mF6pruR8lpT2J-5qmfGfUhJL-ttJkguxrIYitpvFrUMfYbzO-lMxuoqunV9JZ7eWkDR5vK-8T3ljoE5_dWXyaWqtfC64qK03eaiJwhm0rG0ss">
+    </div>
+    <div class="p-6 flex flex-col flex-grow justify-between">
+      <div>
+        <h3 class="text-lg font-bold text-[#071934] mb-1">Mr. Joaness OSSA</h3>
+        <p class="text-xs font-semibold uppercase tracking-wider text-[#D3A940] mb-4">RESPONSABLE NUMÉRIQUE</p>
+      </div>
+      <div class="border-l-4 border-[#D3A940] pl-4 py-2 bg-[#F3F4F5] rounded-r-lg mt-4">
+        <p class="text-xs text-[#071934]/80 italic leading-relaxed">« Le futur de l’Afrique se construit à la croisée de l’innovation et du numérique. »</p>
+      </div>
+    </div>
+  </div>
+  <!-- Membre 6: Mlle Marie Consolata MESSAN -->
+  <div class="bg-[#FFFFFF] rounded-2xl border border-[#E6E8EB] overflow-hidden shadow-sm flex flex-col hover:shadow-md transition">
+    <div class="w-full h-64 bg-[#071934] overflow-hidden">
+      <img alt="Mlle Marie Consolata MESSAN" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUaqbEI2JrnFz8R3cW_Kt5J-lTimQfCHX-R22Snpz13L1Q6swPJ-cnuiwM1CXIc2cMWzF-CEYBu4Z8DeuDU5u2f-WKkjm8VA1g2uxVsR3xp9-jp44VUeqP460q9BIxUPL97m2qPkKRF3BdxAq5-wj4FDFe8vI63ypj7EPJDRNIVxXixR_znu27aLy4yiUm_SgGbD52uMH96pHk3pclazrp0LxW8Xiq_ZWXstlpM_lO_yFftKUHcVaAGLgqAUVhsEh7Uxz8HzwnNjs">
+    </div>
+    <div class="p-6 flex flex-col flex-grow justify-between">
+      <div>
+        <h3 class="text-lg font-bold text-[#071934] mb-1">Mlle Marie Consolata MESSAN</h3>
+        <p class="text-xs font-semibold uppercase tracking-wider text-[#D3A940] mb-4">TRÉSORIÈRE GÉNÉRALE</p>
+      </div>
+      <div class="border-l-4 border-[#D3A940] pl-4 py-2 bg-[#F3F4F5] rounded-r-lg mt-4">
+        <p class="text-xs text-[#071934]/80 italic leading-relaxed">« Chaque grande aventure commence par des personnes qui acceptent de croire en une vision. »</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- 9. Bannière d'appel à rejoindre (Call to Action) -->
+<section class="py-16 px-6 bg-[#FFFFFF]">
+<div class="max-w-[1200px] mx-auto">
+<div class="bg-[#071934] py-14 px-8 rounded-2xl text-center text-white relative overflow-hidden shadow-lg">
+<!-- Subtile watermark géométrique en fond de bannière -->
+<div class="absolute inset-0 pointer-events-none opacity-[0.04]" style="background-image: radial-gradient(#FFFFFF 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="text-2xl md:text-3xl font-bold mb-4 tracking-tight">
+            Vous êtes un jeune innovateur africain ? Présentez votre projet au réseau.
+          </h2>
+<p class="text-sm md:text-base text-white/80 mb-8 leading-relaxed">
+            Rejoignez un écosystème continental d'accompagnement, de valorisation médiatique et de partenariats stratégiques.
+          </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#D3A940] text-[#071934] font-medium hover:opacity-95 transition text-sm" href="#">
+              Soumettre mon innovation
+            </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white text-white hover:bg-white/10 transition text-sm font-medium" href="#">
+              Devenir partenaire
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<!-- 9. FOOTER DESKTOP -->
+<footer class="bg-[#071934] text-[#FFFFFF] pt-14 pb-8 px-6">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[#E6E8EB]/20">
+<!-- Col 1 : Logo 56px dans son conteneur blanc -->
+<div>
+<div class="inline-block bg-[#FFFFFF] p-2.5 rounded-xl mb-4">
+<img alt="RAJI" class="h-14 w-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD31y3HnyjQyDtWpfH1ARFZ1vOxPqK0OazF9fATr4gx__oINqcXhmBKXUO46dNxFT_EOqt1EACUmYbp8pRakkwjsFX9fzfnCHo14BS1aIMX2mKW9EekSRhv47P2DB7cjnlRtwWZOLkxn_RKCsI0S478wx5q7zGMo9Ho0J3wN-akhAavQor4wJi1GL48YHfC7n7HBic4u6YCG861HA9eQ1R8iP5Ce162xO08jUxnJlxBtZVq9j2fRxM_sVM5u6yYOJQjvRk">
+</div>
+<p class="text-sm text-[#F3F4F5] leading-relaxed">
+          Réseau Africain des Jeunes Innovateurs.<br>
+          Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique.
+        </p>
+</div>
+<!-- Col 2 : Plateforme -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wider text-[#D3A940] mb-4">Plateforme</h4>
+<ul class="space-y-2 text-sm text-[#F3F4F5]">
+<li class=""><a class="hover:underline transition" href="#">Accueil</a></li>
+<li class=""><a class="hover:underline transition" href="#">À propos</a></li>
+<li class=""><a class="hover:underline transition" href="#">Innovateurs</a></li>
+<li class=""><a class="hover:underline transition" href="#">Opportunités</a></li>
+</ul>
+</div>
+<!-- Col 3 : Ressources -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wider text-[#D3A940] mb-4">Ressources</h4>
+<ul class="space-y-2 text-sm text-[#F3F4F5]">
+<li class=""><a class="hover:underline transition" href="#">RAJI Média</a></li>
+<li class=""><a class="hover:underline transition" href="#">Événements</a></li>
+<li class=""><a class="hover:underline transition" href="#">Partenaires</a></li>
+<li class=""><a class="hover:underline transition" href="#">Contact</a></li>
+</ul>
+</div>
+<!-- Col 4 : Réseau Panafricain & Réseaux -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wider text-[#D3A940] mb-4">Réseau Panafricain</h4>
+<p class="text-sm text-[#F3F4F5] leading-relaxed mb-4">
+          Rejoignez le mouvement des bâtisseurs et innovateurs à travers l'Afrique et sa diaspora.
+        </p>
+<div class="flex items-center space-x-3">
+<!-- Globe icon navy on white -->
+<a class="w-9 h-9 rounded-lg bg-[#FFFFFF] flex items-center justify-center hover:opacity-90 transition" href="#">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+</a>
+<!-- Handshake icon navy on white -->
+<a class="w-9 h-9 rounded-lg bg-[#FFFFFF] flex items-center justify-center hover:opacity-90 transition" href="#">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l.77.78L12 20.66l7.65-7.65.77-.78a5.4 5.4 0 0 0 0-7.65z"></path></svg>
+</a>
+<!-- Mail icon navy on white -->
+<a class="w-9 h-9 rounded-lg bg-[#FFFFFF] flex items-center justify-center hover:opacity-90 transition" href="#">
+<svg class="w-5 h-5 stroke-[#071934]" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+</a>
+</div>
+</div>
+</div>
+<!-- Copyright -->
+<div class="max-w-[1200px] mx-auto mt-8 text-center text-xs text-[#F3F4F5]">
+      © 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.
+    </div>
+</footer>
+
+
+</body></html>

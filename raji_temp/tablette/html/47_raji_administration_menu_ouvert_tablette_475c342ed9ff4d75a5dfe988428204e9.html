@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#191c1d", "on-primary-fixed-variant": "#374764", "on-primary-fixed": "#0a1b36", "on-secondary-fixed": "#0a1b36", "surface-container-highest": "#e1e3e4", "on-error-container": "#93000a", "on-primary-container": "#7484a4", "tertiary": "#000000", "primary-fixed": "#d7e3ff", "on-secondary": "#ffffff", "primary-fixed-dim": "#b7c7ea", "error-container": "#ffdad6", "tertiary-fixed": "#ffdf9a", "primary-container": "#0a1b36", "on-primary": "#ffffff", "secondary-container": "#cadafe", "inverse-on-surface": "#f0f1f2", "error": "#ba1a1a", "outline": "#75777e", "surface-bright": "#f8f9fa", "tertiary-container": "#251a00", "inverse-primary": "#b7c7ea", "surface": "#f8f9fa", "on-tertiary-fixed-variant": "#5a4300", "surface-container-lowest": "#ffffff", "outline-strong": "#071934", "on-secondary-container": "#505f7e", "on-error": "#ffffff", "surface-container-high": "#e7e8e9", "on-tertiary-fixed": "#251a00", "surface-container-low": "#f3f4f5", "surface-dim": "#E6E8EB", "on-secondary-fixed-variant": "#374764", "secondary-fixed": "#d7e3ff", "secondary": "#4f5f7d", "outline-variant": "#c5c6ce", "tertiary-fixed-dim": "#edc155", "on-surface-variant": "#44474d", "secondary-fixed-dim": "#b7c7ea", "on-tertiary": "#ffffff", "primary": "#000000", "surface-container": "#edeeef", "background": "#f8f9fa", "surface-variant": "#e1e3e4", "inverse-surface": "#2e3132", "surface-tint": "#4f5f7d", "on-background": "#191c1d", "on-tertiary-container": "#a47e15" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1rem", "margin-desktop": "3rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin": "1rem", "gutter-tablet": "1.5rem", "margin-tablet": "2rem", "space-lg": "1.5rem", "gutter-desktop": "2rem", "space-md": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-sm": ["Inter"], "headline-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "title-md": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "display-lg-mobile": ["Inter"], "body-lg": ["Inter"], "label-lg": ["Inter"], "display-lg": ["Inter"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface-container-low font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-[70px] bg-surface-container-lowest border-b border-surface-dim px-6 flex items-center justify-between z-30"><div class="flex items-center gap-4"><button aria-label="Ouvrir le menu" class="w-11 h-11 bg-outline-strong text-on-primary flex items-center justify-center cursor-pointer focus:outline-none" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><span class="font-title-md text-title-md text-outline-strong font-semibold tracking-tight">RAJI Administration</span></div><div class="flex items-center justify-center"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-[44px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/></div><div class="flex items-center gap-3"><div class="bg-surface-dim text-outline-strong font-label-md text-label-md px-3 py-1.5 border border-surface-dim uppercase tracking-wider font-semibold">Administrateur général</div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><div class="fixed inset-0 bg-[#071934]/40 z-40"></div><aside class="fixed left-0 top-0 h-screen w-[360px] bg-outline-strong z-50 flex flex-col justify-between shadow-2xl"><div class="flex flex-col flex-1 min-h-0"><div class="h-[70px] px-6 border-b border-[#0e2a52] flex items-center justify-between bg-outline-strong"><div class="bg-surface-container-lowest rounded-lg p-2 h-12 flex items-center justify-center"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/></div><button aria-label="Fermer le menu" class="w-11 h-11 text-on-primary flex items-center justify-center hover:bg-[#0c2447] transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[24px]">close</span></button></div><div class="px-6 pt-6 pb-2 text-label-md font-label-md tracking-wider uppercase font-semibold text-[#D3A940]">NAVIGATION PRINCIPALE</div><nav class="flex-1 overflow-y-auto px-3 py-2 space-y-1" data-active-classes="border-l-4 border-[#D3A940] bg-[#0c2447] text-on-primary font-medium"><a aria-current="page" class="flex items-center gap-3 px-4 py-3 transition-colors border-l-4 border-[#D3A940] bg-[#0c2447] text-on-primary font-medium" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Tableau de bord</span></a><a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-surface-container-low hover:bg-[#0c2447] hover:text-on-primary transition-colors" data-path="candidatures" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Candidatures</span></a><a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-surface-container-low hover:bg-[#0c2447] hover:text-on-primary transition-colors" data-path="innovateurs" href="#"><span class="material-symbols-outlined text-[20px]">lightbulb</span><span>Innovateurs</span></a><a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-surface-container-low hover:bg-[#0c2447] hover:text-on-primary transition-colors" data-path="evenements" href="#"><span class="material-symbols-outlined text-[20px]">event</span><span>Événements</span></a><a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-surface-container-low hover:bg-[#0c2447] hover:text-on-primary transition-colors" data-path="opportunites" href="#"><span class="material-symbols-outlined text-[20px]">work</span><span>Opportunités</span></a><a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-surface-container-low hover:bg-[#0c2447] hover:text-on-primary transition-colors" data-path="partenaires" href="#"><span class="material-symbols-outlined text-[20px]">handshake</span><span>Partenaires</span></a><a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-surface-container-low hover:bg-[#0c2447] hover:text-on-primary transition-colors" data-path="articles-et-media" href="#"><span class="material-symbols-outlined text-[20px]">newspaper</span><span>Articles &amp; Média</span></a><a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-surface-container-low hover:bg-[#0c2447] hover:text-on-primary transition-colors" data-path="messages-et-contact" href="#"><span class="material-symbols-outlined text-[20px]">mail</span><span>Messages &amp; Contact</span></a><a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-surface-container-low hover:bg-[#0c2447] hover:text-on-primary transition-colors" data-path="utilisateurs-et-roles" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Utilisateurs et rôles</span></a><a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-surface-container-low hover:bg-[#0c2447] hover:text-on-primary transition-colors" data-path="parametres-generaux" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Paramètres généraux</span></a></nav></div><div class="p-4 border-t border-[#0e2a52]"><a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-surface-container-low hover:bg-[#0c2447] hover:text-on-primary transition-colors" data-path="deconnexion" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span>Déconnexion</span></a></div></aside><div class="w-full"><main class="pt-[70px] bg-surface-container-low min-h-screen px-6 py-6"><div class="flex flex-col w-full">
+<!-- BACKGROUND DASHBOARD LAYER (TABLETTE VIEW) -->
+<div class="w-full max-w-[820px] mx-auto space-y-6 select-none opacity-85">
+<!-- Top Action & Title Bar for Tablette -->
+<div class="bg-[#FFFFFF] p-5 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-11 h-11 bg-[#071934] text-[#FFFFFF] flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</div>
+<div>
+<span class="text-[12px] font-bold text-[#071934] tracking-wider uppercase">VUE TABLETTE</span>
+<h1 class="text-[20px] font-bold text-[#071934] leading-tight">Tableau de bord</h1>
+</div>
+</div>
+<div class="bg-[#E6E8EB] px-3 py-1.5 text-[12px] font-bold text-[#071934] uppercase tracking-wider">
+        Administrateur général
+      </div>
+</div>
+<!-- 4 Metrics Stats Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-[#FFFFFF] p-4 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[12px] font-semibold text-[#071934] uppercase tracking-wide">Candidatures reçues</span>
+<div class="w-8 h-8 bg-[#E6E8EB] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#071934] text-[18px]">assignment</span>
+</div>
+</div>
+<div class="text-[28px] font-bold text-[#071934] leading-none mb-1">142</div>
+<div class="text-[12px] text-[#071934] opacity-80">+14% ce mois</div>
+</div>
+<div class="bg-[#FFFFFF] p-4 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[12px] font-semibold text-[#071934] uppercase tracking-wide">Innovateurs validés</span>
+<div class="w-8 h-8 bg-[#E6E8EB] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#071934] text-[18px]">lightbulb</span>
+</div>
+</div>
+<div class="text-[28px] font-bold text-[#071934] leading-none mb-1">89</div>
+<div class="text-[12px] text-[#071934] opacity-80">Réseau consolidé</div>
+</div>
+<div class="bg-[#FFFFFF] p-4 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[12px] font-semibold text-[#071934] uppercase tracking-wide">Événements</span>
+<div class="w-8 h-8 bg-[#E6E8EB] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#071934] text-[18px]">event</span>
+</div>
+</div>
+<div class="text-[28px] font-bold text-[#071934] leading-none mb-1">12</div>
+<div class="text-[12px] text-[#071934] opacity-80">3 en préparation</div>
+</div>
+<div class="bg-[#FFFFFF] p-4 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[12px] font-semibold text-[#071934] uppercase tracking-wide">Opportunités</span>
+<div class="w-8 h-8 bg-[#E6E8EB] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#071934] text-[18px]">work</span>
+</div>
+</div>
+<div class="text-[28px] font-bold text-[#071934] leading-none mb-1">34</div>
+<div class="text-[12px] text-[#071934] opacity-80">Appels ouverts</div>
+</div>
+</div>
+<!-- Analytics Chart: Visites et activité -->
+<div class="bg-[#FFFFFF] p-5 shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-[16px] font-bold text-[#071934]">Visites et activité générale</h2>
+<p class="text-[12px] text-[#071934] opacity-75">Statistiques consolidées des 30 derniers jours</p>
+</div>
+<div class="flex items-center gap-4 text-[12px] font-semibold text-[#071934]">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-[#071934]"></span>
+<span>Candidatures</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-[#D3A940]"></span>
+<span>Consultations</span>
+</div>
+</div>
+</div>
+<div class="w-full h-44 flex items-end justify-between gap-3 pt-4">
+<!-- SVG Vector Analytics Data -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 760 140">
+<line stroke="#E6E8EB" stroke-width="1" x1="0" x2="760" y1="30" y2="30"></line>
+<line stroke="#E6E8EB" stroke-width="1" x1="0" x2="760" y1="75" y2="75"></line>
+<line stroke="#E6E8EB" stroke-width="1" x1="0" x2="760" y1="120" y2="120"></line>
+<!-- Activity Bars -->
+<rect fill="#071934" height="75" width="22" x="25" y="45"></rect>
+<rect fill="#D3A940" height="90" width="22" x="52" y="30"></rect>
+<rect fill="#071934" height="55" width="22" x="135" y="65"></rect>
+<rect fill="#D3A940" height="80" width="22" x="162" y="40"></rect>
+<rect fill="#071934" height="95" width="22" x="245" y="25"></rect>
+<rect fill="#D3A940" height="105" width="22" x="272" y="15"></rect>
+<rect fill="#071934" height="65" width="22" x="355" y="55"></rect>
+<rect fill="#D3A940" height="70" width="22" x="382" y="50"></rect>
+<rect fill="#071934" height="85" width="22" x="465" y="35"></rect>
+<rect fill="#D3A940" height="95" width="22" x="492" y="25"></rect>
+<rect fill="#071934" height="80" width="22" x="575" y="40"></rect>
+<rect fill="#D3A940" height="100" width="22" x="602" y="20"></rect>
+<rect fill="#071934" height="100" width="22" x="685" y="20"></rect>
+<rect fill="#D3A940" height="110" width="22" x="712" y="10"></rect>
+</svg>
+</div>
+<div class="grid grid-cols-7 text-[12px] text-center font-medium text-[#071934] opacity-80 pt-2">
+<span>Semaine 01</span>
+<span>Semaine 02</span>
+<span>Semaine 03</span>
+<span>Semaine 04</span>
+<span>Semaine 05</span>
+<span>Semaine 06</span>
+<span>Semaine 07</span>
+</div>
+</div>
+<!-- Recent applications table -->
+<div class="bg-[#FFFFFF] shadow-sm overflow-hidden">
+<div class="p-5 flex items-center justify-between">
+<div>
+<h2 class="text-[16px] font-bold text-[#071934]">Dernières candidatures à valider</h2>
+<p class="text-[12px] text-[#071934] opacity-75">Dossiers soumis récemment par les porteurs de projet</p>
+</div>
+<button class="bg-[#071934] text-[#FFFFFF] px-4 py-2 text-[12px] font-bold tracking-wide uppercase" type="button">
+          Voir tout
+        </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-[14px]">
+<thead class="bg-[#F3F4F5] text-[12px] font-bold uppercase text-[#071934]">
+<tr>
+<th class="py-3 px-5">Candidat</th>
+<th class="py-3 px-5">Projet</th>
+<th class="py-3 px-5">Date</th>
+<th class="py-3 px-5">Statut</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#E6E8EB] text-[#071934]">
+<tr class="bg-[#FFFFFF]">
+<td class="py-3 px-5 font-semibold">Moussa Traoré</td>
+<td class="py-3 px-5">Solaire Connect Mali</td>
+<td class="py-3 px-5 text-[12px]">24 Oct 2024</td>
+<td class="py-3 px-5">
+<span class="inline-block bg-[#D3A940] text-[#071934] px-2.5 py-1 text-[12px] font-bold tracking-wide uppercase">
+                  En attente
+                </span>
+</td>
+</tr>
+<tr class="bg-[#F3F4F5]">
+<td class="py-3 px-5 font-semibold">Fatouma Bamba</td>
+<td class="py-3 px-5">AgriLogix Tech</td>
+<td class="py-3 px-5 text-[12px]">23 Oct 2024</td>
+<td class="py-3 px-5">
+<span class="inline-block bg-[#071934] text-[#FFFFFF] px-2.5 py-1 text-[12px] font-bold tracking-wide uppercase">
+                  Validée
+                </span>
+</td>
+</tr>
+<tr class="bg-[#FFFFFF]">
+<td class="py-3 px-5 font-semibold">Ibrahim Keita</td>
+<td class="py-3 px-5">BioPharma Sahel</td>
+<td class="py-3 px-5 text-[12px]">22 Oct 2024</td>
+<td class="py-3 px-5">
+<span class="inline-block bg-[#D3A940] text-[#071934] px-2.5 py-1 text-[12px] font-bold tracking-wide uppercase">
+                  En attente
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- FULL-VIEWPORT MODAL OVERLAY (NAVY #071934 40% OPACITY, BLUR 2PX) -->
+<div class="fixed inset-0 z-40" id="drawer-backdrop" style="background-color: rgba(7, 25, 52, 0.40); backdrop-filter: blur(2px);"></div>
+<!-- NAVY DRAWER ON THE LEFT (360PX WIDTH, FULL HEIGHT, Z-50) -->
+<aside aria-label="Navigation latérale principale" class="fixed top-0 bottom-0 left-0 w-[360px] h-screen bg-[#071934] z-50 flex flex-col" id="admin-drawer" style="box-shadow: 6px 0 30px rgba(0, 0, 0, 0.3);">
+<!-- Drawer Header -->
+<div class="p-5 flex items-center justify-between border-b border-[#0e2a52]">
+<!-- Logo Container -->
+<div class="bg-[#FFFFFF] rounded-lg px-3 py-1.5 h-12 inline-flex items-center justify-center">
+<img alt="RAJI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgDFEds57-UY5zmP8W7mufCN3Z4ud_GBfP-iwxIVhRnoKK0KRCr147s6T76GejpmQEKTTNu6palUrdsOprSzCjEMlMcfdU3UUfgGINwBBYQYeZiiO2jYhbkvdDdBbOiWfgBVdZjtBIndDgFhWp3tj6xyvkKZzWBaN2gZt6ngAHEdsHAgZeQ0_HBc1HxwIe6bvq06RNIM_kJiRU_tJOTExtk8wvcVNH-hKTkNaUNobLzo4GqYPmZ6XWG9zcUH_2XdSuhlw"/>
+</div>
+<!-- Close Button with White SVG 'X' icon -->
+<button aria-label="Fermer le menu" class="w-11 h-11 text-[#FFFFFF] flex items-center justify-center rounded-md hover:bg-[#0e2a52] transition-colors focus:outline-none" id="close-drawer-btn" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+</div>
+<!-- Drawer Body / Navigation List -->
+<div class="flex-1 overflow-y-auto py-4 px-3">
+<div class="text-[12px] font-bold text-[#D3A940] tracking-wider uppercase px-4 py-2 mb-2">
+        PANEL D'ADMINISTRATION
+      </div>
+<nav class="space-y-1">
+<!-- 1. Tableau de bord (ACTIVE) -->
+<a class="flex items-center gap-[14px] px-4 py-3 text-[14px] font-semibold text-[#FFFFFF] mb-1.5" href="#" style="border-left: 4px solid #D3A940; background-color: rgba(255, 255, 255, 0.1); border-radius: 0 8px 8px 0;">
+<svg class="w-5 h-5 shrink-0 text-[#FFFFFF]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<rect height="7" width="7" x="3" y="3"></rect>
+<rect height="7" width="7" x="14" y="3"></rect>
+<rect height="7" width="7" x="14" y="14"></rect>
+<rect height="7" width="7" x="3" y="14"></rect>
+</svg>
+<span>Tableau de bord</span>
+</a>
+<!-- 2. Candidatures -->
+<a class="flex items-center gap-[14px] px-4 py-3 text-[14px] text-[#F3F4F5] rounded-lg mb-1.5 hover:bg-[#0e2a52] transition-colors" href="#">
+<svg class="w-5 h-5 shrink-0 text-[#F3F4F5]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+</svg>
+<span>Candidatures</span>
+</a>
+<!-- 3. Innovateurs -->
+<a class="flex items-center gap-[14px] px-4 py-3 text-[14px] text-[#F3F4F5] rounded-lg mb-1.5 hover:bg-[#0e2a52] transition-colors" href="#">
+<svg class="w-5 h-5 shrink-0 text-[#F3F4F5]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+</svg>
+<span>Innovateurs</span>
+</a>
+<!-- 4. Événements -->
+<a class="flex items-center gap-[14px] px-4 py-3 text-[14px] text-[#F3F4F5] rounded-lg mb-1.5 hover:bg-[#0e2a52] transition-colors" href="#">
+<svg class="w-5 h-5 shrink-0 text-[#F3F4F5]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+<span>Événements</span>
+</a>
+<!-- 5. Opportunités -->
+<a class="flex items-center gap-[14px] px-4 py-3 text-[14px] text-[#F3F4F5] rounded-lg mb-1.5 hover:bg-[#0e2a52] transition-colors" href="#">
+<svg class="w-5 h-5 shrink-0 text-[#F3F4F5]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<rect height="14" rx="2" ry="2" width="20" x="2" y="7"></rect>
+<path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
+</svg>
+<span>Opportunités</span>
+</a>
+<!-- 6. Partenaires -->
+<a class="flex items-center gap-[14px] px-4 py-3 text-[14px] text-[#F3F4F5] rounded-lg mb-1.5 hover:bg-[#0e2a52] transition-colors" href="#">
+<svg class="w-5 h-5 shrink-0 text-[#F3F4F5]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+</svg>
+<span>Partenaires</span>
+</a>
+<!-- 7. Articles & Média -->
+<a class="flex items-center gap-[14px] px-4 py-3 text-[14px] text-[#F3F4F5] rounded-lg mb-1.5 hover:bg-[#0e2a52] transition-colors" href="#">
+<svg class="w-5 h-5 shrink-0 text-[#F3F4F5]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+</svg>
+<span>Articles &amp; Média</span>
+</a>
+<!-- 8. Messages & Contact -->
+<a class="flex items-center gap-[14px] px-4 py-2.5 text-[14px] text-[#F3F4F5] rounded-lg mb-1.5 hover:bg-[#0e2a52] transition-colors" href="#">
+<svg class="w-5 h-5 shrink-0 text-[#F3F4F5]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+</svg>
+<span>Messages &amp; Contact</span>
+</a>
+<!-- 9. Utilisateurs et rôles -->
+<a class="flex items-center gap-[14px] px-4 py-3 text-[14px] text-[#F3F4F5] rounded-lg mb-1.5 hover:bg-[#0e2a52] transition-colors" href="#">
+<svg class="w-5 h-5 shrink-0 text-[#F3F4F5]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+</svg>
+<span>Utilisateurs et rôles</span>
+</a>
+<!-- 10. Paramètres généraux -->
+<a class="flex items-center gap-[14px] px-4 py-3 text-[14px] text-[#F3F4F5] rounded-lg mb-1.5 hover:bg-[#0e2a52] transition-colors" href="#">
+<svg class="w-5 h-5 shrink-0 text-[#F3F4F5]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="3"></circle>
+<path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"></path>
+</svg>
+<span>Paramètres généraux</span>
+</a>
+</nav>
+</div>
+<!-- Drawer Footer -->
+<div class="border-t border-[#0e2a52] px-5 py-4">
+<div class="text-[12px] text-[#F3F4F5] mb-3 leading-tight">
+        Connecté en tant qu'Administrateur général
+      </div>
+<button class="w-full py-3 px-4 flex items-center justify-center gap-3 bg-transparent text-[#F3F4F5] text-[14px] font-medium rounded-lg hover:bg-[#0e2a52] transition-colors" style="border: 1px solid #0e2a52;" type="button">
+<svg class="w-5 h-5 shrink-0 text-[#F3F4F5]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+</svg>
+<span>Déconnexion</span>
+</button>
+</div>
+</aside>
+</div>
+<script>
+  (function() {
+    const backdrop = document.getElementById('drawer-backdrop');
+    const drawer = document.getElementById('admin-drawer');
+    const closeBtn = document.getElementById('close-drawer-btn');
+
+    function closeMenu() {
+      if (backdrop) backdrop.style.display = 'none';
+      if (drawer) drawer.style.display = 'none';
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeMenu);
+    }
+    if (backdrop) {
+      backdrop.addEventListener('click', closeMenu);
+    }
+  })();
+</script></main></div></body></html>

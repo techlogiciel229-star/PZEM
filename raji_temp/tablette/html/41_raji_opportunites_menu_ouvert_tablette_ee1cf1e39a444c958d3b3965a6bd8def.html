@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAJI — Opportunités – Menu ouvert (Tablette)</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#071934',
+              gold: '#D3A940',
+              bgLight: '#F3F4F5',
+              border: '#E6E8EB',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #071934;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+    }
+  </style>
+<style data-purpose="decorative-pattern">
+    .cta-banner-pattern {
+      background-color: #071934;
+      background-image: radial-gradient(#152e59 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen bg-white">
+<!-- BEGIN: BackgroundPageContent -->
+<!-- Underlying content representing the tablet listing page, overlaid by menu backdrop -->
+<div class="w-full max-w-[820px] mx-auto min-h-screen flex flex-col bg-white">
+<!-- Header of the underlying page -->
+<header class="w-full border-b border-[#E6E8EB] px-6 py-4 flex items-center justify-between">
+<!-- Logo Container -->
+<div class="flex items-center gap-2">
+<svg aria-label="Logo RAJI" class="h-10 w-auto" fill="none" viewbox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" fill="#F8FAFC" r="22" stroke="#071934" stroke-dasharray="2 2" stroke-width="1.5"></circle>
+<path d="M19 15C22 13 28 14 31 17C33 19 32 23 30 25C27 28 29 32 27 35C25 38 21 37 19 35C16 32 17 28 19 25C21 21 16 17 19 15Z" fill="none" stroke="#D3A940" stroke-width="1.5"></path>
+<text fill="#071934" font-size="18" font-weight="700" letter-spacing="1" x="54" y="27">RAJI</text>
+<text fill="#071934" font-size="6.5" font-weight="500" opacity="0.8" x="54" y="38">Réseau Africain des Jeunes Innovateurs</text>
+</svg>
+</div>
+<!-- Right actions -->
+<div class="flex items-center gap-3">
+<button class="bg-[#D3A940] text-[#071934] font-semibold text-xs px-4 py-2 rounded-lg" tabindex="-1">
+          Soumettre mon innovation
+        </button>
+<div class="w-9 h-9 rounded-full border border-[#E6E8EB] flex items-center justify-center text-[#071934]">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</header>
+<!-- Main Content Area (Background) -->
+<main class="flex-1 px-6 pt-6 pb-12">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 text-xs text-[#071934]/60 mb-2">
+<span>Accueil</span>
+<span>/</span>
+<span class="text-[#071934] font-medium">Opportunités</span>
+</div>
+<!-- Section Title & Subheading -->
+<div class="mb-6">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-6 h-0.5 bg-[#D3A940]"></span>
+<span class="text-[10px] font-bold tracking-wider text-[#071934] uppercase">Programmes &amp; Soutien à l'innovation</span>
+</div>
+<h1 class="text-2xl font-bold text-[#071934] mb-2">Opportunités pour Innovateurs</h1>
+<p class="text-xs text-[#071934]/70 max-w-xl">
+          Explorez les appels à projets, concours panafricains, programmes d'accélération et bourses techniques référencés pour propulser les initiatives des jeunes talents africains.
+        </p>
+</div>
+<!-- Search & Filters Container -->
+<div class="flex flex-col sm:flex-row gap-3 mb-4">
+<div class="flex-1 relative">
+<input class="w-full pl-9 pr-4 py-2.5 text-xs rounded-lg border border-[#E6E8EB] focus:outline-none" placeholder="Rechercher par mot-clé, domaine, pays..." readonly="" tabindex="-1" type="text"/>
+<svg class="w-4 h-4 absolute left-3 top-3 text-[#071934]/50" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="w-44 border border-[#E6E8EB] rounded-lg px-3 py-2.5 flex justify-between items-center text-xs text-[#071934]">
+<span>Toutes catégories</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Category Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-hidden mb-6">
+<span class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#071934] text-white">Tous</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium border border-[#E6E8EB] text-[#071934]">Appels à projets</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium border border-[#E6E8EB] text-[#071934]">Concours</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium border border-[#E6E8EB] text-[#071934]">Formations &amp; Ateliers</span>
+</div>
+<!-- Grid of Cards (Mock for underlying context) -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Card 1 -->
+<article class="border border-[#E6E8EB] rounded-xl p-4 bg-white shadow-sm flex flex-col justify-between h-52">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold uppercase tracking-wider bg-[#F3F4F5] text-[#071934] px-2 py-0.5 rounded">Appels à projets</span>
+<span class="text-[10px] text-[#071934]/60">● 25 Mai 2026</span>
+</div>
+<h3 class="text-sm font-bold text-[#071934] line-clamp-2">Fonds AgriTech Sahel : Résilience Climatique</h3>
+<p class="text-[10px] text-[#071934]/60 mt-1">ORGANISATEUR : Alliance Sahélienne &amp; BAfD</p>
+</div>
+<div class="pt-3 border-t border-[#E6E8EB] flex items-center justify-between">
+<span class="text-[11px] font-semibold text-[#071934]">15k$ - 50k$</span>
+<span class="text-xs bg-[#071934] text-white px-2.5 py-1 rounded">En savoir plus</span>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="border border-[#E6E8EB] rounded-xl p-4 bg-white shadow-sm flex flex-col justify-between h-52">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold uppercase tracking-wider bg-[#F3F4F5] text-[#071934] px-2 py-0.5 rounded">Concours</span>
+<span class="text-[10px] text-[#071934]/60">● 12 Juin 2026</span>
+</div>
+<h3 class="text-sm font-bold text-[#071934] line-clamp-2">Grand Prix Panafricain de l'Éco-Innovation</h3>
+<p class="text-[10px] text-[#071934]/60 mt-1">ORGANISATEUR : Fondation Énergie Verte Afri...</p>
+</div>
+<div class="pt-3 border-t border-[#E6E8EB] flex items-center justify-between">
+<span class="text-[11px] font-semibold text-[#071934]">Dotation 30k$</span>
+<span class="text-xs bg-[#071934] text-white px-2.5 py-1 rounded">En savoir plus</span>
+</div>
+</article>
+</div>
+<!-- Banner bottom -->
+<section class="mt-8 rounded-xl cta-banner-pattern p-6 text-white flex justify-between items-center" data-purpose="promo-banner">
+<div>
+<span class="text-[10px] font-bold tracking-wider text-[#D3A940] uppercase">Institutions &amp; Bailleurs</span>
+<h2 class="text-base font-bold mt-1">Vous proposez une opportunité ?</h2>
+<p class="text-xs text-white/80 max-w-sm mt-1">Faites rayonner vos concours et subventions auprès d'une communauté qualifiée.</p>
+</div>
+<button class="bg-[#D3A940] text-[#071934] font-semibold text-xs px-4 py-2.5 rounded-lg whitespace-nowrap" tabindex="-1">
+          Publier une opportunité
+        </button>
+</section>
+</main>
+<!-- Footer of the underlying page -->
+<footer class="w-full bg-[#071934] text-white px-6 py-6 border-t border-white/10 mt-auto">
+<div class="text-xs text-white/60 text-center">
+        © 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.
+      </div>
+</footer>
+</div>
+<!-- END: BackgroundPageContent -->
+<!-- BEGIN: ModalBackdrop -->
+<!-- Dimmed navy overlay (#071934 at 40% opacity) covering viewport -->
+<div aria-hidden="true" class="fixed inset-0 z-40 bg-[#071934] bg-opacity-40 transition-opacity" data-purpose="sheet-backdrop">
+</div>
+<!-- END: ModalBackdrop -->
+<!-- BEGIN: NavigationSideSheet -->
+<!-- Exactly 360px wide drawer on the right side, solid #FFFFFF, full height with shadow-2xl -->
+<aside aria-label="Menu de navigation" aria-modal="true" class="fixed top-0 right-0 bottom-0 z-50 w-[360px] max-w-full bg-white shadow-2xl flex flex-col justify-between h-full min-h-screen" data-purpose="side-sheet-drawer" role="dialog">
+<!-- Top & Navigation Container -->
+<div class="flex flex-col w-full">
+<!-- Side sheet header with RAJI logo and close button -->
+<div class="px-6 py-5 flex items-center justify-between border-b border-[#E6E8EB]" data-purpose="drawer-header">
+<!-- RAJI Logo (Height: 44px) -->
+<a aria-label="Accueil RAJI" class="flex items-center gap-2 group" href="#">
+<svg class="h-[44px] w-auto" fill="none" viewbox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+<!-- Emblème RAJI : Contour continent / réseau -->
+<circle cx="25" cy="25" fill="#F8FAFC" r="22" stroke="#071934" stroke-dasharray="2 2" stroke-width="1.5"></circle>
+<path d="M19 14C22 12 28 13 31 16C33 18 32 22 30 24C27 27 29 31 27 34C25 37 21 36 19 34C16 31 17 27 19 24C21 20 16 16 19 14Z" fill="none" stroke="#D3A940" stroke-width="1.75"></path>
+<circle cx="24" cy="24" fill="#071934" r="2"></circle>
+<!-- RAJI Typography & baseline -->
+<text fill="#071934" font-size="18" font-weight="700" letter-spacing="1" x="54" y="27">RAJI</text>
+<text fill="#071934" font-size="6.5" font-weight="500" opacity="0.8" x="54" y="38">Réseau Africain des Jeunes Innovateurs</text>
+</svg>
+</a>
+<!-- Close Button (X icon inside 36x36px border-[#E6E8EB] rounded-lg) -->
+<button aria-label="Fermer le menu" class="w-[36px] h-[36px] flex items-center justify-center rounded-lg border border-[#E6E8EB] text-[#071934] hover:bg-[#F3F4F5] transition-colors focus:outline-none" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Navigation links list: vertically stacked with generous padding -->
+<nav aria-label="Menu principal" class="px-6 py-6" data-purpose="drawer-nav">
+<ul class="flex flex-col space-y-4">
+<!-- 1. Accueil -->
+<li>
+<a class="block py-1 text-base font-medium text-[#071934] hover:text-[#D3A940] transition-colors" href="#">
+              Accueil
+            </a>
+</li>
+<!-- 2. À propos -->
+<li>
+<a class="block py-1 text-base font-medium text-[#071934] hover:text-[#D3A940] transition-colors" href="#">
+              À propos
+            </a>
+</li>
+<!-- 3. Innovateurs -->
+<li>
+<a class="block py-1 text-base font-medium text-[#071934] hover:text-[#D3A940] transition-colors" href="#">
+              Innovateurs
+            </a>
+</li>
+<!-- 4. RAJI Média -->
+<li>
+<a class="block py-1 text-base font-medium text-[#071934] hover:text-[#D3A940] transition-colors" href="#">
+              RAJI Média
+            </a>
+</li>
+<!-- 5. Événements -->
+<li>
+<a class="block py-1 text-base font-medium text-[#071934] hover:text-[#D3A940] transition-colors" href="#">
+              Événements
+            </a>
+</li>
+<!-- 6. Partenaires -->
+<li>
+<a class="block py-1 text-base font-medium text-[#071934] hover:text-[#D3A940] transition-colors" href="#">
+              Partenaires
+            </a>
+</li>
+<!-- 7. Opportunités (ACTIVE LINK: bold text #071934 with gold underline border-b-2 border-[#D3A940]) -->
+<li>
+<div class="inline-block w-full border-b-2 border-[#D3A940] pb-2">
+<a aria-current="page" class="block text-base font-bold text-[#071934]" href="#">
+                Opportunités
+              </a>
+</div>
+</li>
+<!-- 8. Contact -->
+<li>
+<a class="block py-1 text-base font-medium text-[#071934] hover:text-[#D3A940] transition-colors" href="#">
+              Contact
+            </a>
+</li>
+</ul>
+</nav>
+</div>
+<!-- Side sheet footer area (pinned at bottom of drawer) -->
+<div class="px-6 pb-6 pt-4 bg-[#F3F4F5] border-t border-[#E6E8EB]" data-purpose="drawer-footer">
+<!-- Gold CTA button: Soumettre mon innovation -->
+<a class="block w-full py-3 px-4 bg-[#D3A940] text-[#071934] font-semibold text-center text-sm rounded-lg hover:brightness-105 transition-all shadow-sm" href="#">
+        Soumettre mon innovation
+      </a>
+<!-- Official copyright notice -->
+<p class="text-xs text-[#071934]/60 text-center mt-3 leading-relaxed">
+        © 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.
+      </p>
+</div>
+</aside>
+<!-- END: NavigationSideSheet -->
+</body></html>

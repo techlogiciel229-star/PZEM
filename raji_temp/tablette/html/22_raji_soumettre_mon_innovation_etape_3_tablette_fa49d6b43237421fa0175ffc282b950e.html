@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAJI — Soumettre mon innovation – Étape 3 (Tablette)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#F3F4F5] text-[#071934] antialiased min-h-screen flex flex-col">
+<!-- Header Sticky (Tablette: 820px layout, logo 44px on left, 44px hamburger button only on right) -->
+<header class="sticky top-0 left-0 right-0 z-50 bg-[#FFFFFF] border-b border-[#E6E8EB] shadow-[0_1px_6px_rgba(7,25,52,0.05)]">
+<div class="max-w-[820px] mx-auto px-6 h-20 flex items-center justify-between">
+<a class="flex items-center gap-3" href="#">
+<img alt="Logo RAJI" class="h-[44px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjnIgu2mXpFDBEI3mZOrX-qKoOEXslMjIqEgxcN19ZSKK1DbwPMbaPPqD59lX_Ke1tQg2p5HQjofSsQC5xYc94ecYDuO9PVhNcLI6fkW97XK59URG3VjB2wqRrEodIiSovHw0DZUCpAmuIbNX529UJyzOo8Ls1-KOaMogOp5D-drips2wRIh-YiIgFYbXfn_44W46FhxFQ43YtAMez-BRTAZIpurq-GVjC3xcb0Vfjo0tDp0nP82SqOcQ3y_Td4kdjLHw"/>
+<span class="font-bold text-[18px] text-[#071934] tracking-tight">RAJI</span>
+</a>
+<button aria-label="Ouvrir le menu" class="w-[44px] h-[44px] flex items-center justify-center rounded-xl border border-[#E6E8EB] text-[#071934] hover:bg-[#F3F4F5] transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Container -->
+<main class="flex-1 w-full max-w-[820px] mx-auto px-6 py-10 flex flex-col items-center">
+<!-- Header Title Section -->
+<div class="w-full text-center flex flex-col items-center mb-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#E6E8EB] mb-3 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#D3A940]"></span>
+<span class="text-[12px] font-semibold tracking-wider text-[#071934] uppercase">Candidature &amp; Réseau</span>
+</div>
+<h1 class="text-[26px] font-bold text-[#071934] tracking-tight mb-2">Soumettre mon innovation</h1>
+<p class="text-[14px] leading-relaxed text-[#071934]/70 max-w-[580px]">
+        Présentez votre projet au réseau RAJI. Vos informations sont stockées de manière sécurisée et ne sont jamais publiées sans votre accord.
+      </p>
+</div>
+<!-- Stepper (4 steps) -->
+<div class="w-full max-w-[640px] mb-8">
+<div class="relative flex items-center justify-between">
+<div class="absolute left-6 right-6 top-4 -translate-y-1/2 h-[2px] bg-[#E6E8EB] -z-0">
+<div class="h-full bg-[#071934] w-[70%]"></div>
+</div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#071934] text-[#FFFFFF] flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="text-[12px] font-medium text-[#071934] mt-1.5 whitespace-nowrap">1. Identité</span>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#071934] text-[#FFFFFF] flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="text-[12px] font-medium text-[#071934] mt-1.5 whitespace-nowrap">2. Projet</span>
+</div>
+<!-- Step 3 Active -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#071934] text-[#FFFFFF] flex items-center justify-center shadow-sm ring-4 ring-[#D3A940]/30">
+<span class="text-[12px] font-bold">3</span>
+</div>
+<span class="text-[12px] font-bold text-[#071934] mt-1.5 whitespace-nowrap">3. Traction &amp; financement</span>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#FFFFFF] border-2 border-[#E6E8EB] text-[#071934]/40 flex items-center justify-center shadow-sm">
+<span class="text-[12px] font-medium">4</span>
+</div>
+<span class="text-[12px] font-medium text-[#071934]/50 mt-1.5 whitespace-nowrap">4. Médias</span>
+</div>
+</div>
+</div>
+<!-- Centered Form Card (640px wide, white, rounded-2xl, border 1px #E6E8EB, p-8) -->
+<div class="w-full max-w-[640px] bg-[#FFFFFF] border border-[#E6E8EB] rounded-2xl p-8 shadow-sm">
+<!-- Card Header -->
+<div class="border-b border-[#E6E8EB] pb-5 mb-6">
+<div class="inline-block px-2.5 py-0.5 rounded bg-[#F3F4F5] text-[#071934] text-[12px] font-bold tracking-wider uppercase mb-2">
+          FORMULAIRE D'ADMISSION
+        </div>
+<h2 class="text-[20px] font-bold text-[#071934] tracking-tight mb-1">
+          Étape 3 sur 4 : Traction et financement
+        </h2>
+<p class="text-[14px] text-[#071934]/70 leading-relaxed">
+          Précisez vos indicateurs d'impact, vos usagers et vos besoins d'accompagnement.
+        </p>
+</div>
+<!-- Form Elements -->
+<form class="flex flex-col gap-5" onsubmit="event.preventDefault();">
+<!-- Field 1: Nombre de clients ou bénéficiaires actifs -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[14px] font-semibold text-[#071934] flex items-center justify-between" for="beneficiaries">
+<span>Nombre de clients ou bénéficiaires actifs <span class="text-[#071934] font-bold">*</span></span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[18px] text-[#071934]/40">group</span>
+<input class="w-full pl-10 pr-3.5 py-2.5 bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl text-[14px] text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934] focus:ring-2 focus:ring-[#D3A940]/25 transition" id="beneficiaries" placeholder="Ex: 1 250 petits producteurs ruraux" type="text"/>
+</div>
+</div>
+<!-- Field 2: Revenus générés ou modèle économique actuel -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[14px] font-semibold text-[#071934]" for="revenue_model">
+            Revenus générés ou modèle économique actuel <span class="text-[#071934] font-bold">*</span>
+</label>
+<textarea class="w-full p-3.5 bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl text-[14px] text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934] focus:ring-2 focus:ring-[#D3A940]/25 transition resize-none" id="revenue_model" placeholder="Détaillez vos sources de revenus actuelles ou projetées (abonnements, ventes directes, marges unitaires, subventions)..." rows="3"></textarea>
+</div>
+<!-- Field 3: Besoins prioritaires du projet -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[14px] font-semibold text-[#071934]" for="priority_needs">
+            Besoins prioritaires du projet <span class="text-[#071934] font-bold">*</span>
+</label>
+<textarea class="w-full p-3.5 bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl text-[14px] text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934] focus:ring-2 focus:ring-[#D3A940]/25 transition resize-none" id="priority_needs" placeholder="Accompagnement technologique, accès aux marchés, certifications, mentorat stratégique, déploiement panafricain..." rows="3"></textarea>
+</div>
+<!-- Field 4: Montant de financement recherché -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[14px] font-semibold text-[#071934]" for="target_amount">
+            Montant de financement recherché <span class="text-[#071934] font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full pl-3.5 pr-20 py-2.5 bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl text-[14px] text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934] focus:ring-2 focus:ring-[#D3A940]/25 transition" id="target_amount" placeholder="Ex: 15 000 000" type="text"/>
+<div class="absolute right-1 top-1 bottom-1 px-3 bg-[#F3F4F5] border border-[#E6E8EB] rounded-lg text-[#071934] text-[12px] font-bold flex items-center justify-center select-none">
+              FCFA
+            </div>
+</div>
+</div>
+<!-- Field 5: Utilisation prévue du financement -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[14px] font-semibold text-[#071934]" for="fund_allocation">
+            Utilisation prévue du financement <span class="text-[#071934] font-bold">*</span>
+</label>
+<textarea class="w-full p-3.5 bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl text-[14px] text-[#071934] placeholder-[#071934]/40 focus:outline-none focus:border-[#071934] focus:ring-2 focus:ring-[#D3A940]/25 transition resize-none" id="fund_allocation" placeholder="Répartition prévisionnelle du budget sollicité (ex: 40% R&amp;D et prototype, 30% acquisition de matériel, 30% renforcement d'équipe)..." rows="3"></textarea>
+</div>
+<!-- Confidentiality Box -->
+<div class="p-4 bg-[#F3F4F5] rounded-xl border border-[#E6E8EB] flex items-start gap-3 mt-1">
+<span class="material-symbols-outlined text-[#071934] text-[20px] shrink-0 mt-0.5">verified_user</span>
+<p class="text-[12px] leading-relaxed text-[#071934]/80">
+<strong class="font-semibold text-[#071934]">Garantie de confidentialité :</strong> Les données chiffrées relatives à votre modèle économique et à vos prévisions financières sont strictement traitées par le comité d'examen RAJI sous accord d'habilitation restreinte.
+          </p>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex items-center justify-between pt-4 mt-2 border-t border-[#E6E8EB] gap-4">
+<button class="px-5 py-3 rounded-xl border border-[#071934] text-[#071934] text-[14px] font-semibold hover:bg-[#F3F4F5] transition flex items-center gap-2 whitespace-nowrap" type="button">
+<span>← Précédent : Projet</span>
+</button>
+<button class="px-6 py-3 rounded-xl bg-[#071934] text-[#FFFFFF] text-[14px] font-semibold hover:bg-[#071934]/90 transition shadow-sm flex items-center gap-2 whitespace-nowrap" type="button">
+<span>Suivant : Médias &amp; accord →</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Subtext -->
+<div class="w-full max-w-[640px] text-center mt-6">
+<span class="text-[12px] text-[#071934]/60 font-medium">
+        Réseau Africain des Jeunes Innovateurs • Session de candidature sécurisée
+      </span>
+</div>
+</main>
+<!-- Footer (Navy #071934, logo 56px inside white rounded container, 8 exact links, copyright) -->
+<footer class="w-full bg-[#071934] text-[#FFFFFF] pt-10 pb-8 mt-auto border-t border-white/10">
+<div class="max-w-[820px] mx-auto px-6 flex flex-col gap-8">
+<div class="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6 pb-6 border-b border-white/10">
+<div class="flex flex-col items-center sm:items-start gap-3">
+<div class="p-2 bg-[#FFFFFF] rounded-xl inline-flex items-center justify-center shadow-sm">
+<img alt="Logo RAJI" class="h-[56px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDxioBGi4bLhgFzVgYnKHH3Ge4oOpovY7jnK1ONegZ1RzfwTPEThi7R4TwqPKglfqSNOzWVuSi69mmSiO_kwHE3xZahzUE0W5ZtA8BzMbe2Wo7Hl2qFfUYUbR40z_RVQlCkNG3sGN8iX1yjUOylp5nW0ucxjQCVycXk6-BVKWk54ciEHyZhsFYKvc8GjoFLyw-OtOYjp9fMO4aODlkwrIRNZm2evd2joItVAoXlP3xUVJhmHkgNB6mNiWATGI8iyGj1Lo"/>
+</div>
+<p class="text-[12px] text-[#E6E8EB] text-center sm:text-left leading-relaxed max-w-[280px]">
+            Réseau Africain des Jeunes Innovateurs.<br/>Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique.
+          </p>
+</div>
+<nav class="flex flex-wrap items-center justify-center sm:justify-end gap-x-5 gap-y-3 max-w-[460px]">
+<a class="text-[14px] text-[#E6E8EB] hover:text-[#D3A940] transition-colors whitespace-nowrap" href="#">Accueil</a>
+<a class="text-[14px] text-[#E6E8EB] hover:text-[#D3A940] transition-colors whitespace-nowrap" href="#">À propos</a>
+<a class="text-[14px] text-[#E6E8EB] hover:text-[#D3A940] transition-colors whitespace-nowrap" href="#">Innovateurs</a>
+<a class="text-[14px] text-[#E6E8EB] hover:text-[#D3A940] transition-colors whitespace-nowrap" href="#">RAJI Média</a>
+<a class="text-[14px] text-[#E6E8EB] hover:text-[#D3A940] transition-colors whitespace-nowrap" href="#">Événements</a>
+<a class="text-[14px] text-[#E6E8EB] hover:text-[#D3A940] transition-colors whitespace-nowrap" href="#">Partenaires</a>
+<a class="text-[14px] text-[#E6E8EB] hover:text-[#D3A940] transition-colors whitespace-nowrap" href="#">Opportunités</a>
+<a class="text-[14px] text-[#E6E8EB] hover:text-[#D3A940] transition-colors whitespace-nowrap" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+<p class="text-[12px] text-[#E6E8EB]">
+          © 2026 Réseau Africain des Jeunes Innovateurs (RAJI). Tous droits réservés.
+        </p>
+<div>
+<a class="text-[12px] text-[#D3A940] hover:underline font-semibold" href="#">Soumettre mon innovation</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

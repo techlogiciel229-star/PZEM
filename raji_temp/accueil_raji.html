@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"surface-container-low": "#f5f3f6", "tertiary-fixed-dim": "#f8b89c", "on-error-container": "#93000a", "inverse-surface": "#303033", "text-navy": "#031736", "on-tertiary-fixed-variant": "#673c27", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "accent-text-safe": "#7A5A0E", "error": "#B42318", "on-background": "#1b1b1e", "on-secondary-container": "#705100", "accent-hover": "#C9951F", "text-inverse": "#FEFEFE", "info": "#175CD3", "warning": "#B54708", "primary-hover": "#0A2550", "border": "#E4E7EC", "on-primary": "#ffffff", "surface-dim": "#dbd9dc", "on-secondary": "#ffffff", "on-surface": "#1b1b1e", "tertiary": "#000000", "error-container": "#ffdad6", "on-primary-fixed": "#071b3a", "on-secondary-fixed-variant": "#5d4200", "surface-bright": "#fbf8fc", "success": "#067647", "outline-variant": "#c5c6cf", "secondary-container": "#fdc342", "surface-container-highest": "#e4e2e5", "surface-tint": "#4d5e81", "primary-active": "#021123", "surface-variant": "#e4e2e5", "inverse-on-surface": "#f2f0f3", "surface": "#FFFFFF", "secondary": "#7a5900", "on-primary-fixed-variant": "#364768", "surface-subtle": "#FAFBFC", "on-primary-container": "#7384a8", "on-surface-variant": "#44474e", "background": "#FEFEFE", "primary-fixed": "#d7e2ff", "text-muted": "#475467", "primary-fixed-dim": "#b5c7ee", "on-tertiary-fixed": "#331202", "outline": "#75777f", "inverse-primary": "#b5c7ee", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#f7bd3d", "accent-active": "#A87D17", "on-tertiary-container": "#ae775e", "surface-container": "#efedf0", "secondary-fixed": "#ffdea3", "primary-container": "#071b3a", "tertiary-fixed": "#ffdbcc", "primary": "#000000", "surface-container-high": "#e9e7eb", "on-secondary-fixed": "#261900", "tertiary-container": "#331202"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"space-lg": "24px", "space-xl": "32px", "gutter": "24px", "margin": "32px", "space-xs": "4px", "space-sm": "8px", "space-md": "16px"}, "fontFamily": {"headline-md": ["Sora"], "title-md": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Sora"], "title-lg": ["Sora"], "body-md": ["Inter"], "headline-lg": ["Sora"], "label-md": ["Inter"], "body-lg": ["Inter"]}, "fontSize": {"headline-md": ["30.52px", {"lineHeight": "38px", "fontWeight": "600"}], "title-md": ["15.63px", {"lineHeight": "24px", "fontWeight": "500"}], "label-sm": ["10px", {"lineHeight": "14px", "fontWeight": "500"}], "headline-sm": ["24.41px", {"lineHeight": "32px", "fontWeight": "600"}], "title-lg": ["19.53px", {"lineHeight": "28px", "fontWeight": "500"}], "body-md": ["12.5px", {"lineHeight": "20px", "fontWeight": "400"}], "headline-lg": ["38.15px", {"lineHeight": "48px", "fontWeight": "600"}], "label-md": ["12.5px", {"lineHeight": "16px", "fontWeight": "500"}], "body-lg": ["15.63px", {"lineHeight": "24px", "fontWeight": "400"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-canvas font-sans text-base text-navy"><header class="fixed top-0 w-full z-50 bg-canvas/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-gutter flex items-center justify-between"><a class="font-sans text-3xl font-bold tracking-tight text-navy min-h-[44px] min-w-[44px] inline-flex items-center" data-path="accueil" href="#">RAJI</a><nav class="hidden lg:flex items-center space-x-space-md" data-active-classes="bg-gold/20 text-navy font-bold rounded-lg"><a aria-current="page" class="transition-colors bg-gold/20 text-navy font-bold rounded-lg" data-path="accueil" href="#">Accueil</a><a class="text-body-md text-navy-variant hover:text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" data-path="a-propos" href="#">À propos</a><a class="text-body-md text-navy-variant hover:text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" data-path="innovateurs" href="#">Innovateurs</a><a class="text-body-md text-navy-variant hover:text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" data-path="soumettre" href="#">Soumettre</a><a class="text-body-md text-navy-variant hover:text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" data-path="media" href="#">Média</a><a class="text-body-md text-navy-variant hover:text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" data-path="evenements" href="#">Événements</a><a class="text-body-md text-navy-variant hover:text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" data-path="partenaires" href="#">Partenaires</a><a class="text-body-md text-navy-variant hover:text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" data-path="opportunites" href="#">Opportunités</a><a class="text-body-md text-navy-variant hover:text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="bg-gold text-navy font-sans text-lg font-medium px-space-lg py-space-sm rounded-lg hover:bg-gold/80 transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" data-path="soumettre" href="#">Soumettre mon innovation</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xs5FHvf1G31Io-AwL-TYAOMF0DMN5-ZCTUxQ17EB36BDtxbfcm9cdz97-flcJG5AjPO1SeUovkHKghe60lM6SajO1MyGPZAVvZGar8QY07duCLRwRbDWWYQXVRbhfljAnKG6RzOVcu4tfVK6Y-ZhHd1ukwYOhVtUkZi2Dq66OgY3I5cayc-T81Wnt9tXF-P_PzdcC9MprfeWb0foN_rhE7sVZn4FFoM7iwfS4sua90clR743lcG_J8BYNRsxN-7RDH2tv8_lfw"/></div></div></header><main class="w-full pt-20 bg-canvas"><div class="flex flex-col w-full bg-canvas">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-navy text-canvas py-24 px-gutter">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fdc342_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-96 h-96 bg-navy/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-canvas/10 backdrop-blur-md text-gold">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span class="font-sans text-sm font-medium uppercase tracking-wider">Réseau Africain des Jeunes Innovateurs</span>
+</div>
+<h1 class="font-sans text-3xl text-4xl lg:text-6xl font-bold tracking-tight text-canvas leading-tight">
+          Aujourd'hui innovateurs, <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-fixed via-secondary to-secondary-fixed-dim">demain bâtisseurs de l'Afrique</span>
+</h1>
+<p class="font-sans text-lg text-canvas/80 max-w-xl text-lg">
+          Nous connectons, propulsons et finançons les esprits les plus brillants du continent pour façonner un avenir technologique et durable souverain.
+        </p>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="bg-gold text-navy font-sans text-lg font-medium px-8 py-4 rounded-xl hover:bg-gold/80 transition-all duration-300 shadow-lg hover:scale-105 flex items-center gap-2 min-h-[44px] min-w-[44px] inline-flex items-center" href="#innovations">
+<span>Découvrir les innovations</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="bg-canvas/10 hover:bg-canvas/20 text-canvas font-sans text-lg font-medium px-8 py-4 rounded-xl backdrop-blur-md transition-all duration-300 min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+            Rejoindre le réseau
+          </a>
+</div>
+<div class="grid grid-cols-3 gap-6 pt-8 border-t border-canvas/10">
+<div>
+<div class="font-sans text-2xl text-gold">+1,500</div>
+<div class="font-sans text-base text-canvas/70">Innovateurs actifs</div>
+</div>
+<div>
+<div class="font-sans text-2xl text-gold">54</div>
+<div class="font-sans text-base text-canvas/70">Pays représentés</div>
+</div>
+<div>
+<div class="font-sans text-2xl text-gold">$12M</div>
+<div class="font-sans text-base text-canvas/70">Fonds levés</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-72 h-72 lg:w-96 lg:h-96">
+<div class="absolute inset-0 bg-gradient-to-tr from-secondary to-secondary-fixed-dim rounded-3xl rotate-6 opacity-30 animate-pulse"></div>
+<div class="absolute inset-0 bg-canvas/5 backdrop-blur-xl rounded-3xl -rotate-3 p-6 flex items-center justify-center shadow-2xl">
+<img alt="RAJI Official Emblem representing African youth innovation and technology leadership" class="w-full h-full object-contain drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkSCkW0hFJTfpdjs0sTmJuT9sPfew8HiqmT3F1L64QdpsRbwl9w_wDvogFaWrymuFbNGv6Kg_oFIWkWd8xReOUdmkAWxa2C6MrC9N-MQz4LZ6Qks-FYRgzaEe4gMQFG29vrSSU_zMmuu5CIbLU91S6cbed-h2bUKrtJVBfcG1uQTDxLDk2YOEW7zpWsXP9WxD12rPQB0lgUV97_ZQmY0-d_NZ36yhYK2k91gcwtbPiW7fikFxAFj1uANkGiJ-JzaHPVA"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Innovations à la une -->
+<section class="py-24 px-gutter bg-canvas-container-low" id="innovations">
+<div class="max-w-7xl mx-auto space-y-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-3">
+<span class="text-secondary font-sans text-sm font-medium uppercase tracking-wider">Sélection rigoureuse</span>
+<h2 class="font-sans text-2xl text-3xl font-bold text-navy">Innovations à la une</h2>
+<p class="font-sans text-lg text-text-muted max-w-2xl">Des solutions disruptives conçues par la jeunesse africaine pour répondre aux défis majeurs de la santé, de l'agro-tech et de l'énergie.</p>
+</div>
+<a class="inline-flex items-center gap-2 font-sans text-lg font-medium text-navy hover:text-secondary transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+<span>Voir toutes les innovations</span>
+<span class="material-symbols-outlined">east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-canvas rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col pt-2 bg-gradient-to-b from-[#fdc342] to-surface to-10%">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A sophisticated agricultural drone flying over lush green terraced farms in Rwanda during golden hour, high technological detail, professional corporate aesthetic with deep navy and gold accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHjdWa0I0kd9DXinzWhYW5Oyqe10Ci9-h7sSWyZAZDaqqs7OlIgakjcItEwoxCMpcIqgPdvQzsguA5LttBwODs9GL099EEVOyOXFVbkhzK-O-W1OGTwIBZqFMQVOywhbCKPfRXX2iq8y4HO3W8i4izYWNj_o_M0HOT_2Zx1Pm1Z0gnD8ZwBXddd2lH_4gprHLmIj2KQFWqW8PhgTehVCWoZBx_DYtYV9RoLaatRd4KgzQKXXFqEsZC"/>
+<span class="absolute top-4 left-4 bg-canvas/90 backdrop-blur-md px-3 py-1 rounded-full text-label-sm text-navy font-bold">AgroTech</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs text-text-muted font-sans text-sm font-medium">Kigali, Rwanda</span>
+<span class="text-xs text-secondary font-bold">Série A</span>
+</div>
+<h3 class="font-headline-sm text-xl text-navy">AgriDrone Africa</h3>
+<p class="font-sans text-base text-text-muted">Cartographie par IA et pulvérisation de précision pour optimiser les rendements des petits exploitations agricoles.</p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-border">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-canvas-container flex items-center justify-center font-bold text-navy text-xs">KA</div>
+<span class="font-sans text-lg font-medium text-sm">K. Aminu</span>
+</div>
+<a class="p-2 rounded-lg bg-canvas-container hover:bg-gold/20 text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-canvas rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col pt-2 bg-gradient-to-b from-[#fdc342] to-surface to-10%">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A sleek portable solar generator unit designed for rural African clinics, futuristic clean design with glowing indicators, professional product photography against a clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtbwHc_GSzkzvZLd5AlVFMwiNwb3iMiFnLNdLolRAsQ3OIJwqFib9Q2JLAUaflAJXGp7Za-bzPaMYKEjn_RnrJDFVA3zIZWvFxNJ9t-xplGny2ySYwmqjRvU2UsDGtL-FbSVVDyZnbpMHIMN2-67EN76kWekFHsZGDwYu8I4O-N4w0tKt8kkUysf1ISXtVY-M-C2zhskelcNu4Hu0QOf53KdMiHRTfOT7NNI-vXlnM-OvjSElhge5n"/>
+<span class="absolute top-4 left-4 bg-canvas/90 backdrop-blur-md px-3 py-1 rounded-full text-label-sm text-navy font-bold">GreenEnergy</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs text-text-muted font-sans text-sm font-medium">Dakar, Sénégal</span>
+<span class="text-xs text-secondary font-bold">Seed</span>
+</div>
+<h3 class="font-headline-sm text-xl text-navy">SolarBox Média</h3>
+<p class="font-sans text-base text-text-muted">Unités d'énergie solaire autonomes et connectées pour alimenter les écoles et cliniques rurales isolées.</p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-border">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-canvas-container flex items-center justify-center font-bold text-navy text-xs">FD</div>
+<span class="font-sans text-lg font-medium text-sm">F. Diallo</span>
+</div>
+<a class="p-2 rounded-lg bg-canvas-container hover:bg-gold/20 text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-canvas rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col pt-2 bg-gradient-to-b from-[#fdc342] to-surface to-10%">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A young African female software engineer looking at medical diagnostic software on a multi-screen setup, modern tech hub in Nairobi, professional cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVswGXIHmHit45LT8iLL2zEBhsnSjJdk01ETPzo3Z9EupOfUj1rx9a1MB7l5_CippYVYUUhMbLa4BrzsxBTQqqI884eUV3Q17ZImBP__h8LN9sXQ-qu-yszOMTn4s6FMSYLnHVj1iuYSe3ipCpjZAj8RViQQQhL9yMOWQ1uk_nzSnvVYmwCobrg-kmWctH54snUFYPvSoO8gVYOHAM3yPXuPiNPFID_PytpSIhvUDPhfN7E5qnPDDk"/>
+<span class="absolute top-4 left-4 bg-canvas/90 backdrop-blur-md px-3 py-1 rounded-full text-label-sm text-navy font-bold">HealthTech</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs text-text-muted font-sans text-sm font-medium">Nairobi, Kenya</span>
+<span class="text-xs text-secondary font-bold">Amorçage</span>
+</div>
+<h3 class="font-headline-sm text-xl text-navy">MediTelec</h3>
+<p class="font-sans text-base text-text-muted">Plateforme de diagnostic médical à distance fonctionnant en zones à faible connectivité internet via SMS et USSD.</p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-border">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-canvas-container flex items-center justify-center font-bold text-navy text-xs">WO</div>
+<span class="font-sans text-lg font-medium text-sm">W. Omondi</span>
+</div>
+<a class="p-2 rounded-lg bg-canvas-container hover:bg-gold/20 text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Derniers innovateurs row -->
+<section class="py-24 px-gutter bg-canvas">
+<div class="max-w-7xl mx-auto space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-3">
+<span class="text-secondary font-sans text-sm font-medium uppercase tracking-wider">Talents émergents</span>
+<h2 class="font-sans text-2xl text-3xl font-bold text-navy">Derniers innovateurs</h2>
+<p class="font-sans text-lg text-text-muted">Rencontrez les nouveaux membres qui viennent de rejoindre l'écosystème RAJI.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-3 rounded-xl bg-canvas-container hover:bg-gold/20 text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center">
+<span class="material-symbols-outlined">west</span>
+</button>
+<button class="p-3 rounded-xl bg-canvas-container hover:bg-gold/20 text-navy transition-colors min-h-[44px] min-w-[44px] inline-flex items-center">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Innovator 1 -->
+<div class="bg-canvas-container-low p-6 rounded-xl hover:shadow-lg transition-all space-y-4">
+<div class="relative w-20 h-20 mx-auto rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a confident young African male entrepreneur wearing smart casual attire, studio portrait with professional lighting against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWFE_itGMb_uXffOeaPFJ33StDukVrzFmfj7nY7bgBL-Tgn1_ETPGGPqGbUpO1f8DXLAgqBjIdHt4chu4rVDMPQIh9TkOIXyh6dXCB_3VQMRM6djnGBxG_Ul5IA3uGcuX92-a_g3Eay1d_wVkguNyBX7B4SUBEfjGrDtIHFKJxNYnsZKfx7XXgh3sUOyZNYMQmEH7cu9ytV_zIUuFtyw-R2ianPHFeqAZkKzwrHOi9eXHzveZZcVPr"/>
+</div>
+<div class="text-center space-y-1">
+<h3 class="font-title-lg text-navy">Dr. Malik Sy</h3>
+<p class="font-sans text-sm font-medium text-secondary">FinTech &amp; Blockchain</p>
+<p class="font-sans text-base text-text-muted text-xs">Bamako, Mali</p>
+</div>
+<div class="pt-2 flex justify-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-canvas text-text-muted text-xs">Micro-crédit</span>
+<span class="px-2.5 py-1 rounded-full bg-canvas text-text-muted text-xs">Web3</span>
+</div>
+</div>
+<!-- Innovator 2 -->
+<div class="bg-canvas-container-low p-6 rounded-xl hover:shadow-lg transition-all space-y-4">
+<div class="relative w-20 h-20 mx-auto rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of an ambitious young African female software developer smiling, professional studio shot with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeBxL4E8gT8dNRa1KtFJyuFj3iIYam0muXfS6JG47K8rDxgVBEBgwBuW6EChQcPXaePIWK6gkJpQqSfjjIXB-R5Wd2ncGA09o1M7ci0M-uzH7XSVSNxkZpJwdH03GhAe9OmI7OZ9oCYQY27mmVYVAIHH0nltmUHmEmxRVAv3vcAEMFw0oDbNOcuFSagwFxo1OcMQxNT8TyaTSqZZqj3pKtnG6w78q7-65_9Jk-JN2cywBL0mfxHvqG"/>
+</div>
+<div class="text-center space-y-1">
+<h3 class="font-title-lg text-navy">Aïcha Traoré</h3>
+<p class="font-sans text-sm font-medium text-secondary">EdTech &amp; IA</p>
+<p class="font-sans text-base text-text-muted text-xs">Abidjan, Côte d'Ivoire</p>
+</div>
+<div class="pt-2 flex justify-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-canvas text-text-muted text-xs">E-learning</span>
+<span class="px-2.5 py-1 rounded-full bg-canvas text-text-muted text-xs">NLP</span>
+</div>
+</div>
+<!-- Innovator 3 -->
+<div class="bg-canvas-container-low p-6 rounded-xl hover:shadow-lg transition-all space-y-4">
+<div class="relative w-20 h-20 mx-auto rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young African innovator in clean tech, wearing a modern utility jacket, confident expression, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcTtxPMjbdaQLltlItfYbmgK1008mLKJEgF24noEsrRXV5pNPgg8QqslP0Ker13EcJYLlxSQsaShOPifvhVm664CAovc-Y2Pp1VMjK645Y-dVvsFSTUDrjCIKK3Zf6WIxl_DFXbIDZ0UKLUVVixxVGGT4ncKU-FmnozaXkSslbByRqyC-xRI9xydYVohx8bDFWzYUZdVvnFcMnRXbP2qXJD0Ukf_cZ3eoFbAH8Pq9VSdvHyMmV4H3R"/>
+</div>
+<div class="text-center space-y-1">
+<h3 class="font-title-lg text-navy">Jean-Luc Mensah</h3>
+<p class="font-sans text-sm font-medium text-secondary">CleanTech</p>
+<p class="font-sans text-base text-text-muted text-xs">Accra, Ghana</p>
+</div>
+<div class="pt-2 flex justify-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-canvas text-text-muted text-xs">Recyclage</span>
+<span class="px-2.5 py-1 rounded-full bg-canvas text-text-muted text-xs">IoT</span>
+</div>
+</div>
+<!-- Innovator 4 -->
+<div class="bg-canvas-container-low p-6 rounded-xl hover:shadow-lg transition-all space-y-4">
+<div class="relative w-20 h-20 mx-auto rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a visionary young African woman tech founder, professional corporate headshot against a soft grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkS7HjfponcptYIo1G2nzGF6HP_1PgByt33q1EaaKKff4QRcVlFxa_2BMbUL7dds3adVBEPsg3jYOFbeUK6fjltcI5Sjql_t3AnYwbtMeyL71kN8WLZPtAcfwhWIE4G5Q2jBYMZZedOkfB3eQVXOL0UBCnhaQFW6pfayir1DSbzxdEEe6eETxP2iuyq0nw_Ja0hFZFuXUFtreAnqT-uNQyuOGIdctlzb-HOiyJd4cTaOsV6BwnJQA8"/>
+</div>
+<div class="text-center space-y-1">
+<h3 class="font-title-lg text-navy">Zainab Bello</h3>
+<p class="font-sans text-sm font-medium text-secondary">Logistics &amp; Mobility</p>
+<p class="font-sans text-base text-text-muted text-xs">Lagos, Nigéria</p>
+</div>
+<div class="pt-2 flex justify-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-canvas text-text-muted text-xs">Supply Chain</span>
+<span class="px-2.5 py-1 rounded-full bg-canvas text-text-muted text-xs">SaaS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dernières interviews media feed -->
+<section class="py-24 px-gutter bg-canvas-container-low">
+<div class="max-w-7xl mx-auto space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-3">
+<span class="text-secondary font-sans text-sm font-medium uppercase tracking-wider">Paroles d'experts</span>
+<h2 class="font-sans text-2xl text-3xl font-bold text-navy">Dernières interviews</h2>
+<p class="font-sans text-lg text-text-muted">Plongez dans les visions et les parcours inspirants des leaders de demain.</p>
+</div>
+<a class="inline-flex items-center gap-2 font-sans text-lg font-medium text-navy hover:text-secondary transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+<span>Explorer la médiathèque</span>
+<span class="material-symbols-outlined">east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Media Card 1 -->
+<div class="bg-canvas rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Podcast recording studio setup with professional microphones and two African innovators discussing tech trends, warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoh-HRfCEDo961Yc663MwNynaWsfn_WEnh1Wg2006IDwW8Jtkw6r9UFScK2lUz-zxIsl2BAl-5bV-QbggRf_QAWmlgrL_s_mSYEwsgbNAjmbCBWSrA-miYgGfFDFd2rwMWM3GOKM76OVaxvpkLU7-vnrKhuCPtWm3iWGu30CJt3bjpbjP2iGf7XbiK6MXb8AtFwGdONjt3-hR8rRfliG2-iXlbyJd8ieQArK5Oqq-fiBvVSLzzaJdL"/>
+<div class="absolute inset-0 bg-primary/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined">play_arrow</span>
+</div>
+</div>
+<span class="absolute bottom-4 left-4 bg-primary text-canvas px-3 py-1 rounded-lg text-xs font-sans text-sm font-medium">Podcast • 24 min</span>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="font-title-lg text-navy group-hover:text-secondary transition-colors">"Comment l'IA générative transforme l'éducation francophone en Afrique"</h3>
+<p class="font-sans text-base text-text-muted line-clamp-2">Entretien exclusif avec Dr. Aminata Sow sur les opportunités d'apprentissage adaptatif pour la jeunesse.</p>
+</div>
+</div>
+<!-- Media Card 2 -->
+<div class="bg-canvas rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Fireside chat at a major tech conference in Johannesburg featuring young African innovators on stage under dramatic stage lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6fHCSrszp5syjTfuFCvNa2lIk2WEcYEWCkclAUD5odqUECIrpwLiWy1DZzTK_j-er8zoWGu8fM1tqqjWCTfQxlZywHmfztKcQeq20NLWulYibHIJ172CEFHFE6yELiLXwSuNDgKK7NEHsJn_qLNYQPnqWSgowrukEAs0asPl34S2b0icElFx3Nwz07Ws2H6OIImFqzZURKZ8Dofd5EW0kEdc_0IZpARb22NelLi7LDyjre7Wgnhwu"/>
+<div class="absolute inset-0 bg-primary/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined">play_arrow</span>
+</div>
+</div>
+<span class="absolute bottom-4 left-4 bg-primary text-canvas px-3 py-1 rounded-lg text-xs font-sans text-sm font-medium">Vidéo • 15 min</span>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="font-title-lg text-navy group-hover:text-secondary transition-colors">De l'idée au premier million de levée de fonds : Guide pratique</h3>
+<p class="font-sans text-base text-text-muted line-clamp-2">Retour d'expérience des fondateurs d'AgriDrone Africa sur leur parcours d'accélération internationale.</p>
+</div>
+</div>
+<!-- Media Card 3 -->
+<div class="bg-canvas rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up portrait of a young tech innovator in a modern co-working space in Cape Town, smiling thoughtfully during a video interview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqApKAD8FkkfRcXQDT-JmKrmjiMnL6RLpp8eJsbY-_EUbtjmncchM8RFr7UR7XAvhfwcQRJ1OFzSaHPh0-Hbe2t2_OSpVv_8UBbaNPT3J31p8CeWC5ntvOi6MCEAYBOnnbxo7rK73vCUKtfZmcoe8KBvPpXeNafJVMyuAoMdpBiA-SdYJ3JxmkmLZkGVjOcjIkI0TCB1ENBdijOqI9As7DTK1SnXIRxOFQz5-mdYgCSY0Mw-4Tj1bL"/>
+<div class="absolute inset-0 bg-primary/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined">play_arrow</span>
+</div>
+</div>
+<span class="absolute bottom-4 left-4 bg-primary text-canvas px-3 py-1 rounded-lg text-xs font-sans text-sm font-medium">Article • 5 min de lecture</span>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="font-title-lg text-navy group-hover:text-secondary transition-colors">Souveraineté numérique : Pourquoi nos données doivent rester en Afrique</h3>
+<p class="font-sans text-base text-text-muted line-clamp-2">Analyse approfondie des enjeux de régulation et d'infrastructure cloud sur le continent.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Prochains événements preview -->
+<section class="py-24 px-gutter bg-canvas">
+<div class="max-w-7xl mx-auto space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-3">
+<span class="text-secondary font-sans text-sm font-medium uppercase tracking-wider">Agenda RAJI</span>
+<h2 class="font-sans text-2xl text-3xl font-bold text-navy">Prochains événements</h2>
+<p class="font-sans text-lg text-text-muted">Participez à nos webinaires, hackathons et sommets continentaux.</p>
+</div>
+<a class="inline-flex items-center gap-2 font-sans text-lg font-medium text-navy hover:text-secondary transition-colors min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+<span>Voir l'agenda complet</span>
+<span class="material-symbols-outlined">east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Event 1 -->
+<div class="bg-canvas-container-low p-8 rounded-xl flex flex-col md:flex-row gap-6 items-start md:items-center justify-between hover:shadow-lg transition-all">
+<div class="flex gap-6 items-center">
+<div class="bg-gold/20 text-navy p-4 rounded-xl text-center min-w-[80px]">
+<span class="font-sans text-sm font-medium uppercase block text-xs">OCT</span>
+<span class="font-sans text-2xl text-2xl font-bold">24</span>
+</div>
+<div class="space-y-2">
+<span class="px-3 py-1 rounded-full bg-canvas text-secondary text-xs font-bold">En ligne &amp; Présentiel</span>
+<h3 class="font-headline-sm text-xl text-navy">Sommet Panafricain de la Tech 2024</h3>
+<p class="font-sans text-base text-text-muted flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 09:00 - 17:00 • Nairobi, Kenya
+              </p>
+</div>
+</div>
+<a class="bg-primary text-canvas font-sans text-sm font-medium px-6 py-3 rounded-lg hover:bg-primary-hover transition-colors whitespace-nowrap min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+            S'inscrire
+          </a>
+</div>
+<!-- Event 2 -->
+<div class="bg-canvas-container-low p-8 rounded-xl flex flex-col md:flex-row gap-6 items-start md:items-center justify-between hover:shadow-lg transition-all">
+<div class="flex gap-6 items-center">
+<div class="bg-gold/20 text-navy p-4 rounded-xl text-center min-w-[80px]">
+<span class="font-sans text-sm font-medium uppercase block text-xs">NOV</span>
+<span class="font-sans text-2xl text-2xl font-bold">05</span>
+</div>
+<div class="space-y-2">
+<span class="px-3 py-1 rounded-full bg-canvas text-secondary text-xs font-bold">Webinaire</span>
+<h3 class="font-headline-sm text-xl text-navy">Masterclass : Lever des fonds en amorçage</h3>
+<p class="font-sans text-base text-text-muted flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 14:00 - 16:00 • Virtuel
+              </p>
+</div>
+</div>
+<a class="bg-primary text-canvas font-sans text-sm font-medium px-6 py-3 rounded-lg hover:bg-primary-hover transition-colors whitespace-nowrap min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+            S'inscrire
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Closing Multi-audience CTA -->
+<section class="py-24 px-gutter bg-navy text-canvas relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fdc342_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="max-w-7xl mx-auto relative z-10 space-y-16">
+<div class="text-center space-y-4 max-w-3xl mx-auto">
+<span class="text-gold font-sans text-sm font-medium uppercase tracking-wider">Rejoignez le mouvement</span>
+<h2 class="font-sans text-3xl text-3xl lg:text-5xl font-bold text-canvas">Construisons ensemble l'Afrique de demain</h2>
+<p class="font-sans text-lg text-canvas/80">Que vous soyez porteur de projet, investisseur visionnaire ou partenaire institutionnel, votre place est au cœur du RAJI.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Innovateurs -->
+<div class="bg-canvas/5 backdrop-blur-md p-8 rounded-2xl border border-canvas/10 space-y-6 flex flex-col justify-between hover:bg-canvas/10 transition-all">
+<div class="space-y-4">
+<div class="w-14 h-14 rounded-xl bg-gold/80 text-navy flex items-center justify-center font-bold text-xl">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<h3 class="font-headline-sm text-2xl text-canvas">Je suis Innovateur</h3>
+<p class="font-sans text-base text-canvas/70">Bénéficiez de mentorat, de visibilité internationale et accédez à notre réseau d'investisseurs qualifiés.</p>
+</div>
+<a class="w-full bg-gold text-navy font-sans text-lg font-medium py-3 rounded-xl hover:bg-gold/80 transition-colors text-center block min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+            Soumettre mon innovation
+          </a>
+</div>
+<!-- Partenaires -->
+<div class="bg-canvas/5 backdrop-blur-md p-8 rounded-2xl border border-canvas/10 space-y-6 flex flex-col justify-between hover:bg-canvas/10 transition-all">
+<div class="space-y-4">
+<div class="w-14 h-14 rounded-xl bg-gold/80 text-navy flex items-center justify-center font-bold text-xl">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<h3 class="font-headline-sm text-2xl text-canvas">Je suis Partenaire</h3>
+<p class="font-sans text-base text-canvas/70">Associez votre organisation aux initiatives technologiques majeures et soutenez l'écosystème entrepreneurial.</p>
+</div>
+<a class="w-full bg-canvas text-navy font-sans text-lg font-medium py-3 rounded-xl hover:bg-canvas-bright transition-colors text-center block min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+            Devenir partenaire
+          </a>
+</div>
+<!-- Investisseurs -->
+<div class="bg-canvas/5 backdrop-blur-md p-8 rounded-2xl border border-canvas/10 space-y-6 flex flex-col justify-between hover:bg-canvas/10 transition-all">
+<div class="space-y-4">
+<div class="w-14 h-14 rounded-xl bg-gold/80 text-navy flex items-center justify-center font-bold text-xl">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-2xl text-canvas">Je suis Investisseur</h3>
+<p class="font-sans text-base text-canvas/70">Découvrez un deal-flow exclusif de startups africaines à fort impact prêtes pour l'accélération et le scale-up.</p>
+</div>
+<a class="w-full bg-canvas text-navy font-sans text-lg font-medium py-3 rounded-xl hover:bg-canvas-bright transition-colors text-center block min-h-[44px] min-w-[44px] inline-flex items-center" href="#">
+            Accéder au deal-flow
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-canvas-container-low py-space-xl"><div class="max-w-7xl mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-space-xl mb-space-xl"><div class="space-y-space-md"><h3 class="font-headline-sm text-navy">RAJI</h3><p class="text-body-md text-navy-variant">Réseau Africain des Jeunes Innovateurs - Autonomiser la prochaine génération de talents africains.</p></div><div class="space-y-space-md"><h4 class="font-sans text-lg font-medium text-navy">Liens Rapides</h4><ul class="space-y-space-sm text-body-md text-navy-variant"><li><a class="hover:text-navy min-h-[44px] min-w-[44px] inline-flex items-center" href="#">À propos</a></li><li><a class="hover:text-navy min-h-[44px] min-w-[44px] inline-flex items-center" href="#">Innovateurs</a></li><li><a class="hover:text-navy min-h-[44px] min-w-[44px] inline-flex items-center" href="#">Opportunités</a></li><li><a class="hover:text-navy min-h-[44px] min-w-[44px] inline-flex items-center" href="#">Contact</a></li></ul></div><div class="space-y-space-md"><h4 class="font-sans text-lg font-medium text-navy">Newsletter</h4><p class="text-body-md text-navy-variant">Restez informé de nos derniers appels à projets et actualités.</p><div class="flex gap-space-xs"><input class="px-space-md py-space-sm bg-canvas border border-border rounded-lg text-body-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Votre email" type="email"/><button class="bg-primary text-canvas px-space-md py-space-sm rounded-lg font-sans text-sm font-medium min-h-[44px] min-w-[44px] inline-flex items-center">S'inscrire</button></div></div><div class="space-y-space-md"><h4 class="font-sans text-lg font-medium text-navy">Suivez-nous</h4><div class="flex space-x-space-md text-navy-variant"><a class="hover:text-navy min-h-[44px] min-w-[44px] inline-flex items-center" href="#">LinkedIn</a><a class="hover:text-navy min-h-[44px] min-w-[44px] inline-flex items-center" href="#">Twitter</a><a class="hover:text-navy min-h-[44px] min-w-[44px] inline-flex items-center" href="#">Facebook</a></div></div></div><div class="max-w-7xl mx-auto px-gutter pt-space-lg border-t border-border text-center text-body-md text-navy-variant">© 2024 RAJI. Tous droits réservés.</div></footer></body></html>

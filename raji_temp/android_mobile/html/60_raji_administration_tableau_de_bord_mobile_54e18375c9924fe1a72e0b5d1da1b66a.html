@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"surface-bright":"#f8f9fc","surface-variant":"#e0e3e6","secondary-container":"#dfe0e0","secondary":"#5d5f5f","error-container":"#ffdad6","error":"#ba1a1a","on-error-container":"#93000a","surface-container-highest":"#e0e3e6","background":"#f8f9fc","on-surface-variant":"#44474d","on-tertiary":"#ffffff","primary":"#000000","inverse-primary":"#b7c7ea","on-primary":"#ffffff","tertiary-container":"#251a00","surface-container-low":"#f2f4f7","on-primary-fixed-variant":"#374764","on-primary-container":"#7484a4","surface":"#f8f9fc","on-tertiary-fixed-variant":"#5a4300","on-secondary-fixed-variant":"#454747","tertiary-fixed-dim":"#edc155","on-secondary":"#ffffff","on-surface":"#191c1e","on-secondary-container":"#616363","surface-dim":"#d8dadd","tertiary":"#000000","inverse-surface":"#2d3133","on-tertiary-fixed":"#251a00","primary-fixed":"#d7e3ff","surface-container-lowest":"#ffffff","on-primary-fixed":"#0a1b36","outline-variant":"#c5c6ce","primary-container":"#0a1b36","tertiary-fixed":"#ffdf9a","secondary-fixed":"#e2e2e2","surface-container":"#eceef1","inverse-on-surface":"#eff1f4","surface-container-high":"#e6e8eb","surface-tint":"#4f5f7d","secondary-fixed-dim":"#c6c6c7","primary-fixed-dim":"#b7c7ea","on-background":"#191c1e","on-error":"#ffffff","outline":"#75777e","on-secondary-fixed":"#1a1c1c","on-tertiary-container":"#a47e15"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-md":"1rem","space-lg":"1.5rem","margin-lg":"4rem","gutter-lg":"2rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter":"1.5rem","margin-sm":"1rem","margin":"1.5rem","gutter-sm":"1rem"},"fontFamily":{"label-md":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"title":["Inter"],"display":["Inter"],"display-mobile":["Inter"],"headline-lg-mobile":["Inter"]},"fontSize":{"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","letterSpacing":"0","fontWeight":"400"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.005em","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0","fontWeight":"400"}],"headline-md":["1.875rem",{"lineHeight":"2.375rem","letterSpacing":"-0.02em","fontWeight":"600"}],"title":["1.125rem",{"lineHeight":"1.625rem","letterSpacing":"-0.01em","fontWeight":"600"}],"display":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.035em","fontWeight":"800"}],"display-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"800"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-[#F3F4F5] text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-screen w-64 bg-[#071934] z-50 flex flex-col justify-between overflow-y-auto"><div class="w-full"><div class="p-4 border-b border-[#071934]"><div class="flex items-center gap-3 p-2 rounded-lg bg-[#FFFFFF] h-[44px]"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/><span class="font-title text-title text-[#071934] font-bold tracking-tight">RAJI Admin</span></div></div><nav class="py-4 flex flex-col gap-0.5" data-active-classes="border-l-4 border-[#D3A940] bg-[#071934] text-[#FFFFFF] font-medium pl-3"><a aria-current="page" class="flex items-center gap-3 px-4 py-2.5 transition-colors border-l-4 border-[#D3A940] bg-[#071934] text-[#FFFFFF] font-medium pl-3" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-[20px] text-[#FFFFFF]">dashboard</span><span class="font-label-md text-label-md">Tableau de bord</span></a><a class="flex items-center gap-3 px-4 py-2.5 text-[#E6E8EB] hover:text-[#FFFFFF] transition-colors" data-path="innovateurs" href="#"><span class="material-symbols-outlined text-[20px] text-[#FFFFFF]">lightbulb</span><span class="font-label-md text-label-md">Innovateurs</span></a><a class="flex items-center gap-3 px-4 py-2.5 text-[#E6E8EB] hover:text-[#FFFFFF] transition-colors" data-path="candidatures" href="#"><span class="material-symbols-outlined text-[20px] text-[#FFFFFF]">assignment</span><span class="font-label-md text-label-md">Candidatures</span></a><a class="flex items-center gap-3 px-4 py-2.5 text-[#E6E8EB] hover:text-[#FFFFFF] transition-colors" data-path="medias" href="#"><span class="material-symbols-outlined text-[20px] text-[#FFFFFF]">perm_media</span><span class="font-label-md text-label-md">Médias</span></a><a class="flex items-center gap-3 px-4 py-2.5 text-[#E6E8EB] hover:text-[#FFFFFF] transition-colors" data-path="evenements" href="#"><span class="material-symbols-outlined text-[20px] text-[#FFFFFF]">event</span><span class="font-label-md text-label-md">Événements</span></a><a class="flex items-center gap-3 px-4 py-2.5 text-[#E6E8EB] hover:text-[#FFFFFF] transition-colors" data-path="partenaires" href="#"><span class="material-symbols-outlined text-[20px] text-[#FFFFFF]">handshake</span><span class="font-label-md text-label-md">Partenaires</span></a><a class="flex items-center gap-3 px-4 py-2.5 text-[#E6E8EB] hover:text-[#FFFFFF] transition-colors" data-path="formulaires" href="#"><span class="material-symbols-outlined text-[20px] text-[#FFFFFF]">description</span><span class="font-label-md text-label-md">Formulaires</span></a><a class="flex items-center gap-3 px-4 py-2.5 text-[#E6E8EB] hover:text-[#FFFFFF] transition-colors" data-path="utilisateurs" href="#"><span class="material-symbols-outlined text-[20px] text-[#FFFFFF]">group</span><span class="font-label-md text-label-md">Utilisateurs</span></a><a class="flex items-center gap-3 px-4 py-2.5 text-[#E6E8EB] hover:text-[#FFFFFF] transition-colors" data-path="statistiques" href="#"><span class="material-symbols-outlined text-[20px] text-[#FFFFFF]">analytics</span><span class="font-label-md text-label-md">Statistiques</span></a><a class="flex items-center gap-3 px-4 py-2.5 text-[#E6E8EB] hover:text-[#FFFFFF] transition-colors" data-path="sauvegardes" href="#"><span class="material-symbols-outlined text-[20px] text-[#FFFFFF]">backup</span><span class="font-label-md text-label-md">Sauvegardes</span></a></nav></div><div class="p-4 border-t border-[#071934] bg-[#071934]"><div class="text-xs text-[#E6E8EB] font-mono mb-1">Version v1.4.2</div><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#D3A940]"></span><span class="text-xs text-[#E6E8EB] font-label-sm">Serveur connecté</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-[#FFFFFF] border-b border-[#E6E8EB] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-4"><img alt="RAJI_logo_stitch_ajuste_1600.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V15W-aQn8HZKoWr-I8Pv_6MBD044MjAKF7lGhPTGgvUxGEMvWrc7sUYniuO4zquHI7aKCxsSAPOH2VvebASKFqZNT3l-fYaU4nGT2zzGqHG1wpH_3gLIUkNgXJx2bqGF1qjlUWj55apBEmuOxSp0r06Elpie1qA1GYPb6VID7xbiPeY5AI1_37IVoH0Ev2WIXzx6mgFJNR5u-vZNOq_9Xz5jg1r_L1ArEdEno5-5LFOPaGPD7MhLoWEVKFXOIf3RvCfSa_hMRxHus"/><span class="font-headline-sm text-headline-sm font-bold text-[#071934]">Console d'administration</span></div><div class="flex items-center gap-6"><span class="bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB] px-3 py-1.5 rounded text-xs font-semibold">Administrateur général</span><a class="text-[#071934] hover:underline font-medium text-sm transition-colors" data-path="connexion" href="#">Déconnexion</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-[#F3F4F5] min-h-screen"><div class="flex flex-col w-full max-w-[390px] mx-auto bg-[#F3F4F5] text-[#071934] font-['Inter'] pb-12">
+<!-- Top Bar Spécifique Mobile 56px -->
+<header class="w-full h-14 bg-[#FFFFFF] border-b border-[#E6E8EB] px-4 flex items-center justify-between sticky top-0 z-30 shadow-sm">
+<div class="flex items-center gap-2.5">
+<div class="h-9 px-2 bg-[#FFFFFF] rounded-lg border border-[#E6E8EB] flex items-center justify-center">
+<img alt="RAJI Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy0paiwyULgfL5fqqvGu1mr6AHduvuR3k5WE1ujAB6mTHLd1Fasri6EIKiL-Hw4bLKtYjKkPYP7C6AnG9RowdopfFbKIKP_WJxsimQI5Dn8DYUYHJLNykbWVsqRB7aTH-CvUpMhYzlv3j9vnM5VNFuiz4P8jAzoJDC6O1LhdluPtKuIXVPpQ1avGWLDR0JKVl8MGKpDlXDCDNaB2nP7SUaSR6RuP7anTXd976_8-nY9maNdxGT0zMozx7Ye7qj-jkcEJE"/>
+</div>
+<span class="bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB] text-[12px] font-semibold px-2 py-0.5 rounded tracking-wide uppercase">
+        Admin
+      </span>
+</div>
+<!-- Bouton Hamburger 44px -->
+<button aria-label="Menu" class="w-11 h-11 rounded-lg flex items-center justify-center bg-[#F3F4F5] border border-[#E6E8EB] active:bg-[#E6E8EB] transition-colors" type="button">
+<svg class="w-5 h-5 text-[#071934]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</header>
+<div class="px-4 py-5 flex flex-col gap-5">
+<!-- 1. En-tête & Action Rapide -->
+<div class="flex flex-col gap-3">
+<div class="flex flex-col">
+<h1 class="text-[20px] font-bold text-[#071934] leading-tight tracking-tight">Tableau de bord</h1>
+<p class="text-[13px] text-[#5d5f5f] font-normal">Back-office RAJI • Supervision globale</p>
+</div>
+<button class="w-full bg-[#D3A940] hover:bg-[#c29832] active:bg-[#b08726] text-[#071934] font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 text-[14px] shadow-sm transition-colors" type="button">
+<svg class="w-4 h-4 text-[#071934]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Sauvegarder les données</span>
+</button>
+</div>
+<!-- 2. Grille Statistiques (2 colonnes + 1 pleine largeur) -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Visiteurs -->
+<div class="bg-[#FFFFFF] p-3.5 rounded-xl border border-[#E6E8EB] flex flex-col shadow-sm">
+<span class="text-[12px] font-medium text-[#5d5f5f]">Visiteurs</span>
+<span class="text-[22px] font-bold text-[#071934] mt-0.5 tracking-tight">48.2k</span>
+<span class="text-[11px] text-[#071934] bg-[#F3F4F5] font-medium px-1.5 py-0.5 rounded w-max mt-2 border border-[#E6E8EB]">
+          +12.4% ce mois
+        </span>
+</div>
+<!-- Innovateurs -->
+<div class="bg-[#FFFFFF] p-3.5 rounded-xl border border-[#E6E8EB] flex flex-col shadow-sm">
+<span class="text-[12px] font-medium text-[#5d5f5f]">Innovateurs</span>
+<span class="text-[22px] font-bold text-[#071934] mt-0.5 tracking-tight">1 240</span>
+<span class="text-[11px] text-[#071934] bg-[#F3F4F5] font-medium px-1.5 py-0.5 rounded w-max mt-2 border border-[#E6E8EB]">
+          Actifs certifiés
+        </span>
+</div>
+<!-- Candidatures -->
+<div class="bg-[#FFFFFF] p-3.5 rounded-xl border border-[#E6E8EB] flex flex-col shadow-sm">
+<span class="text-[12px] font-medium text-[#5d5f5f]">Candidatures</span>
+<span class="text-[22px] font-bold text-[#071934] mt-0.5 tracking-tight">318</span>
+<span class="text-[11px] text-[#071934] bg-[#D3A940]/20 text-[#071934] font-semibold px-1.5 py-0.5 rounded w-max mt-2 border border-[#D3A940]/40">
+          24 en attente
+        </span>
+</div>
+<!-- Partenaires -->
+<div class="bg-[#FFFFFF] p-3.5 rounded-xl border border-[#E6E8EB] flex flex-col shadow-sm">
+<span class="text-[12px] font-medium text-[#5d5f5f]">Partenaires</span>
+<span class="text-[22px] font-bold text-[#071934] mt-0.5 tracking-tight">86</span>
+<span class="text-[11px] text-[#071934] bg-[#F3F4F5] font-medium px-1.5 py-0.5 rounded w-max mt-2 border border-[#E6E8EB]">
+          Panafricains
+        </span>
+</div>
+<!-- Inscriptions événements (Pleine Largeur) -->
+<div class="col-span-2 bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="text-[12px] font-medium text-[#5d5f5f]">Inscriptions événements</span>
+<span class="text-[22px] font-bold text-[#071934] tracking-tight">2 450</span>
+</div>
+<div class="flex items-center gap-1.5 bg-[#F3F4F5] border border-[#E6E8EB] px-2.5 py-1.5 rounded-lg">
+<span class="w-2 h-2 rounded-full bg-[#D3A940]"></span>
+<span class="text-[12px] font-semibold text-[#071934]">5 Sommets actifs</span>
+</div>
+</div>
+</div>
+<!-- 3. Graphique Compact SVG "Évolution du trafic (30j)" -->
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-[14px] font-bold text-[#071934]">Évolution du trafic (30j)</h2>
+<p class="text-[12px] text-[#5d5f5f]">Fréquentation cumulée</p>
+</div>
+<span class="text-[12px] font-bold text-[#071934] bg-[#F3F4F5] border border-[#E6E8EB] px-2 py-0.5 rounded">
+          +18.6%
+        </span>
+</div>
+<div class="w-full h-36 relative mt-1">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 320 120">
+<defs>
+<lineargradient id="goldTrafficGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#D3A940" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#D3A940" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Lignes horizontales repères -->
+<line stroke="#E6E8EB" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="320" y1="20" y2="20"></line>
+<line stroke="#E6E8EB" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="320" y1="60" y2="60"></line>
+<line stroke="#E6E8EB" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="320" y1="100" y2="100"></line>
+<!-- Aire et Courbe -->
+<path d="M 0,90 Q 40,80 80,55 T 160,50 T 240,30 T 320,15 L 320,115 L 0,115 Z" fill="url(#goldTrafficGrad)"></path>
+<path d="M 0,90 Q 40,80 80,55 T 160,50 T 240,30 T 320,15" fill="none" stroke="#D3A940" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Points Navy (#071934) -->
+<circle cx="0" cy="90" fill="#071934" r="3.5" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="80" cy="55" fill="#071934" r="3.5" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="160" cy="50" fill="#071934" r="3.5" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="240" cy="30" fill="#071934" r="3.5" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="320" cy="15" fill="#071934" r="4" stroke="#D3A940" stroke-width="2"></circle>
+</svg>
+</div>
+<div class="flex justify-between items-center text-[11px] text-[#5d5f5f] pt-1 border-t border-[#E6E8EB]">
+<span>J - 30</span>
+<span>J - 15</span>
+<span>Aujourd'hui</span>
+</div>
+</div>
+<!-- 4. Provenance des Visiteurs -->
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h2 class="text-[14px] font-bold text-[#071934]">Provenance des visiteurs</h2>
+<span class="text-[12px] text-[#5d5f5f]">Top Afrique</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Pays 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-[12px]">
+<span class="font-medium text-[#071934]">Côte d'Ivoire</span>
+<span class="font-semibold text-[#071934]">34%</span>
+</div>
+<div class="w-full h-2 bg-[#F3F4F5] rounded-full overflow-hidden border border-[#E6E8EB]">
+<div class="h-full bg-[#071934] rounded-full" style="width: 34%;"></div>
+</div>
+</div>
+<!-- Pays 2 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-[12px]">
+<span class="font-medium text-[#071934]">Sénégal</span>
+<span class="font-semibold text-[#071934]">26%</span>
+</div>
+<div class="w-full h-2 bg-[#F3F4F5] rounded-full overflow-hidden border border-[#E6E8EB]">
+<div class="h-full bg-[#D3A940] rounded-full" style="width: 26%;"></div>
+</div>
+</div>
+<!-- Pays 3 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-[12px]">
+<span class="font-medium text-[#071934]">Cameroun</span>
+<span class="font-semibold text-[#071934]">18%</span>
+</div>
+<div class="w-full h-2 bg-[#F3F4F5] rounded-full overflow-hidden border border-[#E6E8EB]">
+<div class="h-full bg-[#071934] rounded-full" style="width: 18%;"></div>
+</div>
+</div>
+<!-- Pays 4 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-[12px]">
+<span class="font-medium text-[#071934]">Rwanda & Autres</span>
+<span class="font-semibold text-[#071934]">22%</span>
+</div>
+<div class="w-full h-2 bg-[#F3F4F5] rounded-full overflow-hidden border border-[#E6E8EB]">
+<div class="h-full bg-[#E6E8EB] rounded-full" style="width: 22%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Pages les plus consultées (Top 4 cliquables) -->
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] shadow-sm flex flex-col gap-2.5">
+<h2 class="text-[14px] font-bold text-[#071934]">Pages les plus consultées</h2>
+<div class="flex flex-col divide-y divide-[#E6E8EB]">
+<a class="py-2.5 flex items-center justify-between text-[13px] hover:bg-[#F3F4F5] transition-colors rounded px-1" href="#">
+<div class="flex items-center gap-2 min-w-0">
+<span class="text-[11px] font-bold text-[#5d5f5f] w-4">01</span>
+<span class="text-[#071934] font-medium truncate">/candidatures/appel-2025</span>
+</div>
+<span class="text-[12px] font-bold text-[#071934] pl-2">14.8k</span>
+</a>
+<a class="py-2.5 flex items-center justify-between text-[13px] hover:bg-[#F3F4F5] transition-colors rounded px-1" href="#">
+<div class="flex items-center gap-2 min-w-0">
+<span class="text-[11px] font-bold text-[#5d5f5f] w-4">02</span>
+<span class="text-[#071934] font-medium truncate">/innovateurs/annuaire</span>
+</div>
+<span class="text-[12px] font-bold text-[#071934] pl-2">11.2k</span>
+</a>
+<a class="py-2.5 flex items-center justify-between text-[13px] hover:bg-[#F3F4F5] transition-colors rounded px-1" href="#">
+<div class="flex items-center gap-2 min-w-0">
+<span class="text-[11px] font-bold text-[#5d5f5f] w-4">03</span>
+<span class="text-[#071934] font-medium truncate">/evenements/sommet-dakar</span>
+</div>
+<span class="text-[12px] font-bold text-[#071934] pl-2">8.9k</span>
+</a>
+<a class="py-2.5 flex items-center justify-between text-[13px] hover:bg-[#F3F4F5] transition-colors rounded px-1" href="#">
+<div class="flex items-center gap-2 min-w-0">
+<span class="text-[11px] font-bold text-[#5d5f5f] w-4">04</span>
+<span class="text-[#071934] font-medium truncate">/partenaires/rejoindre</span>
+</div>
+<span class="text-[12px] font-bold text-[#071934] pl-2">5.4k</span>
+</a>
+</div>
+</div>
+<!-- 6. Candidatures en attente (3 cartes empilées) -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h2 class="text-[14px] font-bold text-[#071934]">Candidatures en attente</h2>
+<span class="text-[12px] font-semibold text-[#071934] bg-[#D3A940]/20 px-2 py-0.5 rounded border border-[#D3A940]/40">
+          3 à traiter
+        </span>
+</div>
+<!-- Candidature 1 -->
+<div class="bg-[#FFFFFF] p-3.5 rounded-xl border border-[#E6E8EB] shadow-sm flex flex-col gap-2.5">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="text-[14px] font-bold text-[#071934]">Amara Traoré</h3>
+<p class="text-[13px] text-[#5d5f5f]">AgriTech Solaire • Bamako</p>
+</div>
+<span class="bg-[#D3A940] text-[#071934] text-[11px] font-bold px-2 py-0.5 rounded uppercase">
+            En attente
+          </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="w-full bg-[#071934] hover:bg-[#12284b] text-[#FFFFFF] text-[13px] font-semibold py-2 rounded-lg transition-colors text-center" type="button">
+            Valider
+          </button>
+<button class="w-full border border-[#071934] hover:bg-[#F3F4F5] text-[#071934] text-[13px] font-semibold py-2 rounded-lg transition-colors text-center" type="button">
+            Refuser
+          </button>
+</div>
+</div>
+<!-- Candidature 2 -->
+<div class="bg-[#FFFFFF] p-3.5 rounded-xl border border-[#E6E8EB] shadow-sm flex flex-col gap-2.5">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="text-[14px] font-bold text-[#071934]">Fatou Diop</h3>
+<p class="text-[13px] text-[#5d5f5f]">HealthTech IA • Dakar</p>
+</div>
+<span class="bg-[#D3A940] text-[#071934] text-[11px] font-bold px-2 py-0.5 rounded uppercase">
+            En attente
+          </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="w-full bg-[#071934] hover:bg-[#12284b] text-[#FFFFFF] text-[13px] font-semibold py-2 rounded-lg transition-colors text-center" type="button">
+            Valider
+          </button>
+<button class="w-full border border-[#071934] hover:bg-[#F3F4F5] text-[#071934] text-[13px] font-semibold py-2 rounded-lg transition-colors text-center" type="button">
+            Refuser
+          </button>
+</div>
+</div>
+<!-- Candidature 3 -->
+<div class="bg-[#FFFFFF] p-3.5 rounded-xl border border-[#E6E8EB] shadow-sm flex flex-col gap-2.5">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="text-[14px] font-bold text-[#071934]">Kofi Mensah</h3>
+<p class="text-[13px] text-[#5d5f5f]">CleanFintech • Accra</p>
+</div>
+<span class="bg-[#D3A940] text-[#071934] text-[11px] font-bold px-2 py-0.5 rounded uppercase">
+            En attente
+          </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="w-full bg-[#071934] hover:bg-[#12284b] text-[#FFFFFF] text-[13px] font-semibold py-2 rounded-lg transition-colors text-center" type="button">
+            Valider
+          </button>
+<button class="w-full border border-[#071934] hover:bg-[#F3F4F5] text-[#071934] text-[13px] font-semibold py-2 rounded-lg transition-colors text-center" type="button">
+            Refuser
+          </button>
+</div>
+</div>
+</div>
+<!-- 7. Lien de redirection -->
+<a class="w-full py-3 px-4 bg-[#FFFFFF] border border-[#E6E8EB] rounded-xl text-[13px] font-bold text-[#071934] hover:bg-[#F3F4F5] flex items-center justify-center gap-1 shadow-sm transition-colors" data-path="candidatures" href="#">
+<span>Voir toutes les candidatures (318)</span>
+<span class="text-[#D3A940] text-base">→</span>
+</a>
+<!-- 8. Pied de page discret d'administration -->
+<footer class="pt-4 pb-2 text-center flex flex-col items-center gap-1 border-t border-[#E6E8EB]">
+<p class="text-[12px] text-[#5d5f5f]">Système RAJI Admin v1.4 • Session sécurisée</p>
+<div class="flex items-center gap-1.5 text-[11px] text-[#071934] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#D3A940]"></span>
+<span>Base de données synchronisée</span>
+</div>
+</footer>
+</div>
+</div></main></div></body></html>

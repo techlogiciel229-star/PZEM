@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAJI — Administration – Tableau de bord (Tablette)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#F3F4F5] text-[#071934] antialiased min-h-screen">
+<!-- White Top Bar (Tablette) -->
+<header class="bg-[#FFFFFF] border-b border-[#E6E8EB] h-16 px-6 flex items-center justify-between sticky top-0 z-30">
+<!-- Left: Hamburger + RAJI Logo -->
+<div class="flex items-center gap-3">
+<button aria-label="Menu" class="w-11 h-11 flex items-center justify-center rounded-lg border border-[#E6E8EB] bg-[#FFFFFF] text-[#071934] hover:bg-[#F3F4F5] transition-colors focus:outline-none" type="button">
+<svg class="w-5 h-5" fill="none" stroke="#071934" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
+</button>
+<img alt="Logo RAJI" class="h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAceEEli9gzL2gyf0qMrAPHud6aJIH9i3-r5gWnl2qONZgpSEqIQOyd_nCWuPyhb0ajT4OJZnxkX4EdREJJuwhtIvprrbciQW4gEyNdC-Xyth62DT-T1YAvfis2Mc920J0WWc2oS4tGmZLtej8Al1tAgYoZKcKIvAzTc2TEh3mm9KOKM7KfO0u_uqYcvUBDgLSx6SOQ1nwHURec5hK1aM9_jXHrYC_Zb9bK5kQlg5I3RKKpdUFJUZiUS0e2eSWorHpt2JI"/>
+</div>
+<!-- Center/Title -->
+<div class="text-[#071934] font-semibold text-base">
+      Console d'administration
+    </div>
+<!-- Right: Badge + Button Déconnexion -->
+<div class="flex items-center gap-3">
+<span class="bg-[#F3F4F5] text-[#071934] text-xs px-2.5 py-1 rounded border border-[#E6E8EB] font-medium">
+        Administrateur général
+      </span>
+<a class="border border-[#E6E8EB] px-3 py-1.5 rounded text-xs font-medium text-[#071934] flex items-center gap-1.5 hover:bg-[#F3F4F5] transition-colors" href="#">
+<svg class="w-4 h-4" fill="none" stroke="#071934" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+<polyline points="16 17 21 12 16 7"></polyline>
+<line x1="21" x2="9" y1="12" y2="12"></line>
+</svg>
+<span>Déconnexion</span>
+</a>
+</div>
+</header>
+<!-- Main Container -->
+<main class="max-w-[820px] mx-auto p-6 bg-[#F3F4F5]">
+<!-- Header Section -->
+<div class="flex items-center justify-between bg-[#FFFFFF] p-5 rounded-xl border border-[#E6E8EB] mb-6">
+<div>
+<h1 class="text-xl font-bold text-[#071934]">Tableau de bord général</h1>
+<p class="text-sm text-[#071934] mt-1">Supervision globale et flux des activités</p>
+</div>
+<button class="bg-[#D3A940] text-[#071934] font-semibold text-xs px-3.5 py-2 rounded-lg hover:brightness-95 transition-all flex items-center gap-1.5" type="button">
+<svg class="w-4 h-4" fill="none" stroke="#071934" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+<polyline points="17 21 17 13 7 13 7 21"></polyline>
+<polyline points="7 3 7 8 15 8"></polyline>
+</svg>
+<span>Sauvegarder les données</span>
+</button>
+</div>
+<!-- Stat Cards Grid -->
+<div class="space-y-4 mb-6">
+<!-- Row 1: 3 cards -->
+<div class="grid grid-cols-3 gap-4">
+<!-- Visiteurs uniques -->
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] flex flex-col justify-between">
+<span class="text-xs uppercase font-medium text-[#071934]">Visiteurs uniques</span>
+<div class="mt-3">
+<div class="text-[24px] font-bold text-[#071934] leading-none">48 290</div>
+<div class="mt-2">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2 py-0.5 rounded">
+                +12% ce mois
+              </span>
+</div>
+</div>
+</div>
+<!-- Innovateurs inscrits -->
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] flex flex-col justify-between">
+<span class="text-xs uppercase font-medium text-[#071934]">Innovateurs inscrits</span>
+<div class="mt-3">
+<div class="text-[24px] font-bold text-[#071934] leading-none">1 240</div>
+<div class="mt-2">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2 py-0.5 rounded">
+                +34 ce mois
+              </span>
+</div>
+</div>
+</div>
+<!-- Candidatures reçues -->
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] flex flex-col justify-between">
+<span class="text-xs uppercase font-medium text-[#071934]">Candidatures reçues</span>
+<div class="mt-3">
+<div class="text-[24px] font-bold text-[#071934] leading-none">318</div>
+<div class="mt-2">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2 py-0.5 rounded">
+                24 en attente
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 2: 2 cards -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Partenaires actifs -->
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] flex items-center justify-between">
+<div>
+<span class="text-xs uppercase font-medium text-[#071934]">Partenaires actifs</span>
+<div class="text-[24px] font-bold text-[#071934] leading-none mt-2">86</div>
+<div class="mt-2">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2 py-0.5 rounded">
+                6 nouveaux
+              </span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-lg bg-[#071934] flex items-center justify-center text-[#FFFFFF]">
+<svg class="w-6 h-6" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+</div>
+</div>
+<!-- Inscriptions événements -->
+<div class="bg-[#FFFFFF] p-4 rounded-xl border border-[#E6E8EB] flex items-center justify-between">
+<div>
+<span class="text-xs uppercase font-medium text-[#071934]">Inscriptions événements</span>
+<div class="text-[24px] font-bold text-[#071934] leading-none mt-2">2 450</div>
+<div class="mt-2">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2 py-0.5 rounded">
+                3 sessions
+              </span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-lg bg-[#071934] flex items-center justify-center text-[#FFFFFF]">
+<svg class="w-6 h-6" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-2 gap-4 mb-6">
+<!-- Évolution du trafic -->
+<div class="bg-[#FFFFFF] p-5 rounded-xl border border-[#E6E8EB] flex flex-col justify-between">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="text-sm font-bold text-[#071934]">Évolution du trafic (30 derniers jours)</h2>
+<span class="text-xs text-[#071934]">Visites journalières</span>
+</div>
+</div>
+<!-- SVG Chart in Navy & Gold -->
+<div class="w-full">
+<svg class="w-full h-36 overflow-visible" viewbox="0 0 340 140">
+<!-- Navy Reference Grid Lines -->
+<line stroke="#E6E8EB" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="340" y1="25" y2="25"></line>
+<line stroke="#E6E8EB" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="340" y1="65" y2="65"></line>
+<line stroke="#E6E8EB" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="340" y1="105" y2="105"></line>
+<line stroke="#E6E8EB" stroke-width="1" x1="0" x2="340" y1="130" y2="130"></line>
+<!-- Curve 1: Navy #071934 (Moyenne mobile / Visites uniques) -->
+<path d="M 0 115 Q 40 100, 80 85 T 160 70 T 240 50 T 300 45 T 340 30" fill="none" stroke="#071934" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Curve 2: Gold #D3A940 (Visites totales) -->
+<path d="M 0 95 Q 45 80, 85 55 T 165 40 T 245 25 T 305 35 T 340 15" fill="none" stroke="#D3A940" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Chart Anchor Points -->
+<circle cx="85" cy="55" fill="#D3A940" r="3.5" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="165" cy="40" fill="#D3A940" r="3.5" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="245" cy="25" fill="#D3A940" r="3.5" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="340" cy="15" fill="#071934" r="4" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="80" cy="85" fill="#071934" r="3" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="160" cy="70" fill="#071934" r="3" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="240" cy="50" fill="#071934" r="3" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<circle cx="340" cy="30" fill="#D3A940" r="3.5" stroke="#FFFFFF" stroke-width="1.5"></circle>
+</svg>
+<div class="flex justify-between items-center text-xs text-[#071934] pt-2 border-t border-[#E6E8EB] mt-2">
+<span>J-30</span>
+<span>J-20</span>
+<span>J-10</span>
+<span>Aujourd'hui</span>
+</div>
+</div>
+</div>
+<!-- Provenance des visiteurs -->
+<div class="bg-[#FFFFFF] p-5 rounded-xl border border-[#E6E8EB] flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<div>
+<h2 class="text-sm font-bold text-[#071934]">Provenance des visiteurs</h2>
+<span class="text-xs text-[#071934]">Top pays de consultation</span>
+</div>
+</div>
+<div class="space-y-3">
+<!-- Sénégal (32%) -->
+<div>
+<div class="flex justify-between items-center text-xs font-semibold text-[#071934] mb-1">
+<span>Sénégal</span>
+<span>32%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-[#E6E8EB]">
+<div class="h-2 rounded-full bg-[#071934]" style="width: 32%;"></div>
+</div>
+</div>
+<!-- Côte d'Ivoire (24%) -->
+<div>
+<div class="flex justify-between items-center text-xs font-semibold text-[#071934] mb-1">
+<span>Côte d'Ivoire</span>
+<span>24%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-[#E6E8EB]">
+<div class="h-2 rounded-full bg-[#071934]" style="width: 24%;"></div>
+</div>
+</div>
+<!-- Bénin (18%) -->
+<div>
+<div class="flex justify-between items-center text-xs font-semibold text-[#071934] mb-1">
+<span>Bénin</span>
+<span>18%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-[#E6E8EB]">
+<div class="h-2 rounded-full bg-[#D3A940]" style="width: 18%;"></div>
+</div>
+</div>
+<!-- Rwanda (14%) -->
+<div>
+<div class="flex justify-between items-center text-xs font-semibold text-[#071934] mb-1">
+<span>Rwanda</span>
+<span>14%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-[#E6E8EB]">
+<div class="h-2 rounded-full bg-[#D3A940]" style="width: 14%;"></div>
+</div>
+</div>
+<!-- Autres (12%) -->
+<div>
+<div class="flex justify-between items-center text-xs font-semibold text-[#071934] mb-1">
+<span>Autres</span>
+<span>12%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-[#E6E8EB]">
+<div class="h-2 rounded-full bg-[#E6E8EB] border border-[#071934]" style="width: 12%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pages les plus consultées -->
+<div class="bg-[#FFFFFF] p-5 rounded-xl border border-[#E6E8EB] mb-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="text-sm font-bold text-[#071934]">Pages les plus consultées</h2>
+<span class="text-xs text-[#071934]">Audience des 7 derniers jours</span>
+</div>
+<span class="text-xs font-medium text-[#071934] bg-[#F3F4F5] border border-[#E6E8EB] px-2.5 py-1 rounded">
+          Top 5 Pages
+        </span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F3F4F5] border-b border-[#E6E8EB] text-xs font-semibold text-[#071934]">
+<th class="py-2.5 px-3">Rang</th>
+<th class="py-2.5 px-3">Page / URL</th>
+<th class="py-2.5 px-3 text-center">Vues</th>
+<th class="py-2.5 px-3 text-center">Taux</th>
+<th class="py-2.5 px-3 text-right">Tendance</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr class="border-b border-[#E6E8EB]">
+<td class="py-3 px-3 font-bold text-[#071934]">#1</td>
+<td class="py-3 px-3">
+<div class="font-semibold text-[#071934]">Appel à projets : Bourse Innovation 2025</div>
+<div class="text-xs text-[#071934]">/candidatures/bourse-2025</div>
+</td>
+<td class="py-3 px-3 text-center font-bold text-[#071934]">14 820</td>
+<td class="py-3 px-3 text-center text-[#071934]">8.4%</td>
+<td class="py-3 px-3 text-right">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2 py-0.5 rounded">
+                  +18%
+                </span>
+</td>
+</tr>
+<tr class="border-b border-[#E6E8EB]">
+<td class="py-3 px-3 font-bold text-[#071934]">#2</td>
+<td class="py-3 px-3">
+<div class="font-semibold text-[#071934]">Annuaire des Jeunes Bâtisseurs</div>
+<div class="text-xs text-[#071934]">/innovateurs</div>
+</td>
+<td class="py-3 px-3 text-center font-bold text-[#071934]">9 410</td>
+<td class="py-3 px-3 text-center text-[#071934]">5.1%</td>
+<td class="py-3 px-3 text-right">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2 py-0.5 rounded">
+                  +9%
+                </span>
+</td>
+</tr>
+<tr class="border-b border-[#E6E8EB]">
+<td class="py-3 px-3 font-bold text-[#071934]">#3</td>
+<td class="py-3 px-3">
+<div class="font-semibold text-[#071934]">Accueil &amp; Manifeste RAJI</div>
+<div class="text-xs text-[#071934]">/</div>
+</td>
+<td class="py-3 px-3 text-center font-bold text-[#071934]">8 650</td>
+<td class="py-3 px-3 text-center text-[#071934]">3.2%</td>
+<td class="py-3 px-3 text-right">
+<span class="inline-block bg-[#F3F4F5] text-[#071934] border border-[#E6E8EB] text-xs font-semibold px-2 py-0.5 rounded">
+                  0%
+                </span>
+</td>
+</tr>
+<tr class="border-b border-[#E6E8EB]">
+<td class="py-3 px-3 font-bold text-[#071934]">#4</td>
+<td class="py-3 px-3">
+<div class="font-semibold text-[#071934]">Forum Technologique Panafricain Kigali</div>
+<div class="text-xs text-[#071934]">/evenements/kigali-tech-2025</div>
+</td>
+<td class="py-3 px-3 text-center font-bold text-[#071934]">6 240</td>
+<td class="py-3 px-3 text-center text-[#071934]">12.8%</td>
+<td class="py-3 px-3 text-right">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2 py-0.5 rounded">
+                  +24%
+                </span>
+</td>
+</tr>
+<tr>
+<td class="py-3 px-3 font-bold text-[#071934]">#5</td>
+<td class="py-3 px-3">
+<div class="font-semibold text-[#071934]">Consortium des Partenaires Stratégiques</div>
+<div class="text-xs text-[#071934]">/partenaires</div>
+</td>
+<td class="py-3 px-3 text-center font-bold text-[#071934]">3 190</td>
+<td class="py-3 px-3 text-center text-[#071934]">4.0%</td>
+<td class="py-3 px-3 text-right">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2 py-0.5 rounded">
+                  +3%
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Candidatures en attente de revue -->
+<div class="bg-[#FFFFFF] p-5 rounded-xl border border-[#E6E8EB]">
+<div class="flex items-center justify-between mb-4">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="text-sm font-bold text-[#071934]">Candidatures en attente de revue</h2>
+<span class="bg-[#D3A940] text-[#071934] font-bold text-xs px-2 py-0.5 rounded-full">24</span>
+</div>
+<span class="text-xs text-[#071934]">Dossiers soumis nécessitant une décision</span>
+</div>
+<a class="text-xs font-semibold text-[#071934] border-b border-[#071934] pb-0.5 hover:opacity-80" href="#">
+          Voir toutes les candidatures
+        </a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F3F4F5] border-b border-[#E6E8EB] text-xs font-semibold text-[#071934]">
+<th class="py-2.5 px-3">Candidat</th>
+<th class="py-2.5 px-3">Pays &amp; Secteur</th>
+<th class="py-2.5 px-3 text-center">Dépôt</th>
+<th class="py-2.5 px-3 text-center">Statut</th>
+<th class="py-2.5 px-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<!-- Candidate 1: Mamadou Sow -->
+<tr class="border-b border-[#E6E8EB]">
+<td class="py-3 px-3">
+<div class="font-bold text-[#071934]">Mamadou Sow</div>
+<div class="text-xs text-[#071934]">AgriTech Solaire Durable</div>
+</td>
+<td class="py-3 px-3">
+<div class="font-medium text-[#071934]">Sénégal</div>
+<div class="text-xs text-[#071934]">Agro-industrie</div>
+</td>
+<td class="py-3 px-3 text-center text-xs text-[#071934]">26 oct. 2025</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2.5 py-1 rounded">
+                  En attente
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="inline-flex items-center gap-2 justify-end">
+<button class="bg-[#071934] text-[#FFFFFF] px-3 py-1.5 rounded text-xs font-semibold hover:brightness-125 transition-all" type="button">
+                    Valider
+                  </button>
+<button class="border border-[#071934] text-[#071934] bg-[#FFFFFF] px-3 py-1.5 rounded text-xs font-semibold hover:bg-[#F3F4F5] transition-all" type="button">
+                    Refuser
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Candidate 2: Aïcha Traoré -->
+<tr class="border-b border-[#E6E8EB]">
+<td class="py-3 px-3">
+<div class="font-bold text-[#071934]">Aïcha Traoré</div>
+<div class="text-xs text-[#071934]">Système Hydrique Intelligent</div>
+</td>
+<td class="py-3 px-3">
+<div class="font-medium text-[#071934]">Mali</div>
+<div class="text-xs text-[#071934]">Environnement &amp; Eau</div>
+</td>
+<td class="py-3 px-3 text-center text-xs text-[#071934]">25 oct. 2025</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2.5 py-1 rounded">
+                  En attente
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="inline-flex items-center gap-2 justify-end">
+<button class="bg-[#071934] text-[#FFFFFF] px-3 py-1.5 rounded text-xs font-semibold hover:brightness-125 transition-all" type="button">
+                    Valider
+                  </button>
+<button class="border border-[#071934] text-[#071934] bg-[#FFFFFF] px-3 py-1.5 rounded text-xs font-semibold hover:bg-[#F3F4F5] transition-all" type="button">
+                    Refuser
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Candidate 3: Koffi Mensah -->
+<tr>
+<td class="py-3 px-3">
+<div class="font-bold text-[#071934]">Koffi Mensah</div>
+<div class="text-xs text-[#071934]">Micro-crédit Décentralisé</div>
+</td>
+<td class="py-3 px-3">
+<div class="font-medium text-[#071934]">Côte d'Ivoire</div>
+<div class="text-xs text-[#071934]">FinTech &amp; Web3</div>
+</td>
+<td class="py-3 px-3 text-center text-xs text-[#071934]">24 oct. 2025</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-block bg-[#D3A940]/20 text-[#071934] border border-[#D3A940] text-xs font-semibold px-2.5 py-1 rounded">
+                  En attente
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="inline-flex items-center gap-2 justify-end">
+<button class="bg-[#071934] text-[#FFFFFF] px-3 py-1.5 rounded text-xs font-semibold hover:brightness-125 transition-all" type="button">
+                    Valider
+                  </button>
+<button class="border border-[#071934] text-[#071934] bg-[#FFFFFF] px-3 py-1.5 rounded text-xs font-semibold hover:bg-[#F3F4F5] transition-all" type="button">
+                    Refuser
+                  </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</body></html>

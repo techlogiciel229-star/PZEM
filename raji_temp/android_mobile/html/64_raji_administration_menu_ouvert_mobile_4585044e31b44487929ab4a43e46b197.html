@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<style>
+    @layer base {
+      html, body { width: 100vw; margin: 0; padding: 0; font-family: 'Inter', sans-serif; background-color: #F3F4F5; }
+      body { overscroll-behavior: none; }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-[#F3F4F5] text-[#071934] flex flex-col min-h-screen relative overflow-hidden font-['Inter']">
+<!-- TOP HEADER (BACKGROUND) -->
+<header class="fixed top-0 inset-x-0 z-10 bg-[#FFFFFF] pt-safe border-b border-[#E6E8EB]">
+<div class="h-16 px-4 flex items-center justify-between">
+<div class="w-11 h-11 flex items-center justify-center text-[#071934]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
+</div>
+<div class="flex items-center justify-center">
+<img alt="RAJI" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAivlk-nQmAg7edrGdWHoccUajHRfppvL0YE56SiP7rDfe0fJF020Bi6nC-MCZXViQ9DaBCIKwwNR80MpHrHEFS8_x7e_AaitHRihUFjvVwe7RwCR1LxjR1uFY6wy8n6QnNaRSh7NLlzB9RjGPd5_IUw2hUUfpBV1WJsT18Zlpeu0nZihXgvjC0U1K5LBQmDha0WQegShNS29EUUnVN7tqTWhGtee9LfDdGajxZ4wwODyQC33h4tfMuSwNf0Z7aHv7Bpz8"/>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-[#F3F4F5] text-[#071934] text-[12px] font-semibold tracking-wider uppercase border border-[#E6E8EB]">Admin</span>
+</div>
+</div>
+</header>
+<!-- BACKGROUND DASHBOARD CONTENT LAYER -->
+<main class="flex flex-col relative w-full pt-20 pb-20 px-4 gap-4 bg-[#F3F4F5]">
+<!-- Stats Row -->
+<div class="grid grid-cols-2 gap-3 w-full">
+<div class="bg-[#FFFFFF] p-4 border border-[#E6E8EB] flex flex-col gap-1">
+<span class="text-[12px] uppercase font-semibold text-[#071934] tracking-wider">Candidatures</span>
+<span class="text-[28px] font-bold text-[#071934] leading-tight">142</span>
+<span class="text-[12px] font-medium text-[#071934] mt-1">+18 cette semaine</span>
+</div>
+<div class="bg-[#FFFFFF] p-4 border border-[#E6E8EB] flex flex-col gap-1">
+<span class="text-[12px] uppercase font-semibold text-[#071934] tracking-wider">Innovateurs</span>
+<span class="text-[28px] font-bold text-[#071934] leading-tight">89</span>
+<span class="text-[12px] font-medium text-[#071934] mt-1">Taux 62%</span>
+</div>
+<div class="bg-[#FFFFFF] p-4 border border-[#E6E8EB] flex flex-col gap-1">
+<span class="text-[12px] uppercase font-semibold text-[#071934] tracking-wider">Événements</span>
+<span class="text-[28px] font-bold text-[#071934] leading-tight">12</span>
+<span class="text-[12px] font-medium text-[#071934] mt-1">Dans 4 jours</span>
+</div>
+<div class="bg-[#FFFFFF] p-4 border border-[#E6E8EB] flex flex-col gap-1">
+<span class="text-[12px] uppercase font-semibold text-[#071934] tracking-wider">Opportunités</span>
+<span class="text-[28px] font-bold text-[#071934] leading-tight">34</span>
+<span class="text-[12px] font-medium text-[#071934] mt-1">7 actives</span>
+</div>
+</div>
+<!-- Chart Card -->
+<div class="bg-[#FFFFFF] p-4 border border-[#E6E8EB] flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-[14px] font-bold text-[#071934] uppercase tracking-wide">Trafic &amp; Soumissions</span>
+<span class="text-[12px] font-semibold text-[#071934] bg-[#F3F4F5] px-2 py-1">Semaine 42</span>
+</div>
+<div class="w-full h-28 pt-2">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 340 100">
+<line stroke="#E6E8EB" stroke-width="1" x1="0" x2="340" y1="20" y2="20"></line>
+<line stroke="#E6E8EB" stroke-width="1" x1="0" x2="340" y1="50" y2="50"></line>
+<line stroke="#E6E8EB" stroke-width="1" x1="0" x2="340" y1="80" y2="80"></line>
+<polyline fill="none" points="0,75 40,65 90,70 140,40 190,55 240,30 290,38 340,15" stroke="#071934" stroke-width="3"></polyline>
+<polyline fill="none" points="0,85 40,80 90,60 140,65 190,45 240,50 290,25 340,30" stroke="#D3A940" stroke-dasharray="4 3" stroke-width="2"></polyline>
+</svg>
+</div>
+<div class="flex items-center justify-end gap-4 pt-1">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 bg-[#071934]"></span>
+<span class="text-[12px] text-[#071934] font-medium">Dossiers</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 bg-[#D3A940]"></span>
+<span class="text-[12px] text-[#071934] font-medium">Visiteurs</span>
+</div>
+</div>
+</div>
+<!-- Recent Items -->
+<div class="bg-[#FFFFFF] border border-[#E6E8EB] flex flex-col">
+<div class="p-3 border-b border-[#E6E8EB] flex items-center justify-between">
+<span class="text-[14px] font-bold text-[#071934] uppercase tracking-wide">Candidatures récentes</span>
+<span class="text-[12px] text-[#071934] font-semibold">14 en attente</span>
+</div>
+<div class="p-3 border-b border-[#E6E8EB] flex items-center justify-between bg-[#F3F4F5]">
+<div class="flex flex-col">
+<span class="text-[14px] font-bold text-[#071934]">AgroTech Sahel</span>
+<span class="text-[12px] text-[#071934]">Dakar • Énergie &amp; Agri</span>
+</div>
+<span class="text-[12px] font-semibold text-[#071934] border border-[#071934] px-2 py-0.5">En cours</span>
+</div>
+<div class="p-3 flex items-center justify-between bg-[#FFFFFF]">
+<div class="flex flex-col">
+<span class="text-[14px] font-bold text-[#071934]">MedSecure Cloud</span>
+<span class="text-[12px] text-[#071934]">Abidjan • Santé Digitale</span>
+</div>
+<span class="text-[12px] font-semibold text-[#071934] border border-[#071934] px-2 py-0.5">Nouveau</span>
+</div>
+</div>
+</main>
+<!-- BOTTOM BAR (BACKGROUND) -->
+<nav class="fixed bottom-0 inset-x-0 z-10 pb-safe bg-[#FFFFFF] border-t border-[#E6E8EB]">
+<div class="flex justify-around items-center h-16 px-2">
+<div class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-[#071934] font-semibold">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<rect height="7" width="7" x="3" y="3"></rect>
+<rect height="7" width="7" x="14" y="3"></rect>
+<rect height="7" width="7" x="14" y="14"></rect>
+<rect height="7" width="7" x="3" y="14"></rect>
+</svg>
+<span class="text-[12px]">Accueil</span>
+</div>
+<div class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-[#071934]">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+</svg>
+<span class="text-[12px]">Dossiers</span>
+</div>
+<div class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-[#071934]">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+<span class="text-[12px]">Messages</span>
+</div>
+<div class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-[#071934]">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="3"></circle>
+<path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg>
+<span class="text-[12px]">Réglages</span>
+</div>
+</div>
+</nav>
+<!-- NAVY OVERLAY AT 40% (rgba(7, 25, 52, 0.4)) -->
+<div class="fixed inset-0 z-40 bg-[rgba(7,25,52,0.4)]"></div>
+<!-- FIXED LEFT DRAWER OF 300px WIDTH (BACKGROUND #071934) -->
+<aside aria-label="Menu principal d'administration" class="fixed top-0 bottom-0 left-0 w-[300px] h-full bg-[#071934] z-50 flex flex-col justify-between shadow-[4px_0_24px_rgba(7,25,52,0.3)]">
+<!-- Top & Navigation Container -->
+<div class="flex flex-col flex-1 overflow-hidden">
+<!-- Drawer Top Header -->
+<div class="p-4 pt-safe flex items-center justify-between border-b border-[#E6E8EB]/10">
+<!-- Logo inside white rounded container (background #FFFFFF, rounded-md, height 44px) -->
+<div class="bg-[#FFFFFF] rounded-md px-3 h-[44px] flex items-center justify-center">
+<img alt="RAJI" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzg6lK0Mm9JUkb2pt7oPB9Wb3cODg3O_D9yxJhz9TCG55C7nVbK3GvysbFNFjHb3VnMtLr_UNt8BESb0m_ew3h8jm0DheUM8NubvgYWpSGoRkKr-njEWSsNvIOVp0zaxuZjr-52El5LHoovFy8XzsePUSgrkbcVlx3n4lcJ7eLOOubHaY-i_Mx6l7nGCQxcNjhtjI59XjS4DKKOCbgvNq4eeYqQcEIIi5RNIBitj2ARNoGVpV_PLQz1lmjJIQVw55pWaY"/>
+</div>
+<!-- White SVG close button (cross) -->
+<button aria-label="Fermer le menu" class="w-11 h-11 flex items-center justify-center text-[#FFFFFF] hover:bg-[#FFFFFF]/10 transition-colors" type="button">
+<svg class="w-6 h-6" fill="none" stroke="#FFFFFF" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+</div>
+<!-- Navigation Section Title -->
+<div class="px-4 pt-4 pb-1">
+<span class="text-[#D3A940] text-[12px] font-semibold tracking-wider uppercase">Navigation</span>
+</div>
+<!-- Drawer Navigation: Exactly 10 sidebar links -->
+<nav class="flex-1 overflow-y-auto px-2 py-1 flex flex-col gap-0.5">
+<!-- 1. Tableau de bord (active, gold left border 4px #D3A940, text #FFFFFF) -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#FFFFFF] text-[14px] font-semibold bg-[#FFFFFF]/10 border-l-4 border-[#D3A940] transition-colors" href="#">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="#D3A940" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<rect height="7" width="7" x="3" y="3"></rect>
+<rect height="7" width="7" x="14" y="3"></rect>
+<rect height="7" width="7" x="14" y="14"></rect>
+<rect height="7" width="7" x="3" y="14"></rect>
+</svg>
+<span>Tableau de bord</span>
+</a>
+<!-- 2. Candidatures (text #E6E8EB) -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#E6E8EB] text-[14px] hover:bg-[#FFFFFF]/5 transition-colors" href="#">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="#E6E8EB" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Candidatures</span>
+</a>
+<!-- 3. Innovateurs (text #E6E8EB) -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#E6E8EB] text-[14px] hover:bg-[#FFFFFF]/5 transition-colors" href="#">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="#E6E8EB" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Innovateurs</span>
+</a>
+<!-- 4. Événements (text #E6E8EB) -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#E6E8EB] text-[14px] hover:bg-[#FFFFFF]/5 transition-colors" href="#">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="#E6E8EB" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<rect height="18" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+<span>Événements</span>
+</a>
+<!-- 5. Opportunités (text #E6E8EB) -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#E6E8EB] text-[14px] hover:bg-[#FFFFFF]/5 transition-colors" href="#">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="#E6E8EB" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+</svg>
+<span>Opportunités</span>
+</a>
+<!-- 6. Partenaires (text #E6E8EB) -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#E6E8EB] text-[14px] hover:bg-[#FFFFFF]/5 transition-colors" href="#">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="#E6E8EB" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<polyline points="16 11 18 13 22 9"></polyline>
+</svg>
+<span>Partenaires</span>
+</a>
+<!-- 7. Articles & Média (text #E6E8EB) -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#E6E8EB] text-[14px] hover:bg-[#FFFFFF]/5 transition-colors" href="#">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="#E6E8EB" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V7m2 13a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path>
+<line x1="7" x2="13" y1="8" y2="8"></line>
+<line x1="7" x2="13" y1="12" y2="12"></line>
+</svg>
+<span>Articles &amp; Média</span>
+</a>
+<!-- 8. Messages & Contact (text #E6E8EB) -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#E6E8EB] text-[14px] hover:bg-[#FFFFFF]/5 transition-colors" href="#">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="#E6E8EB" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+<span>Messages &amp; Contact</span>
+</a>
+<!-- 9. Utilisateurs et rôles (text #E6E8EB) -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#E6E8EB] text-[14px] hover:bg-[#FFFFFF]/5 transition-colors" href="#">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="#E6E8EB" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="3"></circle>
+<path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg>
+<span>Utilisateurs et rôles</span>
+</a>
+<!-- 10. Paramètres généraux (text #E6E8EB) -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#E6E8EB] text-[14px] hover:bg-[#FFFFFF]/5 transition-colors" href="#">
+<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="#E6E8EB" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<line x1="4" x2="4" y1="21" y2="14"></line>
+<line x1="4" x2="4" y1="10" y2="3"></line>
+<line x1="12" x2="12" y1="21" y2="12"></line>
+<line x1="12" x2="12" y1="8" y2="3"></line>
+<line x1="20" x2="20" y1="21" y2="16"></line>
+<line x1="20" x2="20" y1="12" y2="3"></line>
+<line x1="1" x2="7" y1="14" y2="14"></line>
+<line x1="9" x2="15" y1="8" y2="8"></line>
+<line x1="17" x2="23" y1="16" y2="16"></line>
+</svg>
+<span>Paramètres généraux</span>
+</a>
+</nav>
+</div>
+<!-- Bottom of drawer: text "Administrateur général" and Déconnexion button with logout SVG icon -->
+<div class="border-t border-[#E6E8EB]/10 p-4 pb-safe flex flex-col gap-3">
+<div class="flex flex-col">
+<span class="text-[#D3A940] text-[12px] font-semibold tracking-wider uppercase">
+          Administrateur général
+        </span>
+<span class="text-[#E6E8EB] text-[12px]">
+          Session sécurisée active
+        </span>
+</div>
+<button class="w-full py-2.5 px-3 flex items-center justify-center gap-2 bg-transparent border border-[#E6E8EB]/30 text-[#E6E8EB] text-[14px] hover:bg-[#FFFFFF]/10 active:bg-[#FFFFFF]/15 transition-colors focus:outline-none font-medium" type="button">
+<svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="#E6E8EB" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+<polyline points="16 17 21 12 16 7"></polyline>
+<line x1="21" x2="9" y1="12" y2="12"></line>
+</svg>
+<span>Déconnexion</span>
+</button>
+</div>
+</aside>
+</body></html>

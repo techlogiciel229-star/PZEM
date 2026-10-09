@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../../../../.gemini/config/skills"
+		},
+		{
+			"name": "PZEM_Project",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PZEM_Project",
+		"liveServer.settings.port": 5501
+	}
+}

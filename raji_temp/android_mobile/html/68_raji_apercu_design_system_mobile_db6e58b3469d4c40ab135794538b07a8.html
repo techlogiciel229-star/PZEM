@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<meta content="mobile_tab" name="shell-type">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            raji: {
+              navy: '#071934',
+              gold: '#D3A940',
+              white: '#FFFFFF',
+              tint: '#F3F4F5',
+              border: '#E6E8EB'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-[#071934] font-sans min-h-screen flex flex-col antialiased selection:bg-[#D3A940] selection:text-[#071934]">
+<!-- Sticky Top Header -->
+<header class="sticky top-0 z-50 bg-white border-b border-[#E6E8EB] px-4 py-2 flex items-center justify-between">
+<div class="flex items-center">
+<img alt="Logo RAJI" class="h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBai5L9PIsJjhRBCIUu7IyUsBwfYxyaT_1PupCDHKzX0vKtkoJHCw0n5D5TnN7T3M8fewPS4UQyxgcfJKIKxd91_uhpSYMe9R6D880S8bMvGz0Dzk9P6aq2_b5ZVMrQ3xMao_UAWUWWratJm2MfTjwAEKh5dDl0mGkuymavGkebbwg9HZvgWrX3KeCaaW9RD5nNH_E2r9bDq6n_3ycWLiTST0iKyxzTCxmPUKwyy45b84hRYkxgTf-VBSGVYWTPygZFcyo">
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Ouvrir le menu" class="w-10 h-10 flex items-center justify-center text-[#071934] hover:bg-[#F3F4F5] rounded-lg transition-colors" onclick="document.getElementById('mobile-drawer').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</header>
+<!-- Mobile Drawer / Side Sheet -->
+<div aria-modal="true" class="fixed inset-0 z-50 hidden" id="mobile-drawer" role="dialog">
+<div class="fixed inset-0 bg-[#071934]/60 backdrop-blur-sm transition-opacity" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"></div>
+<div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-2xl p-5 flex flex-col justify-between z-10 border-l border-[#E6E8EB] overflow-y-auto">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between pb-3 border-b border-[#E6E8EB]">
+<img alt="Logo RAJI" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTFF-1za-a3reXKBTjHlLlEIMQ1tH6e2NJcgAxldOZwVh0luPv2XYOoxlFSrpkOH0kc89EGsTmA_4rlfs4hdN9t0yxXGg3_IWzRD73uSl12ZXkQuM1iBIygy0Ca_wy_ZcXCG8uD-rtbfCpPmRZSBrAncCJM4UANo0uBJiDiOAemGUEl06INteigaS4istoSebwMWmEodduYhAjIV9SQAKVxEHLjvZ0iYxZiWoTs9LlPf30r4VeZeDAHah4dIVpo9qJ1Bc">
+<button aria-label="Fermer le menu" class="w-9 h-9 flex items-center justify-center text-[#071934] hover:bg-[#F3F4F5] rounded-lg transition-colors" onclick="document.getElementById('mobile-drawer').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="px-3 py-2.5 rounded-lg text-[#071934] font-semibold hover:bg-[#F3F4F5] transition-colors" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">Accueil</a>
+<a class="px-3 py-2.5 rounded-lg text-[#071934] font-semibold hover:bg-[#F3F4F5] transition-colors" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">À propos</a>
+<a class="px-3 py-2.5 rounded-lg text-[#071934] font-semibold hover:bg-[#F3F4F5] transition-colors" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">Innovateurs</a>
+<a class="px-3 py-2.5 rounded-lg text-[#071934] font-semibold hover:bg-[#F3F4F5] transition-colors" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">RAJI Média</a>
+<a class="px-3 py-2.5 rounded-lg text-[#071934] font-semibold hover:bg-[#F3F4F5] transition-colors" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">Événements</a>
+<a class="px-3 py-2.5 rounded-lg text-[#071934] font-semibold hover:bg-[#F3F4F5] transition-colors" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">Partenaires</a>
+<a class="px-3 py-2.5 rounded-lg text-[#071934] font-semibold hover:bg-[#F3F4F5] transition-colors" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">Opportunités</a>
+<a class="px-3 py-2.5 rounded-lg text-[#071934] font-semibold hover:bg-[#F3F4F5] transition-colors" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">Contact</a>
+</nav>
+</div>
+<div class="pt-6">
+<a class="bg-[#D3A940] text-[#071934] font-semibold w-full py-2.5 rounded-lg text-center block shadow hover:opacity-95 transition-opacity" href="#">
+          Soumettre mon innovation
+        </a>
+</div>
+</div>
+</div>
+<main class="flex-1 flex flex-col w-full bg-white">
+<!-- Minimal Navy Hero Section -->
+<section class="bg-[#071934] text-white px-4 py-6 relative overflow-hidden">
+<!-- Watermark African pattern -->
+<svg class="absolute right-0 top-0 h-full w-48 text-white opacity-[0.05] pointer-events-none" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 100 100">
+<polygon points="0,0 50,50 0,100"></polygon>
+<polygon points="50,0 100,50 50,100"></polygon>
+<polygon points="25,25 75,25 50,75"></polygon>
+<line x1="0" x2="100" y1="50" y2="50"></line>
+</svg>
+<div class="relative z-10 flex flex-col gap-2">
+<div class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full bg-[#D3A940] text-[#071934]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#071934]"></span>
+<span class="text-xs font-bold tracking-wide">Design System Mobile</span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-white mt-1">
+          RAJI UI System
+        </h1>
+<p class="text-sm font-medium text-white/90 leading-relaxed">
+          RAJI — Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique
+        </p>
+<div class="flex items-center gap-3 pt-2 text-xs font-semibold">
+<span class="text-[#D3A940]">100% Validé</span>
+<span class="text-white/40">•</span>
+<span class="text-white/80">Norme Mobile 390px</span>
+</div>
+</div>
+</section>
+<!-- Component Workspace -->
+<div class="px-4 py-5 flex flex-col gap-5">
+<!-- Tabs Component -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-0.5">
+<span class="text-xs font-bold tracking-wider text-[#071934] uppercase">Inspection UI</span>
+<span class="text-xs font-semibold text-[#071934]">Spécifications</span>
+</div>
+<div class="bg-[#F3F4F5] p-1 rounded-xl flex items-center gap-1 border border-[#E6E8EB]" role="tablist">
+<button class="flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all bg-white text-[#071934] shadow-sm text-center" id="tab-btn-components" onclick="switchPreviewTab('components')" type="button">
+            Composants
+          </button>
+<button class="flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all text-[#071934]/70 hover:text-[#071934] text-center" id="tab-btn-tokens" onclick="switchPreviewTab('tokens')" type="button">
+            Tokens
+          </button>
+<button class="flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all text-[#071934]/70 hover:text-[#071934] text-center" id="tab-btn-guidelines" onclick="switchPreviewTab('guidelines')" type="button">
+            Règles
+          </button>
+</div>
+</div>
+<!-- Tab Content: Components -->
+<div class="flex flex-col gap-5" id="tab-content-components">
+<!-- 1. Buttons Matrix -->
+<div class="bg-white rounded-xl p-4 border border-[#E6E8EB] flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-bold text-[#071934] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-[#071934]">smart_button</span>
+              Boutons d'Action
+            </h2>
+<span class="text-xs px-2 py-0.5 rounded bg-[#F3F4F5] text-[#071934] font-medium border border-[#E6E8EB]">3 types</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Primary Navy Button -->
+<button class="w-full h-11 px-4 rounded-lg bg-[#071934] text-white font-semibold text-sm flex items-center justify-center gap-2 hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="">Bouton Primaire — Deep Navy</span>
+</button>
+<!-- Gold Button -->
+<button class="w-full h-11 px-4 rounded-lg bg-[#D3A940] text-[#071934] font-semibold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span class="">Bouton Or — Propulsion</span>
+</button>
+<!-- Outlined Button -->
+<button class="w-full h-11 px-4 rounded-lg border border-[#071934] text-[#071934] bg-transparent font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#F3F4F5] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span class="">Bouton Contour — Neutre</span>
+</button>
+</div>
+</div>
+<!-- 2. Badges Showcase -->
+<div class="bg-white rounded-xl p-4 border border-[#E6E8EB] flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-bold text-[#071934] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-[#071934]">sell</span>
+              Badges &amp; Statuts
+            </h2>
+<span class="text-xs text-[#071934]/70 font-medium">Palette Officielle</span>
+</div>
+<div class="flex flex-wrap gap-2 items-center">
+<!-- Gold badge bg-[#D3A940] text-[#071934] -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D3A940] text-[#071934] font-bold text-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-[#071934]"></span>
+              Excellence Or
+            </span>
+<!-- Navy badge bg-[#071934] text-white -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#071934] text-white font-semibold text-xs">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+              Innovateur Actif
+            </span>
+<!-- Muted badge bg-[#F3F4F5] text-[#071934] -->
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#F3F4F5] text-[#071934] font-semibold text-xs border border-[#E6E8EB]">
+              En Examen
+            </span>
+<!-- Additional Muted Badge -->
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#F3F4F5] text-[#071934] font-medium text-xs border border-[#E6E8EB]">
+              Hub Panafricain
+            </span>
+</div>
+</div>
+<!-- 3. Input Field -->
+<div class="bg-white rounded-xl p-4 border border-[#E6E8EB] flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="text-xs font-bold text-[#071934] flex items-center gap-1" for="project-name">
+<span class="">Nom du Projet d'Innovation</span>
+<span class="text-[#071934]">*</span>
+</label>
+<span class="text-xs text-[#071934]/60">Max 40 car.</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[#071934]/60 text-[20px] pointer-events-none">eco</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] text-[#071934] text-sm focus:outline-none focus:bg-white focus:border-[#071934] transition-colors" id="project-name" placeholder="Ex: Système d'irrigation solaire" type="text" value="AgriTech Sahelo-Smart">
+</div>
+<p class="text-xs text-[#071934]/70 flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">info</span>
+            Identifiant d'impact auditable par le jury panafricain.
+          </p>
+</div>
+<!-- 4. Card with border-[#E6E8EB] and project featuring logo -->
+<div class="bg-white rounded-xl p-4 border border-[#E6E8EB] flex flex-col gap-3">
+<!-- Card Header with Logo Asset in white container -->
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-white border border-[#E6E8EB] flex items-center justify-center p-1 shrink-0">
+<img alt="Logo RAJI" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7SoukrOCYgDtvJYZ7ZIqloaujMIyUFf2J2uSm-bDNENGnAAaOho5BsUnKgugd8eQmh2mpse1yEcbnr6HADHrVx7WF_20V2AOMFU4GWzc74wZ6VmKDAiXbAq_LZCILPiJ41anCDArFMJBaBNFv7__I7UEbx25bPBjoDahpcsq04AHL_va9nGNjxJAnBGmFUzm83wZMuG_7h_6oMUSRL861EFcAWid7mx0e0P2wXJJq__u1W36Tt-dnrkClna6UY9kFZ8U">
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold uppercase tracking-wider text-[#071934]">Projet Certifié</span>
+<h3 class="text-base font-bold text-[#071934]">Bio-Pesticide Nilotica</h3>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#F3F4F5] text-[#071934] font-semibold text-xs border border-[#E6E8EB] shrink-0">
+              Rwanda
+            </span>
+</div>
+<!-- Description -->
+<p class="text-xs text-[#071934] leading-relaxed">
+            Formulation agronomique biodégradable valorisant les coproduits oléagineux locaux pour protéger les récoltes céréalières à coût accessible.
+          </p>
+<!-- Progress Tracker Mini Widget -->
+<div class="p-2.5 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-xs">
+<span class="text-[#071934] font-medium">Maturité Prototype</span>
+<span class="text-[#071934] font-bold">Étape 4 / 5 (80%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-[#E6E8EB] overflow-hidden">
+<div class="h-full bg-[#071934] rounded-full" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Card Actions -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 px-3 rounded-lg bg-[#071934] text-white font-semibold text-xs flex items-center justify-center gap-1.5 hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span class="">Consulter</span>
+</button>
+<button aria-label="Favoris" class="h-10 px-3 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] text-[#071934] text-xs font-semibold flex items-center justify-center hover:bg-[#E6E8EB] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tab Content: Tokens -->
+<div class="hidden flex-col gap-3" id="tab-content-tokens">
+<div class="bg-white rounded-xl p-4 border border-[#E6E8EB] flex flex-col gap-3">
+<h2 class="text-sm font-bold text-[#071934] flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">palette</span>
+            Palette Stricte RAJI (Mobile)
+          </h2>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Navy -->
+<div class="p-3 rounded-lg bg-[#071934] text-white flex flex-col justify-between h-20">
+<span class="text-xs text-[#D3A940] font-bold">Navy</span>
+<span class="text-sm font-bold">#071934</span>
+</div>
+<!-- Gold -->
+<div class="p-3 rounded-lg bg-[#D3A940] text-[#071934] flex flex-col justify-between h-20">
+<span class="text-xs font-bold text-[#071934]">Or</span>
+<span class="text-sm font-bold">#D3A940</span>
+</div>
+<!-- Pure White -->
+<div class="p-3 rounded-lg bg-white border border-[#E6E8EB] text-[#071934] flex flex-col justify-between h-20">
+<span class="text-xs text-[#071934]/70 font-bold">Blanc</span>
+<span class="text-sm font-bold">#FFFFFF</span>
+</div>
+<!-- Tint & Border -->
+<div class="p-3 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] text-[#071934] flex flex-col justify-between h-20">
+<span class="text-xs text-[#071934]/70 font-bold">Muted &amp; Border</span>
+<span class="text-sm font-bold">#F3F4F5 / #E6E8EB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab Content: Guidelines -->
+<div class="hidden flex-col gap-3" id="tab-content-guidelines">
+<div class="bg-white rounded-xl p-4 border border-[#E6E8EB] flex flex-col gap-2">
+<h2 class="text-sm font-bold text-[#071934] flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+            Contraintes de Cohérence
+          </h2>
+<div class="flex flex-col gap-2 pt-1 text-xs text-[#071934]">
+<div class="p-2.5 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#071934] mt-0.5">check_circle</span>
+<p class="">Texte sur fond or systématiquement en <strong class="text-[#071934]">#071934</strong>.</p>
+</div>
+<div class="p-2.5 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#071934] mt-0.5">check_circle</span>
+<p class="">Arrière-plan général strictement blanc pur <strong class="text-[#071934]">#FFFFFF</strong>.</p>
+</div>
+<div class="p-2.5 rounded-lg bg-[#F3F4F5] border border-[#E6E8EB] flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#071934] mt-0.5">check_circle</span>
+<p class="">Logo officiel RAJI affiché en conteneur blanc pur préservant le ratio d'origine.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Conformance Notification -->
+<div class="p-3 rounded-xl bg-[#F3F4F5] border border-[#E6E8EB] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-[#071934]">workspace_premium</span>
+<span class="text-xs font-semibold text-[#071934]">Spécifications 390px Conformes</span>
+</div>
+<span class="text-xs uppercase font-bold text-[#071934] px-2 py-0.5 rounded bg-[#D3A940]">
+          Validé
+        </span>
+</div>
+</div>
+<!-- Script for Tab Switching -->
+<script>
+      function switchPreviewTab(tabId) {
+        var tabs = ['components', 'tokens', 'guidelines'];
+        tabs.forEach(function(t) {
+          var contentEl = document.getElementById('tab-content-' + t);
+          var btnEl = document.getElementById('tab-btn-' + t);
+          if (contentEl && btnEl) {
+            if (t === tabId) {
+              contentEl.classList.remove('hidden');
+              contentEl.classList.add('flex');
+              btnEl.className = 'flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all bg-white text-[#071934] shadow-sm text-center';
+            } else {
+              contentEl.classList.remove('flex');
+              contentEl.classList.add('hidden');
+              btnEl.className = 'flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all text-[#071934]/70 hover:text-[#071934] text-center';
+            }
+          }
+        });
+      }
+    </script>
+<!-- Footer with Navy #071934, white text & logo in rounded white box -->
+<footer class="w-full bg-[#071934] text-white px-4 py-8 mt-6">
+<div class="flex flex-col items-center gap-4 text-center">
+<!-- Logo inside white rounded container -->
+<div class="bg-white rounded-xl p-2.5 inline-block">
+<img alt="Logo RAJI" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyGe1aeLFrnrm4D4yNvPXVDsGnCA6knn-tWCvU8MxGl0Na-MNat-vlcGrJQU8dfTjRzlF3MYLIUqkUpdCfQ8p4ZmqK88PCWR-e8sJgQOf5DPX-Ci9rwF_I5nt0Mtc47PP10v5oIlmEV1nEgDJnRS-9djX49eg4L5ktkKQZ4JkLDeAdT0_cp2grZ1vGtfU5dvxMIm9Lkpd2cTn7XVFMLqGsn0-DlWo7quucNvN74G3-5luF_59v3W_u-VOa8hDvVvParKM">
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-xs font-bold uppercase tracking-wider text-[#D3A940]">Excellence Panafricaine</p>
+<p class="text-xs text-white/90 max-w-xs leading-relaxed">
+            RAJI — Aujourd'hui innovateurs, demain bâtisseurs de l'Afrique
+          </p>
+</div>
+<div class="flex items-center justify-center gap-4 pt-1 text-xs text-white/80">
+<a class="hover:text-white" href="#">Charte</a>
+<span class="">•</span>
+<a class="hover:text-white" href="#">Contact</a>
+<span class="">•</span>
+<a class="hover:text-white" href="#">Mentions Légales</a>
+</div>
+<p class="text-xs text-white/60">© 2025 RAJI. Tous droits réservés.</p>
+</div>
+</footer>
+</main>
+<!-- Bottom Navigation Bar -->
+
+
+
+</body></html>
