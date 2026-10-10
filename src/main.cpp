@@ -27,7 +27,10 @@ const char *WIFI_PASSWORD = "7CBBAF62";
 
 const char *SUPABASE_URL = "https://jjwudgxkitmmyjhzafis.supabase.co";
 const char *SUPABASE_ANON_KEY =
-    "sb_publishable_Ulogmr9FDFtsy3i8dXqLJg_pKZHQa5_";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."
+    "eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impqd3VkZ3hraXRtbXlqaHphZmlzIiwicm9sZSI6Im"
+    "Fub24iLCJpYXQiOjE3OTA3MDY2NjksImV4cCI6MjEwNjI4MjY2OX0.OWbvCxN8DuCJrFuLP-"
+    "wWehU3DQNqUBaab7OMt5o3ziY";
 
 // Seuil d'alerte de surpuissance en Watts (ex: 3500 W pour un disjoncteur 16A
 // sous 230V)

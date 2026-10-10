@@ -8,7 +8,7 @@ const state = {
   simInterval: null,
   // Récupération des clés Supabase depuis le localStorage avec les valeurs par défaut
   supabaseUrl: localStorage.getItem('pzem_supabase_url') || 'https://jjwudgxkitmmyjhzafis.supabase.co',
-  supabaseKey: localStorage.getItem('pzem_supabase_key') || 'sb_publishable_Ulogmr9FDFtsy3i8dXqLJg_pKZHQa5_',
+  supabaseKey: localStorage.getItem('pzem_supabase_key') || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impqd3VkZ3hraXRtbXlqaHphZmlzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA3MDY2NjksImV4cCI6MjEwNjI4MjY2OX0.OWbvCxN8DuCJrFuLP-wWehU3DQNqUBaab7OMt5o3ziY',
   supabaseClient: null,
   realtimeSubscription: null,
   lastSyncTime: 0,
