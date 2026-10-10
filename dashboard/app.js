@@ -431,47 +431,6 @@ async function connectSupabase() {
   }
 }
 
-function saveSupabaseConfig() {
-  const url = document.getElementById('cfg-supabase-url').value.trim();
-  const key = document.getElementById('cfg-supabase-key').value.trim();
-
-  if (!url || !key) {
-    alert('Veuillez saisir l\'URL du projet Supabase et la clé Anon.');
-    return;
-  }
-
-  state.supabaseUrl = url;
-  state.supabaseKey = key;
-  localStorage.setItem('pzem_supabase_url', url);
-  localStorage.setItem('pzem_supabase_key', key);
-
-  document.getElementById('sim-toggle').checked = false;
-  toggleSimulator(false);
-  connectSupabase();
-  alert('✅ Configuration Supabase enregistrée !');
-}
-
-async function testSupabaseConnection() {
-  const url = document.getElementById('cfg-supabase-url').value.trim();
-  const key = document.getElementById('cfg-supabase-key').value.trim();
-
-  if (!url || !key) {
-    alert('Veuillez remplir l\'URL et la clé Supabase avant de tester.');
-    return;
-  }
-
-  try {
-    const testClient = window.supabase.createClient(url, key);
-    const { data, error } = await testClient.from('telemetry').select('id').limit(1);
-
-    if (error) {
-      alert(`⚠️ Erreur Supabase : ${error.message}\n(Vérifiez que vous avez bien créé la table "telemetry" avec le script SQL fourni)`);
-    } else {
-      alert('🎉 Connexion à Supabase et accès à la table "telemetry" réussis !');
-    }
-  } catch (e) {
-    alert(`❌ Impossible de joindre Supabase : ${e.message}`);
-  }
 }
 
 // 9. Export CSV
@@ -499,12 +458,6 @@ function exportCSV() {
 window.addEventListener('DOMContentLoaded', () => {
   initCharts();
   loadThemeSettings();
-
-  const inputUrl = document.getElementById('cfg-supabase-url');
-  if (inputUrl && state.supabaseUrl) inputUrl.value = state.supabaseUrl;
-
-  const inputKey = document.getElementById('cfg-supabase-key');
-  if (inputKey && state.supabaseKey) inputKey.value = state.supabaseKey;
 
   const inputPower = document.getElementById('cfg-power-limit');
   if (inputPower) inputPower.value = state.powerLimit;
