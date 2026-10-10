@@ -421,6 +421,7 @@ async function fetchHistoryData(period) {
 
   if (error) {
     console.error("Erreur chargement historique:", error);
+    document.getElementById('history-table-body').innerHTML = `<tr><td colspan="5" class="px-4 py-6 text-center" style="color: var(--theme-danger);">Erreur de connexion à Supabase. Vérifiez l'URL et la clé dans app.js.</td></tr>`;
     return;
   }
 
