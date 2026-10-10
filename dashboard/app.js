@@ -6,9 +6,9 @@ const state = {
   historyData: [],
   isSimulator: false,
   simInterval: null,
-  // Récupération des clés Supabase depuis le localStorage (sauvegardées lors des étapes précédentes)
-  supabaseUrl: localStorage.getItem('pzem_supabase_url') || '',
-  supabaseKey: localStorage.getItem('pzem_supabase_key') || '',
+  // Récupération des clés Supabase depuis le localStorage avec les valeurs par défaut
+  supabaseUrl: localStorage.getItem('pzem_supabase_url') || 'https://jjwudgxkitmmyjhzafis.supabase.co',
+  supabaseKey: localStorage.getItem('pzem_supabase_key') || 'sb_publishable_Ulogmr9FDFtsy3i8dXqLJg_pKZHQa5_',
   supabaseClient: null,
   realtimeSubscription: null,
   lastSyncTime: 0,
