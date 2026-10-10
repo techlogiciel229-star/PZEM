@@ -490,8 +490,8 @@ function toggleThemePanel() {
 }
 
 function loadThemeSettings() {
-  const savedColor = localStorage.getItem('pzem_theme_color');
-  if (savedColor) applyTheme(savedColor);
+  const savedTheme = localStorage.getItem('pzem_theme') || 'nebula';
+  setTheme(savedTheme, false);
   
   const savedGlass = localStorage.getItem('pzem_glass');
   if (savedGlass !== null) {
@@ -501,28 +501,107 @@ function loadThemeSettings() {
   }
 }
 
-function setThemeColor(colorHex) {
-  localStorage.setItem('pzem_theme_color', colorHex);
-  applyTheme(colorHex);
-}
+function setTheme(themeName, save = true) {
+  if (save) localStorage.setItem('pzem_theme', themeName);
 
-function applyTheme(colorHex) {
   let styleEl = document.getElementById('custom-theme-style');
   if (!styleEl) {
     styleEl = document.createElement('style');
     styleEl.id = 'custom-theme-style';
     document.head.appendChild(styleEl);
   }
-  styleEl.textContent = `
-    .text-secondary { color: ${colorHex} !important; }
-    .bg-secondary { background-color: ${colorHex} !important; }
-    .border-secondary { border-color: ${colorHex} !important; }
-    .peer-checked\\:bg-secondary:checked ~ div { background-color: ${colorHex} !important; }
-    .hover\\:border-secondary:hover { border-color: ${colorHex} !important; }
-    .text-tertiary { color: ${colorHex} !important; }
-    .bg-tertiary { background-color: ${colorHex} !important; }
-    .border-tertiary { border-color: ${colorHex} !important; }
-  `;
+
+  let css = '';
+  switch(themeName) {
+    case 'light':
+      css = `
+        body { background: #f3f4f6 !important; color: #1f2937 !important; }
+        .text-white { color: #111827 !important; }
+        .text-outline { color: #6b7280 !important; }
+        .text-on-surface-variant { color: #4b5563 !important; }
+        .bg-surface-container-low\\/40, .bg-surface-container-low\\/60, .bg-surface-container-low { background-color: rgba(255, 255, 255, 0.8) !important; border-color: #d1d5db !important; }
+        .bg-surface-container { background-color: #f9fafb !important; border-color: #d1d5db !important; }
+        .text-secondary { color: #2563eb !important; }
+        .bg-secondary { background-color: #2563eb !important; }
+        .border-secondary { border-color: #2563eb !important; }
+        .text-tertiary { color: #059669 !important; }
+        .bg-tertiary { background-color: #059669 !important; }
+        .border-tertiary { border-color: #059669 !important; }
+        .bg-primary-container { background-color: #3b82f6 !important; color: #fff !important; }
+        .nav-item.bg-primary-container { background-color: #2563eb !important; }
+        #sidebar { background-color: rgba(243, 244, 246, 0.9) !important; border-color: #d1d5db !important; }
+      `;
+      break;
+    case 'cyberpunk':
+      css = `
+        body { background: #fde047 !important; color: #000 !important; font-family: 'JetBrains Mono', monospace !important; }
+        .text-white { color: #000 !important; text-shadow: 1px 1px 0px #06b6d4; }
+        .text-outline { color: #333 !important; font-weight: bold; }
+        .bg-surface-container-low\\/40, .bg-surface-container-low\\/60, .bg-surface-container-low { background-color: #000 !important; border-color: #e11d48 !important; border-width: 2px !important; border-radius: 0 !important; color: #fff !important; }
+        .bg-surface-container { background-color: #111 !important; border-color: #06b6d4 !important; border-radius: 0 !important; }
+        .text-secondary { color: #fde047 !important; }
+        .bg-secondary { background-color: #fde047 !important; }
+        .border-secondary { border-color: #fde047 !important; }
+        .text-tertiary { color: #06b6d4 !important; }
+        .bg-tertiary { background-color: #06b6d4 !important; }
+        .border-tertiary { border-color: #06b6d4 !important; }
+        .bg-primary-container { background-color: #e11d48 !important; color: #000 !important; border-radius: 0 !important; font-weight: bold; }
+        .rounded-xl, .rounded-lg, .rounded-full { border-radius: 0 !important; }
+        #sidebar { background-color: rgba(253, 224, 71, 0.95) !important; border-color: #000 !important; border-width: 2px !important; }
+      `;
+      break;
+    case 'eco':
+      css = `
+        body { background: #064e3b !important; color: #ecfdf5 !important; }
+        .text-white { color: #ffffff !important; }
+        .text-outline { color: #a7f3d0 !important; }
+        .bg-surface-container-low\\/40, .bg-surface-container-low\\/60, .bg-surface-container-low { background-color: rgba(2, 44, 34, 0.6) !important; border-color: #10b981 !important; border-radius: 24px !important; }
+        .bg-surface-container { background-color: #022c22 !important; border-color: #059669 !important; border-radius: 16px !important; }
+        .text-secondary { color: #6ee7b7 !important; }
+        .bg-secondary { background-color: #6ee7b7 !important; }
+        .border-secondary { border-color: #6ee7b7 !important; }
+        .text-tertiary { color: #fcd34d !important; }
+        .bg-tertiary { background-color: #fcd34d !important; }
+        .border-tertiary { border-color: #fcd34d !important; }
+        .bg-primary-container { background-color: #059669 !important; color: #fff !important; border-radius: 16px !important; }
+        #sidebar { background-color: rgba(6, 78, 59, 0.8) !important; border-color: #10b981 !important; }
+      `;
+      break;
+    case 'oled':
+      css = `
+        body { background: #000000 !important; color: #e5e5e5 !important; }
+        .text-white { color: #ffffff !important; }
+        .text-outline { color: #737373 !important; }
+        .bg-surface-container-low\\/40, .bg-surface-container-low\\/60, .bg-surface-container-low { background-color: #000000 !important; border-color: #262626 !important; box-shadow: none !important; }
+        .bg-surface-container { background-color: #0a0a0a !important; border-color: #171717 !important; }
+        .text-secondary { color: #ea580c !important; }
+        .bg-secondary { background-color: #ea580c !important; }
+        .border-secondary { border-color: #ea580c !important; }
+        .text-tertiary { color: #dc2626 !important; }
+        .bg-tertiary { background-color: #dc2626 !important; }
+        .border-tertiary { border-color: #dc2626 !important; }
+        .bg-primary-container { background-color: #ea580c !important; color: #000 !important; font-weight: bold !important; }
+        #sidebar { background-color: #000000 !important; border-color: #262626 !important; }
+      `;
+      break;
+    case 'nebula':
+    default:
+      css = ''; 
+      break;
+  }
+  
+  styleEl.textContent = css;
+
+  // Ajustement forcé des textes blancs sur fond cyberpunk
+  if(themeName === 'cyberpunk') {
+    document.querySelectorAll('.text-white').forEach(el => {
+      if(el.closest('.bg-surface-container-low\\/40')) {
+         el.style.color = '#fff';
+      }
+    });
+  } else {
+    document.querySelectorAll('.text-white').forEach(el => el.style.color = '');
+  }
 }
 
 function toggleGlass(isGlass) {
