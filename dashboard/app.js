@@ -431,8 +431,6 @@ async function connectSupabase() {
   }
 }
 
-}
-
 // 9. Export CSV
 function exportCSV() {
   if (state.historyData.length === 0) {
