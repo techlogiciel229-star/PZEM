@@ -268,7 +268,15 @@ function updateUI(data) {
   const timeLabel = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
   addDataToCharts(timeLabel, data.power, data.voltage, data.current);
 
-  resetWatchdog();
+  // Vérifier si la donnée est récente (moins de 30 secondes)
+  const dataTime = new Date(data.created_at || Date.now()).getTime();
+  const now = Date.now();
+  if (now - dataTime < 30000) {
+    resetWatchdog();
+  } else {
+    document.getElementById('status-text').textContent = 'HORS LIGNE';
+    document.getElementById('status-dot').style.backgroundColor = 'var(--theme-danger)';
+  }
 }
 
 function renderHistoryTable(dataRows) {
@@ -349,8 +357,8 @@ async function connectSupabase() {
       })
       .subscribe((status) => {
         if (status === 'SUBSCRIBED') {
-          document.getElementById('status-text').textContent = 'EN LIGNE';
-          document.getElementById('status-dot').style.backgroundColor = 'var(--theme-accent)';
+          console.log("Connecté au temps réel Supabase. En attente des données de l'ESP32...");
+          // Ne pas forcer "EN LIGNE" ici, c'est updateUI() qui gère ça selon la fraîcheur des données.
         }
       });
   } catch(e) {
