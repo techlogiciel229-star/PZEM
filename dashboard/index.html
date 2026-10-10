@@ -1,434 +1,323 @@
 <!DOCTYPE html>
-<html class="dark" lang="fr">
+<html lang="fr" class="dark">
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>PZEM Monitor — Dashboard Énergétique IoT</title>
+  <title>Moniteur PZEM — Pro</title>
   
-  <!-- Polices Google : Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS, Chart.js & Supabase Client -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-  <!-- Configuration Thème Tailwind inspiré des maquettes Stitch -->
   <script>
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
-          colors: {
-            background: "#0b1326",
-            surface: "#0b1326",
-            "surface-container-lowest": "#060e20",
-            "surface-container-low": "#131b2e",
-            "surface-container": "#171f33",
-            "surface-container-high": "#222a3d",
-            "surface-container-highest": "#2d3449",
-            primary: "#b4c5ff",
-            "primary-container": "#2563eb",
-            "on-primary-container": "#eeefff",
-            secondary: "#4cd7f6",
-            "secondary-container": "#03b5d3",
-            tertiary: "#45dfa4",
-            "tertiary-container": "#007d57",
-            outline: "#8d90a0",
-            "on-surface": "#dae2fd",
-            "on-surface-variant": "#c3c6d7",
-            error: "#ffb4ab",
-            "error-container": "#93000a"
-          },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace']
+          },
+          colors: {
+            ui: {
+              900: '#0a0a0a',
+              800: '#121212',
+              700: '#1c1c1c',
+              600: '#2a2a2a',
+              border: '#333333',
+              text: '#e5e5e5',
+              muted: '#a3a3a3'
+            }
           }
         }
       }
-    };
+    }
   </script>
 
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #e5e5e5; }
     .font-mono { font-family: 'JetBrains Mono', monospace; }
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: #0b1326; }
-    ::-webkit-scrollbar-thumb { background: #222a3d; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #4cd7f6; }
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+    .glass-panel { background: rgba(18, 18, 18, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--theme-border, #333); }
+    .data-value { font-variant-numeric: tabular-nums; }
+    
+    /* Variables dynamiques pour les thèmes */
+    :root {
+      --theme-bg: #0a0a0a;
+      --theme-panel: #121212;
+      --theme-border: #333333;
+      --theme-text: #e5e5e5;
+      --theme-muted: #a3a3a3;
+      --theme-accent: #3b82f6; 
+      --theme-danger: #ef4444;
+    }
   </style>
 </head>
 
-<body class="bg-[#040914] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#172442] via-[#040914] to-[#000000] text-on-surface antialiased flex min-h-screen">
+<body class="antialiased min-h-screen flex flex-col md:flex-row transition-colors duration-300" style="background-color: var(--theme-bg); color: var(--theme-text);">
 
-  <!-- ======================== 1. BARRE LATÉRALE (SIDEBAR) ======================== -->
-  <aside id="sidebar" class="fixed left-0 top-0 h-full w-64 bg-surface-container-low/60 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-surface-container-high/30 shadow-2xl transition-transform duration-300 -translate-x-full lg:translate-x-0">
-    <div class="flex flex-col">
-      <!-- Logo & Titre -->
-      <div class="h-16 px-5 flex items-center justify-between bg-surface-container-low/90 border-b border-surface-container-high/40">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-lg bg-primary-container/30 border border-primary-container flex items-center justify-center text-secondary">
-            <span class="material-symbols-outlined text-[24px]">electric_meter</span>
-          </div>
-          <div>
-            <h1 class="font-semibold text-sm tracking-tight text-white leading-tight">PZEM Monitor</h1>
-            <span class="text-[10px] text-outline font-mono">ESP32 IoT v2.4</span>
-          </div>
+  <!-- BARRE LATÉRALE -->
+  <aside id="sidebar" class="w-full md:w-64 flex-shrink-0 flex flex-col border-r transition-all duration-300" style="border-color: var(--theme-border); background-color: var(--theme-panel);">
+    <div class="h-16 flex items-center px-6 border-b" style="border-color: var(--theme-border);">
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5" style="color: var(--theme-accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div>
+          <h1 class="text-sm font-semibold tracking-wide">PZEM Monitor</h1>
+          <p class="text-[10px] font-mono" style="color: var(--theme-muted);">v2.5 // TÉLÉMÉTRIE</p>
         </div>
-      </div>
-
-      <!-- Navigation -->
-      <div class="px-3 py-4">
-        <p class="text-[10px] font-semibold text-outline uppercase tracking-wider px-3 mb-2">Supervision Énergie</p>
-        <nav class="flex flex-col gap-1 text-sm font-medium">
-          <button onclick="switchTab('vue-ensemble')" id="nav-vue-ensemble" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary-container text-white transition-all">
-            <span class="material-symbols-outlined text-[20px]">grid_view</span>
-            <span>Vue d'ensemble</span>
-          </button>
-          <button onclick="switchTab('supervision')" id="nav-supervision" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-white transition-all">
-            <span class="material-symbols-outlined text-[20px]">bolt</span>
-            <span>Supervision Direct</span>
-          </button>
-          <button onclick="switchTab('historique')" id="nav-historique" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-white transition-all">
-            <span class="material-symbols-outlined text-[20px]">timeline</span>
-            <span>Historique & Coûts</span>
-          </button>
-          <button onclick="switchTab('alertes')" id="nav-alertes" class="nav-item flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-white transition-all">
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-[20px]">warning</span>
-              <span>Alertes & Seuils</span>
-            </div>
-            <span id="alert-badge" class="hidden px-1.5 py-0.5 rounded-full bg-error text-surface-container-lowest text-[10px] font-bold font-mono">1</span>
-          </button>
-        </nav>
       </div>
     </div>
 
-    <!-- Pied de Sidebar (Statut Cloud & Mode) -->
-    <div class="p-3 bg-surface-container-lowest/60 border-t border-surface-container-high/40 space-y-2">
-      <div class="p-2.5 rounded-lg bg-surface-container flex flex-col gap-1.5">
-        <div class="flex items-center justify-between text-xs">
-          <span class="text-outline uppercase text-[10px]">Statut ESP32</span>
-          <div class="flex items-center gap-1.5">
-            <span id="status-dot" class="inline-block h-2 w-2 rounded-full bg-error"></span>
-            <span id="status-text" class="font-mono text-[11px] text-error">Hors ligne</span>
-          </div>
-        </div>
-        <div class="flex items-center justify-between text-[11px] text-on-surface-variant">
-          <span>Dernière synchro</span>
-          <span id="last-sync-time" class="font-mono text-secondary">--:--:--</span>
-        </div>
-      </div>
+    <nav class="flex-1 py-6 px-4 space-y-1">
+      <p class="px-2 text-[10px] uppercase tracking-widest font-semibold mb-3" style="color: var(--theme-muted);">Navigation</p>
+      
+      <button onclick="switchTab('dashboard')" id="nav-dashboard" class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm transition-colors text-left" style="color: var(--theme-accent); background: rgba(255,255,255,0.05);">
+        <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+        Vue d'ensemble
+      </button>
 
-      <!-- Toggle Simulateur -->
-      <div class="flex items-center justify-between px-2 py-1 bg-surface-container-low rounded-lg">
-        <span class="text-[11px] text-outline">Simulateur Démo</span>
-        <label class="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" id="sim-toggle" class="sr-only peer" onchange="toggleSimulator(this.checked)">
-          <div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3.5 after:transition-all peer-checked:bg-secondary"></div>
-        </label>
+      <button onclick="switchTab('analysis')" id="nav-analysis" class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm transition-colors text-left" style="color: var(--theme-muted);">
+        <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+        Analyses & Historique
+      </button>
+
+      <button onclick="switchTab('settings')" id="nav-settings" class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm transition-colors text-left" style="color: var(--theme-muted);">
+        <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+        Seuils de Sécurité
+      </button>
+    </nav>
+
+    <div class="p-4 border-t" style="border-color: var(--theme-border);">
+      <div class="flex items-center justify-between text-xs mb-3">
+        <span style="color: var(--theme-muted);">Statut ESP32</span>
+        <div class="flex items-center gap-1.5">
+          <span id="status-dot" class="w-1.5 h-1.5 rounded-full" style="background-color: var(--theme-danger);"></span>
+          <span id="status-text" class="font-mono text-[10px]" style="color: var(--theme-danger);">HORS LIGNE</span>
+        </div>
       </div>
-      <!-- Signature -->
-      <div class="pt-2 text-center border-t border-surface-container-high/40 mt-2">
-        <p class="text-[10px] text-outline font-mono">Réalisé par</p>
-        <p class="text-[11px] font-bold text-tertiary">Joaness OSSA</p>
+      <div class="text-[10px] text-center font-mono mt-4" style="color: var(--theme-muted);">
+        Réalisé par Joaness OSSA
       </div>
     </div>
   </aside>
 
-  <!-- ======================== 2. ZONE DE CONTENU PRINCIPALE ======================== -->
-  <div class="lg:pl-64 flex-1 flex flex-col min-w-0 transition-all duration-300">
+  <!-- CONTENU PRINCIPAL -->
+  <main class="flex-1 flex flex-col min-w-0 overflow-hidden">
     
-    <!-- Top Header -->
-    <header class="h-16 border-b border-surface-container-high/30 bg-surface-container-low/40 backdrop-blur-xl px-4 sm:px-6 flex items-center justify-between sticky top-0 z-40">
-      <div class="flex items-center gap-2 sm:gap-3">
-        <button id="mobile-menu-btn" onclick="toggleSidebar()" class="lg:hidden p-1.5 text-on-surface-variant hover:text-white transition-colors bg-surface-container rounded-lg">
-          <span class="material-symbols-outlined text-[20px]">menu</span>
-        </button>
-        <div class="hidden sm:flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-lg border border-surface-container-high">
-          <span class="material-symbols-outlined text-secondary text-[18px]">electrical_services</span>
-          <span class="text-xs font-semibold text-white">Capteur PZEM-004T</span>
-        </div>
-        <div id="live-banner" class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary/10 border border-tertiary/30 text-tertiary text-xs font-medium">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
-          </span>
-          <span>Télémétrie Active (2s)</span>
+    <!-- EN-TÊTE -->
+    <header class="h-16 border-b flex items-center justify-between px-6 z-10" style="border-color: var(--theme-border); background: var(--theme-bg);">
+      <div class="flex items-center gap-4">
+        <h2 id="page-title" class="text-sm font-medium">Supervision en direct</h2>
+        <div id="live-indicator" class="hidden items-center gap-1.5 px-2 py-0.5 border text-[10px] font-mono tracking-widest" style="border-color: var(--theme-accent); color: var(--theme-accent);">
+          <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background-color: var(--theme-accent);"></span>
+          EN DIRECT
         </div>
       </div>
+      
+      <div class="flex items-center gap-4">
+        <label class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" title="Activer/Désactiver le Simulateur">
+          <div class="relative flex items-center">
+            <input type="checkbox" id="sim-toggle" onchange="toggleSimulator(this.checked)" class="sr-only peer">
+            <div class="block w-8 h-4 rounded-full border transition-colors duration-300 peer-checked:bg-opacity-20" style="border-color: var(--theme-border); background-color: var(--theme-panel);"></div>
+            <div class="dot absolute left-1 top-1 bg-gray-400 w-2 h-2 rounded-full transition-transform duration-300 peer-checked:translate-x-4 peer-checked:bg-blue-500" style="background-color: var(--theme-muted);"></div>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--theme-muted);">Simulateur</span>
+        </label>
+        
+        <div class="w-px h-4 bg-gray-500 opacity-30"></div>
 
-      <div class="flex items-center gap-2 sm:gap-3">
-        <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-xs text-on-surface-variant font-mono">
-          <span class="material-symbols-outlined text-secondary text-[16px]">wifi</span>
-          <span id="header-rssi">-58 dBm</span>
-        </div>
-        <button onclick="toggleThemePanel()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs text-secondary border border-surface-container-high transition-colors">
-          <span class="material-symbols-outlined text-[16px]">palette</span>
-          <span class="hidden sm:inline">Thème</span>
+        <button onclick="toggleThemePanel()" class="text-xs flex items-center gap-2 hover:opacity-80 transition-opacity" style="color: var(--theme-muted);">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+          Thèmes
         </button>
-        <button onclick="exportCSV()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs text-white border border-surface-container-high transition-colors">
-          <span class="material-symbols-outlined text-[16px]">download</span>
-          <span>Export</span>
+        <button onclick="exportCSV()" class="text-xs flex items-center gap-2 hover:opacity-80 transition-opacity" style="color: var(--theme-muted);">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          Exporter CSV
         </button>
       </div>
     </header>
 
-    <!-- Panneau Thème (Caché par défaut) -->
-    <div id="theme-panel" class="fixed top-16 right-4 sm:right-6 w-64 bg-surface-container-low/90 backdrop-blur-3xl border border-surface-container-high/50 shadow-2xl rounded-xl p-4 z-50 hidden transition-all duration-300">
-      <h3 class="text-sm font-semibold text-white mb-3">Thèmes du Dashboard</h3>
-      <div class="space-y-3">
-        <button onclick="setTheme('nebula')" class="w-full text-left px-3 py-2 rounded-lg bg-[#0b1326] border border-[#4cd7f6] text-white text-xs hover:scale-105 transition-transform">🌌 Dark Nebula (Défaut)</button>
-        <button onclick="setTheme('light')" class="w-full text-left px-3 py-2 rounded-lg bg-white border border-gray-300 text-gray-800 text-xs hover:scale-105 transition-transform font-semibold">☀️ Clean Light</button>
-        <button onclick="setTheme('cyberpunk')" class="w-full text-left px-3 py-2 rounded-lg bg-[#fde047] border border-[#e11d48] text-black text-xs hover:scale-105 transition-transform font-mono font-bold">🤖 Cyberpunk 2077</button>
-        <button onclick="setTheme('eco')" class="w-full text-left px-3 py-2 rounded-lg bg-[#064e3b] border border-[#34d399] text-[#ecfdf5] text-xs hover:scale-105 transition-transform">🌿 Eco Nature</button>
-        <button onclick="setTheme('oled')" class="w-full text-left px-3 py-2 rounded-lg bg-black border border-[#ea580c] text-white text-xs hover:scale-105 transition-transform">⬛ Midnight OLED</button>
-        
-        <div class="flex items-center justify-between pt-3 border-t border-white/10 mt-2">
-          <label class="text-[11px] text-outline">Effet Verre (Glass)</label>
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" id="glass-toggle" class="sr-only peer" checked onchange="toggleGlass(this.checked)">
-            <div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3.5 after:transition-all peer-checked:bg-secondary"></div>
-          </label>
-        </div>
+    <!-- PANNEAU DES THÈMES (Absolute) -->
+    <div id="theme-panel" class="absolute top-16 right-6 w-48 border shadow-xl p-3 z-50 hidden" style="background: var(--theme-panel); border-color: var(--theme-border);">
+      <p class="text-[10px] uppercase font-semibold mb-2" style="color: var(--theme-muted);">Changer l'apparence</p>
+      <div class="flex flex-col gap-1">
+        <button onclick="setTheme('industrial')" class="text-left text-xs px-2 py-1.5 hover:bg-white/5">🏗️ Industriel (Défaut)</button>
+        <button onclick="setTheme('terminal')" class="text-left text-xs px-2 py-1.5 hover:bg-white/5 font-mono">💻 Terminal Code</button>
+        <button onclick="setTheme('minimal')" class="text-left text-xs px-2 py-1.5 hover:bg-black/5" style="color: var(--theme-text);">⚪ Mode Clair</button>
+        <button onclick="setTheme('botanical')" class="text-left text-xs px-2 py-1.5 hover:bg-white/5">🌿 Nature (Eco)</button>
+        <button onclick="setTheme('abyss')" class="text-left text-xs px-2 py-1.5 hover:bg-white/5">🌌 Abysse</button>
       </div>
     </div>
 
-    <!-- Main Content Area -->
-    <main class="p-6 space-y-6">
+    <!-- ZONE DE CONTENU -->
+    <div class="flex-1 overflow-y-auto p-6 space-y-6">
 
-      <!-- ======================== ONGLET 1 : VUE D'ENSEMBLE ======================== -->
-      <section id="tab-vue-ensemble" class="tab-content space-y-6">
+      <!-- ======================== ONGLET: VUE D'ENSEMBLE ======================== -->
+      <div id="tab-dashboard" class="tab-content block space-y-6">
         
-        <!-- Alerte Banner (si puissance > seuil) -->
-        <div id="overpower-alert" class="hidden p-4 rounded-xl bg-error-container/40 border border-error text-error flex items-center justify-between animate-bounce">
+        <!-- ALERTE SURCONSOMMATION -->
+        <div id="overpower-alert" class="hidden p-3 border border-red-500/50 bg-red-500/10 flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-[24px]">crisis_alert</span>
-            <div>
-              <p class="font-bold text-sm">SURCONSOMMATION DÉTECTÉE !</p>
-              <p class="text-xs text-on-surface-variant">La puissance dépasse le seuil configuré. Risque de disjonction.</p>
-            </div>
+            <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            <span class="text-xs text-red-500 font-semibold tracking-wide">ALERTE : SEUIL DE PUISSANCE DÉPASSÉ</span>
           </div>
-          <span id="alert-val" class="font-mono font-bold text-lg">0 W</span>
+          <span id="alert-val" class="font-mono text-sm text-red-500">0 W</span>
         </div>
 
-        <!-- Bento Grid des 5 Métriques Clés -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          
-          <!-- Carte 1 : Puissance Active (W) -->
-          <div class="rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-4 border border-surface-container-high/50 shadow-lg flex flex-col justify-between relative overflow-hidden group hover:border-secondary hover:shadow-[0_0_15px_rgba(76,215,246,0.15)] transition-all duration-300">
-            <div class="flex items-start justify-between">
-              <div>
-                <span class="text-xs text-outline font-medium uppercase tracking-wider">Puissance Active</span>
-                <div class="flex items-baseline gap-1 mt-1">
-                  <span id="val-power" class="text-3xl font-bold font-mono text-white tracking-tight">0.0</span>
-                  <span class="text-xs font-mono text-secondary font-bold">W</span>
-                </div>
-              </div>
-              <div class="p-2 rounded-lg bg-surface-container text-secondary">
-                <span class="material-symbols-outlined text-[20px]">electric_bolt</span>
-              </div>
-            </div>
-            <div class="mt-4 space-y-1.5">
-              <div class="flex justify-between text-[11px] font-mono text-outline">
-                <span>Charge (max 7 kW)</span>
-                <span id="power-percent" class="text-white">0%</span>
-              </div>
-              <div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
-                <div id="power-bar" class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 0%;"></div>
-              </div>
+        <!-- GRILLE DES MÉTRIQUES -->
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+          <!-- Puissance -->
+          <div class="p-4 border flex flex-col justify-between h-28 glass-panel transition-all">
+            <span class="text-[10px] uppercase font-semibold" style="color: var(--theme-muted);">Puissance Active</span>
+            <div class="flex items-end justify-between">
+              <span id="val-power" class="text-2xl data-value tracking-tight">0.0</span>
+              <span class="text-xs font-mono" style="color: var(--theme-accent);">W</span>
             </div>
           </div>
-
-          <!-- Carte 2 : Tension Réseau (V) -->
-          <div class="rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-4 border border-surface-container-high/50 shadow-lg flex flex-col justify-between hover:border-secondary hover:shadow-[0_0_15px_rgba(76,215,246,0.15)] transition-all duration-300">
-            <div class="flex items-start justify-between">
-              <div>
-                <span class="text-xs text-outline font-medium uppercase tracking-wider">Tension Réseau</span>
-                <div class="flex items-baseline gap-1 mt-1">
-                  <span id="val-voltage" class="text-3xl font-bold font-mono text-white tracking-tight">0.0</span>
-                  <span class="text-xs font-mono text-secondary font-bold">V</span>
-                </div>
-              </div>
-              <div class="p-2 rounded-lg bg-surface-container text-secondary">
-                <span class="material-symbols-outlined text-[20px]">offline_bolt</span>
-              </div>
-            </div>
-            <div class="mt-4 flex items-center justify-between text-[11px]">
-              <span id="voltage-status" class="text-tertiary font-medium">Normal (230V ±5%)</span>
-              <span class="font-mono text-outline">50.0 Hz</span>
+          <!-- Tension -->
+          <div class="p-4 border flex flex-col justify-between h-28 glass-panel transition-all">
+            <span class="text-[10px] uppercase font-semibold" style="color: var(--theme-muted);">Tension Réseau</span>
+            <div class="flex items-end justify-between">
+              <span id="val-voltage" class="text-2xl data-value tracking-tight">0.0</span>
+              <span class="text-xs font-mono" style="color: var(--theme-muted);">V</span>
             </div>
           </div>
-
-          <!-- Carte 3 : Intensité Courant (A) -->
-          <div class="rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-4 border border-surface-container-high/50 shadow-lg flex flex-col justify-between hover:border-secondary hover:shadow-[0_0_15px_rgba(76,215,246,0.15)] transition-all duration-300">
-            <div class="flex items-start justify-between">
-              <div>
-                <span class="text-xs text-outline font-medium uppercase tracking-wider">Courant RMS</span>
-                <div class="flex items-baseline gap-1 mt-1">
-                  <span id="val-current" class="text-3xl font-bold font-mono text-white tracking-tight">0.000</span>
-                  <span class="text-xs font-mono text-secondary font-bold">A</span>
-                </div>
-              </div>
-              <div class="p-2 rounded-lg bg-surface-container text-secondary">
-                <span class="material-symbols-outlined text-[20px]">cable</span>
-              </div>
-            </div>
-            <div class="mt-4 flex items-center justify-between text-[11px] font-mono text-outline">
-              <span>Disjoncteur 16A</span>
-              <span id="current-percent" class="text-white">0%</span>
+          <!-- Courant -->
+          <div class="p-4 border flex flex-col justify-between h-28 glass-panel transition-all">
+            <span class="text-[10px] uppercase font-semibold" style="color: var(--theme-muted);">Courant RMS</span>
+            <div class="flex items-end justify-between">
+              <span id="val-current" class="text-2xl data-value tracking-tight">0.00</span>
+              <span class="text-xs font-mono" style="color: var(--theme-muted);">A</span>
             </div>
           </div>
-
-          <!-- Carte 4 : Énergie Cumulée (kWh) -->
-          <div class="rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-4 border border-surface-container-high/50 shadow-lg flex flex-col justify-between hover:border-secondary hover:shadow-[0_0_15px_rgba(76,215,246,0.15)] transition-all duration-300">
-            <div class="flex items-start justify-between">
-              <div>
-                <span class="text-xs text-outline font-medium uppercase tracking-wider">Énergie Cumulée</span>
-                <div class="flex items-baseline gap-1 mt-1">
-                  <span id="val-energy" class="text-3xl font-bold font-mono text-tertiary tracking-tight">0.000</span>
-                  <span class="text-xs font-mono text-tertiary font-bold">kWh</span>
-                </div>
-              </div>
-              <div class="p-2 rounded-lg bg-surface-container text-tertiary">
-                <span class="material-symbols-outlined text-[20px]">solar_power</span>
-              </div>
-            </div>
-            <div class="mt-4 flex items-center justify-between text-[11px] font-mono text-outline">
-              <span>Facture estimée (112,87 FCFA)</span>
-              <span id="val-cost" class="text-tertiary font-bold text-sm bg-tertiary/10 px-2 py-0.5 rounded-md border border-tertiary/20">0 FCFA</span>
+          <!-- Énergie -->
+          <div class="p-4 border flex flex-col justify-between h-28 glass-panel transition-all">
+            <span class="text-[10px] uppercase font-semibold" style="color: var(--theme-muted);">Énergie (Total)</span>
+            <div class="flex items-end justify-between">
+              <span id="val-energy" class="text-2xl data-value tracking-tight" style="color: var(--theme-accent);">0.00</span>
+              <span class="text-xs font-mono" style="color: var(--theme-muted);">kWh</span>
             </div>
           </div>
-
-          <!-- Carte 5 : Facteur de Puissance (Cos φ) -->
-          <div class="rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-4 border border-surface-container-high/50 shadow-lg flex flex-col justify-between hover:border-secondary hover:shadow-[0_0_15px_rgba(76,215,246,0.15)] transition-all duration-300">
-            <div class="flex items-start justify-between">
-              <div>
-                <span class="text-xs text-outline font-medium uppercase tracking-wider">Facteur Puissance</span>
-                <div class="flex items-baseline gap-1 mt-1">
-                  <span id="val-pf" class="text-3xl font-bold font-mono text-white tracking-tight">0.00</span>
-                  <span class="text-xs font-mono text-secondary font-bold">Cos φ</span>
-                </div>
-              </div>
-              <div class="p-2 rounded-lg bg-surface-container text-secondary">
-                <span class="material-symbols-outlined text-[20px]">analytics</span>
-              </div>
-            </div>
-            <div class="mt-4 flex items-center justify-between text-[11px]">
-              <span id="pf-quality" class="text-tertiary font-medium">Optimal (> 0.95)</span>
-              <span id="val-freq" class="font-mono text-outline">50.0 Hz</span>
+          <!-- Facteur de puissance -->
+          <div class="p-4 border flex flex-col justify-between h-28 glass-panel transition-all">
+            <span class="text-[10px] uppercase font-semibold" style="color: var(--theme-muted);">Facteur Puissance</span>
+            <div class="flex items-end justify-between">
+              <span id="val-pf" class="text-2xl data-value tracking-tight">0.00</span>
+              <span class="text-xs font-mono" style="color: var(--theme-muted);">Cos φ</span>
             </div>
           </div>
-
         </div>
 
-        <!-- Graphique Principal Temps Réel -->
-        <div class="rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-6 border border-surface-container-high/50 shadow-lg space-y-4">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-secondary text-[22px]">show_chart</span>
-              <h2 class="text-base font-semibold text-white">Profil de Puissance en Temps Réel (Watts)</h2>
-            </div>
-            <span class="text-xs text-outline font-mono">Derniers 30 points (Échantillonnage 2s)</span>
+        <!-- GRAPHIQUE PRINCIPAL -->
+        <div class="border p-5 glass-panel h-80 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-semibold tracking-wide">Profil de charge en temps réel</span>
+            <span class="text-[10px] font-mono" style="color: var(--theme-muted);">Fréq: <span id="val-freq">0.0</span> Hz</span>
           </div>
-          <div class="h-64 w-full">
+          <div class="flex-1 relative">
             <canvas id="liveChart"></canvas>
           </div>
         </div>
+      </div>
 
-      </section>
-
-      <!-- ======================== ONGLET 2 : SUPERVISION EN DIRECT ======================== -->
-      <section id="tab-supervision" class="tab-content hidden space-y-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <!-- Graphique Double Axe (Tension V vs Courant A) -->
-          <div class="rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-6 border border-surface-container-high/50 shadow-lg space-y-4">
-            <div class="flex items-center justify-between">
-              <h3 class="text-base font-semibold text-white">Oscilloscope Tension (V) & Courant (A)</h3>
-              <span class="text-xs font-mono text-secondary">Synchronisé</span>
+      <!-- ======================== ONGLET: ANALYSES & HISTORIQUE ======================== -->
+      <div id="tab-analysis" class="tab-content hidden space-y-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[22rem]">
+          <!-- Consommation Journalière (Aujourd'hui) -->
+          <div class="border p-5 glass-panel flex flex-col justify-between">
+            <span class="text-xs font-semibold tracking-wide">Consommation Journalière</span>
+            <div class="text-center my-auto">
+              <span class="block text-[10px] uppercase mb-2" style="color: var(--theme-muted);">Coût estimé aujourd'hui</span>
+              <span id="val-daily-cost" class="text-3xl font-mono block" style="color: var(--theme-accent);">0 FCFA</span>
+              <span id="val-daily-kwh" class="text-sm font-mono mt-2 block" style="color: var(--theme-muted);">0.00 kWh cons.</span>
             </div>
-            <div class="h-72 w-full">
+            <span class="text-[10px] font-mono border px-2 py-1 text-center" style="border-color: var(--theme-border); color: var(--theme-accent);">Base: 112.87 FCFA / kWh</span>
+          </div>
+
+          <!-- Analyse V/A Phase -->
+          <div class="border p-5 glass-panel flex flex-col lg:col-span-2">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold tracking-wide">Évolution Tension (V) / Courant (A)</span>
+            </div>
+            <div class="flex-1 relative">
               <canvas id="viChart"></canvas>
             </div>
           </div>
-
-          <!-- Fréquence & Facteur de puissance -->
-          <div class="rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-6 border border-surface-container-high/50 shadow-lg space-y-4">
-            <div class="flex items-center justify-between">
-              <h3 class="text-base font-semibold text-white">Qualité du Signal Réseau (Cos φ / Hz)</h3>
-              <span class="text-xs font-mono text-tertiary">Réseau 50Hz</span>
-            </div>
-            <div class="h-72 w-full">
-              <canvas id="pfChart"></canvas>
-            </div>
-          </div>
         </div>
-      </section>
 
-      <!-- ======================== ONGLET 3 : HISTORIQUE & COÛTS ======================== -->
-      <section id="tab-historique" class="tab-content hidden space-y-6">
-        <div class="rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-6 border border-surface-container-high/50 shadow-lg space-y-4">
-          <div class="flex items-center justify-between">
-            <div>
-              <h3 class="text-base font-semibold text-white">Consommation Énergétique Journalière (kWh & FCFA)</h3>
-              <p class="text-xs text-outline">Simulation calculée basée sur le tarif local</p>
-            </div>
-            <span class="px-3 py-1 rounded-lg bg-surface-container text-xs font-mono text-tertiary border border-surface-container-high shadow-inner">Tarif : 112,87 FCFA / kWh</span>
-          </div>
-          <div class="h-80 w-full">
-            <canvas id="historyBarChart"></canvas>
-          </div>
-        </div>
-      </section>
-
-      <!-- ======================== ONGLET 4 : ALERTES & SEUILS ======================== -->
-      <section id="tab-alertes" class="tab-content hidden space-y-6">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <!-- Configuration des seuils -->
-          <div class="rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-6 border border-surface-container-high/50 shadow-lg space-y-4">
-            <h3 class="text-base font-semibold text-white flex items-center gap-2">
-              <span class="material-symbols-outlined text-secondary">tune</span>
-              Seuils de Sécurité
-            </h3>
-            <div class="space-y-3 text-sm">
-              <div>
-                <label class="text-xs text-outline block mb-1">Seuil Puissance Max (Watts)</label>
-                <input type="number" id="cfg-power-limit" value="3500" class="w-full bg-surface-container px-3 py-2 rounded-lg border border-surface-container-high font-mono text-white focus:outline-none focus:border-secondary">
-              </div>
-              <div>
-                <label class="text-xs text-outline block mb-1">Seuil Tension Min / Max (Volts)</label>
-                <div class="flex gap-2">
-                  <input type="number" id="cfg-volt-min" value="207" class="w-1/2 bg-surface-container px-3 py-2 rounded-lg border border-surface-container-high font-mono text-white text-xs">
-                  <input type="number" id="cfg-volt-max" value="253" class="w-1/2 bg-surface-container px-3 py-2 rounded-lg border border-surface-container-high font-mono text-white text-xs">
-                </div>
-              </div>
-              <button onclick="saveThresholds()" class="w-full py-2 rounded-lg bg-primary-container hover:bg-blue-600 text-white font-medium text-xs transition-colors mt-2">
-                Enregistrer les seuils
+        <!-- HISTORIQUE (Période) -->
+        <div class="border glass-panel flex flex-col">
+          <div class="p-4 border-b flex items-center justify-between flex-wrap gap-4" style="border-color: var(--theme-border);">
+            <span class="text-xs font-semibold tracking-wide">Historique des données (Base de données)</span>
+            
+            <div class="flex items-center gap-2">
+              <label class="text-[10px] font-semibold" style="color: var(--theme-muted);">PÉRIODE :</label>
+              <select id="period-selector" onchange="fetchHistoryData(this.value)" class="bg-transparent border text-xs px-2 py-1 font-mono focus:outline-none" style="border-color: var(--theme-border); color: var(--theme-text);">
+                <option value="today">Aujourd'hui</option>
+                <option value="7days">7 derniers jours</option>
+                <option value="30days">30 derniers jours</option>
+              </select>
+              <button onclick="fetchHistoryData(document.getElementById('period-selector').value)" class="px-2 py-1 border text-xs hover:opacity-80 transition-opacity" style="border-color: var(--theme-accent); color: var(--theme-accent);">
+                Rafraîchir
               </button>
             </div>
           </div>
-
-          <!-- Journal des événements -->
-          <div class="lg:col-span-2 rounded-xl bg-surface-container-low/40 backdrop-blur-xl p-6 border border-surface-container-high/50 shadow-lg space-y-3">
-            <div class="flex items-center justify-between">
-              <h3 class="text-base font-semibold text-white">Journal des Alertes & Événements</h3>
-              <button onclick="clearAlertLogs()" class="text-xs text-outline hover:text-white">Effacer l'historique</button>
-            </div>
-            <div id="alert-logs-list" class="space-y-2 max-h-72 overflow-y-auto font-mono text-xs">
-              <div class="p-3 rounded-lg bg-surface-container flex items-center justify-between border-l-4 border-tertiary">
-                <span class="text-white">Système initialisé et prêt</span>
-                <span class="text-outline text-[11px]">Aujourd'hui</span>
-              </div>
-            </div>
+          <div class="overflow-x-auto max-h-64">
+            <table class="w-full text-left text-[11px] font-mono">
+              <thead class="sticky top-0 bg-opacity-90 backdrop-blur" style="background-color: var(--theme-panel); color: var(--theme-muted);">
+                <tr>
+                  <th class="px-4 py-2 font-normal border-b" style="border-color: var(--theme-border);">HORODATAGE</th>
+                  <th class="px-4 py-2 font-normal border-b" style="border-color: var(--theme-border);">TENSION (V)</th>
+                  <th class="px-4 py-2 font-normal border-b" style="border-color: var(--theme-border);">COURANT (A)</th>
+                  <th class="px-4 py-2 font-normal border-b" style="border-color: var(--theme-border);">PUISSANCE (W)</th>
+                  <th class="px-4 py-2 font-normal border-b" style="border-color: var(--theme-border);">ÉNERGIE (kWh)</th>
+                </tr>
+              </thead>
+              <tbody id="history-table-body" class="divide-y" style="border-color: var(--theme-border); color: var(--theme-text);">
+                <tr><td colspan="5" class="px-4 py-6 text-center" style="color: var(--theme-muted);">Chargement de l'historique depuis Supabase...</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      </section>
 
-    </main>
-  </div>
+      </div>
+
+      <!-- ======================== ONGLET: SEUILS DE SÉCURITÉ ======================== -->
+      <div id="tab-settings" class="tab-content hidden space-y-6">
+        <div class="max-w-md border p-5 glass-panel">
+          <span class="text-xs font-semibold tracking-wide block mb-4">Configuration des limites</span>
+          <div class="space-y-4">
+            <div>
+              <label class="text-[10px] uppercase font-mono block mb-1" style="color: var(--theme-muted);">Puissance Maximale (Watts)</label>
+              <input type="number" id="cfg-power-limit" value="3500" class="w-full bg-transparent border px-3 py-1.5 text-xs font-mono focus:outline-none transition-colors" style="border-color: var(--theme-border); color: var(--theme-text);">
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="text-[10px] uppercase font-mono block mb-1" style="color: var(--theme-muted);">Tension Min (V)</label>
+                <input type="number" id="cfg-volt-min" value="207" class="w-full bg-transparent border px-3 py-1.5 text-xs font-mono focus:outline-none transition-colors" style="border-color: var(--theme-border); color: var(--theme-text);">
+              </div>
+              <div>
+                <label class="text-[10px] uppercase font-mono block mb-1" style="color: var(--theme-muted);">Tension Max (V)</label>
+                <input type="number" id="cfg-volt-max" value="253" class="w-full bg-transparent border px-3 py-1.5 text-xs font-mono focus:outline-none transition-colors" style="border-color: var(--theme-border); color: var(--theme-text);">
+              </div>
+            </div>
+            <button onclick="saveThresholds()" class="w-full py-2 text-xs font-semibold tracking-wide border transition-all hover:opacity-80" style="background-color: var(--theme-accent); color: #fff; border-color: var(--theme-accent);">
+              Appliquer les modifications
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
 
   <script src="app.js"></script>
 </body>
